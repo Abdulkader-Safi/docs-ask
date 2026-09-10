@@ -21,7 +21,8 @@ const SHORT_KEEP = /^(?:[45]\d\d|[123]\d\d|id|ip|io|db|ui|os|js|ts|ci|cd|v\d+)$/
 // Tokens that must survive as a single unit.
 const SPECIAL = new RegExp([
   String.raw`(?:GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)(?=\s+\/)`, // verb before a path
-  String.raw`[a-z]+\/[a-z0-9.+-]+(?=[\s,.?!)]|$)`,                  // MIME types: text/csv, application/json
+  String.raw`@[a-z0-9-]+\/[a-z0-9._-]+`,                              // scoped packages: @fastify/aws-lambda
+  String.raw`[a-z]+\/[a-z0-9.+-]+(?=[\s,.?!)'"\x60;\]]|$)`,     // MIME types and package paths: text/csv, 'hono/client'
   String.raw`(?<![\w.])\/[A-Za-z0-9_{}:.\-]+(?:\/[A-Za-z0-9_{}:.\-]*)*`, // /auth/refresh and /api/v1/apps/:id, but not the /csv inside text/csv
   String.raw`--?[A-Za-z][\w-]*`,                                       // --force, -f
   String.raw`[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)+(?:\(\))?`,         // fastify.register, reply.send()

@@ -5,6 +5,8 @@ import type { QueryPlan, Ranked } from "./retrieve.ts";
 import type { Classification } from "./rules.ts";
 import type { Weights } from "./weights.ts";
 
+const MIME_TYPE = /^(?:text|application|image|audio|video|multipart|font)\/[a-z0-9.+-]+$/;
+
 export type GateResult = { ok: true; gap: number; coverage: number } | { ok: false; reason: string; unknown?: string[] };
 
 export function checkGates(idx: LoadedIndex, ranked: Ranked[], plan: QueryPlan, cls: Classification, w: Weights): GateResult {
@@ -12,8 +14,9 @@ export function checkGates(idx: LoadedIndex, ranked: Ranked[], plan: QueryPlan, 
   const [top, second] = ranked;
   if (!top) return { ok: false, reason: "no matching section" };
 
-  // 1. the question names an identifier the docs never mention
-  const unknown = plan.exact.filter((e) => !idx.df.has(e));
+  // 1. the question names an identifier the docs never mention. A MIME type ("like text/csv") is an example
+  // value, not an identifier: docs explain content types without listing every one.
+  const unknown = plan.exact.filter((e) => !idx.df.has(e) && !MIME_TYPE.test(e));
   if (unknown.length) return { ok: false, reason: `not found in docs: ${unknown.join(", ")}`, unknown };
 
   // A parent or child of the top section, in the same file, isn't a competitor: the gap counts as 100%.
@@ -24,7 +27,7 @@ export function checkGates(idx: LoadedIndex, ranked: Ranked[], plan: QueryPlan, 
   const g = w.gates;
 
   // 2. the top section misses too much of what was asked
-  if (top.idfCoverage < g.minCoverage) return { ok: false, reason: `weak term coverage (${top.idfCoverage.toFixed(2)})` };
+  if (top.idfCoverage < (g.minCoverageByType[rule.id] ?? g.minCoverage)) return { ok: false, reason: `weak term coverage (${top.idfCoverage.toFixed(2)})` };
   // 3. the top two are too close to call
   if (gap < g.minGap || (gap < g.softGap && top.idfCoverage < g.softCoverage)) {
     return { ok: false, reason: `ambiguous: top two within ${(gap * 100).toFixed(0)}%` };

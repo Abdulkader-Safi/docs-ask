@@ -1,6 +1,7 @@
 // Every scoring weight and threshold in the query pipeline, in one place so a sweep script can tune them
 // (research.md sections 7 to 11). Per-rule numbers (trigger weights, sentence bonuses) live with the rules.
-// Values are the research prototype's; don't change them without measuring on the dev split.
+// Values are the research prototype's unless noted; don't change them without measuring on the dev split.
+import type { QClass } from "../core/types.ts";
 export const WEIGHTS = {
   search: {
     /** sections kept from MiniSearch before reranking */
@@ -57,6 +58,8 @@ export const WEIGHTS = {
   gates: {
     /** IDF-weighted share of question terms the top section must match */
     minCoverage: 0.5,
+    /** per question type, replaces minCoverage (research.md section 11: looser for HOWTO, stricter with shape evidence) */
+    minCoverageByType: { HOWTO: 0.45 } as Partial<Record<QClass, number>>, // M4: HOWTO 0.45 measured best on dev
     /** (top - second) / top below this is too close to call */
     minGap: 0.05,
     /** ...and below this, too close unless coverage reaches softCoverage */

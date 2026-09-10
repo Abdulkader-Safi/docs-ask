@@ -1,5 +1,5 @@
-FAIL rank=1 abs [fastify] how do I trust the X-Forwarded-For header behind a load balancer?
-     -> weak term coverage (0.50)
+ok   rank=1 ans [fastify] how do I trust the X-Forwarded-For header behind a load balancer?
+     -> Reference/Server.md:446 trustProxy
 ok   rank=1 ans [fastify] how can I make the router ignore a trailing slash
      -> Reference/Server.md:869 ignoreTrailingSlash
 ok   rank=1 ans [fastify] what is the default max length of a route parameter
@@ -7,7 +7,7 @@ ok   rank=1 ans [fastify] what is the default max length of a route parameter
 ok   rank=1 ans [fastify] how do I handle 404s myself
      -> Reference/Server.md:1619 setNotFoundHandler
 FAIL rank=1 abs [fastify] how do I stop the server gracefully
-     -> weak term coverage (0.49)
+     -> ambiguous: top two within 9%
 ok   rank=1 ans [fastify] how do I add a property to the request object
      -> Reference/Hooks.md:787 Using Hooks to Inject Custom Properties
 ok   rank=1 ans [fastify] how do I set a different log level for one route
@@ -23,9 +23,9 @@ FAIL rank=3 ans [fastify] how do I set the status code of the response
 ok   rank=1 ans [fastify] can I route based on the Host header
      -> Reference/Routes.md:694 Host Constraints
 FAIL rank=1 abs [fastify] how do I parse a custom content type like text/csv
-     -> not found in docs: text/csv
+     -> weak term coverage (0.39)
 FAIL rank=0 abs [fastify] how do I list all registered routes
-     -> weak term coverage (0.47)
+     -> ambiguous: top two within 3%
 ok   rank=0 abs [fastify] how do I enable CORS
      -> weak term coverage (0.38)
 ok   rank=0 abs [fastify] how do I send emails from a route

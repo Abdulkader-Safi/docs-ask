@@ -24,16 +24,20 @@ describe("checkGates", () => {
     }
   });
 
+  it("gate 1: lets a MIME type through, since docs explain content types without listing each one", () => {
+    expect(planQuery(fastify, "how do I parse a custom content type like text/csv").exact).toEqual(["text/csv"]);
+    expect(run("how do I parse a custom content type like text/csv").gate).not.toMatchObject({ reason: expect.stringMatching(/^not found/) });
+  });
+
   it("gate 1: abstains when an identifier never appears in the docs", () => {
-    expect(run("how do I parse a custom content type like text/csv").gate).toEqual({ ok: false, reason: "not found in docs: text/csv", unknown: ["text/csv"] });
     expect(run("what is the default keepAliveTimout").gate).toEqual({ ok: false, reason: "not found in docs: keepalivetimout", unknown: ["keepalivetimout"] });
   });
 
   it("gate 2: abstains on weak coverage but keeps the right section among the candidates", () => {
     // research.md section 11 used "how do I turn on logging"; the M4 enable synonym answers that one now
-    const { gate, ranked } = run("how do I stop the server gracefully");
-    expect(gate).toEqual({ ok: false, reason: "weak term coverage (0.49)" });
-    expect(ranked.slice(0, 3).map((r) => r.s.id)).toContain("Reference/Server.md#close");
+    const { gate, ranked } = run("how do I parse a custom content type like text/csv");
+    expect(gate).toEqual({ ok: false, reason: "weak term coverage (0.39)" });
+    expect(ranked[0].s.heading).toBe("addContentTypeParser"); // an accepted answer for this held-out question
   });
 
   it("gate 3: abstains when the top two are too close", () => {
@@ -41,7 +45,13 @@ describe("checkGates", () => {
   });
 
   it("uses the thresholds from WEIGHTS", () => {
-    expect(run("how do I stop the server gracefully", fastify, withWeights({ gates: { minCoverage: 0.4, softCoverage: 0.4 } })).gate.ok).toBe(true);
+    expect(run("how do I parse a custom content type like text/csv", fastify, withWeights({ gates: { minCoverageByType: { HOWTO: 0.3 } } })).gate.ok).toBe(true);
+  });
+
+  it("uses a per-type coverage bar (HOWTO 0.45) before the general one", () => {
+    // coverage 0.39: under both bars; coverage between 0.45 and 0.5 passes only for HOWTO
+    expect(WEIGHTS.gates.minCoverageByType.HOWTO).toBe(0.45);
+    expect(run("how do I parse a custom content type like text/csv", fastify, withWeights({ gates: { minCoverageByType: {} } })).gate).toEqual({ ok: false, reason: "weak term coverage (0.39)" });
   });
 
   it("doesn't count a parent or child section of the same file as a competitor", () => {
@@ -83,9 +93,9 @@ describe("gates 4 and 5 (research.md section 11)", () => {
     expect(run("hooks").gate).toEqual({ ok: false, reason: 'too broad: "hook" is in 15% of sections' });
   });
 
-  it("gate 5: a real question about a common word is not (Hono corpus: 'hono' is in 53% of sections)", () => {
+  it("gate 5: a real question about a common word is not (Hono corpus: 'hono' is in 52% of sections)", () => {
     const hono = loadIndex(honoData);
-    expect(run("hono", hono).gate).toEqual({ ok: false, reason: 'too broad: "hono" is in 53% of sections' });
+    expect(run("hono", hono).gate).toEqual({ ok: false, reason: 'too broad: "hono" is in 52% of sections' });
     expect(run("What is Hono?", hono).gate.ok).toBe(true);
   });
 });

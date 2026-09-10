@@ -38,6 +38,13 @@ describe("queryTerms: the 10 Sep fixes", () => {
   });
 });
 
+describe("package specifiers (M4)", () => {
+  it("keeps package paths in quotes and scoped packages whole", () => {
+    expect(indexTerms("import { hc } from 'hono/client'")).toContain("hono/client");
+    expect(queryTerms("npm i @fastify/aws-lambda").exact).toEqual(["@fastify/aws-lambda"]);
+  });
+});
+
 describe("identifiers", () => {
   it("splits camelCase, snake_case, paths and flags into parts", () => {
     expect(splitIdentifier("setNotFoundHandler")).toEqual(["set", "Not", "Found", "Handler"]);

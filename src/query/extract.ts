@@ -52,7 +52,8 @@ export function pickUnits(idx: LoadedIndex, sec: QaSection, rule: Rule, plan: Qu
     return { units: [...(lead ? [lead] : []), ...body] };
   }
   const pool = sec.units.filter((u) => u.kind !== "heading" && rule.preferUnits.includes(u.kind));
-  if (rule.id === "VALUE" && !pool.some((u) => NUMBERISH.test(u.text))) return { noValue: true };
+  // a value is a number or literal, or a "default is `X`" sentence (string defaults such as `"Secure Area"`)
+  if (rule.id === "VALUE" && !pool.some((u) => NUMBERISH.test(u.text) || rule.boosts.sentenceRe!.test(u.text))) return { noValue: true };
   const headingTerms = idx.tokenize(sec.heading);
   const scored = pool
     .map((u, i) => ({ u, total: scoreUnit(idx, u.text, plan.q, rule, i, headingTerms, w).score * (1 - rule.preferUnits.indexOf(u.kind) * w.unit.kindStep) }))

@@ -5,6 +5,7 @@ import { loadIndex, type Answer, type Unit } from "../../src/core/index.ts";
 import { buildIndex, parseDocument } from "../../src/parse/index.ts";
 import { HELDOUT, TUNED } from "../eval/golden.ts";
 import { FASTIFY_DIR, fastifyData } from "../helpers/fastify.ts";
+import { honoData } from "../helpers/hono.ts";
 
 const docs = loadIndex(fastifyData);
 const QUESTIONS = [...TUNED, ...HELDOUT].map((g) => g.q);
@@ -26,7 +27,7 @@ describe("ask", () => {
       units: [{ kind: "list", text: "Default: `1048576` (1MiB)", line: 224 }],
     });
     expect(a.candidates).toHaveLength(5);
-    expect(a.candidates[0]).toEqual({ id: "Reference/Server.md#bodylimit", file: "Reference/Server.md", line: 221, headingPath: ["Factory", "bodyLimit"], score: 1098.63 });
+    expect(a.candidates[0]).toEqual({ id: "Reference/Server.md#bodylimit", file: "Reference/Server.md", line: 221, headingPath: ["Factory", "bodyLimit"], score: 1098.68 });
   });
 
   it("fences quoted code", () => {
@@ -39,13 +40,18 @@ describe("ask", () => {
     expect(docs.ask("How do I fix FST_ERR_CTP_BODY_TOO_LARGE")).toMatchObject({ confident: true, level: "medium", reason: "gap 19%, coverage 1.00" });
   });
 
+  it("counts a string default as a VALUE answer (M4)", () => {
+    const hono = loadIndex(honoData);
+    expect(hono.ask("what is the default realm for basic auth")).toMatchObject({ confident: true, text: expect.stringContaining('"Secure Area"') });
+  });
+
   it("answers 'turn on logging' through the enable synonym (M4)", () => {
     expect(docs.ask("how do I turn on logging")).toMatchObject({ confident: true, file: "Reference/Logging.md", headingPath: ["Logging", "Enable Logging"] });
   });
 
   it("says not sure, with the closest sections, when it can't tell", () => {
     const a = docs.ask("how do I stop the server gracefully");
-    expect(a).toMatchObject({ confident: false, qclass: "HOWTO", reason: "weak term coverage (0.49)" });
+    expect(a).toMatchObject({ confident: false, qclass: "HOWTO", reason: "ambiguous: top two within 9%" });
     expect(a.file).toBeUndefined();
     expect(a.candidates.slice(0, 3).map((c) => c.headingPath.at(-1))).toEqual(["preClose", "close", "onClose"]);
   });
@@ -57,9 +63,9 @@ describe("ask", () => {
 
   it("takes topK and weight overrides per call or as defaults", () => {
     expect(docs.ask("how do I stop the server gracefully", { topK: 2 }).candidates).toHaveLength(2);
-    expect(docs.ask("how do I stop the server gracefully", { weights: { gates: { minCoverage: 0.4, softCoverage: 0.4 } } }).confident).toBe(true);
-    const lenient = loadIndex(fastifyData, { weights: { gates: { minCoverage: 0.4, softCoverage: 0.4 } } });
-    expect(lenient.ask("how do I stop the server gracefully").confident).toBe(true);
+    const loose = { gates: { minGap: 0.01, softGap: 0.01 } };
+    expect(docs.ask("how do I stop the server gracefully", { weights: loose }).confident).toBe(true);
+    expect(loadIndex(fastifyData, { weights: loose }).ask("how do I stop the server gracefully").confident).toBe(true);
   });
 });
 

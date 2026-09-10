@@ -120,3 +120,10 @@ describe("loose synonyms (M4)", () => {
     expect(top.idfCoverage).toBeGreaterThanOrEqual(0.5);
   });
 });
+
+describe("identifier headings match their words (research.md section 20)", () => {
+  it("finds setNotFoundHandler from 'not found handler', through the identifier's parts", () => {
+    expect(top("how do I set a not found handler")).toBe("Reference/Server.md > setNotFoundHandler");
+    expect(top("how do I add a content type parser")).toBe("Reference/Server.md > addContentTypeParser");
+  });
+});
