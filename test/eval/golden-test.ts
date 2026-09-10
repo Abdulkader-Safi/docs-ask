@@ -53,7 +53,7 @@ const FASTIFY_TEST: Golden[] = [
   { q: "How do I send push notifications to mobile phones?", unanswerable: true, qclass: "HOWTO" },
 ];
 
-const HONO_TEST: Golden[] = [
+const HONO_TEST: Golden[] = ([
   { q: "Can hono serve static site?", accept: [F("getting-started/nodejs.md", "Serve static files"), F("getting-started/bun.md", "Serve static files"), F("getting-started/deno.md", "Serve static files"), F("getting-started/cloudflare-workers.md", "Serve static files")], qclass: "YESNO" },
   { q: "How to get request's remote client IP in Node.js?", accept: [F("helpers/conninfo.md", "ConnInfo Helper"), F("helpers/conninfo.md", "Usage")] },
   { q: "How do I proxy a streaming response in hono?", accept: [F("helpers/proxy.md", "Proxy Helper"), F("helpers/proxy.md", "proxy()"), F("helpers/proxy.md", "Examples")], qclass: "HOWTO" },
@@ -95,6 +95,6 @@ const HONO_TEST: Golden[] = [
   { q: "Does Hono have a built-in ORM?", unanswerable: true, qclass: "YESNO" },
   { q: "How do I deploy Hono to Heroku?", unanswerable: true, qclass: "HOWTO" },
   { q: "How do I schedule cron jobs with Hono?", unanswerable: true, qclass: "HOWTO" },
-].map((g) => ({ ...g, corpus: "hono" as const }));
+] as Golden[]).map((g) => ({ ...g, corpus: "hono" }));
 
 export const TEST: Golden[] = [...FASTIFY_TEST, ...HONO_TEST];
