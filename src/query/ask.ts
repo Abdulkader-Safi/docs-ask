@@ -1,5 +1,6 @@
 // The whole question pipeline: classify, retrieve and rerank, gate, then quote (research.md section 12).
 import type { Answer, QaSection, SerializedIndex, Unit } from "../core/types.ts";
+import { compare } from "./compare.ts";
 import { pickUnits } from "./extract.ts";
 import { checkGates } from "./gates.ts";
 import { openIndex, type LoadedIndex } from "./load.ts";
@@ -32,6 +33,10 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   }));
   const notSure = (reason: string, extra: Partial<Answer> = {}): Answer => ({ confident: false, qclass: rule.id, reason, candidates, ...extra });
 
+  if (rule.id === "COMPARISON") {
+    const both = compare(idx, question, w);
+    if (both) return { ...both, qclass: rule.id, candidates };
+  }
   const gate = checkGates(idx, ranked, plan, cls, w);
   if (!gate.ok) {
     const suggestions = [...new Set((gate.unknown ?? []).flatMap((t) => suggest(idx, t, w)))];

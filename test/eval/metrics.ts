@@ -16,7 +16,10 @@ export function evaluate(docs: DocsIndex | Record<Corpus, DocsIndex>, golden: Go
     const rank = g.unanswerable ? 0 : a.candidates.findIndex((c) => accepted(g, c.file, c.headingPath.at(-1))) + 1;
     const answerOk = g.unanswerable
       ? !a.confident
-      : a.confident && accepted(g, a.file, a.headingPath?.at(-1)) && (!g.contains || !!a.text?.includes(g.contains));
+      : a.confident &&
+        // a comparison answer quotes two sections; it counts if either is an accepted one
+        (a.parts ?? [a]).some((p) => accepted(g, p.file, p.headingPath?.at(-1))) &&
+        (!g.contains || !!a.text?.includes(g.contains));
     return { corpus: g.corpus ?? "fastify", q: g.q, rank, confident: a.confident, answerOk, classOk: !g.qclass || classify(g.q).primary.id === g.qclass, unanswerable: !!g.unanswerable, answer: a };
   });
   const ans = rows.filter((r) => !r.unanswerable);
