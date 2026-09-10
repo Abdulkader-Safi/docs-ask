@@ -1,0 +1,32 @@
+FAIL rank=1 abs how do I trust the X-Forwarded-For header behind a load balancer?
+     -> weak term coverage (0.50)
+ok   rank=1 ans how can I make the router ignore a trailing slash
+     -> Reference/Server.md:869 ignoreTrailingSlash
+ok   rank=1 ans what is the default max length of a route parameter
+     -> Reference/Server.md:899 maxParamLength
+ok   rank=1 ans how do I handle 404s myself
+     -> Reference/Server.md:1619 setNotFoundHandler
+FAIL rank=4 abs how do I stop the server gracefully
+     -> weak term coverage (0.11)
+ok   rank=1 ans how do I add a property to the request object
+     -> Reference/Hooks.md:787 Using Hooks to Inject Custom Properties
+ok   rank=1 ans how do I set a different log level for one route
+     -> Reference/Routes.md:505 Custom Log Level
+FAIL rank=2 abs how do I turn on logging
+     -> weak term coverage (0.24)
+FAIL rank=2 abs how do I share a JSON schema between routes
+     -> ambiguous: top two within 13%
+FAIL rank=2 ans which hook runs when the request times out
+     -> Guides/Plugins-Guide.md:283 Hooks
+FAIL rank=4 ans how do I set the status code of the response
+     -> Reference/Validation-and-Serialization.md:549 .statusCode property
+ok   rank=1 ans can I route based on the Host header
+     -> Reference/Routes.md:694 Host Constraints
+FAIL rank=1 abs how do I parse a custom content type like text/csv
+     -> not found in docs: text/csv
+FAIL rank=0 abs how do I list all registered routes
+     -> weak term coverage (0.47)
+ok   rank=0 abs how do I enable CORS
+     -> weak term coverage (0.39)
+ok   rank=0 abs how do I send emails from a route
+     -> weak term coverage (0.36)
