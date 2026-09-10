@@ -3,7 +3,8 @@ import { stemWord } from './text.ts';
 // Hand-made alias table. `canonical` is what gets indexed.
 // strict: true  -> canonicalize at index AND query time (true synonyms)
 // strict: false -> expand at query time only, with lower weight (related terms)
-export interface SynonymGroup { canonical: string; aliases: string[]; strict: boolean }
+import type { SynonymGroup } from '../core/types.ts';
+export type { SynonymGroup };
 
 export const SYNONYMS: SynonymGroup[] = [
   { canonical: 'login',   aliases: ['log in', 'sign in', 'signin', 'logon', 'authenticate', 'authentication', 'auth'], strict: true },

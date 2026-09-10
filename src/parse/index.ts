@@ -2,3 +2,4 @@
 export { parseDocument, parseMarkdown, blankMdxSyntax } from "./markdown.ts";
 export { splitSentences, type Sentence } from "./sentences.ts";
 export { toQaSections } from "./units.ts";
+export { buildIndex, type BuildOptions } from "./build.ts";
