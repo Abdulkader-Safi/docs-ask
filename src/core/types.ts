@@ -80,6 +80,46 @@ export interface QaSection {
   code: string
 }
 
+// ---------- answers ----------
+
+export type QClass =
+  | 'ERROR' | 'COMPARISON' | 'PARAMS' | 'ENDPOINT' | 'VALUE' | 'EXAMPLE'
+  | 'LOCATION' | 'HOWTO' | 'YESNO' | 'DEFINITION' | 'FALLBACK'
+
+export interface Candidate {
+  id: string
+  file: string
+  line: number
+  /** ancestors plus the section's own heading */
+  headingPath: string[]
+  score: number
+}
+
+/** What ask() returns (PRD section 5). The same object feeds every surface. */
+export interface Answer {
+  confident: boolean
+  /** high: coverage and gap both clear their WEIGHTS.gates thresholds */
+  level?: 'high' | 'medium'
+  qclass: QClass
+  /** why it answered ("gap 89%, coverage 1.00") or why it didn't */
+  reason: string
+  id?: string
+  /** repo-relative, forward slashes */
+  file?: string
+  /** line of the first quoted unit (the section heading when nothing is quoted) */
+  line?: number
+  /** line of the last quoted unit */
+  endLine?: number
+  headingPath?: string[]
+  /** markdown of the quoted units, code fenced */
+  text?: string
+  units?: Unit[]
+  /** the closest sections, always present */
+  candidates: Candidate[]
+  /** near spellings when an identifier was unknown (from M4) */
+  suggestions?: string[]
+}
+
 // ---------- index file ----------
 
 /** strict: rewritten at index and query time (true synonyms). loose: added to the query only. */
