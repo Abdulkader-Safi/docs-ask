@@ -2,11 +2,9 @@
 // ELIZA-style: every rule has weighted triggers; the highest total wins,
 // ties broken by `rank`. Weight >= 3 is a "strong" trigger that can win alone.
 
-export type QClass =
-  | 'ERROR' | 'COMPARISON' | 'PARAMS' | 'ENDPOINT' | 'VALUE' | 'EXAMPLE'
-  | 'LOCATION' | 'HOWTO' | 'YESNO' | 'DEFINITION' | 'FALLBACK';
+export type { QClass };
 
-import type { UnitKind } from '../core/types.ts';
+import type { QClass, UnitKind } from '../core/types.ts';
 
 export type AnswerShape =
   | 'steps'            // numbered list, else code block + lead sentence

@@ -1,4 +1,4 @@
-// SerializedIndex -> a searchable index. Runs in Node and the browser; the widget fetches the index file,
+// SerializedIndex -> the internal searchable index (wrapped by DocsIndex). Runs in Node and the browser; the widget fetches the index file,
 // so the shape is checked before anything trusts it.
 import MiniSearch from "minisearch";
 import type { QaSection, SerializedIndex } from "../core/types.ts";
@@ -23,7 +23,7 @@ export interface LoadedIndex {
 
 const majorMinor = (v: string) => v.split(".").slice(0, 2).join(".");
 
-export function loadIndex(data: SerializedIndex): LoadedIndex {
+export function openIndex(data: SerializedIndex): LoadedIndex {
   if (!data || typeof data !== "object" || !Array.isArray(data.sections) || typeof data.mini !== "object" || !data.df || !data.config) {
     throw new Error("docs-ask: this is not a docs-ask index file. Rebuild it with docs-ask build.");
   }

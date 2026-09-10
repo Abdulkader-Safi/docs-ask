@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadIndex } from "../../src/core/index.ts";
+import { openIndex as loadIndex } from "../../src/query/load.ts";
 import { findDocs } from "../../src/node/index.ts";
 import { buildIndex, parseDocument } from "../../src/parse/index.ts";
 

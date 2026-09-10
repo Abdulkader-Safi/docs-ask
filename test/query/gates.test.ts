@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { loadIndex } from "../../src/core/index.ts";
+import { openIndex as loadIndex } from "../../src/query/load.ts";
 import { buildIndex, parseDocument } from "../../src/parse/index.ts";
 import { checkGates } from "../../src/query/gates.ts";
 import { planQuery, retrieve } from "../../src/query/retrieve.ts";
