@@ -1,0 +1,1118 @@
+Guides/Database.md:1  Guides/Database.md
+  sentence@1
+Guides/Database.md:3  Database
+  heading@3 sentence@5 sentence@7 blockquote@10 blockquote@15
+Guides/Database.md:18  Database > MySQL
+  heading@18 sentence@20 sentence@22 code@24
+Guides/Database.md:46  Database > Postgres
+  heading@46 sentence@47 sentence@49 code@51
+Guides/Database.md:73  Database > Redis
+  heading@73 sentence@74 sentence@76 code@78 sentence@107 sentence@109 code@111
+Guides/Database.md:118  Database > Mongo
+  heading@118 sentence@119 sentence@121 code@122
+Guides/Database.md:152  Database > LevelDB
+  heading@152 sentence@153 sentence@155 code@156
+Guides/Database.md:180  Database > Writing plugin for a database library
+  heading@180 sentence@181 sentence@183 code@185
+Guides/Database.md:209  Database > Writing a plugin for a database engine
+  heading@209 sentence@211 code@214
+Guides/Database.md:233  Database > Migrations
+  heading@233 sentence@235 sentence@236 sentence@239 sentence@240 sentence@242
+Guides/Database.md:245  Database > Migrations > Postgrator
+  heading@245 sentence@247 sentence@248 sentence@251 sentence@253 sentence@254 sentence@256 sentence@256 sentence@260 blockquote@263 code@266 code@275
+Guides/Delay-Accepting-Requests.md:1  Guides/Delay-Accepting-Requests.md
+  sentence@1
+Guides/Delay-Accepting-Requests.md:3  Delay Accepting Requests
+  heading@3
+Guides/Delay-Accepting-Requests.md:5  Delay Accepting Requests > Introduction
+  heading@5 sentence@7 sentence@8 sentence@10 sentence@14 sentence@15 orderedList@21 orderedList@22 sentence@24 sentence@25 sentence@27 sentence@27
+Guides/Delay-Accepting-Requests.md:31  Delay Accepting Requests > Solution
+  heading@31
+Guides/Delay-Accepting-Requests.md:33  Delay Accepting Requests > Solution > Overview
+  heading@33 sentence@35 sentence@36 sentence@39 sentence@43 sentence@44 sentence@48 orderedList@50 orderedList@53
+Guides/Delay-Accepting-Requests.md:55  Delay Accepting Requests > Solution > Hands-on
+  heading@55 sentence@57 list@59 list@60 list@61 list@62 list@63 sentence@65 code@67 sentence@123 list@125 list@127 list@130 sentence@133 code@136 sentence@178 sentence@182 sentence@183 sentence@185 sentence@187 sentence@188 sentence@191 sentence@193 sentence@193 sentence@194 sentence@195 sentence@198 list@202 list@203 sentence@205 sentence@208
+Guides/Delay-Accepting-Requests.md:210  Delay Accepting Requests > Solution > Hands-on > index.js
+  heading@210 code@212
+Guides/Delay-Accepting-Requests.md:248  Delay Accepting Requests > Solution > Hands-on > provider.js
+  heading@248 code@250
+Guides/Delay-Accepting-Requests.md:292  Delay Accepting Requests > Solution > Hands-on > delay-incoming-requests.js
+  heading@292 code@294
+Guides/Delay-Accepting-Requests.md:355  Delay Accepting Requests > Solution > Hands-on > customer-routes.js
+  heading@355 code@357 sentence@380 sentence@383 sentence@385 sentence@388 sentence@389 sentence@390 sentence@391
+Guides/Delay-Accepting-Requests.md:393  Delay Accepting Requests > Solution > Hands-on > setup
+  heading@393 sentence@395 code@398 sentence@402 sentence@405 code@408 sentence@412 sentence@412
+Guides/Delay-Accepting-Requests.md:415  Delay Accepting Requests > Solution > Hands-on > delay
+  heading@415 sentence@417 sentence@417 sentence@417 code@422 sentence@444 sentence@446 sentence@448 sentence@453 sentence@456 sentence@457 sentence@461 sentence@463 sentence@466 sentence@466 sentence@466 code@471 sentence@486 code@488 sentence@493 sentence@493 sentence@497 code@500 sentence@508 sentence@510 code@512 sentence@527 sentence@527 sentence@529 sentence@530 sentence@532 sentence@537 code@539 sentence@553 code@556 sentence@563 sentence@564 code@569 sentence@575 sentence@575 code@578
+Guides/Delay-Accepting-Requests.md:592  Delay Accepting Requests > Conclusion
+  heading@592 sentence@594 sentence@598 sentence@599 sentence@601 sentence@605 sentence@607 sentence@608
+Guides/Detecting-When-Clients-Abort.md:1  Guides/Detecting-When-Clients-Abort.md
+  sentence@1
+Guides/Detecting-When-Clients-Abort.md:3  Detecting When Clients Abort
+  heading@3
+Guides/Detecting-When-Clients-Abort.md:5  Detecting When Clients Abort > Introduction
+  heading@5 sentence@7 sentence@8 sentence@10 sentence@13 sentence@14 sentence@16
+Guides/Detecting-When-Clients-Abort.md:19  Detecting When Clients Abort > Solution
+  heading@19
+Guides/Detecting-When-Clients-Abort.md:21  Detecting When Clients Abort > Solution > Overview
+  heading@21 sentence@23 sentence@25 sentence@29 sentence@30
+Guides/Detecting-When-Clients-Abort.md:33  Detecting When Clients Abort > Solution > Hands-on
+  heading@33 sentence@35 code@37 sentence@81 list@84 list@86 list@87 list@88 sentence@90 sentence@93 sentence@94 sentence@97 code@99 sentence@111 code@114 sentence@125
+Guides/Detecting-When-Clients-Abort.md:129  Detecting When Clients Abort > Solution > Testing
+  heading@129 sentence@131 sentence@132 sentence@133 code@135 sentence@154
+Guides/Detecting-When-Clients-Abort.md:157  Detecting When Clients Abort > Conclusion
+  heading@157 sentence@159 sentence@163 sentence@164 sentence@167 sentence@168 sentence@170
+Guides/Getting-Started.md:1  Guides/Getting-Started.md
+  sentence@1
+Guides/Getting-Started.md:3  Getting Started
+  heading@3 sentence@5 sentence@5 sentence@7 sentence@8 sentence@11
+Guides/Getting-Started.md:13  Getting Started > Install
+  heading@13 sentence@16 code@17 sentence@21 code@22
+Guides/Getting-Started.md:26  Getting Started > Your first server
+  heading@26 sentence@29 code@30 blockquote@59 sentence@67 sentence@67 code@69 sentence@99 sentence@101 sentence@102 sentence@106 blockquote@109
+Guides/Getting-Started.md:135  Getting Started > Your first plugin
+  heading@135 sentence@138 sentence@141 sentence@143 code@146 code@168 code@189 sentence@209 sentence@210 sentence@212 sentence@213 sentence@216 sentence@217 sentence@218 sentence@220 sentence@223 sentence@225 sentence@228 code@230 sentence@234 code@235 code@259 sentence@281 code@282 code@303 sentence@328 code@329 sentence@380 sentence@382 sentence@384 sentence@387 sentence@389 sentence@394 sentence@397 sentence@398 sentence@402
+Guides/Getting-Started.md:407  Getting Started > Loading order of your plugins
+  heading@407 sentence@410 code@412 sentence@419 sentence@422 sentence@423 code@426
+Guides/Getting-Started.md:448  Getting Started > Validate your data
+  heading@448 sentence@451 sentence@453 sentence@456 code@457 sentence@478 sentence@482
+Guides/Getting-Started.md:485  Getting Started > Serialize your data
+  heading@485 sentence@488 sentence@488 sentence@491 sentence@491 code@493 sentence@515 sentence@516 sentence@517
+Guides/Getting-Started.md:521  Getting Started > Parsing request payloads
+  heading@521 sentence@524 sentence@528 code@530 sentence@540
+Guides/Getting-Started.md:544  Getting Started > Extend your server
+  heading@544 sentence@547 sentence@551
+Guides/Getting-Started.md:554  Getting Started > Test your server
+  heading@554 sentence@557 sentence@560
+Guides/Getting-Started.md:562  Getting Started > Run your server from CLI
+  heading@562 sentence@565 sentence@569 code@571 sentence@575 sentence@577 code@578 sentence@586 code@587 sentence@598 code@599
+Guides/Getting-Started.md:603  Getting Started > Slides and Videos
+  heading@603 list@606 list@614
+Guides/Migration-Guide-V5.md:1  V5 Migration Guide
+  heading@1 sentence@3 sentence@5 sentence@6
+Guides/Migration-Guide-V5.md:9  V5 Migration Guide > Long Term Support Cycle
+  heading@9 sentence@11 sentence@11 sentence@14 sentence@14
+Guides/Migration-Guide-V5.md:17  V5 Migration Guide > Long Term Support Cycle > Why Node.js v20?
+  heading@17 sentence@19 sentence@21 sentence@24
+Guides/Migration-Guide-V5.md:27  V5 Migration Guide > Breaking Changes
+  heading@27
+Guides/Migration-Guide-V5.md:29  V5 Migration Guide > Breaking Changes > Full JSON Schema is now required for querystring, params and body and response schemas
+  heading@29 sentence@31 sentence@32 sentence@35 code@40 code@53 sentence@70 sentence@72 sentence@73 sentence@75
+Guides/Migration-Guide-V5.md:78  V5 Migration Guide > Breaking Changes > New logger constructor signature
+  heading@78 sentence@80 sentence@82 sentence@84 sentence@85 code@87 code@95
+Guides/Migration-Guide-V5.md:103  V5 Migration Guide > Breaking Changes > useSemicolonDelimiter false by default
+  heading@103 sentence@105 sentence@107 sentence@110 code@113
+Guides/Migration-Guide-V5.md:119  V5 Migration Guide > Breaking Changes > The parameters object no longer has a prototype
+  heading@119 sentence@121 sentence@121 sentence@122 code@125 code@133 sentence@141
+Guides/Migration-Guide-V5.md:144  V5 Migration Guide > Breaking Changes > Type Providers now differentiate between validator and serializer schemas
+  heading@144 sentence@146 sentence@147 sentence@150 sentence@154 code@157
+Guides/Migration-Guide-V5.md:172  V5 Migration Guide > Breaking Changes > Changes to the .listen() method
+  heading@172 sentence@174 sentence@175 code@177 sentence@182 code@184 sentence@189
+Guides/Migration-Guide-V5.md:192  V5 Migration Guide > Breaking Changes > Direct return of trailers has been removed
+  heading@192 sentence@194 sentence@195 code@197 code@207 sentence@217 sentence@218
+Guides/Migration-Guide-V5.md:221  V5 Migration Guide > Breaking Changes > Streamlined access to route definition
+  heading@221 sentence@223 tableRow@228 tableRow@229 tableRow@230 tableRow@231 tableRow@232 tableRow@233 sentence@235
+Guides/Migration-Guide-V5.md:237  V5 Migration Guide > Breaking Changes > reply.redirect() has a new signature
+  heading@237 sentence@239 code@242 sentence@247 code@249 sentence@254
+Guides/Migration-Guide-V5.md:258  V5 Migration Guide > Breaking Changes > Modifying reply.sent is now forbidden
+  heading@258 sentence@260 sentence@262 code@264 sentence@272 code@274 sentence@282
+Guides/Migration-Guide-V5.md:285  V5 Migration Guide > Breaking Changes > Constraints for route versioning signature changes
+  heading@285 sentence@287 sentence@288 tableRow@293 tableRow@294
+Guides/Migration-Guide-V5.md:296  V5 Migration Guide > Breaking Changes > HEAD routes requires to register before GET when exposeHeadRoutes: true
+  heading@296 sentence@298 sentence@301 code@304 code@317 sentence@330 code@332 sentence@345
+Guides/Migration-Guide-V5.md:348  V5 Migration Guide > Breaking Changes > Removed request.connection
+  heading@348 sentence@350 sentence@351 code@353 code@361 sentence@369
+Guides/Migration-Guide-V5.md:372  V5 Migration Guide > Breaking Changes > reply.getResponseTime() has been removed, use reply.elapsedTime instead
+  heading@372 sentence@374 sentence@375 code@377 code@385 sentence@393
+Guides/Migration-Guide-V5.md:396  V5 Migration Guide > Breaking Changes > fastify.hasRoute() now matches the behavior of find-my-way
+  heading@396 sentence@398 code@401 code@411
+Guides/Migration-Guide-V5.md:422  V5 Migration Guide > Breaking Changes > Removal of some non-standard HTTP methods
+  heading@422 sentence@424 list@425 list@426 list@427 list@428 list@429 list@430 list@431 list@432 list@433 sentence@435 code@437 sentence@450
+Guides/Migration-Guide-V5.md:453  V5 Migration Guide > Breaking Changes > Removed support from reference types in decorators
+  heading@453 sentence@455 code@458 code@463 sentence@471 code@473 sentence@478 code@480 sentence@489
+Guides/Migration-Guide-V5.md:491  V5 Migration Guide > Breaking Changes > Remove support for DELETE with a Content-Type: application/json header and an empty body
+  heading@491 sentence@493 sentence@495 sentence@497
+Guides/Migration-Guide-V5.md:499  V5 Migration Guide > Breaking Changes > Plugins cannot mix callback/promise API anymore
+  heading@499 sentence@501 sentence@502 code@504 code@511 sentence@518 code@520
+Guides/Migration-Guide-V5.md:527  V5 Migration Guide > Breaking Changes > Requests now have host, hostname, and port, and hostname no longer includes the port number
+  heading@527 sentence@529 sentence@531 sentence@535
+Guides/Migration-Guide-V5.md:538  V5 Migration Guide > Breaking Changes > Removes getDefaultRoute and setDefaultRoute methods
+  heading@538 sentence@540 sentence@542 sentence@545
+Guides/Migration-Guide-V5.md:548  V5 Migration Guide > New Features
+  heading@548
+Guides/Migration-Guide-V5.md:550  V5 Migration Guide > New Features > Diagnostic Channel support
+  heading@550 sentence@552 code@556 sentence@594
+Guides/Migration-Guide-V5.md:597  V5 Migration Guide > Contributors
+  heading@597 sentence@599 sentence@600 tableRow@605 tableRow@606 tableRow@607 tableRow@608 tableRow@609 tableRow@610 tableRow@611 tableRow@612 tableRow@613 tableRow@614 tableRow@615 tableRow@616 tableRow@617 tableRow@618 tableRow@619 tableRow@620 tableRow@621 tableRow@622 tableRow@623 tableRow@624 tableRow@625 tableRow@626 tableRow@627 tableRow@628 tableRow@629 tableRow@630 tableRow@631 tableRow@632 tableRow@633 tableRow@634 tableRow@635 tableRow@636 tableRow@637 tableRow@638 tableRow@639 tableRow@640 tableRow@641 tableRow@642 tableRow@643 tableRow@644 tableRow@645 tableRow@646 tableRow@647 tableRow@648 tableRow@649 tableRow@650 tableRow@651 tableRow@652 tableRow@653 tableRow@654 tableRow@655 tableRow@656 tableRow@657 tableRow@658 tableRow@659 tableRow@660 tableRow@661 tableRow@662 tableRow@663 tableRow@664 tableRow@665 tableRow@666 tableRow@667 tableRow@668 tableRow@669 tableRow@670 tableRow@671 tableRow@672 tableRow@673 tableRow@674 tableRow@675 tableRow@676 tableRow@677 tableRow@678 tableRow@679 tableRow@680 tableRow@681 tableRow@682 tableRow@683 tableRow@684 tableRow@685 tableRow@686 tableRow@687 tableRow@688 tableRow@689 tableRow@690 tableRow@691 tableRow@692 tableRow@693 tableRow@694 tableRow@695 tableRow@696 tableRow@697 tableRow@698 tableRow@699 tableRow@700 tableRow@701 tableRow@702 tableRow@703 tableRow@704 tableRow@705 tableRow@706 tableRow@707 tableRow@708 tableRow@709 tableRow@710 tableRow@711 tableRow@712 tableRow@713 tableRow@714 tableRow@715 tableRow@716 tableRow@717 tableRow@718
+Guides/Plugins-Guide.md:1  Guides/Plugins-Guide.md
+  sentence@1
+Guides/Plugins-Guide.md:3  The hitchhiker's guide to plugins
+  heading@3 sentence@4 sentence@6 sentence@6 sentence@8 sentence@12 list@13
+Guides/Plugins-Guide.md:25  The hitchhiker's guide to plugins > Register
+  heading@25 sentence@28 sentence@31 sentence@31 code@34 sentence@40 sentence@42 sentence@44 sentence@46 sentence@46 sentence@50 sentence@51 sentence@54 sentence@54 sentence@58 sentence@60 code@62 sentence@65 sentence@68 sentence@70 sentence@70 sentence@71 sentence@74 code@77 sentence@87
+Guides/Plugins-Guide.md:91  The hitchhiker's guide to plugins > Decorators
+  heading@91 sentence@94 sentence@95 sentence@95 code@97 code@103 sentence@107 sentence@107 sentence@110 sentence@111 code@113 sentence@116 sentence@119 sentence@120 code@122 sentence@136 sentence@139 sentence@143 code@145 sentence@164 sentence@166 sentence@169 sentence@172 sentence@172 sentence@175 sentence@175 code@177 sentence@188 code@189 sentence@199 sentence@205 code@206 sentence@220 code@221 sentence@238
+Guides/Plugins-Guide.md:243  The hitchhiker's guide to plugins > Hooks
+  heading@243 sentence@246 code@248 sentence@261 sentence@261 sentence@264 sentence@264 code@267 sentence@283 sentence@283 sentence@286 sentence@287 code@289 sentence@309 sentence@311 sentence@312 sentence@313 code@316 sentence@352 sentence@355
+Guides/Plugins-Guide.md:359  The hitchhiker's guide to plugins > How to handle encapsulation and distribution
+  heading@359 sentence@362 sentence@363 sentence@366 sentence@367 sentence@371 sentence@371 sentence@374 sentence@374 code@377 sentence@390 sentence@393 sentence@395 sentence@400 code@403 sentence@420 sentence@422
+Guides/Plugins-Guide.md:425  The hitchhiker's guide to plugins > ESM support
+  heading@425 sentence@428 sentence@429 code@432
+Guides/Plugins-Guide.md:443  The hitchhiker's guide to plugins > Handle errors
+  heading@443 sentence@446 sentence@446 sentence@447 sentence@448 sentence@452 orderedList@454 orderedList@456 orderedList@458 orderedList@460 sentence@465 code@466
+Guides/Plugins-Guide.md:474  The hitchhiker's guide to plugins > Custom errors
+  heading@474 sentence@477 code@481
+Guides/Plugins-Guide.md:487  The hitchhiker's guide to plugins > Emit Warnings
+  heading@487 sentence@490 code@494
+Guides/Plugins-Guide.md:500  The hitchhiker's guide to plugins > Let's start!
+  heading@500 sentence@503 sentence@504 sentence@508 list@509 list@511 list@514 list@516 sentence@520 sentence@520
+Guides/Prototype-Poisoning.md:1  Guides/Prototype-Poisoning.md
+  blockquote@1
+Guides/Prototype-Poisoning.md:7  History behind prototype poisoning
+  heading@7 sentence@10 sentence@11 sentence@14 sentence@18 sentence@19
+Guides/Prototype-Poisoning.md:22  History behind prototype poisoning > BOOM
+  heading@22 sentence@25 sentence@25 sentence@27 sentence@30 sentence@31 sentence@31 sentence@32 sentence@36 sentence@37
+Guides/Prototype-Poisoning.md:40  History behind prototype poisoning > Prototype in a nutshell
+  heading@40 sentence@43 sentence@44 sentence@44 sentence@45 sentence@46 sentence@49 sentence@51 sentence@54 code@56 sentence@67 sentence@68 sentence@69 sentence@72 code@76 sentence@82 sentence@82 sentence@82 sentence@83 sentence@85 sentence@88 sentence@88 sentence@89 sentence@92 code@94 sentence@102 sentence@107 sentence@109
+Guides/Prototype-Poisoning.md:114  History behind prototype poisoning > Oh joi!
+  heading@114 sentence@117 sentence@118 sentence@119 sentence@120 sentence@120 sentence@122 sentence@124 sentence@124 sentence@128
+Guides/Prototype-Poisoning.md:130  History behind prototype poisoning > The right thing
+  heading@130 sentence@133 sentence@134 sentence@134 sentence@136 sentence@140 sentence@142 sentence@147 sentence@147 sentence@152 sentence@152 sentence@154 sentence@157
+Guides/Prototype-Poisoning.md:165  History behind prototype poisoning > A detour
+  heading@165 sentence@168 sentence@170 sentence@172 sentence@173 sentence@174
+Guides/Prototype-Poisoning.md:178  History behind prototype poisoning > A development
+  heading@178 sentence@181 sentence@183 sentence@186 sentence@186 sentence@189 sentence@193 sentence@194 sentence@195 sentence@199
+Guides/Prototype-Poisoning.md:203  History behind prototype poisoning > Sigh of relief
+  heading@203 sentence@206 sentence@206 sentence@208 sentence@211 sentence@211 sentence@215 sentence@217
+Guides/Prototype-Poisoning.md:220  History behind prototype poisoning > Good news, bad news, no news?
+  heading@220 sentence@223 sentence@223 sentence@223 sentence@225 sentence@225 sentence@228 sentence@230 sentence@233 sentence@234 sentence@235 sentence@236 sentence@240 sentence@242 sentence@242 sentence@243 sentence@243 sentence@245 sentence@248 sentence@250 sentence@251
+Guides/Prototype-Poisoning.md:253  History behind prototype poisoning > The solution business
+  heading@253 sentence@256 sentence@256 sentence@257 sentence@261 sentence@261 sentence@262 sentence@263 sentence@263 sentence@264 sentence@267 sentence@268 sentence@269 sentence@270 sentence@275 sentence@276 sentence@277 sentence@278 sentence@282 sentence@282 sentence@284 sentence@287 sentence@287 sentence@288 sentence@288 sentence@289 sentence@292 sentence@293 sentence@294 sentence@295 sentence@297 sentence@298 sentence@301 sentence@302
+Guides/Prototype-Poisoning.md:306  History behind prototype poisoning > Putting it to the test
+  heading@306 sentence@309 sentence@309 sentence@312 sentence@315 sentence@316 sentence@317 sentence@321 sentence@321 sentence@323 sentence@326 sentence@327 sentence@329
+Guides/Prototype-Poisoning.md:332  History behind prototype poisoning > hapi ever-after
+  heading@332 sentence@335 sentence@337 sentence@337 sentence@338 sentence@340 sentence@341 sentence@344 sentence@344 sentence@346 sentence@349 sentence@349 sentence@353 sentence@356 sentence@356
+Guides/Prototype-Poisoning.md:359  History behind prototype poisoning > The after in happy ever-after
+  heading@359 sentence@362 sentence@365 sentence@365 sentence@366 sentence@367 sentence@371 sentence@372 sentence@376 sentence@377 sentence@378 sentence@380
+Guides/Recommendations.md:1  Guides/Recommendations.md
+  sentence@1
+Guides/Recommendations.md:3  Recommendations
+  heading@3 sentence@5 list@7 list@10 list@11 list@12
+Guides/Recommendations.md:14  Use A Reverse Proxy
+  heading@14 sentence@17 sentence@18 sentence@21 sentence@22 sentence@27 orderedList@30 orderedList@31 sentence@33 sentence@34 sentence@36 orderedList@38 orderedList@39 orderedList@40 orderedList@41 orderedList@42 sentence@44 sentence@45
+Guides/Recommendations.md:48  Use A Reverse Proxy > HAProxy
+  heading@48 code@50
+Guides/Recommendations.md:170  Use A Reverse Proxy > Nginx
+  heading@170 code@172
+Guides/Recommendations.md:285  Kubernetes
+  heading@285 sentence@288 sentence@290 sentence@290 sentence@291 code@295
+Guides/Recommendations.md:307  Capacity Planning For Production
+  heading@307 sentence@310 sentence@314 sentence@317 sentence@321 list@323 list@329 list@333 sentence@337
+Guides/Recommendations.md:341  Running Multiple Instances
+  heading@341 sentence@344 sentence@345 sentence@350 sentence@352
+Guides/Serverless.md:1  Guides/Serverless.md
+  sentence@1 sentence@3 sentence@4 sentence@5
+Guides/Serverless.md:9  Should you use Fastify in a serverless platform?
+  heading@9 sentence@11 sentence@11 sentence@13 sentence@14 sentence@19 sentence@20
+Guides/Serverless.md:25  Contents
+  heading@25 list@27 list@28 list@29 list@30 list@31 list@32 list@33
+Guides/Serverless.md:35  AWS
+  heading@35 sentence@37 list@39 list@41 sentence@45
+Guides/Serverless.md:47  AWS > Using @fastify/aws-lambda
+  heading@47 sentence@49
+Guides/Serverless.md:53  AWS > Using @fastify/aws-lambda > app.js
+  heading@53 code@55 sentence@76 sentence@77 sentence@80
+Guides/Serverless.md:84  AWS > Using @fastify/aws-lambda > lambda.js
+  heading@84 code@86 sentence@103 sentence@107 sentence@108
+Guides/Serverless.md:112  AWS > Using @fastify/aws-lambda > Example
+  heading@112 sentence@114
+Guides/Serverless.md:119  AWS > Considerations
+  heading@119 list@121 list@123
+Guides/Serverless.md:126  AWS > Considerations > Beyond API Gateway
+  heading@126 sentence@128
+Guides/Serverless.md:132  Genezio
+  heading@132 sentence@134 sentence@137
+Guides/Serverless.md:139  Google Cloud Functions
+  heading@139
+Guides/Serverless.md:141  Google Cloud Functions > Creation of Fastify instance
+  heading@141 code@142
+Guides/Serverless.md:148  Google Cloud Functions > Add Custom contentTypeParser to Fastify instance
+  heading@148 sentence@150 code@157
+Guides/Serverless.md:163  Google Cloud Functions > Define your endpoint (examples)
+  heading@163 sentence@165 code@166 sentence@172 code@173
+Guides/Serverless.md:203  Google Cloud Functions > Implement and export the function
+  heading@203 sentence@205 code@208
+Guides/Serverless.md:217  Google Cloud Functions > Local test
+  heading@217 sentence@219 sentence@222 code@223 sentence@227 code@228 sentence@232 code@233 sentence@237 code@238 sentence@245
+Guides/Serverless.md:247  Google Cloud Functions > Deploy
+  heading@247 code@248
+Guides/Serverless.md:253  Google Cloud Functions > Deploy > Read logs
+  heading@253 code@254
+Guides/Serverless.md:258  Google Cloud Functions > Deploy > Example request to /hello endpoint
+  heading@258 code@259
+Guides/Serverless.md:266  Google Cloud Functions > References
+  heading@266 list@267
+Guides/Serverless.md:270  Google Firebase Functions
+  heading@270 sentence@272
+Guides/Serverless.md:276  Google Firebase Functions > The onRequest() handler
+  heading@276 sentence@278 sentence@280 code@282
+Guides/Serverless.md:286  Google Firebase Functions > Creation of Fastify instance
+  heading@286 sentence@288 sentence@290 code@292
+Guides/Serverless.md:304  Google Firebase Functions > Add Custom contentTypeParser to Fastify instance and define endpoints
+  heading@304 sentence@306 sentence@307 sentence@311 code@313
+Guides/Serverless.md:335  Google Firebase Functions > Export the function using Firebase onRequest
+  heading@335 sentence@337 code@340
+Guides/Serverless.md:344  Google Firebase Functions > Local test
+  heading@344 sentence@346 code@348 sentence@352 code@354
+Guides/Serverless.md:358  Google Firebase Functions > Deploy
+  heading@358 sentence@360 code@362
+Guides/Serverless.md:366  Google Firebase Functions > Deploy > Read logs
+  heading@366 sentence@368 code@370
+Guides/Serverless.md:374  Google Firebase Functions > References
+  heading@374 list@375 list@376
+Guides/Serverless.md:378  Google Cloud Run
+  heading@378 sentence@380 sentence@381 sentence@382 sentence@386
+Guides/Serverless.md:390  Google Cloud Run > Adjust Fastify server
+  heading@390 sentence@392 code@395
+Guides/Serverless.md:429  Google Cloud Run > Add a Dockerfile
+  heading@429 sentence@431 sentence@431 code@435
+Guides/Serverless.md:458  Google Cloud Run > Add a .dockerignore
+  heading@458 sentence@460 code@463
+Guides/Serverless.md:470  Google Cloud Run > Submit build
+  heading@470 sentence@472 code@476
+Guides/Serverless.md:480  Google Cloud Run > Deploy Image
+  heading@480 sentence@482 code@484 sentence@488
+Guides/Serverless.md:490  netlify-lambda
+  heading@490 sentence@492 sentence@494
+Guides/Serverless.md:497  netlify-lambda > functions/server.js
+  heading@497 code@499
+Guides/Serverless.md:503  netlify-lambda > netlify.toml
+  heading@503 code@505
+Guides/Serverless.md:516  netlify-lambda > webpack.config.netlify.js
+  heading@516 sentence@518 code@520
+Guides/Serverless.md:557  netlify-lambda > Scripts
+  heading@557 sentence@559 code@561 sentence@569
+Guides/Serverless.md:571  Vercel
+  heading@571 sentence@573 sentence@574 sentence@579 sentence@583 sentence@584
+Guides/Testing.md:1  Guides/Testing.md
+  sentence@1
+Guides/Testing.md:3  Testing
+  heading@3 sentence@6 sentence@6
+Guides/Testing.md:11  Testing > Application
+  heading@11 sentence@13 sentence@16
+Guides/Testing.md:18  Testing > Application > Separating concerns makes testing easy
+  heading@18 sentence@20 sentence@22 code@24 sentence@41 code@43
+Guides/Testing.md:63  Testing > Application > Benefits of using fastify.inject()
+  heading@63 sentence@65 sentence@68 sentence@71 code@73 sentence@92 sentence@95 sentence@96 sentence@97 sentence@101 code@103
+Guides/Testing.md:110  Testing > Application > Testing with HTTP injection
+  heading@110 sentence@112 sentence@114 sentence@116 sentence@118 code@120 sentence@138 sentence@140 code@141 sentence@154 code@156 sentence@167 code@169 sentence@187 code@188
+Guides/Testing.md:197  Testing > Application > Testing with HTTP injection > Another Example:
+  heading@197 sentence@199 code@200 sentence@216 code@217
+Guides/Testing.md:242  Testing > Application > Testing with a running server
+  heading@242 sentence@243
+Guides/Testing.md:246  Testing > Application > Testing with a running server > Example:
+  heading@246 sentence@248 sentence@250 code@251 sentence@282 sentence@286 code@287 sentence@314 code@316
+Guides/Testing.md:336  Testing > Application > How to inspect node tests
+  heading@336 orderedList@337 code@338 orderedList@341 code@342 list@345 list@346 orderedList@347 sentence@350
+Guides/Testing.md:355  Testing > Plugins
+  heading@355 sentence@356 sentence@359 sentence@361 code@363 sentence@374 sentence@374 sentence@376 code@378 sentence@404 sentence@405 code@407 sentence@412 sentence@414 sentence@416 sentence@418 sentence@420 code@422 sentence@449 sentence@451 sentence@453 code@455
+Guides/Write-Plugin.md:1  Guides/Write-Plugin.md
+  sentence@1
+Guides/Write-Plugin.md:3  How to write a good plugin
+  heading@3 sentence@4 sentence@4 sentence@7 sentence@8 sentence@9 sentence@12 sentence@12
+Guides/Write-Plugin.md:16  How to write a good plugin > Code
+  heading@16 sentence@17 sentence@18 sentence@22 sentence@22 sentence@23 sentence@25
+Guides/Write-Plugin.md:28  How to write a good plugin > Documentation
+  heading@28 sentence@29 sentence@29 sentence@30 sentence@34 list@36 list@37 list@38 list@39 list@40
+Guides/Write-Plugin.md:42  How to write a good plugin > License
+  heading@42 sentence@43 sentence@46 sentence@47
+Guides/Write-Plugin.md:51  How to write a good plugin > Examples
+  heading@51 sentence@52 sentence@52 sentence@53
+Guides/Write-Plugin.md:55  How to write a good plugin > Test
+  heading@55 sentence@56 sentence@58 sentence@58 sentence@62 sentence@62 sentence@65
+Guides/Write-Plugin.md:68  How to write a good plugin > Code Linter
+  heading@68 sentence@69 sentence@70 sentence@73
+Guides/Write-Plugin.md:76  How to write a good plugin > Continuous Integration
+  heading@76 sentence@77 sentence@79 sentence@84
+Guides/Write-Plugin.md:88  How to write a good plugin > Let's start!
+  heading@88 sentence@89 sentence@90 sentence@90 sentence@90 sentence@94 list@95 list@97 list@100 list@102
+Reference/ContentTypeParser.md:1  Reference/ContentTypeParser.md
+  sentence@1
+Reference/ContentTypeParser.md:3  Content-Type Parser
+  heading@3 sentence@4 sentence@5 sentence@8 sentence@10 sentence@13 sentence@14 sentence@17 sentence@20 sentence@20 sentence@22 blockquote@26
+Reference/ContentTypeParser.md:33  Content-Type Parser > Usage
+  heading@33 code@34 sentence@66 sentence@67 sentence@69 code@72
+Reference/ContentTypeParser.md:83  Content-Type Parser > Using addContentTypeParser with fastify.register
+  heading@83 sentence@84 sentence@85
+Reference/ContentTypeParser.md:88  Content-Type Parser > Using addContentTypeParser with fastify.register > Correct Usage
+  heading@88 code@89 sentence@104
+Reference/ContentTypeParser.md:107  Content-Type Parser > Using addContentTypeParser with fastify.register > hasContentTypeParser
+  heading@107 sentence@109 code@112
+Reference/ContentTypeParser.md:122  Content-Type Parser > Using addContentTypeParser with fastify.register > removeContentTypeParser
+  heading@122 sentence@124 code@127
+Reference/ContentTypeParser.md:138  Content-Type Parser > Using addContentTypeParser with fastify.register > removeAllContentTypeParsers
+  heading@138 sentence@139 sentence@140 code@145 blockquote@155
+Reference/ContentTypeParser.md:158  Content-Type Parser > Using addContentTypeParser with fastify.register > Body Parser
+  heading@158 sentence@159 sentence@159 sentence@160 sentence@161 sentence@163 code@165 sentence@177
+Reference/ContentTypeParser.md:181  Content-Type Parser > Using addContentTypeParser with fastify.register > Body Parser > Custom Parser Options
+  heading@181 list@182 list@184
+Reference/ContentTypeParser.md:188  Content-Type Parser > Using addContentTypeParser with fastify.register > Catch-All
+  heading@188 sentence@189 code@190 sentence@199 sentence@202 sentence@202 code@204 sentence@210 code@212 sentence@218 code@221 sentence@238 sentence@241 code@244
+Reference/Decorators.md:1  Reference/Decorators.md
+  sentence@1
+Reference/Decorators.md:3  Decorators
+  heading@3 sentence@5 sentence@6 sentence@10 sentence@10 sentence@11 sentence@12 sentence@15 sentence@16 sentence@18 code@21 sentence@37 sentence@38 code@41 sentence@56 sentence@57 sentence@58 sentence@59
+Reference/Decorators.md:64  Decorators > Usage
+  heading@64
+Reference/Decorators.md:67  Decorators > Usage > decorate(name, value, [dependencies])
+  heading@67 sentence@70 sentence@72 code@74 sentence@80 code@82 sentence@89 code@91 sentence@97 code@100 sentence@114 sentence@115 sentence@116 code@119 sentence@152 sentence@155 sentence@156
+Reference/Decorators.md:159  Decorators > Usage > decorateReply(name, value, [dependencies])
+  heading@159 sentence@162 code@164 sentence@170 sentence@173 code@175 sentence@179 sentence@181 sentence@183 code@186 sentence@199
+Reference/Decorators.md:201  Decorators > Usage > decorateRequest(name, value, [dependencies])
+  heading@201 sentence@204 code@207 sentence@213 sentence@216 code@218 sentence@222 sentence@224 sentence@226 sentence@229 code@231 sentence@244 sentence@247 code@249 sentence@264 sentence@266
+Reference/Decorators.md:268  Decorators > Usage > hasDecorator(name)
+  heading@268 sentence@271 code@273
+Reference/Decorators.md:277  Decorators > Usage > hasRequestDecorator
+  heading@277 sentence@280 code@282
+Reference/Decorators.md:286  Decorators > Usage > hasReplyDecorator
+  heading@286 sentence@289 code@291
+Reference/Decorators.md:295  Decorators > Decorators and Encapsulation
+  heading@295 sentence@298 sentence@300 code@302 sentence@323 code@325
+Reference/Decorators.md:348  Decorators > Getters and Setters
+  heading@348 sentence@351 sentence@352 code@355 sentence@363 code@365
+Reference/Decorators.md:369  Decorators > getDecorator<T> API
+  heading@369 sentence@371 sentence@372
+Reference/Decorators.md:375  Decorators > getDecorator<T> API > Use cases
+  heading@375 sentence@377 sentence@379 sentence@382 code@384 sentence@395 sentence@397 code@399 sentence@406 sentence@407 sentence@409 code@411 sentence@420 sentence@422 code@424 sentence@438 sentence@442 code@444
+Reference/Decorators.md:479  Decorators > getDecorator<T> API > Bound functions inference
+  heading@479 sentence@481 code@484 sentence@492 sentence@496 code@498
+Reference/Decorators.md:512  Decorators > Request.setDecorator<T> Method
+  heading@512 sentence@514 sentence@516
+Reference/Decorators.md:519  Decorators > Request.setDecorator<T> Method > Use Cases
+  heading@519 sentence@521 sentence@523 code@525 sentence@532 sentence@534 sentence@536 code@538 sentence@548 sentence@550 code@553 sentence@559 code@562
+Reference/Encapsulation.md:1  Reference/Encapsulation.md
+  sentence@1
+Reference/Encapsulation.md:3  Encapsulation
+  heading@3 sentence@6 sentence@6 sentence@8 sentence@11 sentence@13 orderedList@15 orderedList@16 orderedList@17 sentence@22 sentence@23 sentence@28 sentence@30 sentence@34 code@37 sentence@98 orderedList@101 orderedList@104 orderedList@106 orderedList@108 sentence@110 code@112
+Reference/Encapsulation.md:123  Sharing Between Contexts
+  heading@123 sentence@126 sentence@126 sentence@127 sentence@131 code@134 sentence@181 code@183
+Reference/Errors.md:1  Reference/Errors.md
+  sentence@1
+Reference/Errors.md:3  Errors
+  heading@3 sentence@6 list@7
+Reference/Errors.md:103  Errors > Error Handling In Node.js
+  heading@103
+Reference/Errors.md:106  Errors > Error Handling In Node.js > Uncaught Errors
+  heading@106 sentence@107 sentence@109 sentence@112
+Reference/Errors.md:116  Errors > Error Handling In Node.js > Catching Errors In Promises
+  heading@116 sentence@117
+Reference/Errors.md:119  Errors > Errors In Fastify
+  heading@119 sentence@120 sentence@120
+Reference/Errors.md:123  Errors > Errors In Fastify > Errors In Input Data
+  heading@123 sentence@124
+Reference/Errors.md:127  Errors > Errors In Fastify > Catching Uncaught Errors In Fastify
+  heading@127 sentence@128 sentence@129 orderedList@131 orderedList@132 sentence@135 sentence@138
+Reference/Errors.md:141  Errors > Errors In Fastify Lifecycle Hooks And A Custom Error Handler
+  heading@141 sentence@143 blockquote@144 sentence@148 sentence@151 sentence@153 sentence@157 sentence@157 sentence@158 sentence@162 list@164 list@170 sentence@177 sentence@181 sentence@183 sentence@184 sentence@187 sentence@187 sentence@190 sentence@193 code@194
+Reference/Errors.md:236  Errors > Fastify Error Codes
+  heading@236 sentence@239 code@240 sentence@248 code@249 sentence@284 tableRow@288 tableRow@289 tableRow@290 tableRow@291 tableRow@292 tableRow@293 tableRow@294 tableRow@295 tableRow@296 tableRow@297 tableRow@298 tableRow@299 tableRow@300 tableRow@301 tableRow@302 tableRow@303 tableRow@304 tableRow@305 tableRow@306 tableRow@307 tableRow@308 tableRow@309 tableRow@310 tableRow@311 tableRow@312 tableRow@313 tableRow@314 tableRow@315 tableRow@316 tableRow@317 tableRow@318 tableRow@319 tableRow@320 tableRow@321 tableRow@322 tableRow@323 tableRow@324 tableRow@325 tableRow@326 tableRow@327 tableRow@328 tableRow@329 tableRow@330 tableRow@331 tableRow@332 tableRow@333 tableRow@334 tableRow@335 tableRow@336 tableRow@337 tableRow@338 tableRow@339 tableRow@340 tableRow@341 tableRow@342 tableRow@343 tableRow@344 tableRow@345 tableRow@346 tableRow@347 tableRow@348 tableRow@349 tableRow@350 tableRow@351 tableRow@352 tableRow@353 tableRow@354 tableRow@355 tableRow@356 tableRow@357 tableRow@358 tableRow@359 tableRow@360 tableRow@361 tableRow@362 tableRow@363 tableRow@364 tableRow@365 tableRow@366 tableRow@367 tableRow@368 tableRow@369 tableRow@370 tableRow@371 tableRow@372
+Reference/HTTP2.md:1  Reference/HTTP2.md
+  sentence@1
+Reference/HTTP2.md:3  HTTP2
+  heading@3 sentence@5 sentence@7 sentence@9
+Reference/HTTP2.md:11  HTTP2 > Secure (HTTPS)
+  heading@11 sentence@13 code@15 sentence@35 sentence@37 sentence@39 code@42 sentence@64 code@66
+Reference/HTTP2.md:70  HTTP2 > Plain or insecure
+  heading@70 sentence@72 code@75 sentence@89 code@91
+Reference/Hooks.md:1  Reference/Hooks.md
+  sentence@1
+Reference/Hooks.md:3  Hooks
+  heading@3 sentence@5 sentence@6 sentence@9 sentence@9 list@12 list@25 list@32 list@33 list@34 list@35 blockquote@37
+Reference/Hooks.md:41  Request/Reply Hooks
+  heading@41 sentence@43 sentence@45 sentence@47 sentence@50 sentence@51 sentence@53
+Reference/Hooks.md:56  Request/Reply Hooks > onRequest
+  heading@56 code@57 sentence@63 code@64 blockquote@71
+Reference/Hooks.md:75  Request/Reply Hooks > preParsing
+  heading@75 sentence@77 sentence@78 sentence@81 sentence@84 code@86 sentence@92 code@93 blockquote@101 blockquote@105 blockquote@110
+Reference/Hooks.md:113  Request/Reply Hooks > preValidation
+  heading@113 sentence@115 sentence@116 code@118 sentence@124 code@125
+Reference/Hooks.md:132  Request/Reply Hooks > preHandler
+  heading@132 sentence@134 code@137 sentence@143 code@144
+Reference/Hooks.md:150  Request/Reply Hooks > preSerialization
+  heading@150 sentence@152 sentence@153 code@155 sentence@162 code@163 blockquote@169
+Reference/Hooks.md:172  Request/Reply Hooks > onError
+  heading@172 code@173 sentence@179 code@180 sentence@186 sentence@189 sentence@192 blockquote@195
+Reference/Hooks.md:198  Request/Reply Hooks > onSend
+  heading@198 sentence@199 sentence@199 code@201 sentence@208 code@209 sentence@216 code@219 blockquote@227 blockquote@232
+Reference/Hooks.md:236  Request/Reply Hooks > onResponse
+  heading@236 code@237 sentence@243 code@244 sentence@251 sentence@252 blockquote@255
+Reference/Hooks.md:258  Request/Reply Hooks > onTimeout
+  heading@258 code@260 sentence@266 code@267 sentence@273 sentence@275 sentence@276
+Reference/Hooks.md:278  Request/Reply Hooks > onRequestAbort
+  heading@278 code@280 sentence@286 code@287 sentence@293 sentence@294 blockquote@297
+Reference/Hooks.md:300  Request/Reply Hooks > Manage Errors from a hook
+  heading@300 sentence@301 code@305 sentence@311 code@312 sentence@318 sentence@320 code@321
+Reference/Hooks.md:327  Request/Reply Hooks > Respond to a request from a hook
+  heading@327 sentence@329 sentence@330 sentence@332 sentence@334 sentence@336 sentence@340 sentence@343 code@345 sentence@360 sentence@361 code@365 sentence@372 code@375
+Reference/Hooks.md:392  Application Hooks
+  heading@392 sentence@394 list@396 list@397 list@398 list@399 list@400 list@401
+Reference/Hooks.md:403  Application Hooks > onReady
+  heading@403 sentence@404 sentence@405 sentence@405 sentence@406 sentence@407 sentence@409 code@411
+Reference/Hooks.md:426  Application Hooks > onListen
+  heading@426 sentence@428 sentence@428 sentence@429 sentence@430 sentence@432 sentence@435 code@437 blockquote@451
+Reference/Hooks.md:454  Application Hooks > onClose
+  heading@454 sentence@457 sentence@459 sentence@462 code@464
+Reference/Hooks.md:478  Application Hooks > preClose
+  heading@478 sentence@481 sentence@483 sentence@485 code@488
+Reference/Hooks.md:502  Application Hooks > onRoute
+  heading@502 sentence@505 sentence@505 sentence@506 sentence@507 code@509 sentence@524 code@527 sentence@538 sentence@539 sentence@540 code@542 sentence@563
+Reference/Hooks.md:565  Application Hooks > onRegister
+  heading@565 sentence@568 sentence@569 sentence@571 blockquote@575 code@577
+Reference/Hooks.md:606  Scope
+  heading@606 sentence@609 sentence@609 sentence@611 code@615 sentence@622 code@625 sentence@649
+Reference/Hooks.md:654  Route level hooks
+  heading@654 sentence@657 sentence@662 sentence@665 sentence@667 code@669 blockquote@773
+Reference/Hooks.md:775  Using Hooks to Inject Custom Properties
+  heading@775 sentence@778 sentence@779 sentence@781 sentence@783 sentence@785 code@787 sentence@801 sentence@802 sentence@804 sentence@808 code@812 sentence@822
+Reference/Hooks.md:826  Diagnostics Channel Hooks
+  heading@826 sentence@828 sentence@829 sentence@831 sentence@834 sentence@835 code@839 blockquote@860 sentence@863 sentence@865 list@867 list@869 list@871 list@873 list@875 sentence@878 sentence@879 sentence@880 sentence@882 sentence@883 sentence@885 sentence@888 code@890
+Reference/LTS.md:1  Reference/LTS.md
+  sentence@1
+Reference/LTS.md:3  Long Term Support
+  heading@3 sentence@6 orderedList@9 orderedList@13 orderedList@18 orderedList@23 sentence@33 blockquote@35
+Reference/LTS.md:48  Long Term Support > Security Support Beyond LTS
+  heading@48 sentence@50 sentence@52
+Reference/LTS.md:54  Long Term Support > Schedule
+  heading@54 tableRow@59 tableRow@60 tableRow@61 tableRow@62 tableRow@63
+Reference/LTS.md:65  Long Term Support > CI tested operating systems
+  heading@65 sentence@68 tableRow@76 tableRow@77 tableRow@78 tableRow@79 sentence@81
+Reference/Lifecycle.md:1  Reference/Lifecycle.md
+  sentence@1
+Reference/Lifecycle.md:3  Lifecycle
+  heading@3 sentence@6 sentence@8 sentence@8 sentence@10 code@12 sentence@44 list@45 list@46 sentence@48
+Reference/Lifecycle.md:51  Reply Lifecycle
+  heading@51 sentence@54 list@56 list@57 sentence@59 sentence@59 code@62 sentence@80 list@81 list@82 list@84
+Reference/Logging.md:1  Reference/Logging.md
+  sentence@1
+Reference/Logging.md:3  Logging
+  heading@3
+Reference/Logging.md:5  Logging > Enable Logging
+  heading@5 sentence@6 sentence@6 sentence@7 sentence@12
+Reference/Logging.md:16  Logging > Enable Logging > Basic logging setup
+  heading@16 sentence@17 code@19
+Reference/Logging.md:25  Logging > Enable Logging > Environment-Specific Configuration
+  heading@25 sentence@26 code@29 sentence@47 sentence@47
+Reference/Logging.md:50  Logging > Usage
+  heading@50 sentence@51 code@53 sentence@60 code@62
+Reference/Logging.md:66  Logging > Usage > Passing Logger Options
+  heading@66 sentence@67 sentence@67 sentence@69 code@71 sentence@85 code@88
+Reference/Logging.md:100  Logging > Advanced Logger Configuration
+  heading@100
+Reference/Logging.md:103  Logging > Advanced Logger Configuration > Request ID Tracking
+  heading@103 sentence@104 sentence@104 sentence@106
+Reference/Logging.md:110  Logging > Advanced Logger Configuration > Serializers
+  heading@110 sentence@111 sentence@112 sentence@113 code@116 sentence@127 code@130 blockquote@160 code@166 blockquote@187 sentence@191 code@193 blockquote@202 sentence@207
+Reference/Logging.md:209  Logging > Using Custom Loggers
+  heading@209 sentence@210 sentence@210 sentence@215 code@217 sentence@229
+Reference/Logging.md:232  Logging > Log Redaction
+  heading@232 sentence@234 sentence@235 code@238 sentence@260
+Reference/Middleware.md:1  Reference/Middleware.md
+  sentence@1
+Reference/Middleware.md:3  Middleware
+  heading@3 sentence@5 sentence@11 code@15 sentence@25 code@29 sentence@34 sentence@37 sentence@38 sentence@41 sentence@42 sentence@44
+Reference/Middleware.md:47  Middleware > Restrict middleware execution to certain paths
+  heading@47 sentence@50 blockquote@53 code@56
+Reference/Middleware.md:70  Middleware > Alternatives
+  heading@70 sentence@72
+Reference/Plugins.md:1  Reference/Plugins.md
+  sentence@1
+Reference/Plugins.md:3  Plugins
+  heading@3 sentence@4 sentence@5 sentence@8 sentence@10 sentence@13 code@15
+Reference/Plugins.md:19  Plugins > Plugin Options
+  heading@19 sentence@22 sentence@24 sentence@26 list@29 list@30 list@31 sentence@33 sentence@35 sentence@35 code@38 sentence@48 code@50 sentence@58 code@61 sentence@74 sentence@77 sentence@81 sentence@83 sentence@84
+Reference/Plugins.md:88  Plugins > Plugin Options > Route Prefixing option
+  heading@88 sentence@91 sentence@92 sentence@95
+Reference/Plugins.md:99  Plugins > Plugin Options > Error handling
+  heading@99 sentence@102 sentence@104 code@107
+Reference/Plugins.md:125  Plugins > async/await
+  heading@125 sentence@128 code@131 sentence@140 sentence@141
+Reference/Plugins.md:144  Plugins > async/await > ESM support
+  heading@144 sentence@147 code@150
+Reference/Plugins.md:170  Plugins > Create a plugin
+  heading@170 sentence@173 sentence@173 sentence@176 code@177 sentence@186 code@187 sentence@199 sentence@199
+Reference/Plugins.md:202  Plugins > Handle the scope
+  heading@202 sentence@205 sentence@206 sentence@209 list@210 list@211 sentence@213 code@215 sentence@223 sentence@226 sentence@227 code@229
+Reference/Principles.md:1  Technical Principles
+  heading@1 sentence@3 orderedList@6 orderedList@7 orderedList@8 orderedList@9 orderedList@10 orderedList@11 orderedList@12 orderedList@13 orderedList@14 orderedList@15
+Reference/Principles.md:17  Technical Principles > "Zero" Overhead in Production
+  heading@17 sentence@19 sentence@19 sentence@22
+Reference/Principles.md:26  Technical Principles > "Good" Developer Experience
+  heading@26 sentence@28 sentence@29 sentence@32
+Reference/Principles.md:35  Technical Principles > Works great for small and big projects alike
+  heading@35 sentence@37 sentence@37
+Reference/Principles.md:40  Technical Principles > Easy to migrate to microservices (or even serverless) and back
+  heading@40 sentence@42 sentence@42
+Reference/Principles.md:44  Technical Principles > Security and Data Validation
+  heading@44 sentence@46
+Reference/Principles.md:49  Technical Principles > If something could be a plugin, it likely should
+  heading@49 sentence@51 sentence@52
+Reference/Principles.md:55  Technical Principles > Easily testable
+  heading@55 sentence@57
+Reference/Principles.md:59  Technical Principles > Do not monkeypatch core
+  heading@59 sentence@61 sentence@62
+Reference/Principles.md:65  Technical Principles > Semantic Versioning and Long Term Support
+  heading@65 sentence@67
+Reference/Principles.md:70  Technical Principles > Specification adherence
+  heading@70 sentence@72
+Reference/Reply.md:1  Reference/Reply.md
+  sentence@1
+Reference/Reply.md:3  Reply
+  heading@3 list@4
+Reference/Reply.md:43  Reply > Introduction
+  heading@43 sentence@46 sentence@46 list@49 list@50 list@51 list@52 list@54 list@55 list@56 list@57 list@58 list@59 list@60 list@61 list@63 list@64 list@65 list@66 list@67 list@69 list@70 list@73 list@75 list@79 list@84 list@85 list@87 list@89 list@90 list@93 list@94 code@96
+Reference/Reply.md:106  Reply > .code(statusCode)
+  heading@106 sentence@109
+Reference/Reply.md:111  Reply > .elapsedTime
+  heading@111 sentence@114 code@117
+Reference/Reply.md:121  Reply > .statusCode
+  heading@121 sentence@124 sentence@124 code@126
+Reference/Reply.md:132  Reply > .server
+  heading@132 sentence@135 code@138
+Reference/Reply.md:148  Reply > .header(key, value)
+  heading@148 sentence@151 sentence@151 blockquote@154 sentence@160 list@163
+Reference/Reply.md:184  Reply > .headers(object)
+  heading@184 sentence@187 code@189
+Reference/Reply.md:196  Reply > .getHeader(key)
+  heading@196 sentence@199 code@200
+Reference/Reply.md:205  Reply > .getHeaders()
+  heading@205 sentence@208 sentence@209 code@212
+Reference/Reply.md:219  Reply > .removeHeader(key)
+  heading@219 sentence@222 code@223
+Reference/Reply.md:229  Reply > .hasHeader(key)
+  heading@229 sentence@232
+Reference/Reply.md:234  Reply > .writeEarlyHints(hints, callback)
+  heading@234 sentence@237 sentence@237 sentence@239 sentence@242 sentence@244 code@246 sentence@252
+Reference/Reply.md:255  Reply > .trailer(key, function)
+  heading@255 sentence@258 sentence@258 sentence@260 blockquote@263 blockquote@266 code@269
+Reference/Reply.md:293  Reply > .hasTrailer(key)
+  heading@293 sentence@296
+Reference/Reply.md:298  Reply > .removeTrailer(key)
+  heading@298 sentence@301 code@302
+Reference/Reply.md:311  Reply > .redirect(dest, [code ,])
+  heading@311 sentence@314 blockquote@317 sentence@323 code@325 sentence@329 code@331 sentence@335 code@336 sentence@340 code@341
+Reference/Reply.md:345  Reply > .callNotFound()
+  heading@345 sentence@348 sentence@348 code@351
+Reference/Reply.md:355  Reply > .type(contentType)
+  heading@355 sentence@358 sentence@358 code@361 sentence@364 sentence@365
+Reference/Reply.md:368  Reply > .getSerializationFunction(schema | httpStatus, [contentType])
+  heading@368 sentence@371 sentence@373 sentence@376 code@379 sentence@404
+Reference/Reply.md:407  Reply > .compileSerializationSchema(schema, [httpStatus], [contentType])
+  heading@407 sentence@410 sentence@412 sentence@413 sentence@416 sentence@420 code@423 sentence@466 sentence@467 sentence@473 sentence@477 code@478 sentence@489 code@490 sentence@500 code@501
+Reference/Reply.md:513  Reply > .serializeInput(data, [schema | httpStatus], [httpStatus], [contentType])
+  heading@513 sentence@516 sentence@517 sentence@519 code@522 sentence@556
+Reference/Reply.md:559  Reply > .serializer(func)
+  heading@559 sentence@562 sentence@563 sentence@565 code@568 sentence@574 code@578 sentence@584
+Reference/Reply.md:587  Reply > .raw
+  heading@587 sentence@590 sentence@592 code@596 sentence@606
+Reference/Reply.md:609  Reply > .sent
+  heading@609 sentence@612 sentence@613 sentence@616 sentence@619 sentence@620 sentence@622 sentence@622
+Reference/Reply.md:625  Reply > .hijack()
+  heading@625 sentence@628 sentence@631 code@636 sentence@645
+Reference/Reply.md:648  Reply > .send(data)
+  heading@648 sentence@651
+Reference/Reply.md:654  Reply > .send(data) > Objects
+  heading@654 sentence@657 code@661
+Reference/Reply.md:667  Reply > .send(data) > Strings
+  heading@667 sentence@670 sentence@671 code@676
+Reference/Reply.md:682  Reply > .send(data) > Streams
+  heading@682 sentence@685 sentence@688 code@691 sentence@700 code@701
+Reference/Reply.md:711  Reply > .send(data) > Buffers
+  heading@711 sentence@714 sentence@717 code@720 sentence@730 code@731
+Reference/Reply.md:742  Reply > .send(data) > TypedArrays
+  heading@742 sentence@745 sentence@748 code@751
+Reference/Reply.md:760  Reply > .send(data) > ReadableStream
+  heading@760 sentence@763 code@767
+Reference/Reply.md:778  Reply > .send(data) > Response
+  heading@778 sentence@781 sentence@782 sentence@786 sentence@788 sentence@789 code@792
+Reference/Reply.md:808  Reply > .send(data) > Errors
+  heading@808 sentence@811 code@814 sentence@823 blockquote@826 sentence@829 code@834 sentence@840 list@842 list@843 sentence@845 code@848 sentence@871 blockquote@874 sentence@876 code@878 sentence@889 sentence@891 sentence@894 sentence@897 code@899
+Reference/Reply.md:908  Reply > .send(data) > Type of the final payload
+  heading@908 sentence@911 list@915 list@916 list@917 list@918 list@919
+Reference/Reply.md:921  Reply > .send(data) > Async-Await and Promises
+  heading@921 sentence@924 sentence@926 code@927 sentence@941 sentence@941 code@945 sentence@959
+Reference/Reply.md:962  Reply > .then(fulfilled, rejected)
+  heading@962 sentence@965 sentence@966 sentence@968 list@970 list@971 sentence@974 list@976 list@978
+Reference/Request.md:1  Reference/Request.md
+  sentence@1
+Reference/Request.md:3  Request
+  heading@3 sentence@4 sentence@6 list@7 list@9 list@12 list@13 list@14 list@15 list@17 list@18 list@19 list@20 list@23 list@28 list@29 list@31 list@32 list@33 list@34 list@36 list@37 list@38 list@42 list@56 list@59 list@63
+Reference/Request.md:68  Request > Headers
+  heading@68 sentence@70 sentence@71 code@73 sentence@80 sentence@81 sentence@84 blockquote@87 code@90
+Reference/Request.md:119  Request > .getValidationFunction(schema | httpPart)
+  heading@119 sentence@122 sentence@123 sentence@126 sentence@126 code@129 sentence@150
+Reference/Request.md:153  Request > .compileValidationSchema(schema, [httpPart])
+  heading@153 sentence@156 sentence@157 sentence@158 sentence@161 sentence@165 sentence@165 code@168 sentence@196 sentence@197 sentence@201 sentence@204 code@205 sentence@216 code@217 sentence@227 code@228
+Reference/Request.md:240  Request > .validateInput(data, [schema | httpPart], [httpPart])
+  heading@240 sentence@243 sentence@243 sentence@246 code@249 sentence@278
+Reference/Routes.md:1  Reference/Routes.md
+  sentence@1
+Reference/Routes.md:3  Routes
+  heading@3 sentence@5 sentence@5 list@8 list@9 list@10 list@11 list@12 list@13 list@14 list@17 list@18 list@19 list@20
+Reference/Routes.md:24  Routes > Full declaration
+  heading@24 code@27
+Reference/Routes.md:31  Routes > Routes options
+  heading@31 list@34 list@38 list@39 list@52 list@56 list@60 list@62 list@65 list@69 list@71 list@74 list@77 list@80 list@82 list@84 list@87 list@93 list@101 list@105 list@109 list@114 list@118 list@119 list@120 list@121 list@123 list@128 list@137 list@139 blockquote@141 sentence@147 code@148
+Reference/Routes.md:175  Routes > Shorthand declaration
+  heading@175 sentence@178 sentence@181 sentence@183 sentence@185 sentence@187 sentence@189 sentence@191 sentence@193 sentence@195 code@196 sentence@214 sentence@217 code@218 blockquote@237
+Reference/Routes.md:240  Routes > Url building
+  heading@240 sentence@243 sentence@245 sentence@245 sentence@246 code@249 sentence@269 sentence@270 code@271 sentence@281 sentence@282 code@283 sentence@293 sentence@295 code@296 sentence@305 sentence@308 sentence@308 code@310 sentence@316 sentence@316 sentence@319 sentence@320 sentence@321 sentence@324 sentence@325 code@326
+Reference/Routes.md:330  Routes > Async Await
+  heading@330 sentence@333 sentence@333 code@334 sentence@342 sentence@342 sentence@345 sentence@345 code@349 sentence@357 code@360 sentence@369 code@371 blockquote@380
+Reference/Routes.md:387  Routes > Promise resolution
+  heading@387 sentence@390 sentence@391 orderedList@395 orderedList@398 sentence@402 sentence@403 blockquote@406
+Reference/Routes.md:408  Routes > Route Prefixing
+  heading@408 sentence@411 sentence@411 sentence@413 sentence@414 code@417 code@427 code@435 sentence@442 sentence@443 sentence@446 list@447 list@448 sentence@450 sentence@450 sentence@453 code@455
+Reference/Routes.md:475  Routes > Route Prefixing and fastify-plugin
+  heading@475 sentence@478 sentence@479 code@480
+Reference/Routes.md:493  Routes > Route Prefixing and fastify-plugin > Handling of / route inside prefixed plugins
+  heading@493 sentence@495 sentence@496 sentence@497 sentence@500
+Reference/Routes.md:502  Routes > Custom Log Level
+  heading@502 sentence@505 sentence@509 code@513 sentence@523 code@524 sentence@529
+Reference/Routes.md:532  Routes > Custom Log Serializer
+  heading@532 sentence@535 sentence@535 code@539 sentence@556 code@558
+Reference/Routes.md:594  Routes > Config
+  heading@594 sentence@597 code@600
+Reference/Routes.md:614  Routes > Constraints
+  heading@614 sentence@617 sentence@620 sentence@621 sentence@621
+Reference/Routes.md:625  Routes > Constraints > Version Constraints
+  heading@625 sentence@627 sentence@628 sentence@630 sentence@634 sentence@636 blockquote@639 code@641 blockquote@662 sentence@683 sentence@686 sentence@688
+Reference/Routes.md:692  Routes > Constraints > Host Constraints
+  heading@692 sentence@694 code@698 sentence@729 code@732
+Reference/Routes.md:743  Routes > Constraints > Asynchronous Custom Constraints
+  heading@743 sentence@745 sentence@746 code@749 blockquote@774
+Reference/Server.md:1  Reference/Server.md
+  sentence@1
+Reference/Server.md:3  Factory
+  heading@3 sentence@6 sentence@7 sentence@8 list@11 list@53
+Reference/Server.md:106  Factory > http
+  heading@106 list@109 sentence@111 sentence@111 sentence@115
+Reference/Server.md:118  Factory > http2
+  heading@118 list@121 sentence@123
+Reference/Server.md:127  Factory > https
+  heading@127 list@130 sentence@132 sentence@132 sentence@135 sentence@137
+Reference/Server.md:139  Factory > connectionTimeout
+  heading@139 list@142 sentence@144 sentence@144 sentence@149
+Reference/Server.md:151  Factory > keepAliveTimeout
+  heading@151 list@154 sentence@156 sentence@156 sentence@159 sentence@162
+Reference/Server.md:164  Factory > forceCloseConnections
+  heading@164 list@167 sentence@169 blockquote@173 sentence@177 sentence@181 sentence@183
+Reference/Server.md:188  Factory > maxRequestsPerSocket
+  heading@188 list@191 sentence@193 sentence@194 sentence@196 sentence@197 blockquote@200
+Reference/Server.md:203  Factory > requestTimeout
+  heading@203 list@206 sentence@208 sentence@209 sentence@213 sentence@214 blockquote@218
+Reference/Server.md:221  Factory > bodyLimit
+  heading@221 list@224 sentence@226 sentence@227 sentence@229
+Reference/Server.md:232  Factory > onProtoPoisoning
+  heading@232 list@235 sentence@237 sentence@238 sentence@239 sentence@243
+Reference/Server.md:245  Factory > onConstructorPoisoning
+  heading@245 list@248 sentence@250 sentence@251 sentence@252 sentence@256
+Reference/Server.md:258  Factory > logger
+  heading@258 sentence@261 sentence@262 sentence@264 list@266 list@269
+Reference/Server.md:289  Factory > loggerInstance
+  heading@289 list@292 sentence@294 sentence@294 sentence@296 code@297
+Reference/Server.md:317  Factory > disableRequestLogging
+  heading@317 list@320 sentence@322 sentence@324 sentence@325 sentence@328 list@329 list@330 list@332 sentence@335 code@339
+Reference/Server.md:352  Factory > serverFactory
+  heading@352 sentence@355 sentence@358 code@362 sentence@380 sentence@381
+Reference/Server.md:386  Factory > requestIdHeader
+  heading@386 list@389 sentence@391 sentence@391 sentence@393 sentence@395 sentence@397 sentence@398 list@401 code@403
+Reference/Server.md:410  Factory > requestIdLogLabel
+  heading@410 list@413 sentence@415
+Reference/Server.md:417  Factory > genReqId
+  heading@417 list@420 sentence@423 sentence@423 sentence@424 sentence@426 sentence@427 blockquote@430 code@435
+Reference/Server.md:442  Factory > trustProxy
+  heading@442 list@445 list@446 list@448 list@450 list@451 list@452 sentence@459 code@463 sentence@467 sentence@470 code@473 blockquote@482
+Reference/Server.md:487  Factory > pluginTimeout
+  heading@487 list@490 sentence@492 sentence@492 sentence@494 sentence@494
+Reference/Server.md:497  Factory > querystringParser
+  heading@497 sentence@500 sentence@504 sentence@507 code@510 sentence@517 code@520
+Reference/Server.md:527  Factory > exposeHeadRoutes
+  heading@527 list@530 sentence@532 sentence@532
+Reference/Server.md:536  Factory > return503OnClosing
+  heading@536 list@539 sentence@541 sentence@541
+Reference/Server.md:544  Factory > ajv
+  heading@544 sentence@547 sentence@548 code@551
+Reference/Server.md:567  Factory > serializerOpts
+  heading@567 sentence@570 code@574
+Reference/Server.md:582  Factory > http2SessionTimeout
+  heading@582 list@585 sentence@587 sentence@589 sentence@592 sentence@593 sentence@594 sentence@595
+Reference/Server.md:597  Factory > frameworkErrors
+  heading@597 list@600 sentence@602 sentence@602 blockquote@606 code@609
+Reference/Server.md:625  Factory > clientErrorHandler
+  heading@625 sentence@628 sentence@633 list@635 code@636 blockquote@659 code@665
+Reference/Server.md:688  Factory > rewriteUrl
+  heading@688 sentence@691 sentence@692 sentence@693 sentence@695 code@698
+Reference/Server.md:712  RouterOptions
+  heading@712 sentence@715 sentence@716
+Reference/Server.md:720  RouterOptions > allowUnsafeRegex
+  heading@720 list@723 sentence@725 sentence@726 code@729
+Reference/Server.md:736  RouterOptions > buildPrettyMeta
+  heading@736 sentence@739 sentence@742 code@744
+Reference/Server.md:761  RouterOptions > caseSensitive
+  heading@761 list@764 sentence@766 sentence@766 sentence@768 sentence@770 sentence@773 sentence@776 code@779
+Reference/Server.md:786  RouterOptions > constraints
+  heading@786 sentence@789 sentence@790 sentence@792 code@796
+Reference/Server.md:819  RouterOptions > defaultRoute
+  heading@819 sentence@822 code@825
+Reference/Server.md:836  RouterOptions > ignoreDuplicateSlashes
+  heading@836 list@839 sentence@841 sentence@842 sentence@843 sentence@844 sentence@847 code@851
+Reference/Server.md:864  RouterOptions > ignoreTrailingSlash
+  heading@864 list@867 sentence@869 sentence@870 sentence@871 sentence@871 sentence@872 sentence@873 code@876
+Reference/Server.md:894  RouterOptions > maxParamLength
+  heading@894 list@897 sentence@899 sentence@901 sentence@904
+Reference/Server.md:909  RouterOptions > onBadUrl
+  heading@909 sentence@912 code@916
+Reference/Server.md:927  RouterOptions > querystringParser
+  heading@927 sentence@930 sentence@933 sentence@936 code@939 sentence@948 code@951
+Reference/Server.md:960  RouterOptions > useSemicolonDelimiter
+  heading@960 list@963 sentence@965 sentence@967 sentence@968 sentence@969 code@972
+Reference/Server.md:986  RouterOptions > allowErrorHandlerOverride
+  heading@986 list@989 blockquote@991 sentence@994
+Reference/Server.md:998  RouterOptions > allowErrorHandlerOverride > Example of incorrect usage:
+  heading@998 code@1000
+Reference/Server.md:1010  Instance
+  heading@1010
+Reference/Server.md:1012  Instance > Server Methods
+  heading@1012
+Reference/Server.md:1014  Instance > Server Methods > server
+  heading@1014 sentence@1017 blockquote@1021
+Reference/Server.md:1025  Instance > Server Methods > after
+  heading@1025 sentence@1028 sentence@1029 code@1032 sentence@1050 code@1052
+Reference/Server.md:1069  Instance > Server Methods > ready
+  heading@1069 sentence@1072 sentence@1072 code@1074 sentence@1079 code@1081
+Reference/Server.md:1089  Instance > Server Methods > listen
+  heading@1089 sentence@1092 sentence@1092 sentence@1093 sentence@1096 list@1099 sentence@1110 sentence@1111 sentence@1113 sentence@1114 tableRow@1119 tableRow@1120 tableRow@1121 tableRow@1122 tableRow@1123 tableRow@1124 sentence@1126 sentence@1130 sentence@1134 code@1137 sentence@1146 code@1148 sentence@1157 code@1159 sentence@1168 code@1172 sentence@1181 sentence@1184 code@1186
+Reference/Server.md:1197  Instance > Server Methods > addresses
+  heading@1197 sentence@1200 sentence@1200 code@1204 sentence@1213
+Reference/Server.md:1215  Instance > Server Methods > routing
+  heading@1215 sentence@1218 code@1221
+Reference/Server.md:1225  Instance > Server Methods > route
+  heading@1225 sentence@1228
+Reference/Server.md:1231  Instance > Server Methods > hasRoute
+  heading@1231 sentence@1234 sentence@1234 sentence@1235 sentence@1236 code@1239
+Reference/Server.md:1251  Instance > Server Methods > findRoute
+  heading@1251 sentence@1254 sentence@1254 sentence@1255 sentence@1257 code@1259
+Reference/Server.md:1273  Instance > Server Methods > close
+  heading@1273 sentence@1276 sentence@1279 sentence@1280 sentence@1283 code@1285
+Reference/Server.md:1293  Instance > Server Methods > decorate*
+  heading@1293 sentence@1296
+Reference/Server.md:1299  Instance > Server Methods > register
+  heading@1299 sentence@1302 sentence@1302
+Reference/Server.md:1305  Instance > Server Methods > addHook
+  heading@1305 sentence@1308
+Reference/Server.md:1311  Instance > Server Methods > prefix
+  heading@1311 sentence@1314 sentence@1316 code@1318
+Reference/Server.md:1340  Instance > Server Methods > pluginName
+  heading@1340 sentence@1343 sentence@1343 sentence@1343 orderedList@1346 orderedList@1348 orderedList@1351 orderedList@1352 sentence@1356 sentence@1357 sentence@1357 blockquote@1360
+Reference/Server.md:1367  Instance > Server Methods > hasPlugin
+  heading@1367 sentence@1370 sentence@1370 sentence@1371 sentence@1371 code@1374
+Reference/Server.md:1386  Instance > Server Methods > listeningOrigin
+  heading@1386 sentence@1389 sentence@1390
+Reference/Server.md:1395  Instance > Server Methods > log
+  heading@1395 sentence@1398
+Reference/Server.md:1400  Instance > Server Methods > version
+  heading@1400 sentence@1403 sentence@1403 sentence@1403
+Reference/Server.md:1407  Instance > Server Methods > inject
+  heading@1407 sentence@1410
+Reference/Server.md:1413  Instance > Server Methods > addHttpMethod
+  heading@1413 sentence@1416 sentence@1418 code@1421 sentence@1429 code@1432
+Reference/Server.md:1440  Instance > Server Methods > addSchema
+  heading@1440 sentence@1443 sentence@1443 sentence@1447
+Reference/Server.md:1450  Instance > Server Methods > getSchemas
+  heading@1450 sentence@1453 sentence@1454
+Reference/Server.md:1456  Instance > Server Methods > getSchema
+  heading@1456 sentence@1459 sentence@1460
+Reference/Server.md:1462  Instance > Server Methods > setReplySerializer
+  heading@1462 sentence@1465 sentence@1465 sentence@1466 sentence@1468 sentence@1468 code@1471
+Reference/Server.md:1478  Instance > Server Methods > setValidatorCompiler
+  heading@1478 sentence@1481 sentence@1481
+Reference/Server.md:1484  Instance > Server Methods > setSchemaErrorFormatter
+  heading@1484 sentence@1487 sentence@1487
+Reference/Server.md:1490  Instance > Server Methods > setSerializerCompiler
+  heading@1490 sentence@1493 sentence@1493 blockquote@1496
+Reference/Server.md:1499  Instance > Server Methods > validatorCompiler
+  heading@1499 sentence@1502 sentence@1502 sentence@1505
+Reference/Server.md:1508  Instance > Server Methods > serializerCompiler
+  heading@1508 sentence@1511 sentence@1511 sentence@1514
+Reference/Server.md:1517  Instance > Server Methods > schemaErrorFormatter
+  heading@1517 sentence@1520 sentence@1521
+Reference/Server.md:1524  Instance > Server Methods > schemaController
+  heading@1524 sentence@1527 list@1528 list@1529 sentence@1531 sentence@1534 sentence@1534 sentence@1535 code@1539
+Reference/Server.md:1616  Instance > Server Methods > setNotFoundHandler
+  heading@1616 sentence@1619 sentence@1619 sentence@1622 sentence@1626 blockquote@1629 code@1636 sentence@1659 sentence@1660 blockquote@1665
+Reference/Server.md:1673  Instance > Server Methods > setErrorHandler
+  heading@1673 sentence@1676 sentence@1678 sentence@1682 sentence@1685 list@1686 list@1688 code@1691 sentence@1700 sentence@1701 code@1704 blockquote@1715
+Reference/Server.md:1720  Instance > Server Methods > setChildLoggerFactory
+  heading@1720 sentence@1723 sentence@1728 sentence@1731 sentence@1733 sentence@1736 code@1737 sentence@1747
+Reference/Server.md:1750  Instance > Server Methods > setGenReqId
+  heading@1750 sentence@1753 sentence@1754 sentence@1755 sentence@1757 sentence@1759 sentence@1761 code@1762 sentence@1786
+Reference/Server.md:1789  Instance > Server Methods > addConstraintStrategy
+  heading@1789 sentence@1792 sentence@1792 sentence@1797 code@1800
+Reference/Server.md:1824  Instance > Server Methods > hasConstraintStrategy
+  heading@1824 sentence@1827
+Reference/Server.md:1830  Instance > Server Methods > printRoutes
+  heading@1830 sentence@1833 sentence@1834 sentence@1835 sentence@1836 sentence@1838 code@1840 sentence@1859 sentence@1860 sentence@1861 code@1863 sentence@1877 sentence@1877 sentence@1879 sentence@1879 code@1881 sentence@1890 sentence@1891 sentence@1893 code@1896
+Reference/Server.md:1944  Instance > Server Methods > printPlugins
+  heading@1944 sentence@1947 sentence@1950 code@1952
+Reference/Server.md:1968  Instance > Server Methods > addContentTypeParser
+  heading@1968 sentence@1971 sentence@1972 code@1976
+Reference/Server.md:1986  Instance > Server Methods > hasContentTypeParser
+  heading@1986 sentence@1989 code@1992
+Reference/Server.md:1998  Instance > Server Methods > removeContentTypeParser
+  heading@1998 sentence@2001 sentence@2002 code@2005
+Reference/Server.md:2011  Instance > Server Methods > removeAllContentTypeParsers
+  heading@2011 sentence@2014 sentence@2015 sentence@2016 sentence@2020
+Reference/Server.md:2023  Instance > Server Methods > getDefaultJsonParser
+  heading@2023 sentence@2026 sentence@2027 sentence@2028
+Reference/Server.md:2033  Instance > Server Methods > defaultTextParser
+  heading@2033 sentence@2036 code@2038
+Reference/Server.md:2042  Instance > Server Methods > errorHandler
+  heading@2042 sentence@2045 code@2048
+Reference/Server.md:2061  Instance > Server Methods > childLoggerFactory
+  heading@2061 sentence@2064 sentence@2065
+Reference/Server.md:2068  Instance > Server Methods > Symbol.asyncDispose
+  heading@2068 sentence@2071 sentence@2074 sentence@2077 code@2080 sentence@2087 sentence@2089
+Reference/Server.md:2094  Instance > Server Methods > initialConfig
+  heading@2094 sentence@2097 sentence@2100 list@2101 list@2102 list@2103 list@2104 list@2105 list@2106 list@2108 list@2109 list@2110 list@2111 list@2112 list@2113 list@2114 list@2115 code@2128
+Reference/TypeScript.md:1  Reference/TypeScript.md
+  sentence@1
+Reference/TypeScript.md:3  TypeScript
+  heading@3 sentence@5 sentence@9 sentence@9 sentence@11 sentence@13 sentence@14 blockquote@18 blockquote@20 sentence@24
+Reference/TypeScript.md:26  Learn By Example
+  heading@26 sentence@28 sentence@28 sentence@29
+Reference/TypeScript.md:32  Learn By Example > Getting Started
+  heading@32 sentence@34 sentence@34 orderedList@37 code@39 orderedList@44 code@45 orderedList@54 code@55 sentence@58 sentence@61 orderedList@64 orderedList@65 orderedList@83 orderedList@86 orderedList@87 orderedList@88 sentence@91 sentence@91 sentence@92 sentence@93 blockquote@97
+Reference/TypeScript.md:100  Learn By Example > Using Generics
+  heading@100 sentence@102 sentence@103 sentence@104 orderedList@108 orderedList@109 orderedList@126 orderedList@154 orderedList@155 orderedList@160 orderedList@179 sentence@184 sentence@185 sentence@186
+Reference/TypeScript.md:189  Learn By Example > JSON Schema
+  heading@189 sentence@191 sentence@191 sentence@193 sentence@196 sentence@199
+Reference/TypeScript.md:201  Learn By Example > JSON Schema > Fastify Type Providers
+  heading@201 sentence@203 list@205 list@206 sentence@208 sentence@210 sentence@213
+Reference/TypeScript.md:217  Learn By Example > JSON Schema > TypeBox
+  heading@217 sentence@219 sentence@220 sentence@223 orderedList@226 orderedList@232 orderedList@246
+Reference/TypeScript.md:272  Learn By Example > JSON Schema > json-schema-to-typescript
+  heading@272 sentence@274 sentence@275 orderedList@279 orderedList@281 orderedList@287 orderedList@316 code@318 sentence@326 sentence@328 sentence@328 sentence@328 sentence@330 sentence@330 code@332 sentence@398 sentence@398 sentence@402 sentence@402
+Reference/TypeScript.md:405  Learn By Example > JSON Schema > json-schema-to-ts
+  heading@405 sentence@407 sentence@411 code@413 sentence@417 sentence@417 code@420 sentence@432 code@435
+Reference/TypeScript.md:469  Learn By Example > Plugins
+  heading@469 sentence@471 sentence@472 sentence@475
+Reference/TypeScript.md:479  Learn By Example > Plugins > Creating a TypeScript Fastify Plugin
+  heading@479 orderedList@481 orderedList@487 orderedList@497 orderedList@510 orderedList@511 orderedList@551 orderedList@553
+Reference/TypeScript.md:560  Learn By Example > Plugins > Creating Type Definitions for a Fastify Plugin
+  heading@560 sentence@562 sentence@562 orderedList@566 orderedList@571 orderedList@572 orderedList@581 orderedList@601 sentence@630 sentence@632 sentence@633 sentence@637 sentence@640 sentence@641
+Reference/TypeScript.md:645  Learn By Example > Plugins > Using a Plugin
+  heading@645 sentence@647 sentence@648 sentence@651 sentence@652 sentence@655 sentence@658 list@659 list@662 sentence@666 sentence@668 sentence@669 code@671 code@677 sentence@683 code@684
+Reference/TypeScript.md:690  Code Completion In Vanilla JavaScript
+  heading@690 sentence@692 sentence@697 code@699
+Reference/TypeScript.md:706  API Type System Documentation
+  heading@706 sentence@708 sentence@711 sentence@713 sentence@714 list@716 list@718
+Reference/TypeScript.md:721  API Type System Documentation > How to import
+  heading@721 sentence@723 sentence@723 sentence@724 sentence@726 orderedList@728 orderedList@751 orderedList@762
+Reference/TypeScript.md:780  API Type System Documentation > Generics
+  heading@780 sentence@782 sentence@785
+Reference/TypeScript.md:787  API Type System Documentation > Generics > RawServer
+  heading@787 sentence@788 sentence@790 sentence@792 sentence@795
+Reference/TypeScript.md:798  API Type System Documentation > Generics > RawRequest
+  heading@798 sentence@799 sentence@801 sentence@803 sentence@805
+Reference/TypeScript.md:807  API Type System Documentation > Generics > RawReply
+  heading@807 sentence@808 sentence@810 sentence@812 sentence@814
+Reference/TypeScript.md:816  API Type System Documentation > Generics > Logger
+  heading@816 sentence@817 sentence@819 sentence@821
+Reference/TypeScript.md:823  API Type System Documentation > Generics > RawBody
+  heading@823 sentence@824 sentence@826
+Reference/TypeScript.md:830  API Type System Documentation > Fastify
+  heading@830
+Reference/TypeScript.md:832  API Type System Documentation > Fastify > fastify< RawRequest, RawReply, Logger>(opts?: FastifyServerOptions): FastifyInstance
+  heading@832 sentence@833 sentence@835 sentence@835 sentence@835 sentence@839 sentence@841 sentence@841
+Reference/TypeScript.md:844  API Type System Documentation > Fastify > fastify< RawRequest, RawReply, Logger>(opts?: FastifyServerOptions): FastifyInstance > Example 1: Standard HTTP server
+  heading@844 sentence@846 code@847 sentence@852
+Reference/TypeScript.md:855  API Type System Documentation > Fastify > fastify< RawRequest, RawReply, Logger>(opts?: FastifyServerOptions): FastifyInstance > Example 2: HTTPS server
+  heading@855 orderedList@857 orderedList@863 code@865 orderedList@871 orderedList@892
+Reference/TypeScript.md:895  API Type System Documentation > Fastify > fastify< RawRequest, RawReply, Logger>(opts?: FastifyServerOptions): FastifyInstance > Example 3: HTTP2 server
+  heading@895 sentence@897 sentence@897 sentence@898 code@902 sentence@910
+Reference/TypeScript.md:913  API Type System Documentation > Fastify > fastify< RawRequest, RawReply, Logger>(opts?: FastifyServerOptions): FastifyInstance > Example 4: Extended HTTP server
+  heading@913 sentence@915 sentence@916 sentence@916 code@919
+Reference/TypeScript.md:935  API Type System Documentation > Fastify > fastify< RawRequest, RawReply, Logger>(opts?: FastifyServerOptions): FastifyInstance > Example 5: Specifying logger types
+  heading@935 sentence@937 sentence@937 sentence@939 sentence@942 code@945
+Reference/TypeScript.md:964  API Type System Documentation > Fastify > fastify.HTTPMethods
+  heading@964 sentence@965 sentence@967
+Reference/TypeScript.md:970  API Type System Documentation > Fastify > fastify.RawServerBase
+  heading@970 sentence@971 sentence@973 sentence@975
+Reference/TypeScript.md:978  API Type System Documentation > Fastify > fastify.RawServerDefault
+  heading@978 sentence@979 sentence@981 sentence@983
+Reference/TypeScript.md:987  API Type System Documentation > Fastify > fastify.FastifyServerOptions< RawServer, Logger>
+  heading@987 sentence@989 sentence@991 sentence@991 sentence@992 sentence@995
+Reference/TypeScript.md:998  API Type System Documentation > Fastify > fastify.FastifyInstance< RawServer, RawRequest, RequestGeneric, Logger>
+  heading@998 sentence@1000 sentence@1002 sentence@1002 sentence@1003 sentence@1008 sentence@1009 sentence@1013
+Reference/TypeScript.md:1019  API Type System Documentation > Request
+  heading@1019
+Reference/TypeScript.md:1021  API Type System Documentation > Request > fastify.FastifyRequest< RequestGeneric, RawServer, RawRequest>
+  heading@1021 sentence@1022 sentence@1024 sentence@1024 sentence@1029 sentence@1033 sentence@1034
+Reference/TypeScript.md:1037  API Type System Documentation > Request > fastify.FastifyRequest< RequestGeneric, RawServer, RawRequest> > Example
+  heading@1037 code@1038
+Reference/TypeScript.md:1067  API Type System Documentation > Request > fastify.RequestGenericInterface
+  heading@1067 sentence@1068 sentence@1070 sentence@1071 sentence@1071 sentence@1073 sentence@1074 code@1077 sentence@1094
+Reference/TypeScript.md:1097  API Type System Documentation > Request > fastify.RawRequestDefaultExpression<RawServer>
+  heading@1097 sentence@1098 sentence@1100 sentence@1102 sentence@1104 code@1108
+Reference/TypeScript.md:1119  API Type System Documentation > Reply
+  heading@1119
+Reference/TypeScript.md:1121  API Type System Documentation > Reply > fastify.FastifyReply<RequestGeneric, RawServer, RawRequest, RawReply, ContextConfig>
+  heading@1121 sentence@1122 sentence@1124 sentence@1125 sentence@1128 sentence@1132 sentence@1132
+Reference/TypeScript.md:1136  API Type System Documentation > Reply > fastify.FastifyReply<RequestGeneric, RawServer, RawRequest, RawReply, ContextConfig> > Example
+  heading@1136 code@1137
+Reference/TypeScript.md:1157  API Type System Documentation > Reply > fastify.RawReplyDefaultExpression< RawServer>
+  heading@1157 sentence@1158 sentence@1160 sentence@1162 sentence@1164 code@1168
+Reference/TypeScript.md:1179  API Type System Documentation > Plugin
+  heading@1179 sentence@1181 sentence@1181 sentence@1182 sentence@1185 sentence@1186
+Reference/TypeScript.md:1189  API Type System Documentation > Plugin > fastify.FastifyPluginCallback< Options>
+  heading@1189 sentence@1190 sentence@1192
+Reference/TypeScript.md:1195  API Type System Documentation > Plugin > fastify.FastifyPluginAsync< Options>
+  heading@1195 sentence@1196 sentence@1198
+Reference/TypeScript.md:1201  API Type System Documentation > Plugin > fastify.FastifyPlugin< Options>
+  heading@1201 sentence@1202 sentence@1204 sentence@1205
+Reference/TypeScript.md:1209  API Type System Documentation > Plugin > fastify.FastifyPluginOptions
+  heading@1209 sentence@1210 sentence@1212 sentence@1213
+Reference/TypeScript.md:1219  API Type System Documentation > Register
+  heading@1219
+Reference/TypeScript.md:1221  API Type System Documentation > Register > fastify.FastifyRegister(plugin: FastifyPluginCallback, opts: FastifyRegisterOptions)
+  heading@1221 sentence@1222
+Reference/TypeScript.md:1223  API Type System Documentation > Register > fastify.FastifyRegister(plugin: FastifyPluginAsync, opts: FastifyRegisterOptions)
+  heading@1223 sentence@1224
+Reference/TypeScript.md:1225  API Type System Documentation > Register > fastify.FastifyRegister(plugin: FastifyPlugin, opts: FastifyRegisterOptions)
+  heading@1225 sentence@1226 sentence@1228 sentence@1229 sentence@1231 sentence@1233 sentence@1235 sentence@1238 code@1240 sentence@1252
+Reference/TypeScript.md:1255  API Type System Documentation > Register > fastify.FastifyRegisterOptions
+  heading@1255 sentence@1256 sentence@1258 sentence@1259
+Reference/TypeScript.md:1265  API Type System Documentation > Logger
+  heading@1265 sentence@1267
+Reference/TypeScript.md:1270  API Type System Documentation > Logger > fastify.FastifyLoggerOptions< RawServer, RawRequest, RawReply>
+  heading@1270 sentence@1272 sentence@1274 sentence@1274 sentence@1275
+Reference/TypeScript.md:1278  API Type System Documentation > Logger > fastify.FastifyLogFn
+  heading@1278 sentence@1280 sentence@1282 sentence@1283
+Reference/TypeScript.md:1286  API Type System Documentation > Logger > fastify.LogLevel
+  heading@1286 sentence@1288 sentence@1290
+Reference/TypeScript.md:1294  API Type System Documentation > Context
+  heading@1294 sentence@1296 sentence@1297
+Reference/TypeScript.md:1299  API Type System Documentation > Context > fastify.FastifyRequestContext
+  heading@1299 sentence@1301 sentence@1303 sentence@1304 sentence@1306 sentence@1306 sentence@1309
+Reference/TypeScript.md:1312  API Type System Documentation > Context > fastify.FastifyReplyContext
+  heading@1312 sentence@1314 sentence@1316 sentence@1317 sentence@1319 sentence@1319 sentence@1322
+Reference/TypeScript.md:1327  API Type System Documentation > Routing
+  heading@1327 sentence@1329 sentence@1329
+Reference/TypeScript.md:1333  API Type System Documentation > Routing > fastify.RouteHandlerMethod< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>
+  heading@1333 sentence@1335 sentence@1337 sentence@1337 sentence@1339 sentence@1339
+Reference/TypeScript.md:1343  API Type System Documentation > Routing > fastify.RouteOptions< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>
+  heading@1343 sentence@1345 sentence@1347 orderedList@1349 orderedList@1351 orderedList@1352
+Reference/TypeScript.md:1355  API Type System Documentation > Routing > fastify.RouteShorthandMethod< RawServer, RawRequest, RawReply>
+  heading@1355 sentence@1357 sentence@1359
+Reference/TypeScript.md:1362  API Type System Documentation > Routing > fastify.RouteShorthandOptions< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>
+  heading@1362 sentence@1364 sentence@1366 sentence@1366
+Reference/TypeScript.md:1370  API Type System Documentation > Routing > fastify.RouteShorthandOptionsWithHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>
+  heading@1370 sentence@1372 sentence@1374
+Reference/TypeScript.md:1379  API Type System Documentation > Parsers
+  heading@1379
+Reference/TypeScript.md:1381  API Type System Documentation > Parsers > RawBody
+  heading@1381 sentence@1383
+Reference/TypeScript.md:1385  API Type System Documentation > Parsers > fastify.FastifyBodyParser< RawBody, RawServer, RawRequest>
+  heading@1385 sentence@1387 sentence@1389 sentence@1389
+Reference/TypeScript.md:1392  API Type System Documentation > Parsers > fastify.FastifyContentTypeParser< RawServer, RawRequest>
+  heading@1392 sentence@1394 sentence@1396 sentence@1396
+Reference/TypeScript.md:1399  API Type System Documentation > Parsers > fastify.AddContentTypeParser< RawServer, RawRequest>
+  heading@1399 sentence@1401 sentence@1403 sentence@1404
+Reference/TypeScript.md:1408  API Type System Documentation > Parsers > fastify.hasContentTypeParser
+  heading@1408 sentence@1410 sentence@1412
+Reference/TypeScript.md:1416  API Type System Documentation > Errors
+  heading@1416
+Reference/TypeScript.md:1418  API Type System Documentation > Errors > fastify.FastifyError
+  heading@1418 sentence@1420 sentence@1422 sentence@1425
+Reference/TypeScript.md:1428  API Type System Documentation > Errors > fastify.ValidationResult
+  heading@1428 sentence@1430 sentence@1432 sentence@1435
+Reference/TypeScript.md:1439  API Type System Documentation > Hooks
+  heading@1439
+Reference/TypeScript.md:1441  API Type System Documentation > Hooks > fastify.onRequestHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1441 sentence@1443 sentence@1445 sentence@1445 sentence@1448
+Reference/TypeScript.md:1451  API Type System Documentation > Hooks > fastify.preParsingHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1451 sentence@1453 sentence@1455 sentence@1455 sentence@1458 sentence@1461 sentence@1462 sentence@1463
+Reference/TypeScript.md:1466  API Type System Documentation > Hooks > fastify.preValidationHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1466 sentence@1468 sentence@1470 sentence@1470
+Reference/TypeScript.md:1473  API Type System Documentation > Hooks > fastify.preHandlerHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1473 sentence@1475 sentence@1477 sentence@1477
+Reference/TypeScript.md:1480  API Type System Documentation > Hooks > fastify.preSerializationHookHandler< PreSerializationPayload, RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, payload: PreSerializationPayload, done: (err: FastifyError | null, res?: unknown) => void): Promise<unknown> | void
+  heading@1480 sentence@1482 sentence@1484 sentence@1485 sentence@1487
+Reference/TypeScript.md:1490  API Type System Documentation > Hooks > fastify.onSendHookHandler< OnSendPayload, RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, payload: OnSendPayload, done: (err: FastifyError | null, res?: unknown) => void): Promise<unknown> | void
+  heading@1490 sentence@1492 sentence@1494 sentence@1494 sentence@1495 sentence@1498
+Reference/TypeScript.md:1501  API Type System Documentation > Hooks > fastify.onResponseHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1501 sentence@1503 sentence@1505 sentence@1505 sentence@1508 sentence@1509
+Reference/TypeScript.md:1512  API Type System Documentation > Hooks > fastify.onErrorHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(request: FastifyRequest, reply: FastifyReply, error: FastifyError, done: () => void): Promise<unknown> | void
+  heading@1512 sentence@1514 sentence@1516 sentence@1519 sentence@1522 sentence@1524
+Reference/TypeScript.md:1527  API Type System Documentation > Hooks > fastify.onRouteHookHandler< RawServer, RawRequest, RawReply, RequestGeneric, ContextConfig>(opts: RouteOptions & { path: string; prefix: string }): Promise<unknown> | void
+  heading@1527 sentence@1529 sentence@1531 sentence@1531 sentence@1532
+Reference/TypeScript.md:1535  API Type System Documentation > Hooks > fastify.onRegisterHookHandler< RawServer, RawRequest, RawReply, Logger>(instance: FastifyInstance, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1535 sentence@1537 sentence@1539 sentence@1540 sentence@1542 sentence@1545
+Reference/TypeScript.md:1547  API Type System Documentation > Hooks > fastify.onCloseHookHandler< RawServer, RawRequest, RawReply, Logger>(instance: FastifyInstance, done: (err?: FastifyError) => void): Promise<unknown> | void
+  heading@1547 sentence@1549 sentence@1551 sentence@1551
+Reference/Validation-and-Serialization.md:1  Reference/Validation-and-Serialization.md
+  sentence@1
+Reference/Validation-and-Serialization.md:3  Validation and Serialization
+  heading@3 sentence@4 sentence@4 sentence@6 sentence@8 sentence@10 blockquote@14
+Reference/Validation-and-Serialization.md:33  Validation and Serialization > Core concepts
+  heading@33 sentence@34 list@35 list@36 sentence@39
+Reference/Validation-and-Serialization.md:42  Validation and Serialization > Core concepts > Adding a shared schema
+  heading@42 sentence@45 sentence@46 sentence@48 sentence@50 list@52 list@53 list@55 list@57 list@59 sentence@62 code@64 sentence@84 code@86
+Reference/Validation-and-Serialization.md:104  Validation and Serialization > Core concepts > Retrieving the shared schemas
+  heading@104 sentence@107 sentence@108 code@111 sentence@124 code@127
+Reference/Validation-and-Serialization.md:148  Validation and Serialization > Validation
+  heading@148 sentence@149 sentence@150 sentence@153 list@154 list@155 list@156 list@157 sentence@159 blockquote@163 sentence@166 code@167 sentence@231 sentence@232 code@235 sentence@253 sentence@257 sentence@258 code@260 code@284 sentence@290 sentence@293 code@296 sentence@332
+Reference/Validation-and-Serialization.md:334  Validation and Serialization > Validation > Ajv Plugins
+  heading@334 sentence@337 sentence@338 blockquote@340 code@342
+Reference/Validation-and-Serialization.md:398  Validation and Serialization > Validation > Validator Compiler
+  heading@398 sentence@401 sentence@402 sentence@404 sentence@406 code@409 sentence@422 sentence@425 code@428 blockquote@442
+Reference/Validation-and-Serialization.md:446  Validation and Serialization > Validation > Validator Compiler > Using other validation libraries
+  heading@446 sentence@449 code@453 code@479
+Reference/Validation-and-Serialization.md:513  Validation and Serialization > Validation > Validator Compiler > Custom Validator Best Practices
+  heading@513 sentence@515 sentence@518 code@519 sentence@524 code@525 sentence@543
+Reference/Validation-and-Serialization.md:547  Validation and Serialization > Validation > Validator Compiler > .statusCode property
+  heading@547 sentence@549 code@552
+Reference/Validation-and-Serialization.md:559  Validation and Serialization > Validation > Validator Compiler > Validation messages with other validation libraries
+  heading@559 sentence@561 sentence@564 sentence@565 sentence@568 orderedList@570 orderedList@572 sentence@574 list@577 list@579 sentence@582 code@585
+Reference/Validation-and-Serialization.md:613  Validation and Serialization > Serialization
+  heading@613 sentence@616 sentence@617 sentence@621 code@622 sentence@638 sentence@638 code@640 sentence@668 sentence@669 code@670
+Reference/Validation-and-Serialization.md:717  Validation and Serialization > Serialization > Serializer Compiler
+  heading@717 sentence@720 sentence@721 code@724 sentence@747
+Reference/Validation-and-Serialization.md:750  Validation and Serialization > Error Handling
+  heading@750 sentence@751 sentence@752 code@755 sentence@767 code@770 sentence@778 sentence@778 code@782
+Reference/Validation-and-Serialization.md:793  Validation and Serialization > Error Handling > schemaErrorFormatter
+  heading@793 sentence@795 sentence@796 sentence@799 code@803 sentence@819 code@822 sentence@830 sentence@831 blockquote@835 sentence@838 sentence@839 code@843 sentence@892 code@895
+Reference/Validation-and-Serialization.md:925  Validation and Serialization > JSON Schema support
+  heading@925 sentence@927 sentence@927 tableRow@932 tableRow@933 tableRow@934 tableRow@935
+Reference/Validation-and-Serialization.md:937  Validation and Serialization > JSON Schema support > Examples
+  heading@937
+Reference/Validation-and-Serialization.md:939  Validation and Serialization > JSON Schema support > Examples > Usage of $ref to $id in same JSON Schema
+  heading@939 code@941
+Reference/Validation-and-Serialization.md:961  Validation and Serialization > JSON Schema support > Examples > Usage of $ref to /definitions in same JSON Schema
+  heading@961 code@962
+Reference/Validation-and-Serialization.md:981  Validation and Serialization > JSON Schema support > Examples > Usage $ref to a shared schema $id as external schema
+  heading@981 code@982
+Reference/Validation-and-Serialization.md:1006  Validation and Serialization > JSON Schema support > Examples > Usage $ref to a shared schema /definitions as external schema
+  heading@1006 code@1007
+Reference/Validation-and-Serialization.md:1030  Validation and Serialization > Resources
+  heading@1030 list@1033 list@1034 list@1036 list@1038 list@1039 list@1040 list@1041
+Reference/Warnings.md:2  Reference/Warnings.md
+  sentence@2 sentence@4 list@5
+Reference/Warnings.md:13  Warnings
+  heading@13
+Reference/Warnings.md:15  Warnings > Warnings In Fastify
+  heading@15 sentence@17 sentence@18 sentence@19 sentence@23 sentence@24 sentence@27 sentence@27 list@30 list@31 list@32 sentence@34 sentence@36 sentence@36
+Reference/Warnings.md:39  Warnings > Fastify Warning Codes
+  heading@39 tableRow@43 tableRow@44
+Reference/Warnings.md:47  Warnings > Fastify Deprecation Codes
+  heading@47 sentence@49 list@51 list@52 list@53 tableRow@58

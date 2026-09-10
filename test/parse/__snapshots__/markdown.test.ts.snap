@@ -1,0 +1,123 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`parseDocument on the sample API doc > is stable 1`] = `
+[
+  {
+    "at": "docs/api.md:7",
+    "blocks": [
+      "paragraph 7-8",
+    ],
+    "depth": 0,
+    "lines": [
+      7,
+      8,
+      8,
+    ],
+    "path": "Acme API reference",
+    "slug": "",
+  },
+  {
+    "at": "docs/api.md:10",
+    "blocks": [
+      "paragraph 12-12",
+    ],
+    "depth": 1,
+    "lines": [
+      10,
+      12,
+      40,
+    ],
+    "path": "Authentication",
+    "slug": "authentication",
+  },
+  {
+    "at": "docs/api.md:14",
+    "blocks": [
+      "paragraph 16-16",
+      "code 18-21",
+    ],
+    "depth": 2,
+    "lines": [
+      14,
+      21,
+      21,
+    ],
+    "path": "Authentication > Access tokens",
+    "slug": "access-tokens",
+  },
+  {
+    "at": "docs/api.md:23",
+    "blocks": [
+      "paragraph 25-25",
+      "table 27-31",
+    ],
+    "depth": 2,
+    "lines": [
+      23,
+      31,
+      40,
+    ],
+    "path": "Authentication > Refresh tokens",
+    "slug": "refresh-tokens",
+  },
+  {
+    "at": "docs/api.md:33",
+    "blocks": [
+      "list 35-37",
+      "list 38-38",
+      "blockquote 40-40",
+    ],
+    "depth": 3,
+    "lines": [
+      33,
+      40,
+      40,
+    ],
+    "path": "Authentication > Refresh tokens > Examples",
+    "slug": "examples",
+  },
+  {
+    "at": "docs/api.md:42",
+    "blocks": [],
+    "depth": 1,
+    "lines": [
+      42,
+      42,
+      60,
+    ],
+    "path": "Rate limits",
+    "slug": "rate-limits",
+  },
+  {
+    "at": "docs/api.md:44",
+    "blocks": [
+      "paragraph 47-47",
+    ],
+    "depth": 2,
+    "lines": [
+      44,
+      47,
+      47,
+    ],
+    "path": "Rate limits > Setext heading below",
+    "slug": "setext-heading-below",
+  },
+  {
+    "at": "docs/api.md:49",
+    "blocks": [
+      "paragraph 51-51",
+      "html 53-53",
+      "code 55-56",
+      "paragraph 60-60",
+    ],
+    "depth": 2,
+    "lines": [
+      49,
+      60,
+      60,
+    ],
+    "path": "Rate limits > Examples",
+    "slug": "examples-1",
+  },
+]
+`;
