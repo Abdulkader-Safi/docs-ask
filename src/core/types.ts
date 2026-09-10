@@ -1,4 +1,5 @@
 // Parser output types. Types only: safe to import anywhere, including the browser.
+import type {AsPlainObject} from 'minisearch'
 
 export type BlockType = 'paragraph' | 'code' | 'list' | 'table' | 'blockquote' | 'html'
 
@@ -77,4 +78,30 @@ export interface QaSection {
   prose: string
   /** code units joined, for the index */
   code: string
+}
+
+// ---------- index file ----------
+
+/** strict: rewritten at index and query time (true synonyms). loose: added to the query only. */
+export interface SynonymGroup {
+  canonical: string
+  aliases: string[]
+  strict: boolean
+}
+
+/** What `docs-ask build` writes and `loadIndex` reads (PRD section 5). */
+export interface SerializedIndex {
+  formatVersion: number
+  /** loadIndex refuses a different major.minor */
+  packageVersion: string
+  /** ISO date */
+  builtAt: string
+  /** sections with their answer units; no raw markdown */
+  sections: QaSection[]
+  /** document frequency per term, for IDF */
+  df: Record<string, number>
+  /** MiniSearch toJSON() */
+  mini: AsPlainObject
+  /** the synonym groups the index was built with, so query time matches build time */
+  config: { synonyms: SynonymGroup[] }
 }
