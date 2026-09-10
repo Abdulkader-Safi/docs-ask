@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { blankMdxSyntax, parseDocument } from "../../src/parse/index.ts";
+import { blankContainerMarkers, blankMdxSyntax, parseDocument } from "../../src/parse/index.ts";
 import type { Section } from "../../src/core/index.ts";
 
 const SAMPLE = readFileSync(new URL("../fixtures/api-sample.md", import.meta.url), "utf8");
@@ -116,6 +116,27 @@ describe("MDX tolerance", () => {
     expect(doc.sections.map((s) => [s.title, s.startLine])).toEqual([
       ["Guide", 4],
       ["Next", 12],
+    ]);
+  });
+});
+
+describe("admonition markers (VitePress, Docusaurus)", () => {
+  const SRC = ["# Guide", "", "::: warning Heads up", "Don't do this.", ":::", "", ":::tip", "Do this.", ":::", "", "```md", "::: kept inside code", "```"].join("\n");
+
+  it("blanks marker lines, keeps the content and every line number", () => {
+    const out = blankContainerMarkers(SRC);
+    expect(out.split("\n")).toHaveLength(SRC.split("\n").length);
+    expect(out.split("\n")[2]).toBe("");
+    expect(out.split("\n")[3]).toBe("Don't do this.");
+    expect(out).toContain("::: kept inside code");
+  });
+
+  it("turns the content into its own paragraph on its real line", () => {
+    const [s] = parseDocument("g.md", SRC).sections;
+    expect(s.blocks.map((b) => [b.type, b.startLine, b.text])).toEqual([
+      ["paragraph", 4, "Don't do this."],
+      ["paragraph", 8, "Do this."],
+      ["code", 11, "::: kept inside code"],
     ]);
   });
 });

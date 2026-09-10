@@ -26,6 +26,7 @@ export function parseDocument(filePath: string, source: string, options: ParseOp
     src = fm[0].replace(/[^\r\n]/g, '') + src.slice(fm[0].length)
   }
   if (options.mdx ?? /\.mdx$/i.test(file)) src = blankMdxSyntax(src)
+  src = blankContainerMarkers(src)
   const lines = src.split(/\r\n|\r|\n/)
   const lastLine = (map: [number, number]) => { let e = map[1]; while (e > map[0] + 1 && !lines[e - 1]?.trim()) e--; return e }
 
@@ -169,6 +170,22 @@ export function blankMdxSyntax(src: string): string {
       continue
     }
     lines[i] = line.replace(/\{\/\*[\s\S]*?\*\/\}/g, (m) => ' '.repeat(m.length))
+  }
+  return lines.join('\n')
+}
+
+/**
+ * VitePress and Docusaurus admonitions (`::: tip`, `:::warning Title`, `::: code-group`, the closing `:::`):
+ * blank the marker lines so they don't become sentences of their own or glue onto the text after them.
+ * The content inside stays. Blanked, not deleted, so line numbers stay true. Code fences are left alone.
+ */
+export function blankContainerMarkers(src: string): string {
+  const lines = src.split(/\r?\n|\r/)
+  let fence: string | null = null
+  for (let i = 0; i < lines.length; i++) {
+    const f = /^ {0,3}(`{3,}|~{3,})/.exec(lines[i])
+    if (f) { if (!fence) fence = f[1][0]; else if (lines[i].trim().startsWith(fence)) fence = null; continue }
+    if (!fence && /^\s*:{3,}/.test(lines[i])) lines[i] = ''
   }
   return lines.join('\n')
 }

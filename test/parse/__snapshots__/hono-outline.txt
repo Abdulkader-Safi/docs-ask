@@ -1,0 +1,1584 @@
+api/context.md:1  Context
+  heading@1 sentence@3 sentence@3
+api/context.md:5  Context > req
+  heading@5 sentence@7 sentence@7 code@9
+api/context.md:22  Context > status()
+  heading@22 sentence@24 sentence@24 sentence@24 code@26
+api/context.md:37  Context > header()
+  heading@37 sentence@39 code@41
+api/context.md:52  Context > body()
+  heading@52 sentence@54 sentence@57 code@60 sentence@71 code@73 sentence@85 code@87
+api/context.md:97  Context > text()
+  heading@97 sentence@99 code@101
+api/context.md:110  Context > json()
+  heading@110 sentence@112 code@114
+api/context.md:123  Context > html()
+  heading@123 sentence@125 code@127
+api/context.md:136  Context > notFound()
+  heading@136 sentence@138 sentence@138 code@140
+api/context.md:149  Context > redirect()
+  heading@149 sentence@151 code@153
+api/context.md:165  Context > res
+  heading@165 sentence@167 code@169
+api/context.md:182  Context > set() / get()
+  heading@182 sentence@184 sentence@184 code@186 sentence@201 code@203 sentence@213 sentence@213
+api/context.md:215  Context > var
+  heading@215 sentence@217 code@219 sentence@226 code@229 sentence@251 sentence@252 code@254
+api/context.md:273  Context > render() / setRenderer()
+  heading@273 sentence@275 code@277 sentence@297 code@299 sentence@308 code@310 sentence@318 sentence@319 code@321 sentence@332 code@334
+api/context.md:365  Context > executionCtx
+  heading@365 sentence@367 code@369 sentence@386 sentence@386 code@388
+api/context.md:398  Context > event
+  heading@398 sentence@400 sentence@400 sentence@400 code@402
+api/context.md:422  Context > env
+  heading@422 sentence@424 sentence@425 code@427
+api/context.md:445  Context > error
+  heading@445 sentence@447 sentence@448 code@450
+api/context.md:462  Context > ContextVariableMap
+  heading@462 sentence@465 sentence@465 sentence@467 code@469 sentence@496 sentence@496 sentence@498 code@500 sentence@508 code@510 sentence@519 code@521
+api/exception.md:1  HTTPException
+  heading@1 sentence@3 sentence@3
+api/exception.md:5  HTTPException > Throwing HTTPExceptions
+  heading@5 sentence@7
+api/exception.md:9  HTTPException > Throwing HTTPExceptions > Custom Message
+  heading@9 sentence@11 code@13
+api/exception.md:19  HTTPException > Throwing HTTPExceptions > Custom Response
+  heading@19 sentence@21 sentence@21 code@23
+api/exception.md:36  HTTPException > Throwing HTTPExceptions > Cause
+  heading@36 sentence@38 code@40
+api/exception.md:57  HTTPException > Handling HTTPExceptions
+  heading@57 sentence@59 sentence@59 code@61 sentence@81 sentence@81
+api/hono.md:1  App - Hono
+  heading@1 sentence@3 sentence@4 code@6
+api/hono.md:15  App - Hono > Methods
+  heading@15 sentence@17 list@19 list@20 list@21 list@22 list@23 list@24 list@25 list@26 list@27 list@28 list@29 list@30 sentence@32
+api/hono.md:34  App - Hono > Not Found
+  heading@34 sentence@36 code@38 sentence@48 sentence@48
+api/hono.md:51  App - Hono > Error Handling
+  heading@51 sentence@53 code@55 sentence@66
+api/hono.md:69  App - Hono > fire()
+  heading@69 sentence@72 sentence@72 sentence@72 sentence@75 sentence@77 sentence@79 code@81
+api/hono.md:87  App - Hono > fetch()
+  heading@87 sentence@89 sentence@91 code@93 sentence@106 code@108 sentence@115 code@118
+api/hono.md:126  App - Hono > request()
+  heading@126 sentence@128 sentence@130 code@133 sentence@145 code@147
+api/hono.md:162  App - Hono > mount()
+  heading@162 sentence@164 code@166 sentence@183 sentence@183 code@185 sentence@195 code@197
+api/hono.md:207  App - Hono > strict mode
+  heading@207 sentence@209 list@211 list@212 sentence@214 sentence@216 code@218
+api/hono.md:224  App - Hono > router option
+  heading@224 sentence@226 sentence@226 sentence@226 code@228
+api/hono.md:236  App - Hono > Generics
+  heading@236 sentence@238 code@240
+api/index.md:1  API
+  heading@1 sentence@3 sentence@4 sentence@5 sentence@7 list@9 list@10 list@11 list@12
+api/presets.md:1  Presets
+  heading@1 sentence@3 sentence@4 sentence@6 sentence@7 sentence@8
+api/presets.md:10  Presets > hono
+  heading@10 sentence@12 code@14 sentence@18 code@20
+api/presets.md:26  Presets > hono/quick
+  heading@26 sentence@28 code@30 sentence@34 code@36
+api/presets.md:42  Presets > hono/tiny
+  heading@42 sentence@44 code@46 sentence@50 code@52
+api/presets.md:56  Presets > Which preset should I use?
+  heading@56 tableRow@60 tableRow@61 tableRow@62
+api/request.md:1  HonoRequest
+  heading@1 sentence@3
+api/request.md:5  HonoRequest > param()
+  heading@5 sentence@7 code@9
+api/request.md:27  HonoRequest > query()
+  heading@27 sentence@29 code@31
+api/request.md:48  HonoRequest > queries()
+  heading@48 sentence@50 code@52
+api/request.md:64  HonoRequest > header()
+  heading@64 sentence@66 code@68 sentence@80 sentence@82 code@85
+api/request.md:96  HonoRequest > parseBody()
+  heading@96 sentence@98 code@100 sentence@110 sentence@112 code@114 sentence@123 sentence@125
+api/request.md:127  HonoRequest > parseBody() > Multiple files
+  heading@127 code@129 sentence@137 sentence@139
+api/request.md:141  HonoRequest > parseBody() > Multiple files or fields with same name
+  heading@141 sentence@143 code@145 sentence@153 list@155 list@156
+api/request.md:158  HonoRequest > parseBody() > Dot notation
+  heading@158 sentence@160 sentence@162 code@164 sentence@170 code@172
+api/request.md:180  HonoRequest > json()
+  heading@180 sentence@182 code@184
+api/request.md:194  HonoRequest > text()
+  heading@194 sentence@196 code@198
+api/request.md:208  HonoRequest > arrayBuffer()
+  heading@208 sentence@210 code@212
+api/request.md:222  HonoRequest > blob()
+  heading@222 sentence@224 code@226
+api/request.md:236  HonoRequest > formData()
+  heading@236 sentence@238 code@240
+api/request.md:250  HonoRequest > valid()
+  heading@250 sentence@252 code@254 sentence@261 list@263 list@264 list@265 list@266 list@267 list@268 sentence@270
+api/request.md:272  HonoRequest > routePath
+  heading@272 sentence@275 sentence@275 sentence@278 code@280 sentence@289 code@291
+api/request.md:295  HonoRequest > matchedRoutes
+  heading@295 sentence@298 sentence@298 sentence@301 code@303
+api/request.md:325  HonoRequest > path
+  heading@325 sentence@327 code@329
+api/request.md:339  HonoRequest > url
+  heading@339 sentence@341 code@343
+api/request.md:353  HonoRequest > method
+  heading@353 sentence@355 code@357
+api/request.md:367  HonoRequest > raw
+  heading@367 sentence@369 code@371
+api/request.md:379  HonoRequest > cloneRawRequest()
+  heading@379 sentence@381 sentence@381 code@383
+api/routing.md:1  Routing
+  heading@1 sentence@3 sentence@4
+api/routing.md:6  Routing > Basic
+  heading@6 code@8
+api/routing.md:41  Routing > Path Parameter
+  heading@41 code@43 sentence@54 code@56
+api/routing.md:67  Routing > Optional Parameter
+  heading@67 code@69
+api/routing.md:77  Routing > Regexp
+  heading@77 code@79
+api/routing.md:90  Routing > Including slashes
+  heading@90 code@92
+api/routing.md:101  Routing > Chained route
+  heading@101 code@103
+api/routing.md:119  Routing > Grouping
+  heading@119 sentence@121 code@123
+api/routing.md:140  Routing > Grouping without changing base
+  heading@140 sentence@142 code@144
+api/routing.md:160  Routing > Base path
+  heading@160 sentence@162 code@164
+api/routing.md:171  Routing > Routing with hostname
+  heading@171 sentence@173 code@175
+api/routing.md:186  Routing > Routing with host Header value
+  heading@186 sentence@188 code@190 sentence@208
+api/routing.md:210  Routing > Routing priority
+  heading@210 sentence@212 code@214 code@222 sentence@227 code@229 code@237 sentence@241 code@243 sentence@252 code@254 code@262
+api/routing.md:267  Routing > Grouping ordering
+  heading@267 sentence@269 sentence@270 code@272 sentence@280 code@282 sentence@286 code@288 code@301
+concepts/benchmarks.md:1  Benchmarks
+  heading@1 sentence@3
+concepts/benchmarks.md:5  Benchmarks > Routers
+  heading@5 sentence@7 sentence@8 list@10 list@11 list@12 list@13 list@14 list@15 sentence@17 sentence@18 code@20 sentence@42 code@44 sentence@89
+concepts/benchmarks.md:91  Benchmarks > Routers > On Node.js
+  heading@91 sentence@93
+concepts/benchmarks.md:111  Benchmarks > Routers > On Bun
+  heading@111 sentence@113
+concepts/benchmarks.md:131  Benchmarks > Cloudflare Workers
+  heading@131 sentence@133 list@135 list@136 code@138
+concepts/benchmarks.md:147  Benchmarks > Deno
+  heading@147 sentence@149 list@151 list@152 list@153 tableRow@157 tableRow@158 tableRow@159 tableRow@160 tableRow@161 tableRow@162 sentence@164
+concepts/benchmarks.md:166  Benchmarks > Bun
+  heading@166 sentence@168 sentence@169 list@171
+concepts/developer-experience.md:1  Developer Experience
+  heading@1 sentence@3 sentence@4 sentence@5
+concepts/middleware.md:1  Middleware
+  heading@1 sentence@3 sentence@4 sentence@5 sentence@9 code@11 sentence@23
+concepts/motivation.md:1  Philosophy
+  heading@1 sentence@3
+concepts/motivation.md:5  Philosophy > Motivation
+  heading@5 sentence@7 sentence@8 sentence@9 sentence@11 sentence@12 sentence@13 sentence@15 sentence@15 sentence@16 sentence@18 sentence@19 sentence@20 sentence@22 sentence@23
+concepts/routers.md:1  Routers
+  heading@1 sentence@3 sentence@5
+concepts/routers.md:7  Routers > RegExpRouter
+  heading@7 sentence@9 sentence@11 sentence@12 sentence@13 sentence@17 sentence@18 sentence@22 sentence@24
+concepts/routers.md:26  Routers > TrieRouter
+  heading@26 sentence@28 sentence@29 sentence@33 sentence@34
+concepts/routers.md:36  Routers > SmartRouter
+  heading@36 sentence@38 sentence@38 sentence@39 code@41 sentence@48
+concepts/routers.md:50  Routers > LinearRouter
+  heading@50 sentence@52 sentence@53 sentence@55 sentence@56 sentence@58 code@60
+concepts/routers.md:77  Routers > PatternRouter
+  heading@77 sentence@79 sentence@81 sentence@83 code@85
+concepts/stacks.md:1  Hono Stacks
+  heading@1 sentence@3 sentence@4
+concepts/stacks.md:6  Hono Stacks > RPC
+  heading@6 sentence@8 sentence@9 sentence@11 list@13 list@14 list@15 list@16 sentence@18 sentence@19
+concepts/stacks.md:21  Hono Stacks > Writing API
+  heading@21 sentence@23 code@25
+concepts/stacks.md:37  Hono Stacks > Validation with Zod
+  heading@37 sentence@39 code@43
+concepts/stacks.md:64  Hono Stacks > Sharing the Types
+  heading@64 sentence@66 sentence@70 sentence@70 code@74
+concepts/stacks.md:94  Hono Stacks > Client
+  heading@94 sentence@96 sentence@97 sentence@98 code@102 sentence@114 code@118 sentence@123
+concepts/stacks.md:127  Hono Stacks > With React
+  heading@127 sentence@129 sentence@131 code@133 sentence@170 code@172
+concepts/web-standard.md:1  Web Standards
+  heading@1 sentence@3 sentence@4 sentence@5 sentence@7 sentence@8 sentence@8 code@10 sentence@18 sentence@19 sentence@19 list@21 list@22 list@23 list@24 list@25 list@26 list@27 list@28 sentence@30 sentence@31 sentence@33 sentence@34
+getting-started/ali-function-compute.md:1  Alibaba Cloud Function Compute
+  heading@1 sentence@3 sentence@3 sentence@5
+getting-started/ali-function-compute.md:7  Alibaba Cloud Function Compute > 1. Setup
+  heading@7 code@11 code@20 code@29 code@38
+getting-started/ali-function-compute.md:49  Alibaba Cloud Function Compute > 2. Hello World
+  heading@49 sentence@51 code@53
+getting-started/ali-function-compute.md:64  Alibaba Cloud Function Compute > 3. Setup serverless-devs
+  heading@64 blockquote@66 sentence@68 code@70 sentence@76 code@78 sentence@100 code@102
+getting-started/ali-function-compute.md:111  Alibaba Cloud Function Compute > 4. Deploy
+  heading@111 sentence@113 code@115
+getting-started/aws-lambda.md:1  AWS Lambda
+  heading@1 sentence@3 sentence@4 sentence@6
+getting-started/aws-lambda.md:8  AWS Lambda > 1. Setup
+  heading@8 sentence@10 sentence@14 code@18 code@28 code@38 code@48
+getting-started/aws-lambda.md:60  AWS Lambda > 2. Hello World
+  heading@60 sentence@62 code@64
+getting-started/aws-lambda.md:75  AWS Lambda > 3. Deploy
+  heading@75 sentence@77 code@79 sentence@104 code@106
+getting-started/aws-lambda.md:110  AWS Lambda > Serve Binary data
+  heading@110 sentence@112 sentence@113 sentence@114 code@116
+getting-started/aws-lambda.md:125  AWS Lambda > Access AWS Lambda Object
+  heading@125 sentence@127 code@129
+getting-started/aws-lambda.md:151  AWS Lambda > Access RequestContext
+  heading@151 sentence@153 code@155
+getting-started/aws-lambda.md:174  AWS Lambda > Access RequestContext > Before v3.10.0 (deprecated)
+  heading@174 sentence@176 code@178
+getting-started/aws-lambda.md:197  AWS Lambda > Lambda response streaming
+  heading@197 sentence@199 code@201 sentence@208 code@210
+getting-started/azure-functions.md:1  Azure Functions
+  heading@1 sentence@3 sentence@3 sentence@5 sentence@7
+getting-started/azure-functions.md:9  Azure Functions > 1. Install CLI
+  heading@9 sentence@11 sentence@13 code@15 sentence@20 list@22
+getting-started/azure-functions.md:24  Azure Functions > 2. Setup
+  heading@24 sentence@26 code@28 sentence@32 sentence@32 code@34 sentence@43 sentence@43 sentence@46 code@50 code@54 code@58 code@62
+getting-started/azure-functions.md:68  Azure Functions > 3. Hello World
+  heading@68 sentence@70 code@72 sentence@82 code@84
+getting-started/azure-functions.md:104  Azure Functions > 4. Run
+  heading@104 sentence@106 sentence@106 code@110 code@114 code@118 code@122
+getting-started/azure-functions.md:128  Azure Functions > 5. Deploy
+  heading@128 sentence@131 sentence@131 sentence@134 code@138 code@142 code@146 code@150 sentence@156 sentence@156 code@158
+getting-started/basic.md:1  Getting Started
+  heading@1 sentence@3 sentence@3 sentence@3 sentence@3
+getting-started/basic.md:5  Getting Started > Starter
+  heading@5 sentence@7 sentence@7 code@11 code@15 code@19 code@23 code@27 sentence@33 sentence@34 code@36 sentence@49 code@53 code@58 code@63 code@68 sentence@75 code@79 code@83 code@87 code@91
+getting-started/basic.md:97  Getting Started > Hello World
+  heading@97 sentence@99 sentence@101 sentence@101 sentence@103 code@106 sentence@118 code@122 code@126 code@130 code@134
+getting-started/basic.md:140  Getting Started > Return JSON
+  heading@140 sentence@142 sentence@142 code@144
+getting-started/basic.md:153  Getting Started > Request and Response
+  heading@153 sentence@155 code@157 sentence@166 code@168
+getting-started/basic.md:175  Getting Started > Return HTML
+  heading@175 sentence@177 sentence@177 sentence@177 code@179
+getting-started/basic.md:195  Getting Started > Return raw Response
+  heading@195 sentence@197 code@199
+getting-started/basic.md:205  Getting Started > Using Middleware
+  heading@205 sentence@207 sentence@208 code@210 sentence@228 sentence@229 sentence@230
+getting-started/basic.md:232  Getting Started > Adapter
+  heading@232 sentence@234 sentence@235 code@237
+getting-started/basic.md:248  Getting Started > Next step
+  heading@248 sentence@250 sentence@251 sentence@252
+getting-started/bun.md:1  Bun
+  heading@1 sentence@3 sentence@3 sentence@3 sentence@4
+getting-started/bun.md:6  Bun > 1. Install Bun
+  heading@6 sentence@8
+getting-started/bun.md:10  Bun > 2. Setup
+  heading@10
+getting-started/bun.md:12  Bun > 2. Setup > 2.1. Setup a new project
+  heading@12 sentence@14 sentence@14 sentence@15 code@17 sentence@21 code@23
+getting-started/bun.md:28  Bun > 2. Setup > 2.2. Setup an existing project
+  heading@28 sentence@30 code@32 sentence@36 code@38 sentence@46 sentence@46
+getting-started/bun.md:48  Bun > 3. Hello World
+  heading@48 sentence@50 sentence@50 code@52 sentence@61
+getting-started/bun.md:63  Bun > 4. Run
+  heading@63 sentence@65 code@67 sentence@71
+getting-started/bun.md:73  Bun > Change port number
+  heading@73 sentence@75 code@78
+getting-started/bun.md:91  Bun > Serve static files
+  heading@91 sentence@93 code@95 sentence@106 code@108
+getting-started/bun.md:121  Bun > Serve static files > rewriteRequestPath
+  heading@121 sentence@123 code@125
+getting-started/bun.md:136  Bun > Serve static files > mimes
+  heading@136 sentence@138 code@140
+getting-started/bun.md:152  Bun > Serve static files > onFound
+  heading@152 sentence@154 code@156
+getting-started/bun.md:168  Bun > Serve static files > onNotFound
+  heading@168 sentence@170 code@172
+getting-started/bun.md:183  Bun > Serve static files > precompressed
+  heading@183 sentence@185 sentence@185 sentence@185 code@187
+getting-started/bun.md:196  Bun > Testing
+  heading@196 sentence@198 code@200 sentence@213 code@215
+getting-started/cloudbase.md:1  Tencent CloudBase
+  heading@1 sentence@3 sentence@3 sentence@3 sentence@3
+getting-started/cloudbase.md:5  Tencent CloudBase > 1. Setup
+  heading@5 sentence@7 sentence@7 code@11 code@17 code@23 code@29
+getting-started/cloudbase.md:37  Tencent CloudBase > 2. Hello World
+  heading@37 sentence@39 sentence@39 code@41
+getting-started/cloudbase.md:55  Tencent CloudBase > 3. Run
+  heading@55 code@57 sentence@61
+getting-started/cloudbase.md:63  Tencent CloudBase > 4. Bootstrap
+  heading@63 sentence@65 code@67 code@72 sentence@76 sentence@76
+getting-started/cloudbase.md:78  Tencent CloudBase > 5. Deploy
+  heading@78 sentence@80 code@82 sentence@87
+getting-started/cloudflare-pages.md:1  Cloudflare Pages
+  heading@1 sentence@4 sentence@4 sentence@4 sentence@7 sentence@8 sentence@10 sentence@11 sentence@11
+getting-started/cloudflare-pages.md:13  Cloudflare Pages > 1. Setup
+  heading@13 sentence@15 sentence@16 sentence@17 code@21 code@25 code@29 code@33 code@37 sentence@43 code@47 code@52 code@57 code@62 sentence@69 code@71
+getting-started/cloudflare-pages.md:84  Cloudflare Pages > 2. Hello World
+  heading@84 sentence@86 code@88
+getting-started/cloudflare-pages.md:103  Cloudflare Pages > 3. Run
+  heading@103 sentence@105 sentence@105 code@109 code@113 code@117 code@121
+getting-started/cloudflare-pages.md:127  Cloudflare Pages > 4. Deploy
+  heading@127 sentence@129 sentence@129 code@133 code@137 code@141 code@145
+getting-started/cloudflare-pages.md:151  Cloudflare Pages > 4. Deploy > Deploy via the Cloudflare dashboard with GitHub
+  heading@151 orderedList@153 orderedList@154 orderedList@155 tableRow@159 tableRow@160 tableRow@161
+getting-started/cloudflare-pages.md:163  Cloudflare Pages > Bindings
+  heading@163 sentence@165 sentence@166
+getting-started/cloudflare-pages.md:168  Cloudflare Pages > Bindings > Create wrangler.toml
+  heading@168 sentence@170 code@172 sentence@176 sentence@176 code@178
+getting-started/cloudflare-pages.md:183  Cloudflare Pages > Bindings > Create KV
+  heading@183 sentence@185 sentence@185 code@187 sentence@191 code@193 sentence@197 code@199
+getting-started/cloudflare-pages.md:205  Cloudflare Pages > Bindings > Edit vite.config.ts
+  heading@205 sentence@207 code@209
+getting-started/cloudflare-pages.md:226  Cloudflare Pages > Bindings > Use Bindings in your application
+  heading@226 sentence@228 sentence@228 code@230 sentence@239 code@241
+getting-started/cloudflare-pages.md:249  Cloudflare Pages > Bindings > In production
+  heading@249 sentence@251
+getting-started/cloudflare-pages.md:253  Cloudflare Pages > Client-side
+  heading@253 sentence@255 sentence@256 sentence@257 code@259 sentence@278 code@280 sentence@310 code@312
+getting-started/cloudflare-pages.md:316  Cloudflare Pages > Cloudflare Pages Middleware
+  heading@316 sentence@318 sentence@318 code@320 sentence@328 code@330 sentence@340 sentence@340 code@342 sentence@355 code@357
+getting-started/cloudflare-pages.md:369  Cloudflare Pages > Cloudflare Pages Middleware > Accessing EventContext
+  heading@369 sentence@371 code@373 sentence@385 code@387
+getting-started/cloudflare-workers-vite.md:1  Cloudflare Workers + Vite
+  heading@1 sentence@3 sentence@4 sentence@6
+getting-started/cloudflare-workers-vite.md:8  Cloudflare Workers + Vite > 1. Setup
+  heading@8 sentence@10 sentence@11 sentence@12 code@16 code@20 code@24 code@28 code@32 sentence@38 code@42 code@47 code@52 code@57 sentence@64 code@66 sentence@79 code@81
+getting-started/cloudflare-workers-vite.md:91  Cloudflare Workers + Vite > 2. Hello World
+  heading@91 sentence@93 code@95 sentence@110 code@112
+getting-started/cloudflare-workers-vite.md:129  Cloudflare Workers + Vite > 3. Run
+  heading@129 sentence@131 sentence@131 code@135 code@139 code@143 code@147
+getting-started/cloudflare-workers-vite.md:153  Cloudflare Workers + Vite > 4. Deploy
+  heading@153 sentence@155 sentence@155 code@159 code@163 code@167 code@171
+getting-started/cloudflare-workers-vite.md:177  Cloudflare Workers + Vite > Bindings
+  heading@177 sentence@179 sentence@180 sentence@180 code@182 sentence@194 code@198 code@202 code@206 code@210 sentence@216 sentence@216 code@218 sentence@222 code@224
+getting-started/cloudflare-workers-vite.md:230  Cloudflare Workers + Vite > Client-side
+  heading@230 sentence@232 sentence@233 code@235 sentence@252
+getting-started/cloudflare-workers.md:1  Cloudflare Workers
+  heading@1 sentence@3 sentence@5 sentence@6 sentence@8
+getting-started/cloudflare-workers.md:10  Cloudflare Workers > 1. Setup
+  heading@10 sentence@12 sentence@13 sentence@14 code@18 code@22 code@26 code@30 code@34 sentence@40 code@44 code@49 code@54 code@59
+getting-started/cloudflare-workers.md:66  Cloudflare Workers > 2. Hello World
+  heading@66 sentence@68 code@70
+getting-started/cloudflare-workers.md:79  Cloudflare Workers > 3. Run
+  heading@79 sentence@81 sentence@81 code@85 code@89 code@93 code@97
+getting-started/cloudflare-workers.md:103  Cloudflare Workers > 3. Run > Change port number
+  heading@103 sentence@105 sentence@108
+getting-started/cloudflare-workers.md:111  Cloudflare Workers > 4. Deploy
+  heading@111 sentence@113 sentence@113 code@117 code@121 code@125 code@129 sentence@135
+getting-started/cloudflare-workers.md:137  Cloudflare Workers > Using Hono with other event handlers
+  heading@137 sentence@139 sentence@141 code@143
+getting-started/cloudflare-workers.md:152  Cloudflare Workers > Serve static files
+  heading@152 sentence@154 sentence@154 code@156 sentence@160 sentence@160 code@162
+getting-started/cloudflare-workers.md:174  Cloudflare Workers > Types
+  heading@174 sentence@176 code@180 code@184 code@188 code@192
+getting-started/cloudflare-workers.md:198  Cloudflare Workers > Testing
+  heading@198 sentence@200 sentence@201 sentence@203 code@205 sentence@212 code@214
+getting-started/cloudflare-workers.md:223  Cloudflare Workers > Bindings
+  heading@223 sentence@225 sentence@225 sentence@225 code@227
+getting-started/cloudflare-workers.md:244  Cloudflare Workers > Bindings > Generating Bindings Types Automatically
+  heading@244 sentence@246 sentence@246 code@248 sentence@252 sentence@252 code@254
+getting-started/cloudflare-workers.md:264  Cloudflare Workers > Using Variables in Middleware
+  heading@264 sentence@266 sentence@267 code@269 sentence@290
+getting-started/cloudflare-workers.md:292  Cloudflare Workers > Deploy from GitHub Actions
+  heading@292 sentence@294 sentence@294 sentence@296 sentence@296 sentence@298 sentence@300 code@302 sentence@322 code@324 sentence@329 sentence@329
+getting-started/cloudflare-workers.md:331  Cloudflare Workers > Load env when local development
+  heading@331 sentence@333 sentence@334 sentence@334 code@336 blockquote@341 sentence@344 sentence@347 sentence@347 sentence@347 sentence@347 code@350 sentence@363 blockquote@365
+getting-started/deno.md:1  Deno
+  heading@1 sentence@3 sentence@3 sentence@4 sentence@6
+getting-started/deno.md:8  Deno > 1. Install Deno
+  heading@8 sentence@10 sentence@11
+getting-started/deno.md:13  Deno > 2. Setup
+  heading@13 sentence@15 sentence@16 code@18 sentence@22 sentence@22 code@24
+getting-started/deno.md:28  Deno > 3. Hello World
+  heading@28 sentence@30 code@32
+getting-started/deno.md:42  Deno > 4. Run
+  heading@42 sentence@44 sentence@44 code@46
+getting-started/deno.md:50  Deno > Change port number
+  heading@50 sentence@52 code@54
+getting-started/deno.md:59  Deno > Serve static files
+  heading@59 sentence@61 code@63 sentence@77 code@79
+getting-started/deno.md:92  Deno > Serve static files > rewriteRequestPath
+  heading@92 sentence@94 code@96
+getting-started/deno.md:107  Deno > Serve static files > mimes
+  heading@107 sentence@109 code@111
+getting-started/deno.md:123  Deno > Serve static files > onFound
+  heading@123 sentence@125 code@127
+getting-started/deno.md:139  Deno > Serve static files > onNotFound
+  heading@139 sentence@141 code@143
+getting-started/deno.md:154  Deno > Serve static files > precompressed
+  heading@154 sentence@156 sentence@156 sentence@156 code@158
+getting-started/deno.md:167  Deno > Deno Deploy
+  heading@167 sentence@169 sentence@170 sentence@172 sentence@172
+getting-started/deno.md:174  Deno > Testing
+  heading@174 sentence@176 sentence@177 code@179 code@183 sentence@196 code@198
+getting-started/deno.md:202  Deno > npm and JSR
+  heading@202 sentence@204 sentence@204 code@206 sentence@215 code@217 sentence@225 sentence@225 code@227 sentence@237 sentence@237 code@239
+getting-started/fastly.md:1  Fastly Compute
+  heading@1 sentence@3 sentence@3 sentence@5
+getting-started/fastly.md:7  Fastly Compute > 1. Setup
+  heading@7 sentence@9 sentence@10 sentence@11 code@15 code@19 code@23 code@27 code@31 sentence@37 code@41 code@46 code@51 code@56
+getting-started/fastly.md:63  Fastly Compute > 2. Hello World
+  heading@63 sentence@65 code@67 blockquote@79
+getting-started/fastly.md:82  Fastly Compute > 3. Run
+  heading@82 sentence@84 sentence@84 code@88 code@92 code@96 code@100
+getting-started/fastly.md:106  Fastly Compute > 4. Deploy
+  heading@106 sentence@108 sentence@108 sentence@110 code@114 code@118 code@122 code@126
+getting-started/fastly.md:132  Fastly Compute > Bindings
+  heading@132 sentence@134 sentence@134 sentence@136 sentence@136 sentence@136 code@138
+getting-started/google-cloud-run.md:1  Google Cloud Run
+  heading@1 sentence@3 sentence@3 sentence@5 sentence@5 sentence@5 sentence@7
+getting-started/google-cloud-run.md:9  Google Cloud Run > 1. Install the CLI
+  heading@9 sentence@11 sentence@13 code@15 sentence@19 code@21
+getting-started/google-cloud-run.md:25  Google Cloud Run > 2. Project setup
+  heading@25 sentence@27 sentence@27 code@29 sentence@33 sentence@33 code@35 sentence@47 code@49 sentence@53 code@55 sentence@60 code@62 sentence@67 code@69
+getting-started/google-cloud-run.md:75  Google Cloud Run > 3. Hello World
+  heading@75 sentence@77 sentence@77 code@79 sentence@83 code@85 sentence@90 code@93 sentence@112 sentence@112 code@114
+getting-started/google-cloud-run.md:118  Google Cloud Run > 4. Deploy
+  heading@118 sentence@120 code@122
+getting-started/google-cloud-run.md:126  Google Cloud Run > Changing runtimes
+  heading@126 sentence@128 sentence@130 list@132 list@133 list@134
+getting-started/lambda-edge.md:1  Lambda@Edge
+  heading@1 sentence@3 sentence@3 sentence@5
+getting-started/lambda-edge.md:7  Lambda@Edge > 1. Setup
+  heading@7 sentence@9 sentence@13 code@17 code@25 code@33 code@41
+getting-started/lambda-edge.md:51  Lambda@Edge > 2. Hello World
+  heading@51 sentence@53 code@55
+getting-started/lambda-edge.md:66  Lambda@Edge > 3. Deploy
+  heading@66 sentence@68 code@70 sentence@85 code@87 sentence@125 code@127
+getting-started/lambda-edge.md:131  Lambda@Edge > Callback
+  heading@131 sentence@133 code@135
+getting-started/netlify.md:1  Netlify
+  heading@1 sentence@3 sentence@3 sentence@5 sentence@5
+getting-started/netlify.md:7  Netlify > 1. Setup
+  heading@7 sentence@9 sentence@10 sentence@11 code@15 code@19 code@23 code@27 code@31 sentence@37
+getting-started/netlify.md:39  Netlify > 2. Hello World
+  heading@39 sentence@41 code@43
+getting-started/netlify.md:56  Netlify > 3. Run
+  heading@56 sentence@58 sentence@58 code@60
+getting-started/netlify.md:64  Netlify > 4. Deploy
+  heading@64 sentence@66 code@68
+getting-started/netlify.md:72  Netlify > Context
+  heading@72 sentence@74 code@76
+getting-started/nextjs.md:1  Next.js
+  heading@1 sentence@3 sentence@5 sentence@6
+getting-started/nextjs.md:8  Next.js > 1. Setup
+  heading@8 sentence@10 sentence@11 sentence@12 code@16 code@20 code@24 code@28 code@32 sentence@38 code@42 code@47 code@52 code@57
+getting-started/nextjs.md:64  Next.js > 2. Hello World
+  heading@64 sentence@66 sentence@66 code@68
+getting-started/nextjs.md:84  Next.js > 3. Run
+  heading@84 sentence@86 sentence@86 code@90 code@94 code@98 code@102 sentence@108
+getting-started/nextjs.md:110  Next.js > 4. Deploy
+  heading@110 sentence@112
+getting-started/nextjs.md:114  Next.js > Pages Router
+  heading@114 sentence@116 code@120 code@124 code@128 code@132 sentence@138 code@140 sentence@162 code@164
+getting-started/nodejs.md:1  Node.js
+  heading@1 sentence@3 sentence@5 sentence@8 sentence@8 list@10 list@11 list@12 sentence@14
+getting-started/nodejs.md:17  Node.js > 1. Setup
+  heading@17 sentence@19 sentence@20 sentence@21 code@25 code@29 code@33 code@37 code@41 sentence@46 code@50 code@55 code@60 code@65
+getting-started/nodejs.md:72  Node.js > 2. Hello World
+  heading@72 sentence@74 code@76 sentence@86 code@88 sentence@108 sentence@108
+getting-started/nodejs.md:111  Node.js > 3. Run
+  heading@111 sentence@113 sentence@113 code@117 code@121 code@125
+getting-started/nodejs.md:131  Node.js > Change port number
+  heading@131 sentence@133 code@135
+getting-started/nodejs.md:142  Node.js > WebSocket
+  heading@142 sentence@144 sentence@144 sentence@144 sentence@146 code@148
+getting-started/nodejs.md:172  Node.js > Access the raw Node.js APIs
+  heading@172 sentence@174 code@176
+getting-started/nodejs.md:196  Node.js > Serve static files
+  heading@196 sentence@198 sentence@198 code@200 sentence@209 code@211 sentence@218 sentence@218 sentence@218 sentence@220 code@222 sentence@234 code@236 sentence@240 code@242
+getting-started/nodejs.md:246  Node.js > Serve static files > rewriteRequestPath
+  heading@246 sentence@248 code@250
+getting-started/nodejs.md:261  Node.js > http2
+  heading@261 sentence@263
+getting-started/nodejs.md:265  Node.js > http2 > unencrypted http2
+  heading@265 code@267
+getting-started/nodejs.md:276  Node.js > http2 > encrypted http2
+  heading@276 code@278
+getting-started/nodejs.md:292  Node.js > Building & Deployment
+  heading@292 code@296 code@300 code@304 code@308 sentence@313
+getting-started/nodejs.md:316  Node.js > Building & Deployment > Dockerfile
+  heading@316 sentence@318 code@320
+getting-started/service-worker.md:1  Service Worker
+  heading@1 sentence@3 sentence@3 sentence@5
+getting-started/service-worker.md:7  Service Worker > 1. Setup
+  heading@7 sentence@9 code@11 sentence@16 sentence@16 code@18 sentence@29 code@31 sentence@44 code@48 code@53 code@58 code@63
+getting-started/service-worker.md:70  Service Worker > 2. Hello World
+  heading@70 sentence@72 code@74 sentence@84 code@86 sentence@113 sentence@113 code@115
+getting-started/service-worker.md:129  Service Worker > 2. Hello World > Using fire()
+  heading@129 sentence@131 code@133
+getting-started/service-worker.md:143  Service Worker > 3. Run
+  heading@143 sentence@145 code@149 code@153 code@157 code@161 sentence@167 sentence@167 sentence@167
+getting-started/supabase-functions.md:1  Supabase Edge Functions
+  heading@1 sentence@3 sentence@5 sentence@5 sentence@7
+getting-started/supabase-functions.md:9  Supabase Edge Functions > 1. Setup
+  heading@9
+getting-started/supabase-functions.md:11  Supabase Edge Functions > 1. Setup > Prerequisites
+  heading@11 sentence@13 sentence@13
+getting-started/supabase-functions.md:15  Supabase Edge Functions > 1. Setup > Creating a New Project
+  heading@15 orderedList@17 orderedList@19 code@21 sentence@26
+getting-started/supabase-functions.md:28  Supabase Edge Functions > 1. Setup > Adding an Edge Function
+  heading@28 orderedList@30 code@32 sentence@37
+getting-started/supabase-functions.md:39  Supabase Edge Functions > 2. Hello World
+  heading@39 sentence@41 code@43
+getting-started/supabase-functions.md:55  Supabase Edge Functions > 3. Run
+  heading@55 sentence@57 orderedList@59 code@61 sentence@66 orderedList@68 code@70 sentence@74
+getting-started/supabase-functions.md:76  Supabase Edge Functions > 4. Deploy
+  heading@76 sentence@78 code@80 sentence@84 code@86 sentence@91
+getting-started/vercel.md:1  Vercel
+  heading@1 sentence@3 sentence@5
+getting-started/vercel.md:7  Vercel > 1. Setup
+  heading@7 sentence@9 sentence@10 sentence@11 code@15 code@19 code@23 code@27 code@31 sentence@37 code@41 code@46 code@51 code@56 sentence@63 sentence@63
+getting-started/vercel.md:65  Vercel > 2. Hello World
+  heading@65 sentence@67 code@69 sentence@86
+getting-started/vercel.md:88  Vercel > 3. Run
+  heading@88 sentence@90 code@92 sentence@96
+getting-started/vercel.md:98  Vercel > 4. Deploy
+  heading@98 sentence@100 code@102
+getting-started/vercel.md:106  Vercel > Further reading
+  heading@106 sentence@108
+getting-started/webassembly-wasi.md:1  WebAssembly (w/ WASI)
+  heading@1 sentence@3 sentence@5 list@7 list@8 sentence@10 sentence@13 sentence@16 sentence@16 sentence@19
+getting-started/webassembly-wasi.md:28  WebAssembly (w/ WASI) > 1. Setup
+  heading@28 sentence@30 list@32 list@33 list@34 sentence@37 sentence@39 sentence@42 code@46 code@55 code@64 code@73 sentence@84 sentence@87 code@91 code@96 code@101 code@106 sentence@112 list@114 sentence@116 sentence@119 code@121 sentence@135
+getting-started/webassembly-wasi.md:143  WebAssembly (w/ WASI) > 2. Set up WIT interface & dependencies
+  heading@143 sentence@145 sentence@147 sentence@149 code@151 sentence@159 sentence@161 sentence@163 code@165 sentence@169 code@171
+getting-started/webassembly-wasi.md:191  WebAssembly (w/ WASI) > 3. Hello Wasm
+  heading@191 sentence@193 sentence@195 code@197
+getting-started/webassembly-wasi.md:215  WebAssembly (w/ WASI) > 4. Build
+  heading@215 sentence@217 code@221 code@225 code@229 code@233 sentence@240 sentence@242 sentence@245 code@249 code@253 code@257 code@261
+getting-started/webassembly-wasi.md:267  WebAssembly (w/ WASI) > 5. Run
+  heading@267 sentence@269 list@271 list@272 sentence@274 sentence@277 code@284 code@288 code@292 code@296 sentence@302 code@304 sentence@309 sentence@311 code@313 sentence@318 sentence@320 sentence@322
+getting-started/webassembly-wasi.md:325  WebAssembly (w/ WASI) > More information
+  heading@325 sentence@327 list@329 list@330 list@332 list@333 list@334 sentence@336 list@338 list@339 list@340
+guides/best-practices.md:1  Best Practices
+  heading@1 sentence@3 sentence@3 sentence@4
+guides/best-practices.md:6  Best Practices > Don't make "Controllers" when possible
+  heading@6 sentence@8 code@10 sentence@20 sentence@20 code@22 sentence@31 code@33
+guides/best-practices.md:41  Best Practices > factory.createHandlers() in hono/factory
+  heading@41 sentence@43 sentence@43 code@45
+guides/best-practices.md:66  Best Practices > Building a larger application
+  heading@66 sentence@68 sentence@70 code@72 code@85 sentence@98 code@100
+guides/best-practices.md:115  Best Practices > Building a larger application > If you want to use RPC features
+  heading@115 sentence@117 sentence@118 code@120 sentence@133 code@135 sentence@143
+guides/best-practices.md:145  Best Practices > HEAD Request Best Practices
+  heading@145
+guides/best-practices.md:147  Best Practices > HEAD Request Best Practices > Understanding Hono's HEAD Handling
+  heading@147 sentence@149 sentence@149
+guides/best-practices.md:151  Best Practices > HEAD Request Best Practices > ✅ Do: Use GET Routes for HEAD Requests
+  heading@151 code@153
+guides/best-practices.md:167  Best Practices > HEAD Request Best Practices > ✅ Do: Use Middleware for HEAD-Specific Logic
+  heading@167 code@169
+guides/best-practices.md:183  Best Practices > HEAD Request Best Practices > ❌ Don't: Try to Create Dedicated HEAD Handlers
+  heading@183 code@185
+guides/best-practices.md:199  Best Practices > HEAD Request Best Practices > Performance Considerations
+  heading@199 list@201 list@202 list@203
+guides/best-practices.md:205  Best Practices > HEAD Request Best Practices > Testing HEAD Requests
+  heading@205 code@207
+guides/best-practices.md:221  Best Practices > HEAD Request Best Practices > Notes
+  heading@221 list@223 list@224 list@225
+guides/create-hono.md:1  Create-hono
+  heading@1 sentence@3 blockquote@5
+guides/create-hono.md:8  Create-hono > Passing arguments:
+  heading@8 sentence@10 sentence@10 code@14 code@19 code@24 code@29 code@34
+guides/create-hono.md:41  Create-hono > Commonly used arguments
+  heading@41 tableRow@45 tableRow@46 tableRow@47 tableRow@48 blockquote@50
+guides/create-hono.md:53  Create-hono > Example flows
+  heading@53
+guides/create-hono.md:55  Create-hono > Example flows > Minimal, interactive
+  heading@55 code@57 sentence@61
+guides/create-hono.md:63  Create-hono > Example flows > Non-interactive, pick template and package manager
+  heading@63 code@65 sentence@69
+guides/create-hono.md:71  Create-hono > Example flows > Use offline cache (no network)
+  heading@71 code@73
+guides/create-hono.md:77  Create-hono > Troubleshooting & tips
+  heading@77 list@79 list@80
+guides/create-hono.md:82  Create-hono > Links & references
+  heading@82 list@84
+guides/examples.md:1  Examples
+  heading@1 sentence@3
+guides/faq.md:1  Frequently Asked Questions
+  heading@1 sentence@3
+guides/faq.md:5  Frequently Asked Questions > Is there an official Renovate config for Hono?
+  heading@5 sentence@7 sentence@8 sentence@10 code@12 sentence@22
+guides/helpers.md:1  Helpers
+  heading@1 sentence@3 sentence@3 sentence@5 code@7
+guides/helpers.md:20  Helpers > Available Helpers
+  heading@20 list@22 list@23 list@24 list@25 list@26 list@27 list@28 list@29 list@30 list@31 list@32 list@33
+guides/jsx-dom.md:1  Client Components
+  heading@1 sentence@3 sentence@3 sentence@3 sentence@5 sentence@5 sentence@7
+guides/jsx-dom.md:9  Client Components > Counter example
+  heading@9 sentence@11 code@13
+guides/jsx-dom.md:41  Client Components > render()
+  heading@41 sentence@43 code@45 sentence@49
+guides/jsx-dom.md:51  Client Components > Hooks compatible with React
+  heading@51 sentence@53 sentence@53 list@55 list@56 list@57 list@58 list@59 list@60 list@61 list@62 list@63 list@64 list@65 list@66 list@67 list@68 list@69 list@70 list@71 list@72 list@73 list@74 list@75 list@76 list@77 list@78
+guides/jsx-dom.md:80  Client Components > startViewTransition() family
+  heading@80 sentence@82 sentence@82
+guides/jsx-dom.md:84  Client Components > startViewTransition() family > 1. A very simple example
+  heading@84 sentence@86 code@88
+guides/jsx-dom.md:127  Client Components > startViewTransition() family > 2. Using viewTransition() with keyframes()
+  heading@127 sentence@129 sentence@131 code@133
+guides/jsx-dom.md:193  Client Components > startViewTransition() family > 3. Using useViewTransition
+  heading@193 sentence@195 sentence@195 sentence@195 sentence@197 list@199 list@200 code@202
+guides/jsx-dom.md:273  Client Components > The hono/jsx/dom runtime
+  heading@273 sentence@275 sentence@275 sentence@275 sentence@275 code@277 sentence@286 code@288
+guides/jsx.md:1  JSX
+  heading@1 sentence@3 sentence@5 sentence@5
+guides/jsx.md:7  JSX > Settings
+  heading@7 sentence@9 sentence@11 code@13 sentence@22 code@24 sentence@29 code@31
+guides/jsx.md:40  JSX > Usage
+  heading@40 sentence@43 sentence@43 sentence@46 code@48
+guides/jsx.md:85  JSX > Metadata hoisting
+  heading@85 sentence@87 sentence@87 sentence@87 code@89 sentence@120 sentence@120 sentence@120
+guides/jsx.md:123  JSX > Fragment
+  heading@123 sentence@125 code@127 sentence@139 code@141
+guides/jsx.md:151  JSX > PropsWithChildren
+  heading@151 sentence@153 code@155
+guides/jsx.md:173  JSX > Inserting Raw HTML
+  heading@173 sentence@175 code@177
+guides/jsx.md:184  JSX > Memoization
+  heading@184 sentence@186 code@188
+guides/jsx.md:202  JSX > Context
+  heading@202 sentence@204 code@206
+guides/jsx.md:249  JSX > Async Component
+  heading@249 sentence@251 sentence@252 code@254
+guides/jsx.md:271  JSX > Suspense
+  heading@271 sentence@273 sentence@274 sentence@275 code@277
+guides/jsx.md:301  JSX > ErrorBoundary
+  heading@301 sentence@303 sentence@305 code@307 sentence@326 code@328
+guides/jsx.md:350  JSX > StreamingContext
+  heading@350 sentence@352 sentence@352 code@354 sentence@385
+guides/jsx.md:387  JSX > Integration with html Middleware
+  heading@387 sentence@389 sentence@390 code@392
+guides/jsx.md:434  JSX > With JSX Renderer Middleware
+  heading@434 sentence@436
+guides/jsx.md:438  JSX > Override type definitions
+  heading@438 sentence@440 code@442
+guides/middleware.md:1  Middleware
+  heading@1 sentence@3 sentence@3
+guides/middleware.md:5  Middleware > Definition of Middleware
+  heading@5 list@7 list@8 sentence@10 sentence@10 code@12 sentence@23 code@25 sentence@29 code@31
+guides/middleware.md:35  Middleware > Execution order
+  heading@35 sentence@37 sentence@38 sentence@40 code@42 sentence@65 code@67 sentence@77 sentence@77
+guides/middleware.md:79  Middleware > Built-in Middleware
+  heading@79 sentence@81 code@83 sentence@104 sentence@105 code@107
+guides/middleware.md:123  Middleware > Custom Middleware
+  heading@123 sentence@125 code@127 sentence@143 sentence@143 sentence@145 sentence@145 code@147 sentence@157 code@159
+guides/middleware.md:165  Middleware > Custom Middleware > Modify the Response After Next
+  heading@165 sentence@167 code@169
+guides/middleware.md:177  Middleware > Context access inside Middleware arguments
+  heading@177 sentence@179 sentence@179 code@181
+guides/middleware.md:192  Middleware > Context access inside Middleware arguments > Extending the Context in Middleware
+  heading@192 sentence@194 sentence@194 code@196
+guides/middleware.md:213  Middleware > Context access inside Middleware arguments > Type Inference Across Chained Middleware
+  heading@213 sentence@215 sentence@215 code@217 sentence@249 sentence@249
+guides/middleware.md:251  Middleware > Third-party Middleware
+  heading@251 sentence@253 sentence@253 sentence@255 sentence@256
+guides/others.md:1  Miscellaneous
+  heading@1
+guides/others.md:3  Miscellaneous > Contributing
+  heading@3 sentence@5 sentence@5 list@7 list@8 list@9 list@10 list@11 sentence@13
+guides/others.md:15  Miscellaneous > Sponsoring
+  heading@15 sentence@17 list@19 list@20
+guides/others.md:22  Miscellaneous > Other Resources
+  heading@22 list@24 list@25 list@26
+guides/rpc.md:1  RPC
+  heading@1 sentence@3 sentence@5 sentence@7 blockquote@9
+guides/rpc.md:12  RPC > Server
+  heading@12 sentence@14 sentence@14 code@16 blockquote@39 sentence@42 code@44
+guides/rpc.md:48  RPC > Client
+  heading@48 sentence@50 code@52 sentence@57 sentence@57 code@59 sentence@63 code@65 sentence@74 sentence@74 code@76
+guides/rpc.md:83  RPC > Client > Cookies
+  heading@83 sentence@85 code@87
+guides/rpc.md:103  RPC > Status code
+  heading@103 sentence@105 code@107 sentence@132 code@134
+guides/rpc.md:164  RPC > Global Response
+  heading@164 sentence@166 sentence@166 code@168 sentence@185 code@187 sentence@199 code@201
+guides/rpc.md:211  RPC > Not Found
+  heading@211 sentence@213 sentence@213 code@215 sentence@251 code@253 sentence@275 sentence@275 code@277 sentence@300
+guides/rpc.md:302  RPC > Path parameters
+  heading@302 sentence@304 code@306 sentence@325 sentence@327 code@329
+guides/rpc.md:340  RPC > Path parameters > Multiple parameters
+  heading@340 sentence@342 code@344 sentence@363 code@365
+guides/rpc.md:375  RPC > Path parameters > Include slashes
+  heading@375 sentence@377 sentence@377 code@379 blockquote@406
+guides/rpc.md:409  RPC > Headers
+  heading@409 sentence@411 code@413 sentence@427 code@429
+guides/rpc.md:437  RPC > init option
+  heading@437 sentence@439 sentence@439 code@441 sentence@467 sentence@467
+guides/rpc.md:470  RPC > $url()
+  heading@470 sentence@472 sentence@475 sentence@475 sentence@477 code@479 code@491
+guides/rpc.md:509  RPC > $url() > Typed URL
+  heading@509 sentence@511 code@513 sentence@523
+guides/rpc.md:525  RPC > $path()
+  heading@525 sentence@527 sentence@527 code@529 sentence@547 code@549
+guides/rpc.md:559  RPC > File Uploads
+  heading@559 sentence@561 code@563 code@574
+guides/rpc.md:588  RPC > Custom fetch method
+  heading@588 sentence@590 sentence@592 code@594 code@601
+guides/rpc.md:608  RPC > Custom query serializer
+  heading@608 sentence@610 sentence@610 code@612
+guides/rpc.md:631  RPC > Infer
+  heading@631 sentence@633 code@635
+guides/rpc.md:646  RPC > Parsing a Response with type-safety helper
+  heading@646 sentence@648 code@650
+guides/rpc.md:662  RPC > Using SWR
+  heading@662 sentence@664 code@666
+guides/rpc.md:700  RPC > Using RPC with larger applications
+  heading@700 sentence@702 sentence@703 code@705 code@717 sentence@729 code@731 sentence@745
+guides/rpc.md:747  RPC > Known issues
+  heading@747
+guides/rpc.md:749  RPC > Known issues > IDE performance
+  heading@749 sentence@751 sentence@751 sentence@753 code@755 sentence@762 code@764 sentence@774 sentence@774 sentence@774 sentence@776
+guides/rpc.md:778  RPC > Known issues > IDE performance > Hono version mismatch
+  heading@778 sentence@780 sentence@780
+guides/rpc.md:784  RPC > Known issues > IDE performance > TypeScript project references
+  heading@784 sentence@786 sentence@786 sentence@786
+guides/rpc.md:788  RPC > Known issues > IDE performance > Compile your code before using it (recommended)
+  heading@788 sentence@790 sentence@790 sentence@790 sentence@792 sentence@792 code@794 sentence@805 code@807 sentence@817 sentence@817 sentence@817 sentence@819
+guides/rpc.md:821  RPC > Known issues > IDE performance > Specify type arguments manually
+  heading@821 sentence@823 code@825 sentence@831
+guides/rpc.md:833  RPC > Known issues > IDE performance > Split your app and client into multiple files
+  heading@833 sentence@835 sentence@835 code@837 sentence@851
+guides/rpc.md:853  RPC > Known issues > Handlers that return a promise chain
+  heading@853 sentence@855 code@857 sentence@867 sentence@867 code@869 sentence@880 code@882
+guides/testing.md:1  Testing
+  heading@1 sentence@5 sentence@6 sentence@7 sentence@8 sentence@11 sentence@11
+guides/testing.md:14  Testing > Request and Response
+  heading@14 sentence@16 sentence@16 sentence@19 sentence@22 code@24 sentence@42 code@44 sentence@54 code@56 sentence@69 code@71 sentence@86 code@88 sentence@104 code@106 sentence@120
+guides/testing.md:122  Testing > Env
+  heading@122 sentence@124 sentence@124 code@126
+guides/validation.md:1  Validation
+  heading@1 sentence@3 sentence@4 sentence@5
+guides/validation.md:7  Validation > Manual validator
+  heading@7 sentence@9 sentence@11 code@13 sentence@17 sentence@18 sentence@19 code@21 sentence@36 code@38 sentence@51 sentence@54 sentence@54 sentence@56 sentence@59 code@61 sentence@76 code@78 sentence@100 sentence@102 code@104
+guides/validation.md:149  Validation > Multiple validators
+  heading@149 sentence@151 code@153
+guides/validation.md:165  Validation > With Zod
+  heading@165 sentence@167 sentence@168 sentence@170 code@174 code@178 code@182 code@186 sentence@192 code@194 sentence@198 code@200 sentence@206 code@208
+guides/validation.md:231  Validation > Zod Validator Middleware
+  heading@231 sentence@233 code@237 code@241 code@245 code@249 sentence@255 code@257 sentence@261 code@263
+guides/validation.md:279  Validation > Standard Schema Validator Middleware
+  heading@279 sentence@281 sentence@281 sentence@283 code@287 code@291 code@295 code@299 sentence@305 code@307
+guides/validation.md:311  Validation > Standard Schema Validator Middleware > With Zod
+  heading@311 sentence@313 code@317 code@321 code@325 code@329 code@335
+guides/validation.md:353  Validation > Standard Schema Validator Middleware > With Valibot
+  heading@353 sentence@355 code@359 code@363 code@367 code@371 code@377
+guides/validation.md:395  Validation > Standard Schema Validator Middleware > With ArkType
+  heading@395 sentence@397 code@401 code@405 code@409 code@413 code@419
+helpers/accepts.md:1  Accepts Helper
+  heading@1 sentence@3
+helpers/accepts.md:5  Accepts Helper > Import
+  heading@5 code@7
+helpers/accepts.md:12  Accepts Helper > accepts()
+  heading@12 sentence@14 code@16
+helpers/accepts.md:29  Accepts Helper > accepts() > AcceptHeader type
+  heading@29 sentence@31 code@33
+helpers/accepts.md:44  Accepts Helper > Options
+  heading@44
+helpers/accepts.md:46  Accepts Helper > Options > header: AcceptHeader
+  heading@46 sentence@48
+helpers/accepts.md:50  Accepts Helper > Options > supports: string[]
+  heading@50 sentence@52
+helpers/accepts.md:54  Accepts Helper > Options > default: string
+  heading@54 sentence@56
+helpers/accepts.md:58  Accepts Helper > Options > match: (accepts: Accept[], config: acceptsConfig) => string
+  heading@58 sentence@60
+helpers/adapter.md:1  Adapter Helper
+  heading@1 sentence@3
+helpers/adapter.md:5  Adapter Helper > Import
+  heading@5 code@7
+helpers/adapter.md:12  Adapter Helper > env()
+  heading@12 sentence@14 sentence@14 code@16 sentence@27 list@29 list@32 list@35 list@38 list@40 list@42 list@44 list@46 list@48
+helpers/adapter.md:51  Adapter Helper > env() > Specify the runtime
+  heading@51 sentence@53 code@55
+helpers/adapter.md:62  Adapter Helper > getRuntimeKey()
+  heading@62 sentence@64 code@66
+helpers/adapter.md:77  Adapter Helper > getRuntimeKey() > Available Runtimes Keys
+  heading@77 sentence@79 list@81 list@82 list@83 list@84 list@85 list@86 list@87
+helpers/conninfo.md:1  ConnInfo Helper
+  heading@1 sentence@3 sentence@3
+helpers/conninfo.md:5  ConnInfo Helper > Import
+  heading@5 code@9 code@14 code@19 code@24 code@29 code@34 code@39 code@44
+helpers/conninfo.md:51  ConnInfo Helper > Usage
+  heading@51 code@53
+helpers/conninfo.md:62  ConnInfo Helper > Type Definitions
+  heading@62 sentence@64 code@66
+helpers/cookie.md:1  Cookie Helper
+  heading@1 sentence@3
+helpers/cookie.md:5  Cookie Helper > Import
+  heading@5 code@7
+helpers/cookie.md:20  Cookie Helper > Usage
+  heading@20
+helpers/cookie.md:22  Cookie Helper > Usage > Regular cookies
+  heading@22 code@24
+helpers/cookie.md:34  Cookie Helper > Usage > Signed cookies
+  heading@34 sentence@36 code@38 blockquote@55
+helpers/cookie.md:58  Cookie Helper > Usage > Cookie Generation
+  heading@58 sentence@60
+helpers/cookie.md:62  Cookie Helper > Usage > Cookie Generation > generateCookie
+  heading@62 code@64
+helpers/cookie.md:78  Cookie Helper > Usage > Cookie Generation > generateSignedCookie
+  heading@78 code@80 sentence@101 sentence@101
+helpers/cookie.md:103  Cookie Helper > Options
+  heading@103
+helpers/cookie.md:105  Cookie Helper > Options > setCookie & setSignedCookie
+  heading@105 list@107 list@108 list@109 list@110 list@111 list@112 list@113 list@114 list@115 list@116 sentence@118 code@120
+helpers/cookie.md:150  Cookie Helper > Options > deleteCookie
+  heading@150 list@152 list@153 list@154 sentence@156 code@158 sentence@166 code@168
+helpers/cookie.md:172  Cookie Helper > __Secure- and __Host- prefix
+  heading@172 sentence@174 sentence@176 code@178 sentence@196 code@198
+helpers/cookie.md:214  Cookie Helper > Following the best practices
+  heading@214 sentence@216 list@218 list@221 sentence@224 sentence@225 list@227 list@228 list@229 list@230 list@231 list@232
+helpers/css.md:1  css Helper
+  heading@1 sentence@3 sentence@5 sentence@5 sentence@5
+helpers/css.md:7  css Helper > Import
+  heading@7 code@9
+helpers/css.md:14  css Helper > css
+  heading@14 sentence@16 sentence@16 sentence@16 code@18 sentence@38 code@40
+helpers/css.md:49  css Helper > css > Extending
+  heading@49 sentence@51 code@53 sentence@70 code@72
+helpers/css.md:93  css Helper > css > Global styles
+  heading@93 sentence@95 code@97 sentence@114 code@116
+helpers/css.md:136  css Helper > keyframes
+  heading@136 sentence@138 sentence@138 code@140
+helpers/css.md:156  css Helper > cx
+  heading@156 sentence@158 code@160 sentence@172 code@174
+helpers/css.md:178  css Helper > Usage in combination with Secure Headers middleware
+  heading@178 sentence@180 code@182
+helpers/css.md:215  css Helper > createCssContext
+  heading@215 sentence@217 sentence@217 code@219
+helpers/css.md:227  css Helper > createCssContext > classNameSlug
+  heading@227 sentence@229 sentence@229 sentence@231 list@233 list@234 list@235 code@237
+helpers/css.md:250  css Helper > createCssContext > onInvalidSlug
+  heading@250 sentence@252 sentence@252 code@254
+helpers/css.md:264  css Helper > Security
+  heading@264 sentence@266 sentence@266 sentence@269 sentence@269 sentence@269 code@271
+helpers/css.md:281  css Helper > Tips
+  heading@281 sentence@283
+helpers/dev.md:1  Dev Helper
+  heading@1 sentence@3 code@5
+helpers/dev.md:10  Dev Helper > getRouterName()
+  heading@10 sentence@12 code@14
+helpers/dev.md:22  Dev Helper > showRoutes()
+  heading@22 sentence@24 sentence@26 code@28 sentence@48 code@50
+helpers/dev.md:56  Dev Helper > Options
+  heading@56
+helpers/dev.md:58  Dev Helper > Options > verbose: boolean
+  heading@58 sentence@60
+helpers/dev.md:62  Dev Helper > Options > colorize: boolean
+  heading@62 sentence@64
+helpers/factory.md:1  Factory Helper
+  heading@1 sentence@3 sentence@3
+helpers/factory.md:5  Factory Helper > Import
+  heading@5 code@7
+helpers/factory.md:12  Factory Helper > createFactory()
+  heading@12 sentence@14 code@16 sentence@22 code@24
+helpers/factory.md:34  Factory Helper > createFactory() > Options
+  heading@34
+helpers/factory.md:36  Factory Helper > createFactory() > defaultAppOptions: HonoOptions
+  heading@36 sentence@38 code@40
+helpers/factory.md:48  Factory Helper > createMiddleware()
+  heading@48 sentence@50 sentence@51 code@53 sentence@60 code@62
+helpers/factory.md:73  Factory Helper > factory.createHandlers()
+  heading@73 sentence@75 code@77
+helpers/factory.md:97  Factory Helper > factory.createApp()
+  heading@97 sentence@99 sentence@99 sentence@101 code@103 sentence@123 code@125 sentence@141 sentence@141 code@143 code@165
+helpers/html.md:1  html Helper
+  heading@1 sentence@3 sentence@3 sentence@3
+helpers/html.md:5  html Helper > Import
+  heading@5 code@7
+helpers/html.md:12  html Helper > html
+  heading@12 code@14
+helpers/html.md:26  html Helper > html > Insert snippets into JSX
+  heading@26 sentence@28 code@30
+helpers/html.md:49  html Helper > html > Act as functional component
+  heading@49 sentence@51
+helpers/html.md:53  html Helper > html > Act as functional component > Use html to speed up the process instead of memo
+  heading@53 code@55
+helpers/html.md:63  html Helper > html > Receives props and embeds values
+  heading@63 code@65
+helpers/html.md:109  html Helper > raw()
+  heading@109 code@111
+helpers/html.md:118  html Helper > Tips
+  heading@118 sentence@120 list@122 list@123
+helpers/jwt.md:1  JWT Authentication Helper
+  heading@1 sentence@3 sentence@3 sentence@3
+helpers/jwt.md:5  JWT Authentication Helper > Import
+  heading@5 sentence@7 code@9 sentence@14
+helpers/jwt.md:17  JWT Authentication Helper > sign()
+  heading@17 sentence@19 code@21
+helpers/jwt.md:30  JWT Authentication Helper > sign() > Example
+  heading@30 code@32
+helpers/jwt.md:44  JWT Authentication Helper > sign() > Options
+  heading@44
+helpers/jwt.md:48  JWT Authentication Helper > sign() > Options > payload: unknown
+  heading@48 sentence@50 sentence@50
+helpers/jwt.md:52  JWT Authentication Helper > sign() > Options > secret: string
+  heading@52 sentence@54
+helpers/jwt.md:56  JWT Authentication Helper > sign() > Options > alg: AlgorithmTypes
+  heading@56 sentence@58 sentence@58
+helpers/jwt.md:60  JWT Authentication Helper > verify()
+  heading@60 sentence@62 sentence@62 code@64
+helpers/jwt.md:75  JWT Authentication Helper > verify() > Example
+  heading@75 code@77
+helpers/jwt.md:87  JWT Authentication Helper > verify() > Options
+  heading@87
+helpers/jwt.md:91  JWT Authentication Helper > verify() > Options > token: string
+  heading@91 sentence@93
+helpers/jwt.md:95  JWT Authentication Helper > verify() > Options > secret: string
+  heading@95 sentence@97
+helpers/jwt.md:99  JWT Authentication Helper > verify() > Options > alg: AlgorithmTypes
+  heading@99 sentence@101
+helpers/jwt.md:103  JWT Authentication Helper > verify() > Options > issuer: string | RegExp
+  heading@103 sentence@105
+helpers/jwt.md:107  JWT Authentication Helper > verify() > Options > aud: string | string[] | RegExp
+  heading@107 sentence@109 sentence@109
+helpers/jwt.md:111  JWT Authentication Helper > decode()
+  heading@111 sentence@113 sentence@113 code@115
+helpers/jwt.md:119  JWT Authentication Helper > decode() > Example
+  heading@119 code@121
+helpers/jwt.md:134  JWT Authentication Helper > decode() > Options
+  heading@134
+helpers/jwt.md:138  JWT Authentication Helper > decode() > Options > token: string
+  heading@138 sentence@140 blockquote@142
+helpers/jwt.md:144  JWT Authentication Helper > Payload Validation
+  heading@144 sentence@146 list@148 list@149 list@150 list@151 list@152 sentence@154
+helpers/jwt.md:156  JWT Authentication Helper > Custom Error Types
+  heading@156 sentence@158 list@160 list@161 list@162 list@163 list@164 list@165 list@166 list@167 list@168
+helpers/jwt.md:170  JWT Authentication Helper > Supported AlgorithmTypes
+  heading@170 sentence@172 list@174 list@175 list@176 list@177 list@178 list@179 list@180 list@181 list@182 list@183 list@184 list@185 list@186
+helpers/proxy.md:1  Proxy Helper
+  heading@1 sentence@3
+helpers/proxy.md:5  Proxy Helper > Import
+  heading@5 code@7
+helpers/proxy.md:12  Proxy Helper > proxy()
+  heading@12 sentence@14 sentence@14 sentence@16 sentence@16
+helpers/proxy.md:18  Proxy Helper > proxy() > Examples
+  heading@18 sentence@20 code@22 sentence@28 code@30 sentence@48 code@50 sentence@64 code@66
+helpers/proxy.md:74  Proxy Helper > proxy() > Connection Header Processing
+  heading@74 sentence@76 sentence@76 code@78
+helpers/proxy.md:93  Proxy Helper > proxy() > ProxyFetch
+  heading@93 sentence@95 code@97
+helpers/route.md:1  Route Helper
+  heading@1 sentence@3 sentence@3
+helpers/route.md:5  Route Helper > Import
+  heading@5 code@7
+helpers/route.md:17  Route Helper > Usage
+  heading@17
+helpers/route.md:19  Route Helper > Usage > Basic route information
+  heading@19 code@21
+helpers/route.md:35  Route Helper > Usage > Working with sub-applications
+  heading@35 code@37
+helpers/route.md:52  Route Helper > matchedRoutes()
+  heading@52 sentence@54 code@56
+helpers/route.md:72  Route Helper > routePath()
+  heading@72 sentence@74 code@76
+helpers/route.md:83  Route Helper > routePath() > Using with index parameter
+  heading@83 sentence@85 code@87
+helpers/route.md:99  Route Helper > baseRoutePath()
+  heading@99 sentence@101 code@103
+helpers/route.md:112  Route Helper > baseRoutePath() > Using with index parameter
+  heading@112 sentence@114 code@117
+helpers/route.md:132  Route Helper > basePath()
+  heading@132 sentence@134 code@136
+helpers/ssg.md:1  SSG Helper
+  heading@1 sentence@3 sentence@3
+helpers/ssg.md:5  SSG Helper > Usage
+  heading@5
+helpers/ssg.md:7  SSG Helper > Usage > Manual
+  heading@7 sentence@9 code@11 sentence@42 code@44 sentence@53 code@55
+helpers/ssg.md:60  SSG Helper > Usage > Vite Plugin
+  heading@60 sentence@62 sentence@64 sentence@66
+helpers/ssg.md:68  SSG Helper > toSSG
+  heading@68 sentence@70 sentence@70
+helpers/ssg.md:72  SSG Helper > toSSG > Input
+  heading@72 sentence@74 code@76 list@86 list@87 code@89
+helpers/ssg.md:99  SSG Helper > toSSG > Using adapters for Deno and Bun
+  heading@99 sentence@101 sentence@103 code@105 sentence@111 code@113
+helpers/ssg.md:119  SSG Helper > toSSG > Options
+  heading@119 sentence@121 code@123 list@132 list@133 list@134 list@135
+helpers/ssg.md:137  SSG Helper > toSSG > Output
+  heading@137 sentence@139 code@141
+helpers/ssg.md:149  SSG Helper > Generate File
+  heading@149
+helpers/ssg.md:151  SSG Helper > Generate File > Route and Filename
+  heading@151 sentence@153 sentence@153 list@155 list@156 list@157
+helpers/ssg.md:159  SSG Helper > Generate File > File Extension
+  heading@159 sentence@161 sentence@161 sentence@163 code@165 sentence@177 code@179
+helpers/ssg.md:187  SSG Helper > Middleware
+  heading@187 sentence@189
+helpers/ssg.md:191  SSG Helper > Middleware > ssgParams
+  heading@191 sentence@193 sentence@195 code@197
+helpers/ssg.md:218  SSG Helper > Middleware > isSSGContext
+  heading@218 sentence@220 code@222
+helpers/ssg.md:231  SSG Helper > Middleware > disableSSG
+  heading@231 sentence@233 code@235
+helpers/ssg.md:239  SSG Helper > Middleware > onlySSG
+  heading@239 sentence@241 code@243
+helpers/ssg.md:247  SSG Helper > Plugins
+  heading@247 sentence@249 sentence@249
+helpers/ssg.md:251  SSG Helper > Plugins > Default Plugin
+  heading@251 sentence@253 sentence@253 code@255 sentence@265 sentence@265 code@267
+helpers/ssg.md:273  SSG Helper > Plugins > Redirect Plugin
+  heading@273 sentence@275 sentence@275 code@277 sentence@285 code@287 sentence@291 blockquote@293
+helpers/ssg.md:296  SSG Helper > Plugins > Hook Types
+  heading@296 sentence@298 code@300 list@308 list@309 list@310
+helpers/ssg.md:312  SSG Helper > Plugins > Plugin Interface
+  heading@312 code@314
+helpers/ssg.md:322  SSG Helper > Plugins > Basic Plugin Examples
+  heading@322 sentence@324 code@326 sentence@337 code@339 sentence@350 code@352
+helpers/ssg.md:362  SSG Helper > Plugins > Advanced Plugin Example
+  heading@362 sentence@364 code@366 sentence@391 code@393
+helpers/streaming.md:1  Streaming Helper
+  heading@1 sentence@3
+helpers/streaming.md:5  Streaming Helper > Import
+  heading@5 code@7
+helpers/streaming.md:12  Streaming Helper > stream()
+  heading@12 sentence@14 code@16
+helpers/streaming.md:31  Streaming Helper > streamText()
+  heading@31 sentence@33 code@35 sentence@50 sentence@50 code@52
+helpers/streaming.md:63  Streaming Helper > streamSSE()
+  heading@63 sentence@65 code@67
+helpers/streaming.md:86  Streaming Helper > Error Handling
+  heading@86 sentence@88 sentence@89 code@91 sentence@115 sentence@119 sentence@121 sentence@121
+helpers/testing.md:1  Testing Helper
+  heading@1 sentence@3
+helpers/testing.md:5  Testing Helper > Import
+  heading@5 code@7
+helpers/testing.md:12  Testing Helper > testClient()
+  heading@12 sentence@14 sentence@14 sentence@16 sentence@18 sentence@20 sentence@20 sentence@22 sentence@24 code@26 code@36 sentence@65 sentence@65 sentence@65 code@67
+helpers/websocket.md:1  WebSocket Helper
+  heading@1 sentence@3 sentence@4
+helpers/websocket.md:6  WebSocket Helper > Import
+  heading@6 code@10 code@15 code@20 code@32 sentence@40 sentence@40 sentence@40 sentence@42
+helpers/websocket.md:44  WebSocket Helper > upgradeWebSocket()
+  heading@44 sentence@46 code@48 sentence@67 list@69 list@70 list@71 list@72 sentence@76 sentence@76 sentence@78
+helpers/websocket.md:82  WebSocket Helper > RPC-mode
+  heading@82 sentence@84 code@86
+helpers/websocket.md:102  WebSocket Helper > Examples
+  heading@102 sentence@104
+helpers/websocket.md:106  WebSocket Helper > Examples > Server and Client
+  heading@106 code@108 code@127
+helpers/websocket.md:142  WebSocket Helper > Examples > Bun with JSX
+  heading@142 code@144
+helpers/websocket.md:196  WebSocket Helper > Examples > Node.js
+  heading@196 code@198
+index.md:6  Hono
+  heading@6 sentence@8 sentence@9 sentence@11 code@13
+index.md:22  Hono > Quick Start
+  heading@22 sentence@24 code@28 code@32 code@36 code@40 code@44
+index.md:50  Hono > Features
+  heading@50 list@52 list@53 list@54 list@55 list@56
+index.md:58  Hono > Use-cases
+  heading@58 sentence@60 sentence@61 sentence@62 list@64 list@65 list@66 list@67 list@68 list@69
+index.md:71  Hono > Who is using Hono?
+  heading@71 tableRow@75 tableRow@76 tableRow@77 tableRow@78 tableRow@79 tableRow@80 tableRow@81 tableRow@82 sentence@84 list@86 list@87 sentence@89 sentence@89
+index.md:91  Hono > Hono in 1 minute
+  heading@91 sentence@93 sentence@95
+index.md:97  Hono > Ultrafast
+  heading@97 sentence@99 code@101 sentence@110
+index.md:112  Hono > Lightweight
+  heading@112 sentence@114 sentence@114 sentence@114 sentence@114 code@116
+index.md:126  Hono > Multiple routers
+  heading@126 sentence@128 sentence@130 sentence@130 sentence@130 sentence@132 sentence@132 sentence@134
+index.md:136  Hono > Web Standards
+  heading@136 sentence@138 list@140 list@141 list@142 list@143 list@144 list@145 list@146 list@147 sentence@149 sentence@151
+index.md:153  Hono > Middleware & Helpers
+  heading@153 sentence@155 sentence@155 sentence@157 list@159 list@160 list@161 list@162 list@163 list@164 list@165 list@166 list@167 list@168 list@169 list@170 list@171 list@172 list@173 list@174 list@175 list@176 list@177 list@178 list@179 list@180 sentence@182 code@184 sentence@193
+index.md:195  Hono > Developer Experience
+  heading@195 sentence@197 sentence@199 sentence@200 sentence@200 sentence@202 sentence@204 sentence@204 sentence@206 sentence@206 sentence@209
+middleware/builtin/basic-auth.md:1  Basic Auth Middleware
+  heading@1 sentence@3 sentence@4 sentence@6
+middleware/builtin/basic-auth.md:8  Basic Auth Middleware > Import
+  heading@8 code@10
+middleware/builtin/basic-auth.md:15  Basic Auth Middleware > Usage
+  heading@15 code@17 sentence@33 code@35 sentence@51 code@53
+middleware/builtin/basic-auth.md:67  Basic Auth Middleware > Options
+  heading@67
+middleware/builtin/basic-auth.md:69  Basic Auth Middleware > Options > username: string
+  heading@69 sentence@71
+middleware/builtin/basic-auth.md:73  Basic Auth Middleware > Options > password: string
+  heading@73 sentence@75
+middleware/builtin/basic-auth.md:77  Basic Auth Middleware > Options > realm: string
+  heading@77 sentence@79 sentence@79 sentence@80
+middleware/builtin/basic-auth.md:82  Basic Auth Middleware > Options > hashFunction: Function
+  heading@82 sentence@84
+middleware/builtin/basic-auth.md:86  Basic Auth Middleware > Options > verifyUser: (username: string, password: string, c: Context) => boolean | Promise<boolean>
+  heading@86 sentence@88
+middleware/builtin/basic-auth.md:90  Basic Auth Middleware > Options > invalidUserMessage: string | object | MessageFunction
+  heading@90 sentence@92 sentence@92
+middleware/builtin/basic-auth.md:94  Basic Auth Middleware > Options > onAuthSuccess: (c: Context, username: string) => void | Promise<void>
+  heading@94 sentence@96 sentence@96 code@98
+middleware/builtin/basic-auth.md:116  Basic Auth Middleware > More Options
+  heading@116
+middleware/builtin/basic-auth.md:118  Basic Auth Middleware > More Options > ...users: { username: string, password: string }[]
+  heading@118
+middleware/builtin/basic-auth.md:120  Basic Auth Middleware > Recipes
+  heading@120
+middleware/builtin/basic-auth.md:122  Basic Auth Middleware > Recipes > Defining Multiple Users
+  heading@122 sentence@124 code@126 sentence@150 code@152
+middleware/builtin/bearer-auth.md:1  Bearer Auth Middleware
+  heading@1 sentence@3 sentence@4 sentence@6 code@8
+middleware/builtin/bearer-auth.md:12  Bearer Auth Middleware > Import
+  heading@12 code@14
+middleware/builtin/bearer-auth.md:19  Bearer Auth Middleware > Usage
+  heading@19 blockquote@21 code@24 sentence@36 code@38 sentence@52 code@54 sentence@75 code@77
+middleware/builtin/bearer-auth.md:90  Bearer Auth Middleware > Options
+  heading@90
+middleware/builtin/bearer-auth.md:92  Bearer Auth Middleware > Options > token: string | string[]
+  heading@92 sentence@94
+middleware/builtin/bearer-auth.md:96  Bearer Auth Middleware > Options > realm: string
+  heading@96 sentence@98 sentence@98 sentence@99
+middleware/builtin/bearer-auth.md:101  Bearer Auth Middleware > Options > prefix: string
+  heading@101 sentence@103 sentence@103
+middleware/builtin/bearer-auth.md:105  Bearer Auth Middleware > Options > headerName: string
+  heading@105 sentence@107 sentence@107
+middleware/builtin/bearer-auth.md:109  Bearer Auth Middleware > Options > hashFunction: Function
+  heading@109 sentence@111
+middleware/builtin/bearer-auth.md:113  Bearer Auth Middleware > Options > verifyToken: (token: string, c: Context) => boolean | Promise<boolean>
+  heading@113 sentence@115
+middleware/builtin/bearer-auth.md:117  Bearer Auth Middleware > Options > noAuthenticationHeader: object
+  heading@117 sentence@119 list@121 list@122 sentence@124
+middleware/builtin/bearer-auth.md:126  Bearer Auth Middleware > Options > invalidAuthenticationHeader: object
+  heading@126 sentence@128 list@130 list@131
+middleware/builtin/bearer-auth.md:133  Bearer Auth Middleware > Options > invalidToken: object
+  heading@133 sentence@135 list@137 list@138
+middleware/builtin/body-limit.md:1  Body Limit Middleware
+  heading@1 sentence@3 sentence@5 sentence@6
+middleware/builtin/body-limit.md:8  Body Limit Middleware > Import
+  heading@8 code@10
+middleware/builtin/body-limit.md:15  Body Limit Middleware > Usage
+  heading@15 code@17
+middleware/builtin/body-limit.md:38  Body Limit Middleware > Options
+  heading@38
+middleware/builtin/body-limit.md:40  Body Limit Middleware > Options > maxSize: number
+  heading@40 sentence@42 sentence@42
+middleware/builtin/body-limit.md:44  Body Limit Middleware > Options > onError: OnError
+  heading@44 sentence@46
+middleware/builtin/body-limit.md:48  Body Limit Middleware > Usage with Bun for large requests
+  heading@48 sentence@50 sentence@50 sentence@50 sentence@50 sentence@52 code@54 sentence@62 code@64
+middleware/builtin/cache.md:1  Cache Middleware
+  heading@1 sentence@3 sentence@5 sentence@5 sentence@7 sentence@7 sentence@7 sentence@9
+middleware/builtin/cache.md:11  Cache Middleware > Import
+  heading@11 code@13
+middleware/builtin/cache.md:18  Cache Middleware > Usage
+  heading@18 code@22 code@32
+middleware/builtin/cache.md:46  Cache Middleware > Caching QUERY requests
+  heading@46 sentence@48 sentence@48 sentence@50 sentence@53 sentence@53 sentence@53
+middleware/builtin/cache.md:56  Cache Middleware > Options
+  heading@56
+middleware/builtin/cache.md:58  Cache Middleware > Options > cacheName: string | (c: Context) => string | Promise<string>
+  heading@58 sentence@60 sentence@60
+middleware/builtin/cache.md:62  Cache Middleware > Options > wait: boolean
+  heading@62 sentence@64 sentence@64 sentence@64
+middleware/builtin/cache.md:66  Cache Middleware > Options > cacheControl: string
+  heading@66 sentence@68 sentence@68 sentence@68
+middleware/builtin/cache.md:70  Cache Middleware > Options > vary: string | string[]
+  heading@70 sentence@72 sentence@72 sentence@72 sentence@72
+middleware/builtin/cache.md:74  Cache Middleware > Options > keyGenerator: (c: Context) => string | Promise<string>
+  heading@74 sentence@76 sentence@76 sentence@76 sentence@76
+middleware/builtin/cache.md:78  Cache Middleware > Options > maxQueryBodySize: number
+  heading@78 sentence@80 sentence@80 sentence@80
+middleware/builtin/cache.md:82  Cache Middleware > Options > cacheableStatusCodes: number[]
+  heading@82 sentence@84 sentence@84 sentence@84 code@86
+middleware/builtin/cache.md:97  Cache Middleware > Options > onCacheNotAvailable: ((reason: string) => void | Promise<void>) | false
+  heading@97 sentence@99 sentence@99 sentence@99 sentence@99 code@101 code@113
+middleware/builtin/combine.md:1  Combine Middleware
+  heading@1 sentence@3 sentence@3 list@5 list@6 list@7
+middleware/builtin/combine.md:9  Combine Middleware > Import
+  heading@9 code@11
+middleware/builtin/combine.md:16  Combine Middleware > Usage
+  heading@16 sentence@18 code@20
+middleware/builtin/combine.md:45  Combine Middleware > Usage > some
+  heading@45 sentence@47 sentence@47 code@49
+middleware/builtin/combine.md:62  Combine Middleware > Usage > every
+  heading@62 sentence@64 sentence@64 code@66
+middleware/builtin/combine.md:83  Combine Middleware > Usage > except
+  heading@83 sentence@85 sentence@85 sentence@85 code@87
+middleware/builtin/compress.md:1  Compress Middleware
+  heading@1 sentence@3 sentence@6
+middleware/builtin/compress.md:9  Compress Middleware > Import
+  heading@9 code@11
+middleware/builtin/compress.md:16  Compress Middleware > Usage
+  heading@16 code@18
+middleware/builtin/compress.md:24  Compress Middleware > Options
+  heading@24
+middleware/builtin/compress.md:26  Compress Middleware > Options > encoding: 'gzip' | 'deflate'
+  heading@26 sentence@28 sentence@28 sentence@28
+middleware/builtin/compress.md:30  Compress Middleware > Options > threshold: number
+  heading@30 sentence@32 sentence@32
+middleware/builtin/compress.md:34  Compress Middleware > Options > contentTypeFilter: RegExp | (contentType: string) => boolean
+  heading@34 sentence@36 sentence@36 sentence@38 code@40 sentence@45 sentence@45 code@47
+middleware/builtin/context-storage.md:1  Context Storage Middleware
+  heading@1 sentence@3 sentence@6 sentence@6 sentence@8
+middleware/builtin/context-storage.md:11  Context Storage Middleware > Import
+  heading@11 code@13
+middleware/builtin/context-storage.md:22  Context Storage Middleware > Usage
+  heading@22 sentence@24 code@26 sentence@52 code@54
+middleware/builtin/context-storage.md:70  Context Storage Middleware > tryGetContext
+  heading@70 sentence@72 code@74
+middleware/builtin/cors.md:1  CORS Middleware
+  heading@1 sentence@3 sentence@4
+middleware/builtin/cors.md:6  CORS Middleware > Import
+  heading@6 code@8
+middleware/builtin/cors.md:13  CORS Middleware > Usage
+  heading@13 code@15 sentence@40 code@42 sentence@64 code@66
+middleware/builtin/cors.md:81  CORS Middleware > Options
+  heading@81
+middleware/builtin/cors.md:83  CORS Middleware > Options > origin: string | string[] | (origin:string, c:Context) => string
+  heading@83 sentence@85 sentence@85 sentence@85
+middleware/builtin/cors.md:87  CORS Middleware > Options > allowMethods: string[] | (origin:string, c:Context) => string[]
+  heading@87 sentence@89 sentence@89 sentence@89
+middleware/builtin/cors.md:91  CORS Middleware > Options > allowHeaders: string[]
+  heading@91 sentence@93 sentence@93
+middleware/builtin/cors.md:95  CORS Middleware > Options > maxAge: number
+  heading@95 sentence@97
+middleware/builtin/cors.md:99  CORS Middleware > Options > credentials: boolean
+  heading@99 sentence@101
+middleware/builtin/cors.md:103  CORS Middleware > Options > exposeHeaders: string[]
+  heading@103 sentence@105 sentence@105
+middleware/builtin/cors.md:107  CORS Middleware > Environment-dependent CORS configuration
+  heading@107 sentence@109 sentence@109 code@111
+middleware/builtin/cors.md:120  CORS Middleware > Using with Vite
+  heading@120 sentence@122 sentence@122 code@124
+middleware/builtin/csrf.md:1  CSRF Protection
+  heading@1 sentence@3 sentence@3 sentence@5 list@7 list@8 sentence@10 sentence@10
+middleware/builtin/csrf.md:12  CSRF Protection > Import
+  heading@12 code@14
+middleware/builtin/csrf.md:19  CSRF Protection > Usage
+  heading@19 code@21
+middleware/builtin/csrf.md:74  CSRF Protection > Options
+  heading@74
+middleware/builtin/csrf.md:76  CSRF Protection > Options > origin: string | string[] | Function
+  heading@76 sentence@78 list@80 list@81 list@82 sentence@84 sentence@86
+middleware/builtin/csrf.md:88  CSRF Protection > Options > secFetchSite: string | string[] | Function
+  heading@88 sentence@90 list@92 list@93 list@94 sentence@96 sentence@98 list@100 list@101 list@102 list@103 sentence@105
+middleware/builtin/etag.md:1  ETag Middleware
+  heading@1 sentence@3
+middleware/builtin/etag.md:5  ETag Middleware > Import
+  heading@5 code@7
+middleware/builtin/etag.md:12  ETag Middleware > Usage
+  heading@12 code@14
+middleware/builtin/etag.md:23  ETag Middleware > The retained headers
+  heading@23 sentence@25 sentence@25 sentence@27 code@29
+middleware/builtin/etag.md:42  ETag Middleware > Options
+  heading@42
+middleware/builtin/etag.md:44  ETag Middleware > Options > weak: boolean
+  heading@44 sentence@46 sentence@46 sentence@46
+middleware/builtin/etag.md:48  ETag Middleware > Options > retainedHeaders: string[]
+  heading@48 sentence@50
+middleware/builtin/etag.md:52  ETag Middleware > Options > generateDigest: (body: Uint8Array) => ArrayBuffer | Promise<ArrayBuffer>
+  heading@52 sentence@54 sentence@54 sentence@54
+middleware/builtin/ip-restriction.md:1  IP Restriction Middleware
+  heading@1 sentence@3
+middleware/builtin/ip-restriction.md:5  IP Restriction Middleware > Import
+  heading@5 code@7
+middleware/builtin/ip-restriction.md:12  IP Restriction Middleware > Usage
+  heading@12 sentence@14 sentence@14 code@16 sentence@34 sentence@34 code@36
+middleware/builtin/ip-restriction.md:50  IP Restriction Middleware > Rules
+  heading@50 sentence@52
+middleware/builtin/ip-restriction.md:54  IP Restriction Middleware > Rules > IPv4
+  heading@54 list@56 list@57 list@58
+middleware/builtin/ip-restriction.md:60  IP Restriction Middleware > Rules > IPv6
+  heading@60 list@62 list@63 list@64
+middleware/builtin/ip-restriction.md:66  IP Restriction Middleware > Error handling
+  heading@66 sentence@68 code@70
+middleware/builtin/jsx-renderer.md:1  JSX Renderer Middleware
+  heading@1 sentence@3 sentence@3
+middleware/builtin/jsx-renderer.md:5  JSX Renderer Middleware > Import
+  heading@5 code@7
+middleware/builtin/jsx-renderer.md:12  JSX Renderer Middleware > Usage
+  heading@12 code@14
+middleware/builtin/jsx-renderer.md:36  JSX Renderer Middleware > Options
+  heading@36
+middleware/builtin/jsx-renderer.md:38  JSX Renderer Middleware > Options > docType: boolean | string
+  heading@38 sentence@40 code@42 sentence@58 code@60
+middleware/builtin/jsx-renderer.md:79  JSX Renderer Middleware > Options > stream: boolean | Record<string, string>
+  heading@79 sentence@81 code@83 sentence@115 code@117 sentence@125
+middleware/builtin/jsx-renderer.md:127  JSX Renderer Middleware > Options > Function-based Options
+  heading@127 sentence@129 sentence@129 code@131 sentence@149 code@151
+middleware/builtin/jsx-renderer.md:171  JSX Renderer Middleware > Nested Layouts
+  heading@171 sentence@173 code@175
+middleware/builtin/jsx-renderer.md:201  JSX Renderer Middleware > useRequestContext()
+  heading@201 sentence@203 code@205 sentence@226 sentence@226 code@228
+middleware/builtin/jsx-renderer.md:239  JSX Renderer Middleware > Extending ContextRenderer
+  heading@239 sentence@241 sentence@241 code@243
+middleware/builtin/jwk.md:1  JWK Auth Middleware
+  heading@1 sentence@3 sentence@3 sentence@3
+middleware/builtin/jwk.md:5  JWK Auth Middleware > What this middleware validates
+  heading@5 sentence@7 list@9 list@10 list@11 list@12 list@13 list@14 list@15 sentence@17 list@19 list@20 sentence@22 sentence@25 sentence@27
+middleware/builtin/jwk.md:30  JWK Auth Middleware > Import
+  heading@30 code@32
+middleware/builtin/jwk.md:38  JWK Auth Middleware > Usage
+  heading@38 code@40 sentence@56 code@58 sentence@75 code@77
+middleware/builtin/jwk.md:96  JWK Auth Middleware > Using verifyWithJwks outside of middleware
+  heading@96 sentence@98 code@100
+middleware/builtin/jwk.md:113  JWK Auth Middleware > Configuring JWKS fetch request options
+  heading@113 sentence@115 sentence@117 code@119
+middleware/builtin/jwk.md:138  JWK Auth Middleware > Options
+  heading@138
+middleware/builtin/jwk.md:140  JWK Auth Middleware > Options > alg: AsymmetricAlgorithm[]
+  heading@140 sentence@142 sentence@144
+middleware/builtin/jwk.md:146  JWK Auth Middleware > Options > keys: HonoJsonWebKey[] | (c: Context) => Promise<HonoJsonWebKey[]>
+  heading@146 sentence@148 sentence@148
+middleware/builtin/jwk.md:150  JWK Auth Middleware > Options > jwks_uri: string | (c: Context) => Promise<string>
+  heading@150 sentence@152 sentence@152
+middleware/builtin/jwk.md:154  JWK Auth Middleware > Options > allow_anon: boolean
+  heading@154 sentence@156 sentence@156 sentence@156
+middleware/builtin/jwk.md:158  JWK Auth Middleware > Options > cookie: string
+  heading@158 sentence@160
+middleware/builtin/jwk.md:162  JWK Auth Middleware > Options > headerName: string
+  heading@162 sentence@164 sentence@164
+middleware/builtin/jwk.md:166  JWK Auth Middleware > Options > realm: string
+  heading@166 sentence@168 sentence@168
+middleware/builtin/jwk.md:170  JWK Auth Middleware > Options > verification: VerifyOptions
+  heading@170 sentence@172
+middleware/builtin/jwk.md:176  JWK Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.iss: string | RegExp
+  heading@176 sentence@178 sentence@178
+middleware/builtin/jwk.md:180  JWK Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.aud: string | string[] | RegExp
+  heading@180 sentence@182 sentence@182
+middleware/builtin/jwk.md:184  JWK Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.nbf: boolean
+  heading@184 sentence@186 sentence@186
+middleware/builtin/jwk.md:188  JWK Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.iat: boolean
+  heading@188 sentence@190 sentence@190
+middleware/builtin/jwk.md:192  JWK Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.exp: boolean
+  heading@192 sentence@194 sentence@194
+middleware/builtin/jwt.md:1  JWT Auth Middleware
+  heading@1 sentence@3 sentence@4 sentence@4 sentence@7 sentence@9
+middleware/builtin/jwt.md:12  JWT Auth Middleware > Import
+  heading@12 code@14
+middleware/builtin/jwt.md:20  JWT Auth Middleware > Usage
+  heading@20 code@22 sentence@41 code@43 sentence@66 sentence@66 code@68
+middleware/builtin/jwt.md:80  JWT Auth Middleware > Options
+  heading@80
+middleware/builtin/jwt.md:82  JWT Auth Middleware > Options > secret: string
+  heading@82 sentence@84
+middleware/builtin/jwt.md:86  JWT Auth Middleware > Options > alg: string
+  heading@86 sentence@88 sentence@90
+middleware/builtin/jwt.md:92  JWT Auth Middleware > Options > cookie: string
+  heading@92 sentence@94
+middleware/builtin/jwt.md:96  JWT Auth Middleware > Options > headerName: string
+  heading@96 sentence@98 sentence@98 code@100
+middleware/builtin/jwt.md:111  JWT Auth Middleware > Options > realm: string
+  heading@111 sentence@113 sentence@113 code@115
+middleware/builtin/jwt.md:125  JWT Auth Middleware > Options > verification: VerifyOptions
+  heading@125 sentence@127
+middleware/builtin/jwt.md:131  JWT Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.iss: string | RegExp
+  heading@131 sentence@133 sentence@133
+middleware/builtin/jwt.md:135  JWT Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.aud: string | string[] | RegExp
+  heading@135 sentence@137 sentence@137
+middleware/builtin/jwt.md:139  JWT Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.nbf: boolean
+  heading@139 sentence@141 sentence@141
+middleware/builtin/jwt.md:143  JWT Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.iat: boolean
+  heading@143 sentence@145 sentence@145
+middleware/builtin/jwt.md:147  JWT Auth Middleware > Options > verification: VerifyOptions > VerifyOptions.exp: boolean
+  heading@147 sentence@149 sentence@149
+middleware/builtin/language.md:1  Language Middleware
+  heading@1 sentence@3 sentence@3 sentence@3
+middleware/builtin/language.md:5  Language Middleware > Import
+  heading@5 code@7
+middleware/builtin/language.md:12  Language Middleware > Basic Usage
+  heading@12 sentence@14 code@16
+middleware/builtin/language.md:32  Language Middleware > Basic Usage > Client Examples
+  heading@32 code@34
+middleware/builtin/language.md:48  Language Middleware > Default Configuration
+  heading@48 code@50
+middleware/builtin/language.md:71  Language Middleware > Key Behaviors
+  heading@71
+middleware/builtin/language.md:73  Language Middleware > Key Behaviors > Detection Workflow
+  heading@73 orderedList@75 orderedList@80 orderedList@82
+middleware/builtin/language.md:84  Language Middleware > Advanced Configuration
+  heading@84
+middleware/builtin/language.md:86  Language Middleware > Advanced Configuration > Custom Detection Order
+  heading@86 sentence@88 code@90
+middleware/builtin/language.md:101  Language Middleware > Advanced Configuration > Progressive Locale Matching
+  heading@101 sentence@103 sentence@103 sentence@103 code@105
+middleware/builtin/language.md:117  Language Middleware > Advanced Configuration > Language Code Transformation
+  heading@117 sentence@119 code@121
+middleware/builtin/language.md:131  Language Middleware > Advanced Configuration > Cookie Configuration
+  heading@131 code@133 sentence@150 code@152
+middleware/builtin/language.md:158  Language Middleware > Advanced Configuration > Debugging
+  heading@158 sentence@160 code@162
+middleware/builtin/language.md:168  Language Middleware > Options Reference
+  heading@168
+middleware/builtin/language.md:170  Language Middleware > Options Reference > Basic Options
+  heading@170 tableRow@174 tableRow@175 tableRow@176 tableRow@177
+middleware/builtin/language.md:179  Language Middleware > Options Reference > Detection Options
+  heading@179 tableRow@183 tableRow@184 tableRow@185 tableRow@186
+middleware/builtin/language.md:188  Language Middleware > Options Reference > Cookie Options
+  heading@188 tableRow@192 tableRow@193 tableRow@194 tableRow@195 tableRow@196 tableRow@197 tableRow@198
+middleware/builtin/language.md:200  Language Middleware > Options Reference > Advanced Options
+  heading@200 tableRow@204 tableRow@205
+middleware/builtin/language.md:207  Language Middleware > Validation & Error Handling
+  heading@207 list@209 list@210 list@211 list@212
+middleware/builtin/language.md:214  Language Middleware > Common Recipes
+  heading@214
+middleware/builtin/language.md:216  Language Middleware > Common Recipes > Path-Based Routing
+  heading@216 code@218
+middleware/builtin/language.md:225  Language Middleware > Common Recipes > Multiple Supported Languages
+  heading@225 code@227
+middleware/builtin/logger.md:1  Logger Middleware
+  heading@1 sentence@3
+middleware/builtin/logger.md:5  Logger Middleware > Import
+  heading@5 code@7
+middleware/builtin/logger.md:12  Logger Middleware > Usage
+  heading@12 code@14
+middleware/builtin/logger.md:21  Logger Middleware > Logging Details
+  heading@21 sentence@23 list@25 list@26 list@27 list@28 sentence@30 sentence@32 sentence@36 sentence@36 sentence@36
+middleware/builtin/logger.md:39  Logger Middleware > PrintFunc
+  heading@39 sentence@41 sentence@41
+middleware/builtin/logger.md:43  Logger Middleware > Options
+  heading@43
+middleware/builtin/logger.md:45  Logger Middleware > Options > fn: PrintFunc(str: string, ...rest: string[])
+  heading@45 list@47 list@48
+middleware/builtin/logger.md:50  Logger Middleware > Options > Example
+  heading@50 sentence@52 code@54 sentence@62 code@64
+middleware/builtin/method-not-allowed.md:1  Method Not Allowed Middleware
+  heading@1 sentence@3 sentence@3
+middleware/builtin/method-not-allowed.md:5  Method Not Allowed Middleware > Import
+  heading@5 code@7
+middleware/builtin/method-not-allowed.md:12  Method Not Allowed Middleware > Usage
+  heading@12 code@14 sentence@26 code@28
+middleware/builtin/method-not-allowed.md:40  Method Not Allowed Middleware > Options
+  heading@40
+middleware/builtin/method-not-allowed.md:42  Method Not Allowed Middleware > Options > app: Hono
+  heading@42 sentence@44 sentence@44
+middleware/builtin/method-not-allowed.md:46  Method Not Allowed Middleware > Options > onMethodNotAllowed: (c: Context, allowedMethods: string[]) => Response | Promise<Response>
+  heading@46 sentence@48 sentence@48
+middleware/builtin/method-override.md:1  Method Override Middleware
+  heading@1 sentence@3
+middleware/builtin/method-override.md:5  Method Override Middleware > Import
+  heading@5 code@7
+middleware/builtin/method-override.md:12  Method Override Middleware > Usage
+  heading@12 code@14
+middleware/builtin/method-override.md:26  Method Override Middleware > For example
+  heading@26 sentence@28 sentence@28 sentence@30 code@32 sentence@39 code@41 sentence@52 code@54
+middleware/builtin/method-override.md:63  Method Override Middleware > Options
+  heading@63
+middleware/builtin/method-override.md:65  Method Override Middleware > Options > app: Hono
+  heading@65 sentence@67
+middleware/builtin/method-override.md:69  Method Override Middleware > Options > form: string
+  heading@69 sentence@71 sentence@72
+middleware/builtin/method-override.md:74  Method Override Middleware > Options > header: boolean
+  heading@74 sentence@76
+middleware/builtin/method-override.md:78  Method Override Middleware > Options > query: boolean
+  heading@78 sentence@80
+middleware/builtin/pretty-json.md:1  Pretty JSON Middleware
+  heading@1 sentence@3 sentence@4 code@6 sentence@11 code@13
+middleware/builtin/pretty-json.md:23  Pretty JSON Middleware > Import
+  heading@23 code@25
+middleware/builtin/pretty-json.md:30  Pretty JSON Middleware > Usage
+  heading@30 code@32
+middleware/builtin/pretty-json.md:41  Pretty JSON Middleware > Options
+  heading@41
+middleware/builtin/pretty-json.md:43  Pretty JSON Middleware > Options > space: number
+  heading@43 sentence@45 sentence@45
+middleware/builtin/pretty-json.md:47  Pretty JSON Middleware > Options > query: string
+  heading@47 sentence@49 sentence@49
+middleware/builtin/pretty-json.md:51  Pretty JSON Middleware > Options > force: boolean
+  heading@51 sentence@53 sentence@53
+middleware/builtin/request-id.md:1  Request ID Middleware
+  heading@1 sentence@3 sentence@6 sentence@6 sentence@6 sentence@6 sentence@6
+middleware/builtin/request-id.md:9  Request ID Middleware > Import
+  heading@9 code@11
+middleware/builtin/request-id.md:16  Request ID Middleware > Usage
+  heading@16 sentence@18 code@20 sentence@30 code@32
+middleware/builtin/request-id.md:40  Request ID Middleware > Usage > Set Request ID
+  heading@40 sentence@42 code@44 sentence@61
+middleware/builtin/request-id.md:63  Request ID Middleware > Options
+  heading@63
+middleware/builtin/request-id.md:65  Request ID Middleware > Options > limitLength: number
+  heading@65 sentence@67 sentence@67
+middleware/builtin/request-id.md:69  Request ID Middleware > Options > headerName: string
+  heading@69 sentence@71 sentence@71
+middleware/builtin/request-id.md:73  Request ID Middleware > Options > generator: (c: Context) => string
+  heading@73 sentence@75 sentence@75
+middleware/builtin/request-id.md:77  Request ID Middleware > Platform specific Request IDs
+  heading@77 sentence@79 sentence@80 sentence@81 sentence@83
+middleware/builtin/request-id.md:85  Request ID Middleware > Platform specific Request IDs > Platform specific links
+  heading@85 list@87 list@90 list@93 list@95
+middleware/builtin/secure-headers.md:1  Secure Headers Middleware
+  heading@1 sentence@3 sentence@3
+middleware/builtin/secure-headers.md:5  Secure Headers Middleware > Import
+  heading@5 code@7
+middleware/builtin/secure-headers.md:12  Secure Headers Middleware > Usage
+  heading@12 sentence@14 code@16 sentence@21 code@23 sentence@34 code@36
+middleware/builtin/secure-headers.md:49  Secure Headers Middleware > Supported Options
+  heading@49 sentence@51 tableRow@55 tableRow@56 tableRow@57 tableRow@58 tableRow@59 tableRow@60 tableRow@61 tableRow@62 tableRow@63 tableRow@64 tableRow@65 tableRow@66 tableRow@67 tableRow@68 tableRow@69 tableRow@70 tableRow@71 tableRow@72 tableRow@73 tableRow@74
+middleware/builtin/secure-headers.md:76  Secure Headers Middleware > Middleware Conflict
+  heading@76 sentence@78 sentence@80 code@82 sentence@88 code@90
+middleware/builtin/secure-headers.md:96  Secure Headers Middleware > Setting Content-Security-Policy
+  heading@96 code@98
+middleware/builtin/secure-headers.md:146  Secure Headers Middleware > Setting Content-Security-Policy > nonce attribute
+  heading@146 sentence@148 code@150 sentence@185 code@187
+middleware/builtin/secure-headers.md:220  Secure Headers Middleware > Setting Permission-Policy
+  heading@220 sentence@222 sentence@222 code@224
+middleware/builtin/timeout.md:1  Timeout Middleware
+  heading@1 sentence@3 sentence@3
+middleware/builtin/timeout.md:5  Timeout Middleware > Import
+  heading@5 code@7
+middleware/builtin/timeout.md:12  Timeout Middleware > Usage
+  heading@12 sentence@14 sentence@16 code@18 sentence@31 code@33
+middleware/builtin/timeout.md:59  Timeout Middleware > Notes
+  heading@59 list@61 list@63 code@65
+middleware/builtin/timeout.md:96  Timeout Middleware > Middleware Conflicts
+  heading@96 sentence@98
+middleware/builtin/timing.md:1  Server-Timing Middleware
+  heading@1 sentence@3 sentence@7
+middleware/builtin/timing.md:11  Server-Timing Middleware > Import
+  heading@11 code@13
+middleware/builtin/timing.md:25  Server-Timing Middleware > Usage
+  heading@25 code@27
+middleware/builtin/timing.md:58  Server-Timing Middleware > Usage > Conditionally enabled
+  heading@58 code@60
+middleware/builtin/timing.md:72  Server-Timing Middleware > Result
+  heading@72
+middleware/builtin/timing.md:76  Server-Timing Middleware > Options
+  heading@76
+middleware/builtin/timing.md:78  Server-Timing Middleware > Options > total: boolean
+  heading@78 sentence@80 sentence@80
+middleware/builtin/timing.md:82  Server-Timing Middleware > Options > enabled: boolean | (c: Context) => boolean
+  heading@82 sentence@84 sentence@84
+middleware/builtin/timing.md:86  Server-Timing Middleware > Options > totalDescription: boolean
+  heading@86 sentence@88 sentence@88
+middleware/builtin/timing.md:90  Server-Timing Middleware > Options > autoEnd: boolean
+  heading@90 sentence@92 sentence@93
+middleware/builtin/timing.md:95  Server-Timing Middleware > Options > crossOrigin: boolean | string | (c: Context) => boolean | string
+  heading@95 sentence@97 list@99 list@100 list@101 sentence@103 sentence@103
+middleware/builtin/trailing-slash.md:1  Trailing Slash Middleware
+  heading@1 sentence@3 sentence@5 sentence@5
+middleware/builtin/trailing-slash.md:7  Trailing Slash Middleware > Import
+  heading@7 code@9
+middleware/builtin/trailing-slash.md:17  Trailing Slash Middleware > Usage
+  heading@17 sentence@19 code@21 sentence@31 code@33
+middleware/builtin/trailing-slash.md:43  Trailing Slash Middleware > Options
+  heading@43
+middleware/builtin/trailing-slash.md:45  Trailing Slash Middleware > Options > alwaysRedirect: boolean
+  heading@45 sentence@47 sentence@47 sentence@47 code@49 sentence@56
+middleware/builtin/trailing-slash.md:58  Trailing Slash Middleware > Options > skip: (path: string) => boolean
+  heading@58 sentence@60 sentence@60 sentence@60 code@62 sentence@70
+middleware/builtin/trailing-slash.md:72  Trailing Slash Middleware > Note
+  heading@72 sentence@74
+middleware/third-party.md:1  Third-party Middleware
+  heading@1 sentence@3 sentence@4
+middleware/third-party.md:6  Third-party Middleware > Authentication
+  heading@6 list@8 list@9 list@10 list@11 list@12 list@13 list@14 list@15 list@16 list@17 list@18
+middleware/third-party.md:20  Third-party Middleware > Validators
+  heading@20 list@22 list@23 list@24 list@25 list@26 list@27 list@28 list@29 list@30 list@31 list@32
+middleware/third-party.md:34  Third-party Middleware > OpenAPI
+  heading@34 list@36 list@37 list@38 list@39 list@40 list@41
+middleware/third-party.md:43  Third-party Middleware > Development
+  heading@43 list@45 list@46
+middleware/third-party.md:48  Third-party Middleware > Monitoring / Tracing
+  heading@48 list@50 list@51 list@52 list@53 list@54 list@55 list@56
+middleware/third-party.md:58  Third-party Middleware > Server / Adapter
+  heading@58 list@60 list@61 list@62 list@63
+middleware/third-party.md:65  Third-party Middleware > Transpiler
+  heading@65 list@67 list@68
+middleware/third-party.md:70  Third-party Middleware > UI / Renderer
+  heading@70 list@72 list@73 list@74
+middleware/third-party.md:76  Third-party Middleware > Queue / Job Processing
+  heading@76 list@78
+middleware/third-party.md:80  Third-party Middleware > Internationalization
+  heading@80 list@82
+middleware/third-party.md:84  Third-party Middleware > Utilities
+  heading@84 list@86 list@87 list@88 list@89 list@90 list@91 list@92 list@93 list@94 list@95 list@96 list@97 list@98 list@99 list@100 list@101 list@102
