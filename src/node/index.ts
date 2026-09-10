@@ -1,2 +1,2 @@
-// "docs-ask/node": filesystem helpers. Filled in from M1.
-export {};
+// "docs-ask/node": filesystem helpers.
+export { findDocs, DEFAULT_INCLUDE, DEFAULT_EXCLUDE, type FindDocsOptions } from "./walk.ts";
