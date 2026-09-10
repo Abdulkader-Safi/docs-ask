@@ -1,0 +1,9 @@
+{
+  "name": "docs-ask",
+  "version": "0.0.1",
+  "description": "Ask questions about your docs. Early placeholder, work in progress.",
+  "main": "index.js",
+  "files": ["index.js"],
+  "author": "Abdulkader Safi",
+  "license": "MIT"
+}
