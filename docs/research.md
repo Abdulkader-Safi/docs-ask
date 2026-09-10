@@ -4,7 +4,7 @@ A small TypeScript package that answers questions about a repo's markdown docs w
 
 v1 ships four surfaces from one package: a library, a CLI, an MCP server for Claude Code and Cowork, and a drop-in browser widget. English only. MIT on npm.
 
-This file is the build manual. It goes with `prd.md` (the contract) and `claude-code-build-prompt.md` (the prompt to start the build). Every version number was read from the npm registry on 10 Sep 2026. Every code block was run, either in a research scratch build or in the reference prototype in `reference-prototype/`.
+This file is the build manual. It goes with `prd.md` (the contract). Every version number was read from the npm registry on 10 Sep 2026. Every code block was run, either in a research scratch build or in the research prototype.
 
 ## How to read this
 
@@ -13,7 +13,7 @@ This file is the build manual. It goes with `prd.md` (the contract) and `claude-
 - Sections 13 to 19 cover the four surfaces and how to package and publish them.
 - Section 20 covers testing and the measured accuracy, including a held-out run that shows where it really stands.
 - Section 21 lists what it can't do. Read it before promising anything in the README.
-- Sections 22 to 24 list checked versions and links, then explain how to run the prototype.
+- Sections 22 and 23 list checked versions and links.
 
 Words used throughout:
 
@@ -3127,33 +3127,3 @@ Node: 20 end of life, 22 maintenance LTS, 24 active LTS, 26 current (LTS on 28 O
 - Fastify docs at v5.6.0: https://github.com/fastify/fastify/tree/v5.6.0/docs
 - Hono website licence (MIT): https://raw.githubusercontent.com/honojs/website/main/LICENSE
 - Meilisearch docs licence (MIT): https://raw.githubusercontent.com/meilisearch/documentation/main/LICENSE
-
----
-
-## 24. The reference prototype
-
-`reference-prototype/` next to this file is the spike every number above came from. It is one flat folder on purpose, not the product layout. Use it to check behaviour and to copy tested functions into the real modules.
-
-```bash
-cd reference-prototype
-npm install
-npm run corpus      # downloads the 30 Fastify doc files at v5.6.0 into corpus/ (MIT)
-npm run eval        # tuned golden set: prints each question and the metrics
-npm run heldout     # the 16 held-out questions from section 20
-npm run roundtrip   # serialize and reload the index, sizes, time per question
-npm run classify    # 37 labelled question types
-npm test            # vitest: classifier cases + metric floors + no confident answer on unanswerable
-```
-
-| File                                                      | What it holds                                                     |
-| --------------------------------------------------------- | ----------------------------------------------------------------- |
-| `src/shared.ts`, `src/md-parse.ts`                        | Stage 1 parser and types                                          |
-| `src/sentences.ts`                                        | Sentence splitter with the masking guard                          |
-| `src/text.ts`, `src/synonyms.ts`                          | Stage 3 tokenizer, stop words, stemming, synonyms                 |
-| `src/rules.ts`                                            | Stage 5 question types                                            |
-| `src/pipeline.ts`                                         | Adapter, index, rerank, unit scoring, gates, `ask()`              |
-| `src/metrics.ts`, `src/golden.ts`, `test/qa-eval.test.ts` | Evaluation                                                        |
-| `src/heldout.ts`                                          | Held-out questions                                                |
-| `fixtures/api-sample.md`                                  | 60-line sample API doc with every parser edge case from section 4 |
-
-Verified from a clean copy on 10 Sep 2026: corpus fetched, install clean, `npm run eval` reproduces the tuned metrics, `npm test` 33/33.

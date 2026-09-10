@@ -19,8 +19,6 @@ Safi asked whether an old-style, rules-and-search system could answer questions 
 
 - `research.md`: the build manual. Every decision with tested code, measured numbers, limits and resources.
 - `prd.md`: the contract. Problem, success criteria, scope, design, milestones, risks, open questions.
-- `claude-code-build-prompt.md`: paste-ready prompt to start the build in Claude Code.
-- `reference-prototype/`: the working spike behind every number. `npm install && npm run corpus && npm run eval`.
 
 ## Status
 
