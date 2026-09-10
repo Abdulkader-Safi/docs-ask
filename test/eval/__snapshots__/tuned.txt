@@ -26,8 +26,8 @@ ok   rank=1 ans [fastify] What is the onSend hook?
      -> Reference/Hooks.md:199 onSend
 FAIL rank=0 ans [fastify] How can I test my routes without starting a server?
      -> Guides/Testing.md:243 Testing with a running server
-FAIL rank=1 abs [fastify] How do I hide passwords in logs?
-     -> weak term coverage (0.12)
+ok   rank=1 ans [fastify] How do I hide passwords in logs?
+     -> Reference/Logging.md:234 Log Redaction
 ok   rank=1 ans [fastify] How do I version my routes?
      -> Reference/Routes.md:627 Version Constraints
 ok   rank=1 ans [fastify] How do I add a prefix to all routes in a plugin?
@@ -40,7 +40,7 @@ ok   rank=1 ans [fastify] Can I use Express middleware?
      -> Reference/Middleware.md:5 Middleware
 ok   rank=1 ans [fastify] difference between onRequest and preHandler
      -> Reference/Hooks.md:134 preHandler
-FAIL rank=4 ans [fastify] Where is the custom error handler documented?
+FAIL rank=6 ans [fastify] Where is the custom error handler documented?
      -> Reference/Errors.md:141 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
 ok   rank=1 ans [fastify] How do I connect to Postgres?
      -> Guides/Database.md:47 Postgres
@@ -53,7 +53,7 @@ FAIL rank=3 ans [fastify] How do I deploy to AWS Lambda?
 ok   rank=0 abs [fastify] what is the default port for GraphQL subscriptions
      -> not found in docs: graphql
 ok   rank=0 abs [fastify] How do I configure Kubernetes autoscaling?
-     -> weak term coverage (0.22)
+     -> weak term coverage (0.35)
 ok   rank=0 abs [fastify] Does fastify support SOAP?
      -> weak term coverage (0.04)
 ok   rank=0 abs [fastify] What is the rate limit for the API?

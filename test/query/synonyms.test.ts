@@ -22,6 +22,14 @@ describe("strict groups: rewritten at index and query time", () => {
   });
 });
 
+describe("M4 groups", () => {
+  it("rewrites 'turn on' to 'enable' and links hide to redact, stop to close", () => {
+    expect(tokenize("How do I turn on logging")).toContain("enabl");
+    expect(syn.loose.get("hide")).toEqual(["redact"]);
+    expect(syn.loose.get("stop")).toEqual(["close"]);
+  });
+});
+
 describe("loose groups: added to the query only", () => {
   it("links the canonical word and its aliases both ways", () => {
     expect(syn.loose.get("delet")).toEqual(["remov", "destroy", "drop", "eras"]);
@@ -33,9 +41,9 @@ describe("loose groups: added to the query only", () => {
   });
 
   it("accepts extra groups from a repo", () => {
-    const custom = compileSynonyms([...SYNONYMS, { canonical: "redact", aliases: ["hide", "mask"], strict: false }]);
-    expect(custom.loose.get("hide")).toEqual(["redact"]);
-    expect(custom.loose.get("redact")).toEqual(["hide", "mask"]);
+    const custom = compileSynonyms([...SYNONYMS, { canonical: "purge", aliases: ["wipe", "flush"], strict: false }]);
+    expect(custom.loose.get("wipe")).toEqual(["purg"]);
+    expect(custom.loose.get("purg")).toEqual(["wipe", "flush"]);
   });
 });
 
@@ -67,10 +75,10 @@ describe("loose alias scoring", () => {
     expect(low.exact).toBeCloseTo(full.exact);
   });
 
-  // Known weakness carried over from the prototype: the alias doc still ranks first (6.29 vs 3.35 here;
-  // research.md's own table shows 1.68 vs 1.43). Revisit in M4 ("Extend the default synonyms").
-  it.fails("puts the doc with the exact word first", () => {
+  // Raw MiniSearch still lets the alias doc win (6.29 vs 3.35 here; research.md's table shows 1.68 vs 1.43).
+  // retrieve() corrects it by counting a word and its synonyms as one match: see test/query/retrieve.test.ts.
+  it("lets the alias doc win in raw MiniSearch, which is why retrieve regroups", () => {
     const low = scores(0.4);
-    expect(low.exact).toBeGreaterThan(low.aliases);
+    expect(low.aliases).toBeGreaterThan(low.exact);
   });
 });

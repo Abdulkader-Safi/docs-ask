@@ -13,6 +13,11 @@ export const WEIGHTS = {
     /** fuzzy-match terms longer than this (never identifiers) */
     fuzzyAbove: 6,
     fuzzy: 0.15,
+    /**
+     * 1: a question word matched through several of its loose synonyms counts once, undoing MiniSearch's
+     * "times distinct terms matched" bonus for them. 0: MiniSearch's raw score (the research prototype).
+     */
+    groupExpansions: 1,
   },
   rerank: {
     /** section has the unit kinds the question type prefers, when the rule sets no factor of its own */

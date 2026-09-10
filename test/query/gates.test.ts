@@ -30,10 +30,10 @@ describe("checkGates", () => {
   });
 
   it("gate 2: abstains on weak coverage but keeps the right section among the candidates", () => {
-    // research.md section 11: "how do I turn on logging" abstains with coverage 0.24
-    const { gate, ranked } = run("how do I turn on logging");
-    expect(gate).toEqual({ ok: false, reason: "weak term coverage (0.24)" });
-    expect(ranked.slice(0, 3).map((r) => r.s.id)).toContain("Reference/Logging.md#enable-logging");
+    // research.md section 11 used "how do I turn on logging"; the M4 enable synonym answers that one now
+    const { gate, ranked } = run("how do I stop the server gracefully");
+    expect(gate).toEqual({ ok: false, reason: "weak term coverage (0.49)" });
+    expect(ranked.slice(0, 3).map((r) => r.s.id)).toContain("Reference/Server.md#close");
   });
 
   it("gate 3: abstains when the top two are too close", () => {
@@ -41,7 +41,7 @@ describe("checkGates", () => {
   });
 
   it("uses the thresholds from WEIGHTS", () => {
-    expect(run("how do I turn on logging", fastify, withWeights({ gates: { minCoverage: 0.2, softCoverage: 0.2 } })).gate.ok).toBe(true);
+    expect(run("how do I stop the server gracefully", fastify, withWeights({ gates: { minCoverage: 0.4, softCoverage: 0.4 } })).gate.ok).toBe(true);
   });
 
   it("doesn't count a parent or child section of the same file as a competitor", () => {

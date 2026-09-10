@@ -40,10 +40,11 @@ describe("tuned Fastify set", () => {
 describe("held-out Fastify set", () => {
   const m = evaluate(docs, HELDOUT, 5);
 
-  // Not clean any more: the 404s question was read to find a bug (see golden.ts). The honest held-out
-  // numbers stay 0.50 and 0.71; these check parity with the patched prototype.
-  it("matches the prototype after the 10 Sep tokenizer fix", () => {
-    expect(m.summary).toMatchObject({ top1: 0.571, recallAt3: 0.786, answerRate: 0.571, precisionWhenAnswered: 0.75, abstainOnUnanswerable: 1 });
+  // Part of the dev set since M4, so tuned against. The honest held-out numbers stay 0.50 and 0.71;
+  // these floors are what the patched research prototype scored (M3 parity).
+  it("doesn't fall below its M3 numbers", () => {
+    const floor = { top1: 0.571, recallAt3: 0.786, answerRate: 0.571, precisionWhenAnswered: 0.75, abstainOnUnanswerable: 1 };
+    for (const [k, min] of Object.entries(floor)) expect.soft(m.summary[k as keyof typeof m.summary], k).toBeGreaterThanOrEqual(min);
   });
 
   it("matches the committed per-question table", async () => {
