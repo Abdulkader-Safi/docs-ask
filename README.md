@@ -58,9 +58,6 @@ Want embeddings and happy to download models? Use [qmd](https://github.com/tobi/
 - `docs/overview.md`: one page on what this is, why it exists and where it stands.
 - `docs/prd.md`: the contract. Scope, targets, milestones.
 - `docs/research.md`: the build manual, with tested code for every stage.
-- `docs/reference-prototype/`: the spike behind every number. Run `npm install && npm run corpus && npm run eval` inside it.
-- `docs/claude-code-build-prompt.md`: the prompt that starts the build.
-- `docs/docs-ask/`: the task board, one markdown file per task (MD Kanban).
 
 ## Licence
 

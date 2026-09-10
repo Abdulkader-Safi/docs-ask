@@ -2,7 +2,7 @@
 
 Answer questions about a repo's markdown docs with no language model. Library, CLI, MCP server and browser widget in one MIT npm package. English only.
 
-Read with `research.md` (the build manual, with tested code for every stage) and `reference-prototype/` (the spike the numbers come from).
+Read with `research.md` (the build manual, with tested code for every stage).
 
 ---
 
@@ -253,9 +253,6 @@ Event: `docs-ask:select` with the `Answer` or candidate in `detail`. Parts: `inp
 ## 6. Plan
 
 Each milestone ends with a short report to Safi (what was built, test results, anything that went against research.md) and waits for his OK before the next one.
-
-Every task is a card on the MD Kanban board in `docs/docs-ask/`. Cards move from `todo` to `in-progress` while being worked on, to `review` once the change is made, and to `done` only after it is tested. The repo's `CLAUDE.md` has the full rule.
-
 | #   | Milestone                                                                                                                      | Done when                                                                                                  |
 | --- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | M0  | Repo scaffold: tsdown config with all entries, vitest, tsconfig, CI workflow, `node:` import guard test, LICENSE, empty README | `npm run build`, `npm test`, `npm run lint` all pass on an empty skeleton                                  |
