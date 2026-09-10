@@ -2,8 +2,12 @@
 // A question can accept several sections: a single label rejected defensible answers (research.md section 20).
 import type { QClass } from "../../src/core/types.ts";
 
+export type Corpus = "fastify" | "hono";
+
 export interface Golden {
   q: string;
+  /** which vendored docs the question is about (default fastify) */
+  corpus?: Corpus;
   /** sections that count as right */
   accept?: { file: string; heading: string }[];
   qclass?: QClass;
@@ -71,3 +75,41 @@ export const HELDOUT: Golden[] = [
   { q: 'how do I enable CORS', unanswerable: true },
   { q: 'how do I send emails from a route', unanswerable: true },
 ];
+
+const H = (file: string, heading: string) => ({ file, heading });
+
+/**
+ * Dev questions on the Hono docs, written for M4 (11 Sep 2026). Phrasing partly taken from real questions
+ * in Hono's GitHub discussions and issues. Tune on these, never on the test split.
+ */
+export const HONO_DEV: Golden[] = ([
+  { q: "How to use hono/client with a different fetch client", accept: [H("guides/rpc.md", "Custom fetch method")] },
+  { q: "Pass username to context from basicAuth", accept: [H("middleware/builtin/basic-auth.md", "onAuthSuccess: (c: Context, username: string) => void | Promise<void>"), H("api/context.md", "set() / get()")] },
+  { q: "Calling getCookie after setCookie results in old data", accept: [H("helpers/cookie.md", "Regular cookies"), H("helpers/cookie.md", "Usage")] },
+  { q: "what is the default indentation for pretty json", accept: [H("middleware/builtin/pretty-json.md", "space: number")], qclass: "VALUE", contains: "2" },
+  { q: "What is the default body size limit?", accept: [H("middleware/builtin/body-limit.md", "maxSize: number")], qclass: "VALUE", contains: "100" },
+  { q: "what is the default realm for basic auth", accept: [H("middleware/builtin/basic-auth.md", "realm: string")], qclass: "VALUE", contains: "Secure Area" },
+  { q: "What is TrieRouter?", accept: [H("concepts/routers.md", "TrieRouter")], qclass: "DEFINITION" },
+  { q: "What is Hono?", accept: [H("index.md", "Hono")], qclass: "DEFINITION" },
+  { q: "how do I return JSON", accept: [H("getting-started/basic.md", "Return JSON"), H("api/context.md", "json()")], qclass: "HOWTO" },
+  { q: "how do I read query parameters", accept: [H("api/request.md", "query()"), H("api/request.md", "queries()")], qclass: "HOWTO" },
+  { q: "how do I redirect to another url", accept: [H("api/context.md", "redirect()")], qclass: "HOWTO" },
+  { q: "example of Hono with React", accept: [H("concepts/stacks.md", "With React")], qclass: "EXAMPLE" },
+  { q: "streaming text example", accept: [H("helpers/streaming.md", "streamText()")], qclass: "EXAMPLE" },
+  { q: "Does Hono work on Bun?", accept: [H("getting-started/bun.md", "Bun")], qclass: "YESNO" },
+  { q: "Can I use Hono with Next.js?", accept: [H("getting-started/nextjs.md", "Next.js")], qclass: "YESNO" },
+  { q: "What options does the bearer auth middleware take?", accept: [H("middleware/builtin/bearer-auth.md", "Options")], qclass: "PARAMS" },
+  { q: "what arguments does the timeout middleware accept", accept: [H("middleware/builtin/timeout.md", "Usage")], qclass: "PARAMS" },
+  { q: "Where is routing priority explained?", accept: [H("api/routing.md", "Routing priority")], qclass: "LOCATION" },
+  { q: "difference between app.route and app.basePath", accept: [H("api/routing.md", "Grouping"), H("api/routing.md", "Base path")], qclass: "COMPARISON" },
+  { q: "Why do I get CORS errors in the browser", accept: [H("middleware/builtin/cors.md", "CORS Middleware"), H("middleware/builtin/cors.md", "Usage")], qclass: "ERROR" },
+  { q: "my middleware runs in the wrong order", accept: [H("guides/middleware.md", "Execution order")] },
+  // unanswerable: not in these docs
+  { q: "How do I use Hono with Kafka?", unanswerable: true },
+  { q: "Does Hono include an admin panel?", unanswerable: true, qclass: "YESNO" },
+  { q: "What is the default session timeout in Hono?", unanswerable: true, qclass: "VALUE" },
+  { q: "How do I configure Hono for Kubernetes autoscaling?", unanswerable: true, qclass: "HOWTO" },
+] as Golden[]).map((g) => ({ ...g, corpus: "hono" }));
+
+/** Everything that may be tuned against. */
+export const DEV: Golden[] = [...TUNED, ...HELDOUT, ...HONO_DEV];
