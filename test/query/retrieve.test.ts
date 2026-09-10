@@ -23,6 +23,7 @@ describe("planQuery", () => {
       exact: ["bodylimit"],
       content: ["bodylimit", "bodi"],
       expanded: ["default", "bodylimit", "bodi", "limit"],
+      words: 5,
     });
     expect(planQuery(fastify, "how do I remove a route").expanded).toEqual(["remov", "rout", "delet"]);
   });

@@ -4,12 +4,14 @@
 import { describe, expect, it } from "vitest";
 import { loadIndex } from "../../src/core/index.ts";
 import { fastifyData } from "../helpers/fastify.ts";
+import { honoData } from "../helpers/hono.ts";
 import baseline from "./baseline.json" with { type: "json" };
-import { HELDOUT, TUNED } from "./golden.ts";
+import { DEV, HELDOUT, TUNED } from "./golden.ts";
 import { evaluate, table } from "./metrics.ts";
 
 const TOLERANCE = 0.02;
 const docs = loadIndex(fastifyData);
+const hono = loadIndex(honoData);
 
 describe("tuned Fastify set", () => {
   const m = evaluate(docs, TUNED);
@@ -46,6 +48,21 @@ describe("held-out Fastify set", () => {
 
   it("matches the committed per-question table", async () => {
     await expect(table(m.rows)).toMatchFileSnapshot("./__snapshots__/heldout.txt");
+  });
+});
+
+// Everything tuning may look at: Fastify (tuned + held-out) and the Hono dev questions.
+describe("dev set, both corpora", () => {
+  const m = evaluate({ fastify: docs, hono }, DEV);
+  const byCorpus = (c: string) => evaluate({ fastify: docs, hono }, DEV.filter((g) => (g.corpus ?? "fastify") === c)).summary;
+
+  it("reports its numbers", () => {
+    console.log("dev", JSON.stringify(m.summary), "\n  fastify", JSON.stringify(byCorpus("fastify")), "\n  hono", JSON.stringify(byCorpus("hono")));
+    expect(m.rows.filter((r) => r.unanswerable && r.confident).length).toBeLessThanOrEqual(2);
+  });
+
+  it("matches the committed per-question table", async () => {
+    await expect(table(m.rows)).toMatchFileSnapshot("./__snapshots__/dev.txt");
   });
 });
 

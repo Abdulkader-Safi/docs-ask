@@ -19,7 +19,8 @@ const quote = (units: Unit[]) => units.map((u) => (u.kind === "code" ? "```" + (
 
 export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}): Answer {
   const w = withWeights(options.weights);
-  const rule = classify(question).primary;
+  const cls = classify(question);
+  const rule = cls.primary;
   const plan = planQuery(idx, question);
   const ranked = retrieve(idx, plan, rule, w);
   const candidates = ranked.slice(0, options.topK ?? w.candidates).map(({ s, score }) => ({
@@ -31,7 +32,7 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   }));
   const notSure = (reason: string, extra: Partial<Answer> = {}): Answer => ({ confident: false, qclass: rule.id, reason, candidates, ...extra });
 
-  const gate = checkGates(idx, ranked, plan, w);
+  const gate = checkGates(idx, ranked, plan, cls, w);
   if (!gate.ok) {
     const suggestions = [...new Set((gate.unknown ?? []).flatMap((t) => suggest(idx, t, w)))];
     return notSure(gate.reason, suggestions.length ? { suggestions } : {});

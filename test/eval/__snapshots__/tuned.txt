@@ -1,60 +1,60 @@
-ok   rank=1 ans What is the default bodyLimit?
+ok   rank=1 ans [fastify] What is the default bodyLimit?
      -> Reference/Server.md:224 bodyLimit
-ok   rank=1 ans how long is keepAliveTimeout
+ok   rank=1 ans [fastify] how long is keepAliveTimeout
      -> Reference/Server.md:154 keepAliveTimeout
-ok   rank=1 ans what is the default pluginTimeout
+ok   rank=1 ans [fastify] what is the default pluginTimeout
      -> Reference/Server.md:490 pluginTimeout
-FAIL rank=2 ans What is the maximum request body size?
+FAIL rank=2 ans [fastify] What is the maximum request body size?
      -> Reference/ContentTypeParser.md:161 Body Parser
-ok   rank=1 ans How do I fix FST_ERR_CTP_BODY_TOO_LARGE
+ok   rank=1 ans [fastify] How do I fix FST_ERR_CTP_BODY_TOO_LARGE
      -> Reference/Errors.md:300 Fastify Error Codes
-ok   rank=1 ans What is encapsulation?
+ok   rank=1 ans [fastify] What is encapsulation?
      -> Reference/Encapsulation.md:6 Encapsulation
-ok   rank=1 ans Does fastify support http2?
+ok   rank=1 ans [fastify] Does fastify support http2?
      -> Reference/HTTP2.md:5 HTTP2
-ok   rank=1 ans example of a preHandler hook
+ok   rank=1 ans [fastify] example of a preHandler hook
      -> Reference/Hooks.md:134 preHandler
-ok   rank=1 ans How do I register a plugin?
+ok   rank=1 ans [fastify] How do I register a plugin?
      -> Guides/Plugins-Guide.md:31 Register
-ok   rank=1 ans how to install fastify
+ok   rank=1 ans [fastify] how to install fastify
      -> Guides/Getting-Started.md:17 Install
-ok   rank=1 ans How do I redirect a request?
+ok   rank=1 ans [fastify] How do I redirect a request?
      -> Reference/Reply.md:314 .redirect(dest, [code ,])
-FAIL rank=4 ans How do I set a response header?
+FAIL rank=4 ans [fastify] How do I set a response header?
      -> Reference/Reply.md:208 .getHeaders()
-ok   rank=1 ans What is the onSend hook?
+ok   rank=1 ans [fastify] What is the onSend hook?
      -> Reference/Hooks.md:199 onSend
-FAIL rank=0 ans How can I test my routes without starting a server?
+FAIL rank=0 ans [fastify] How can I test my routes without starting a server?
      -> Guides/Testing.md:243 Testing with a running server
-FAIL rank=1 abs How do I hide passwords in logs?
+FAIL rank=1 abs [fastify] How do I hide passwords in logs?
      -> weak term coverage (0.12)
-ok   rank=1 ans How do I version my routes?
+ok   rank=1 ans [fastify] How do I version my routes?
      -> Reference/Routes.md:627 Version Constraints
-ok   rank=1 ans How do I add a prefix to all routes in a plugin?
+ok   rank=1 ans [fastify] How do I add a prefix to all routes in a plugin?
      -> Reference/Routes.md:411 Route Prefixing
-ok   rank=1 ans What options can I pass to a plugin?
+ok   rank=1 ans [fastify] What options can I pass to a plugin?
      -> Reference/Plugins.md:24 Plugin Options
-FAIL rank=2 ans How do I detect when a client aborts a request?
+FAIL rank=2 ans [fastify] How do I detect when a client aborts a request?
      -> Reference/Hooks.md:293 onRequestAbort
-ok   rank=1 ans Can I use Express middleware?
+ok   rank=1 ans [fastify] Can I use Express middleware?
      -> Reference/Middleware.md:5 Middleware
-ok   rank=1 ans difference between onRequest and preHandler
+ok   rank=1 ans [fastify] difference between onRequest and preHandler
      -> Reference/Hooks.md:134 preHandler
-FAIL rank=4 ans Where is the custom error handler documented?
+FAIL rank=4 ans [fastify] Where is the custom error handler documented?
      -> Reference/Errors.md:141 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
-ok   rank=1 ans How do I connect to Postgres?
+ok   rank=1 ans [fastify] How do I connect to Postgres?
      -> Guides/Database.md:47 Postgres
-FAIL rank=0 abs Why is my request taking too long and getting cut off?
+FAIL rank=0 abs [fastify] Why is my request taking too long and getting cut off?
      -> weak term coverage (0.25)
-FAIL rank=0 abs Should I put fastify behind nginx?
+FAIL rank=0 abs [fastify] Should I put fastify behind nginx?
      -> weak term coverage (0.39)
-FAIL rank=3 ans How do I deploy to AWS Lambda?
+FAIL rank=3 ans [fastify] How do I deploy to AWS Lambda?
      -> Guides/Serverless.md:86 lambda.js
-ok   rank=0 abs what is the default port for GraphQL subscriptions
+ok   rank=0 abs [fastify] what is the default port for GraphQL subscriptions
      -> not found in docs: graphql
-ok   rank=0 abs How do I configure Kubernetes autoscaling?
+ok   rank=0 abs [fastify] How do I configure Kubernetes autoscaling?
      -> weak term coverage (0.22)
-ok   rank=0 abs Does fastify support SOAP?
+ok   rank=0 abs [fastify] Does fastify support SOAP?
      -> weak term coverage (0.04)
-ok   rank=0 abs What is the rate limit for the API?
+ok   rank=0 abs [fastify] What is the rate limit for the API?
      -> weak term coverage (0.30)

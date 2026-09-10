@@ -60,6 +60,10 @@ export const WEIGHTS = {
     /** a confident answer is "high" at this coverage and gap, otherwise "medium" */
     highCoverage: 0.9,
     highGap: 0.3,
+    /** gate 5: a one-term question whose term is in more than this share of sections... */
+    broadShare: 0.05,
+    /** ...and whose top two are closer than this, is navigation, not a question */
+    broadGap: 0.3,
   },
   suggest: {
     /** MiniSearch fuzziness for near spellings of an unknown identifier */

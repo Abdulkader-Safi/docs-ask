@@ -15,6 +15,8 @@ export interface QueryPlan {
   content: string[];
   /** q plus loose synonyms */
   expanded: string[];
+  /** words the user typed, before any stop-word removal */
+  words: number;
 }
 
 export interface Ranked {
@@ -32,6 +34,7 @@ export function planQuery(idx: LoadedIndex, question: string): QueryPlan {
     exact,
     content: q.filter((t) => !TRIGGER_WORDS.has(t)),
     expanded: [...new Set([...q, ...q.flatMap((t) => idx.syn.loose.get(t) ?? [])])],
+    words: question.trim().split(/\s+/).filter(Boolean).length,
   };
 }
 
