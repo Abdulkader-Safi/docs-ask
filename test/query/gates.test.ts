@@ -24,8 +24,8 @@ describe("checkGates", () => {
   });
 
   it("gate 1: abstains when an identifier never appears in the docs", () => {
-    expect(run("how do I parse a custom content type like text/csv").gate).toEqual({ ok: false, reason: "not found in docs: text/csv" });
-    expect(run("what is the default keepAliveTimout").gate).toEqual({ ok: false, reason: "not found in docs: keepalivetimout" });
+    expect(run("how do I parse a custom content type like text/csv").gate).toEqual({ ok: false, reason: "not found in docs: text/csv", unknown: ["text/csv"] });
+    expect(run("what is the default keepAliveTimout").gate).toEqual({ ok: false, reason: "not found in docs: keepalivetimout", unknown: ["keepalivetimout"] });
   });
 
   it("gate 2: abstains on weak coverage but keeps the right section among the candidates", () => {

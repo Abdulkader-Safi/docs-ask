@@ -4,7 +4,7 @@ import type { LoadedIndex } from "./load.ts";
 import type { QueryPlan, Ranked } from "./retrieve.ts";
 import type { Weights } from "./weights.ts";
 
-export type GateResult = { ok: true; gap: number; coverage: number } | { ok: false; reason: string };
+export type GateResult = { ok: true; gap: number; coverage: number } | { ok: false; reason: string; unknown?: string[] };
 
 export function checkGates(idx: LoadedIndex, ranked: Ranked[], plan: QueryPlan, w: Weights): GateResult {
   const [top, second] = ranked;
@@ -12,7 +12,7 @@ export function checkGates(idx: LoadedIndex, ranked: Ranked[], plan: QueryPlan, 
 
   // 1. the question names an identifier the docs never mention
   const unknown = plan.exact.filter((e) => !idx.df.has(e));
-  if (unknown.length) return { ok: false, reason: `not found in docs: ${unknown.join(", ")}` };
+  if (unknown.length) return { ok: false, reason: `not found in docs: ${unknown.join(", ")}`, unknown };
 
   // A parent or child of the top section, in the same file, isn't a competitor: the gap counts as 100%.
   // ponytail: same as the prototype, which doesn't go on to compare with the third section.

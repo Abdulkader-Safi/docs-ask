@@ -61,6 +61,12 @@ export const WEIGHTS = {
     highCoverage: 0.9,
     highGap: 0.3,
   },
+  suggest: {
+    /** MiniSearch fuzziness for near spellings of an unknown identifier */
+    fuzzy: 0.2,
+    /** most suggestions returned */
+    max: 3,
+  },
   /** candidates returned with every answer */
   candidates: 5,
 };

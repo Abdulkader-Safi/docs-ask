@@ -5,6 +5,7 @@ import { checkGates } from "./gates.ts";
 import { openIndex, type LoadedIndex } from "./load.ts";
 import { planQuery, retrieve } from "./retrieve.ts";
 import { classify } from "./rules.ts";
+import { suggest } from "./suggest.ts";
 import { withWeights, type WeightOverrides } from "./weights.ts";
 
 export interface AskOptions {
@@ -31,7 +32,10 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   const notSure = (reason: string, extra: Partial<Answer> = {}): Answer => ({ confident: false, qclass: rule.id, reason, candidates, ...extra });
 
   const gate = checkGates(idx, ranked, plan, w);
-  if (!gate.ok) return notSure(gate.reason);
+  if (!gate.ok) {
+    const suggestions = [...new Set((gate.unknown ?? []).flatMap((t) => suggest(idx, t, w)))];
+    return notSure(gate.reason, suggestions.length ? { suggestions } : {});
+  }
   const sec = ranked[0].s;
   const picked = pickUnits(idx, sec, rule, plan, w);
   if ("noValue" in picked) return notSure("VALUE question but best section has no value", { file: sec.file, line: sec.line });
@@ -73,9 +77,9 @@ export class DocsIndex {
     return this.#idx.byId.get(id);
   }
 
-  /** near spellings of a term; filled in at M4 */
-  suggest(_term: string): string[] {
-    return [];
+  /** near spellings of a term, as the docs spell them */
+  suggest(term: string): string[] {
+    return suggest(this.#idx, term, withWeights(this.#defaults.weights));
   }
 
   get sectionCount(): number {

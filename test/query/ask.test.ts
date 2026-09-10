@@ -64,7 +64,7 @@ describe("DocsIndex", () => {
     expect(docs.get("Reference/Server.md#bodylimit")?.heading).toBe("bodyLimit");
     expect(docs.get("nope")).toBeUndefined();
     expect(docs.sectionCount).toBe(559);
-    expect(docs.suggest("keepAliveTimout")).toEqual([]); // filled in at M4
+    expect(docs.suggest("keepAliveTimout")).toEqual(["keepAliveTimeout"]);
   });
 });
 
