@@ -49,3 +49,32 @@ export interface ParseOptions {
   /** Blank out MDX import/export lines and {expressions}. Default: true when file ends in .mdx */
   mdx?: boolean
 }
+
+// ---------- answer units (the QA layer) ----------
+// Different from Block and Section above: a Unit is one quotable piece of a section, and
+// QaSection.headingPath holds the ancestors only (the section's own heading is in `heading`).
+
+export type UnitKind = 'code' | 'orderedList' | 'list' | 'tableRow' | 'sentence' | 'heading' | 'blockquote'
+
+/** One answer unit: a sentence, list item, table row, code block, blockquote or heading. */
+export interface Unit {
+  kind: UnitKind
+  text: string
+  line: number
+  lang?: string
+}
+
+export interface QaSection {
+  id: string
+  file: string
+  /** this section's heading, backticks removed; the file path for the intro section */
+  heading: string
+  /** ancestors only, NOT including `heading` */
+  headingPath: string[]
+  line: number
+  units: Unit[]
+  /** non-code, non-heading units joined, for the index */
+  prose: string
+  /** code units joined, for the index */
+  code: string
+}

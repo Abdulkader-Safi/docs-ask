@@ -1,0 +1,77 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`toQaSections on the sample API doc > is stable 1`] = `
+[
+  {
+    "id": "docs/api.md",
+    "units": [
+      "sentence@7",
+      "sentence@7",
+      "sentence@8",
+    ],
+  },
+  {
+    "id": "docs/api.md#authentication",
+    "units": [
+      "heading@10",
+      "sentence@12",
+      "sentence@12",
+    ],
+  },
+  {
+    "id": "docs/api.md#access-tokens",
+    "units": [
+      "heading@14",
+      "sentence@16",
+      "sentence@16",
+      "code@18",
+    ],
+  },
+  {
+    "id": "docs/api.md#refresh-tokens",
+    "units": [
+      "heading@23",
+      "sentence@25",
+      "sentence@25",
+      "tableRow@29",
+      "tableRow@30",
+      "tableRow@31",
+    ],
+  },
+  {
+    "id": "docs/api.md#examples",
+    "units": [
+      "heading@33",
+      "list@35",
+      "list@36",
+      "orderedList@38",
+      "blockquote@40",
+    ],
+  },
+  {
+    "id": "docs/api.md#rate-limits",
+    "units": [
+      "heading@42",
+    ],
+  },
+  {
+    "id": "docs/api.md#setext-heading-below",
+    "units": [
+      "heading@44",
+      "sentence@47",
+      "sentence@47",
+    ],
+  },
+  {
+    "id": "docs/api.md#examples-1",
+    "units": [
+      "heading@49",
+      "sentence@51",
+      "sentence@51",
+      "sentence@53",
+      "code@55",
+      "sentence@60",
+    ],
+  },
+]
+`;
