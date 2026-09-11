@@ -23,3 +23,5 @@ jobs:
         with: { node-version: '22.19' }
       - run: npm ci
       - run: npm run e2e
+      # examples/faq-check against this repo's own docs: if a doc edit stops answering a question, say so here
+      - run: npm run -s build && node examples/faq-check/check.mjs
