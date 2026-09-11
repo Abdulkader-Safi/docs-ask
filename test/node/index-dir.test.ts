@@ -78,6 +78,14 @@ describe("loadDocs uses the index file only while it's fresh", () => {
     expect((await loadDocs(root)).fromFile).toBe(false);
   });
 
+  it("rebuilds when a doc was saved in the same millisecond as the index", async () => {
+    await buildTo();
+    const same = new Date(); // stat's mtimeMs can carry a fraction, so stamp both files from one value
+    utimesSync(join(root, INDEX_FILE), same, same);
+    utimesSync(join(root, "docs/limits.md"), same, same);
+    expect((await loadDocs(root)).fromFile).toBe(false);
+  });
+
   it("takes another index file name", async () => {
     await buildTo(join(root, "custom.json"));
     age("docs/limits.md", 60);

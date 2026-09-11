@@ -34,7 +34,8 @@ export async function loadDocs(root: string, options: { config?: DocsAskConfig; 
   const askOptions = config.thresholds ? { weights: { gates: config.thresholds } } : {};
   const indexPath = join(root, options.indexFile ?? INDEX_FILE);
   const built = await stat(indexPath).then((s) => s.mtimeMs).catch(() => 0);
-  if (built && built >= (await newestDoc(root, config))) {
+  // strictly newer: a doc saved in the same millisecond as the index counts as a miss, and rebuilding once is cheap
+  if (built && built > (await newestDoc(root, config))) {
     return { docs: loadIndex(await readIndex(indexPath), askOptions), fromFile: true, config };
   }
   return { docs: loadIndex(await indexDirectory(root, config), askOptions), fromFile: false, config };
