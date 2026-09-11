@@ -1,5 +1,5 @@
 // docs-ask mcp, driven the way a client drives it: a real child process, JSON-RPC over its stdin and stdout.
-import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdtempSync, rmSync } from "node:fs";
 import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -71,10 +71,8 @@ afterEach(() => {
 
 describe("docs-ask mcp over stdio", () => {
   it("answers initialize and logs to stderr only", async () => {
-    const started = Date.now();
     const server = start([FASTIFY_DIR]);
     const reply = await server.initialize();
-    if (built) expect(Date.now() - started).toBeLessThan(1000); // PRD: initialize inside a second with a fresh index
     expect(reply.result.serverInfo).toMatchObject({ name: "docs-ask" });
     expect(reply.result.protocolVersion).toBe("2025-11-25");
     expect(server.stderr).toMatch(/\[docs-ask\] 559 sections from .*fastify \(built in memory\) in \d+ ms/);
@@ -101,14 +99,18 @@ describe("docs-ask mcp over stdio", () => {
     expect(result.tools.map((t: any) => t.name).sort()).toEqual(["ask_docs", "get_section"]);
   });
 
-  it("reads docs-index.json when it's fresh", async () => {
+  it("reads a fresh docs-index.json, and answers initialize inside a second", async () => {
     const root = mkdtempSync(join(tmpdir(), "docs-ask-mcp-"));
     try {
-      writeFileSync(join(root, "limits.md"), "# Limits\n\n## bodyLimit\n\nDefault: `1048576` (1MiB)\n");
+      cpSync(FASTIFY_DIR, root, { recursive: true });
       await writeIndex(await indexDirectory(root), join(root, INDEX_FILE));
+      const started = Date.now();
       const server = start([root]);
       await server.initialize();
       expect(server.stderr).toContain("(docs-index.json)");
+      // PRD: initialize inside a second with a fresh index. 127 ms locally from the built binary,
+      // about 500 ms on a CI runner. Only the built binary is timed: type stripping costs a second.
+      if (built) expect(Date.now() - started).toBeLessThan(1000);
     } finally {
       rmSync(root, { recursive: true, force: true });
     }
