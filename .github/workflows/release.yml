@@ -1,0 +1,20 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  id-token: write # OIDC for npm trusted publishing; provenance comes with it
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest # a GitHub-hosted runner is required for trusted publishing
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24' # bundles npm 11.19; trusted publishing needs npm 11.5.1 and Node 22.14
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+      - run: npm ci
+      - run: npm run typecheck && npm run build && npm test && npm run lint
+      - run: npm publish # no token, no --provenance flag
