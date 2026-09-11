@@ -74,6 +74,13 @@ describe("rerank factors", () => {
     expect(gap(q, { rerank: { jaccard: 0 } })).toBeLessThan(0.05); // would abstain as too close to call
   });
 
+  it("heading-only section: a section with nothing but its own heading drops behind", () => {
+    const q = "what is fastify", id = "Reference/TypeScript.md#fastify";
+    expect(top(q, { rerank: { headingOnly: 1 } })).toBe("Reference/TypeScript.md > Fastify"); // used to win
+    expect(top(q)).not.toBe("Reference/TypeScript.md > Fastify");
+    expect(scoreOf(q, id) / scoreOf(q, id, { rerank: { headingOnly: 1 } })).toBeCloseTo(0.6);
+  });
+
   it("exact identifier in the heading multiplies the score by 1.5", () => {
     const q = "What is the default bodyLimit?", id = "Reference/Server.md#bodylimit";
     expect(scoreOf(q, id) / scoreOf(q, id, { rerank: { exactInHeading: 1 } })).toBeCloseTo(1.5);

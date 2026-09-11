@@ -14,7 +14,7 @@ Usage:
   docs-ask mcp [dir]            stdio MCP server (dir defaults to $CLAUDE_PROJECT_DIR or the current folder)
 
 Options:
-  -d, --dir <path>     folder to read docs from (default: .)
+  -d, --dir <path>     folder or single markdown file to read (default: .)
   -k, --top <n>        closest sections to list (default: 3)
   -o, --out <path>     where build writes the index (default: ${INDEX_FILE})
       --target <t>     build target: node (default) or web (smaller, for the widget)
@@ -81,8 +81,9 @@ export async function main(argv = process.argv.slice(2), io: Io = { log: console
   const root = resolve(values.dir!);
 
   try {
-    if (command !== "mcp" && !(await stat(root).then((s) => s.isDirectory()).catch(() => false))) {
-      io.error(styleText("red", `error: no such folder: ${root}`));
+    // a single markdown file stands in for a folder, so --dir takes either
+    if (command !== "mcp" && !(await stat(root).then(() => true).catch(() => false))) {
+      io.error(styleText("red", `error: no such file or folder: ${root}`));
       return 1;
     }
     if (command === "mcp") {
@@ -97,7 +98,7 @@ export async function main(argv = process.argv.slice(2), io: Io = { log: console
         return 1;
       }
       const config = await loadConfig(root);
-      const data = await indexDirectory(root, config);
+      const data = await indexDirectory(root, config); // root may be one file: indexDirectory handles that
       const bytes = await writeIndex(data, resolve(values.out!), { gzip: values.gzip, target: values.target });
       const kb = (n: number) => `${(n / 1024).toFixed(0)} KB`;
       io.log(`${styleText("green", "ok")} ${data.sections.length} sections from ${new Set(data.sections.map((s) => s.file)).size} files, ${kb(bytes)} -> ${values.out}`);

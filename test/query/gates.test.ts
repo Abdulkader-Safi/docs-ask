@@ -5,7 +5,8 @@ import { checkGates } from "../../src/query/gates.ts";
 import { planQuery, retrieve } from "../../src/query/retrieve.ts";
 import { classify } from "../../src/query/rules.ts";
 import { WEIGHTS, withWeights } from "../../src/query/weights.ts";
-import { fastify } from "../helpers/fastify.ts";
+import { loadIndex as loadDocsIndex } from "../../src/core/index.ts";
+import { fastify, fastifyData } from "../helpers/fastify.ts";
 import { honoData } from "../helpers/hono.ts";
 
 const run = (q: string, idx = fastify, w = WEIGHTS) => {
@@ -98,5 +99,33 @@ describe("gates 4 and 5 (research.md section 11)", () => {
     const hono = loadIndex(honoData);
     expect(run("hono", hono).gate).toEqual({ ok: false, reason: 'too broad: "hono" is in 52% of sections' });
     expect(run("What is Hono?", hono).gate.ok).toBe(true);
+  });
+});
+
+// Gate 6 runs after extraction, in ask(), so it is tested through ask() rather than checkGates().
+describe("gate 6: a DEFINITION answer has to define the thing", () => {
+  const docs = loadDocsIndex(fastifyData);
+  const off = loadDocsIndex(fastifyData, { weights: { gates: { definitionShape: 0 } } });
+
+  it("blocks a rare word matched inside an identifier", () => {
+    // "framework" matches the parts index of the heading `frameworkErrors`, and used to win by 3x on BM25
+    const q = "what is fastify framework?";
+    expect(off.ask(q)).toMatchObject({ confident: true, file: "Reference/Server.md", headingPath: ["Factory", "frameworkErrors"] });
+    expect(docs.ask(q)).toMatchObject({ confident: false, reason: "DEFINITION question but the best section doesn't define it" });
+  });
+
+  it("lets a heading that names the thing through", () => {
+    expect(docs.ask("What is encapsulation?")).toMatchObject({ confident: true, headingPath: ["Encapsulation"] });
+  });
+
+  it("lets a quote that reads like a definition through, whatever the heading says", () => {
+    const idx = loadDocsIndex(buildIndex([parseDocument("g.md", "# Guide\n\n## Contexts\n\nA widget is a small piece of a page. Use one per card.\n")]));
+    expect(idx.ask("what is a widget")).toMatchObject({ confident: true, text: expect.stringContaining("A widget is a small piece of a page.") });
+  });
+
+  it("is not fooled by a bare \"are\" in an unrelated sentence", () => {
+    // the heading doesn't name the thing either, so only the quote could carry the definition, and it doesn't
+    const idx = loadDocsIndex(buildIndex([parseDocument("g.md", "# Guide\n\n## Sending\n\nIf you are sending widgets, call send twice.\n")]));
+    expect(idx.ask("what is a widget")).toMatchObject({ confident: false, reason: "DEFINITION question but the best section doesn't define it" });
   });
 });

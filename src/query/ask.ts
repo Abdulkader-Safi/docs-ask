@@ -17,6 +17,9 @@ export interface AskOptions {
 }
 
 /** Units back to markdown, code fenced. The MCP server quotes whole sections the same way. */
+/** Stricter than the DEFINITION rule's scoring bonus: a bare "are" is not a definition. */
+const DEFINES = /\b(?:is|are)\s+(?:an?|the|used|not|called)\b|\brefers? to\b|\bmeans\b|\bstands for\b|\ballows? you to\b|\blets you\b|\bis the\b/i;
+
 export const quote = (units: Unit[]) => units.map((u) => (u.kind === "code" ? "```" + (u.lang ?? "") + "\n" + u.text + "\n```" : u.text)).join("\n");
 
 export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}): Answer {
@@ -48,6 +51,19 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   if ("noValue" in picked) return notSure("VALUE question but best section has no value", { file: sec.file, line: sec.line });
 
   const { units } = picked;
+  // A heading-only section (its content lives in its children) has nothing to quote. LOCATION answers are
+  // meant to be empty: they cite the section and stop.
+  if (!units.length && rule.answerShape !== "location") return notSure("best section has nothing to quote", { file: sec.file, line: sec.line });
+  // Gate 6: a DEFINITION answer has to define the thing. Either the section heading names every content word
+  // of the question, or the quote reads like a definition ("X is a ..."). Without one of the two, a rare word
+  // buried in an identifier wins on BM25 alone: "what is fastify framework?" answered from `frameworkErrors`.
+  if (w.gates.definitionShape && rule.id === "DEFINITION" && units.length) {
+    const headingTerms = new Set(idx.tokenize([...sec.headingPath, sec.heading].join(" ")));
+    const namesIt = plan.content.length > 0 && plan.content.every((t) => headingTerms.has(t));
+    const defines = DEFINES.test(units.map((u) => u.text).join(" "));
+    if (!namesIt && !defines) return notSure("DEFINITION question but the best section doesn't define it", { file: sec.file, line: sec.line });
+  }
+
   const high = gate.coverage >= w.gates.highCoverage && gate.gap >= w.gates.highGap;
   return {
     confident: true,
