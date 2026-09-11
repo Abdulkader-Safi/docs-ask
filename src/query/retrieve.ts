@@ -74,6 +74,8 @@ export function retrieve(idx: LoadedIndex, plan: QueryPlan, rule: Rule, w: Weigh
       const definedHere = (e: string) =>
         s.units.some((u) => (u.kind === "tableRow" || u.kind === "list") && u.text.replace(/^[^:]*:\s*/, "").toLowerCase().startsWith(e));
       if (exact.some(definedHere)) score *= r.definitionSite;
+      // nothing to quote: the content lives in this section's children, so it can only ever be a pointer
+      if (s.units.every((u) => u.kind === "heading")) score *= r.headingOnly;
       // API-signature headings (TypeScript reference) swamp plain questions
       if (!exact.length && /\(.*:.*\)/.test(s.heading)) score *= r.signaturePenalty;
       // the heading says exactly what was asked: Jaccard overlap of heading terms and question content terms

@@ -33,6 +33,8 @@ export const WEIGHTS = {
     signaturePenalty: 0.5,
     /** score *= 1 + jaccard * (overlap of heading terms and question terms) */
     jaccard: 1,
+    /** a section holding nothing but its own heading has no answer to quote: navigation, not a section */
+    headingOnly: 0.6,
   },
   unit: {
     coverage: 1.0,

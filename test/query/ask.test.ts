@@ -71,9 +71,11 @@ describe("ask", () => {
 
 describe("nothing to quote", () => {
   it("abstains when the best section is only a heading", () => {
-    // Reference/TypeScript.md#fastify is one heading with its content in child sections. It used to answer
-    // confidently with an empty quote.
-    const a = docs.ask("what is fastify");
+    // Reference/TypeScript.md#fastify is one heading with its content in child sections, and it used to answer
+    // confidently with an empty quote. The rerank penalty keeps it off the top now, so this pins the guard
+    // itself by turning that penalty off.
+    const noPenalty = loadIndex(fastifyData, { weights: { rerank: { headingOnly: 1 } } });
+    const a = noPenalty.ask("what is fastify");
     expect(a.confident).toBe(false);
     expect(a.reason).toBe("best section has nothing to quote");
     expect(a.candidates[0].id).toBe("Reference/TypeScript.md#fastify");
