@@ -64,8 +64,8 @@ ok   rank=1 ans [fastify] what arguments does addContentTypeParser take
      -> Reference/Server.md:1976 addContentTypeParser
 FAIL rank=2 ans [fastify] Where is the list of error codes?
      -> Guides/Write-Plugin.md:16 Code
-FAIL rank=3 abs [fastify] what endpoint does the Google Cloud Functions example expose
-     -> EXAMPLE question but best section has no code
+FAIL rank=2 abs [fastify] what endpoint does the Google Cloud Functions example expose
+     -> ambiguous: top two within 7%
 ok   rank=1 ans [fastify] connectionTimeout vs requestTimeout
      -> Reference/Server.md:144 connectionTimeout
 ok   rank=1 ans [fastify] difference between register and fastify-plugin
