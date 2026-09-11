@@ -3,9 +3,13 @@ import { readFile, writeFile } from "node:fs/promises";
 import { gunzipSync, gzipSync } from "node:zlib";
 import type { SerializedIndex } from "../core/types.ts";
 
-/** Writes the index and returns the bytes written. Gzips when asked or when the path ends in .gz. */
-export async function writeIndex(data: SerializedIndex, out: string, options: { gzip?: boolean } = {}): Promise<number> {
-  const json = Buffer.from(JSON.stringify(data));
+/**
+ * Writes the index and returns the bytes written. Gzips when asked or when the path ends in .gz.
+ * target "web" drops `prose` and `code`, which only feed index building: the widget answers from units.
+ */
+export async function writeIndex(data: SerializedIndex, out: string, options: { gzip?: boolean; target?: "node" | "web" } = {}): Promise<number> {
+  const slim = options.target === "web" ? { ...data, sections: data.sections.map((s) => ({ ...s, prose: "", code: "" })) } : data;
+  const json = Buffer.from(JSON.stringify(slim));
   const bytes = options.gzip || out.endsWith(".gz") ? gzipSync(json) : json;
   await writeFile(out, bytes);
   return bytes.length;
