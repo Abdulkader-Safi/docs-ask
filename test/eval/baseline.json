@@ -13,8 +13,8 @@
     "top1": 0.701,
     "recallAt3": 0.866,
     "mrr": 0.786,
-    "answerAccuracy": 0.455,
-    "precisionWhenAnswered": 0.753,
+    "answerAccuracy": 0.47,
+    "precisionWhenAnswered": 0.778,
     "answerRate": 0.604,
     "abstainOnUnanswerable": 1,
     "classifierAccuracy": 0.987

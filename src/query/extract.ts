@@ -51,9 +51,13 @@ export function pickUnits(idx: LoadedIndex, sec: QaSection, rule: Rule, plan: Qu
     const body = sec.units.filter((u) => u.kind === want).slice(0, want === "code" ? 1 : w.unit.maxSteps);
     return { units: [...(lead ? [lead] : []), ...body] };
   }
-  const pool = sec.units.filter((u) => u.kind !== "heading" && rule.preferUnits.includes(u.kind));
+  let pool = sec.units.filter((u) => u.kind !== "heading" && rule.preferUnits.includes(u.kind));
   // a value is a number or literal, or a "default is `X`" sentence (string defaults such as `"Secure Area"`)
-  if (rule.id === "VALUE" && !pool.some((u) => NUMBERISH.test(u.text) || rule.boosts.sentenceRe!.test(u.text))) return { noValue: true };
+  const hasValue = (u: Unit) => NUMBERISH.test(u.text) || rule.boosts.sentenceRe!.test(u.text);
+  if (rule.id === "VALUE" && !pool.some(hasValue)) return { noValue: true };
+  // research.md: a VALUE answer is a sentence or item containing a value. "The minimum size in bytes to
+  // compress. Defaults to 1024 bytes." is one line; without this the first sentence won on word overlap.
+  if (rule.id === "VALUE") pool = pool.filter(hasValue);
   const headingTerms = idx.tokenize(sec.heading);
   const scored = pool
     .map((u, i) => ({ u, total: scoreUnit(idx, u.text, plan.q, rule, i, headingTerms, w).score * (1 - rule.preferUnits.indexOf(u.kind) * w.unit.kindStep) }))

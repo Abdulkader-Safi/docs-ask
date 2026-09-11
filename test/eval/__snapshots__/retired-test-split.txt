@@ -96,11 +96,11 @@ FAIL rank=1 abs [hono] how do I group routes under /api
      -> weak term coverage (0.42)
 FAIL rank=1 abs [hono] How do I test my app without deploying it
      -> weak term coverage (0.41)
-FAIL rank=1 ans [hono] What is the default threshold for compression?
+ok   rank=1 ans [hono] What is the default threshold for compression?
      -> middleware/builtin/compress.md:32 threshold: number
 FAIL rank=1 abs [hono] what port does the node server listen on by default
      -> weak term coverage (0.50)
-FAIL rank=1 ans [hono] what is the maximum length of a request id
+ok   rank=1 ans [hono] what is the maximum length of a request id
      -> middleware/builtin/request-id.md:67 limitLength: number
 FAIL rank=1 ans [hono] which status codes does the cache middleware cache by default
      -> middleware/builtin/cache.md:84 cacheableStatusCodes: number[]
