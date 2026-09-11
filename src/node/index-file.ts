@@ -15,6 +15,15 @@ export async function writeIndex(data: SerializedIndex, out: string, options: { 
   return bytes.length;
 }
 
+/** PRD risk table: a web index over 500 KB gzipped is too big for the widget. */
+export const WEB_BUDGET = 500 * 1024;
+
+/** Gzipped size of a written index. A file that is already gzipped counts as it stands. */
+export async function gzippedSize(path: string): Promise<number> {
+  const raw = await readFile(path);
+  return raw[0] === 0x1f && raw[1] === 0x8b ? raw.length : gzipSync(raw).length;
+}
+
 /** Reads an index file, gzipped or not (detected from the gzip magic bytes, not the name). */
 export async function readIndex(path: string): Promise<SerializedIndex> {
   const raw = await readFile(path);

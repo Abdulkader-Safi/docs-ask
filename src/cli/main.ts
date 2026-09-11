@@ -4,7 +4,7 @@ import { stat } from "node:fs/promises";
 import { resolve } from "node:path";
 import { parseArgs, styleText } from "node:util";
 import type { Answer } from "../core/types.ts";
-import { indexDirectory, loadConfig, loadDocs, writeIndex, INDEX_FILE } from "../node/index.ts";
+import { indexDirectory, loadConfig, loadDocs, writeIndex, gzippedSize, INDEX_FILE, WEB_BUDGET } from "../node/index.ts";
 
 export const HELP = `Answer questions about a repo's markdown docs, with no language model.
 
@@ -101,6 +101,10 @@ export async function main(argv = process.argv.slice(2), io: Io = { log: console
       const bytes = await writeIndex(data, resolve(values.out!), { gzip: values.gzip, target: values.target });
       const kb = (n: number) => `${(n / 1024).toFixed(0)} KB`;
       io.log(`${styleText("green", "ok")} ${data.sections.length} sections from ${new Set(data.sections.map((s) => s.file)).size} files, ${kb(bytes)} -> ${values.out}`);
+      if (values.target === "web") {
+        const gz = await gzippedSize(resolve(values.out!));
+        if (gz > WEB_BUDGET) io.error(styleText("yellow", `warning: ${kb(gz)} gzipped is over the ${kb(WEB_BUDGET)} widget budget. Narrow the docs with "include" in docs-ask.config.json, or ship one index per section of the site.`));
+      }
       return 0;
     }
 

@@ -1,5 +1,6 @@
 // The CLI is tested through main(argv, io): same code as the bin, without spawning a process.
-import { mkdtempSync, rmSync, statSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { randomBytes } from "node:crypto";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -62,6 +63,34 @@ describe("docs-ask build", () => {
     expect(res.code).toBe(0);
     expect(res.out).toMatch(/^ok 559 sections from 30 files, \d+ KB -> /);
     expect(statSync(out).size).toBeGreaterThan(0);
+  });
+});
+
+describe("docs-ask build --target web", () => {
+  it("is smaller than the node index and stays quiet under the budget", async () => {
+    const node = join(tmp, "node.json"), web = join(tmp, "web.json");
+    await run("build", "-d", FASTIFY, "-o", node);
+    const res = await run("build", "-d", FASTIFY, "-o", web, "--target", "web", "--gzip");
+    expect(res.code).toBe(0);
+    expect(res.err).toBe("");
+    expect(statSync(web).size).toBeLessThan(statSync(node).size);
+  });
+
+  it("warns when the index is over the 500 KB gzipped widget budget", async () => {
+    // random words don't compress, so a megabyte of them is over the budget whatever gzip does with it
+    const big = mkdtempSync(join(tmpdir(), "docs-ask-big-"));
+    mkdirSync(join(big, "docs"));
+    for (let f = 0; f < 40; f++) {
+      const body = Array.from({ length: 60 }, (_, h) => `## Heading ${h}\n\n${randomBytes(256).toString("hex").match(/.{8}/g)!.join(" ")}.\n`).join("\n");
+      writeFileSync(join(big, "docs", `f${f}.md`), `# File ${f}\n\n${body}`);
+    }
+    try {
+      const { code, err } = await run("build", "-d", big, "-o", join(tmp, "big.json"), "--target", "web");
+      expect(code).toBe(0); // a warning, not an error: the index is still written
+      expect(err).toMatch(/^warning: \d+ KB gzipped is over the 500 KB widget budget\./);
+    } finally {
+      rmSync(big, { recursive: true, force: true });
+    }
   });
 });
 
