@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>docs-ask widget demo</title>
+    <script src="./docs-ask-widget.iife.js" defer></script>
+    <style>
+      /* System colours only, so the page follows light and dark mode with no theme code. */
+      body { font: 16px/1.5 system-ui, sans-serif; max-width: 42rem; margin: 4rem auto; padding: 0 1rem; background: Canvas; color: CanvasText; }
+      h1 { font-size: 1.4rem; }
+      p { color: GrayText; }
+      docs-ask::part(input) { width: 100%; }
+      #picked { min-height: 1.5rem; font-family: ui-monospace, monospace; } /* above the box: the open panel would cover it */
+    </style>
+  </head>
+  <body>
+    <h1>Ask the Fastify docs</h1>
+    <p>
+      Press <kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd> to focus the box, type a question, then use the arrow keys and
+      <kbd>Enter</kbd>. Try "what is the default bodyLimit" or "how do I register a plugin".
+    </p>
+
+    <p id="picked"></p>
+
+    <docs-ask index="./docs-index.json" label="Ask the Fastify docs" top="3"></docs-ask>
+
+    <script>
+      // base-url is left off here, so nothing navigates: the page shows what was picked instead.
+      addEventListener("docs-ask:select", (e) => {
+        document.getElementById("picked").textContent = `picked ${e.detail.file}:${e.detail.line}  ${e.detail.headingPath.join(" > ")}`;
+      });
+    </script>
+  </body>
+</html>
