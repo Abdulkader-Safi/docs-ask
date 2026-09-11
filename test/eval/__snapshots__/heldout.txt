@@ -16,12 +16,12 @@ ok   rank=1 ans [fastify] how do I turn on logging
      -> Reference/Logging.md:6 Enable Logging
 FAIL rank=2 abs [fastify] how do I share a JSON schema between routes
      -> ambiguous: top two within 13%
-FAIL rank=2 abs [fastify] which hook runs when the request times out
-     -> weak term coverage (0.75)
+FAIL rank=2 ans [fastify] which hook runs when the request times out
+     -> Guides/Plugins-Guide.md:283 Hooks
 FAIL rank=3 ans [fastify] how do I set the status code of the response
      -> Reference/Validation-and-Serialization.md:549 .statusCode property
-FAIL rank=1 abs [fastify] can I route based on the Host header
-     -> weak term coverage (0.70)
+ok   rank=1 ans [fastify] can I route based on the Host header
+     -> Reference/Routes.md:694 Host Constraints
 FAIL rank=1 abs [fastify] how do I parse a custom content type like text/csv
      -> weak term coverage (0.39)
 FAIL rank=0 abs [fastify] how do I list all registered routes

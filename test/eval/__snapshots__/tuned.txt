@@ -38,8 +38,8 @@ ok   rank=1 ans [fastify] How do I detect when a client aborts a request?
      -> Reference/Hooks.md:293 onRequestAbort
 ok   rank=1 ans [fastify] Can I use Express middleware?
      -> Reference/Middleware.md:5 Middleware
-FAIL rank=1 abs [fastify] difference between onRequest and preHandler
-     -> weak term coverage (0.73)
+ok   rank=1 ans [fastify] difference between onRequest and preHandler
+     -> Reference/Hooks.md:134 preHandler
 ok   rank=1 ans [fastify] Where is the custom error handler documented?
      -> Reference/Errors.md:141 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
 ok   rank=1 ans [fastify] How do I connect to Postgres?

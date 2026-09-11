@@ -3,9 +3,9 @@
     "top1": 0.769,
     "recallAt3": 0.846,
     "mrr": 0.811,
-    "answerAccuracy": 0.731,
-    "precisionWhenAnswered": 0.826,
-    "answerRate": 0.885,
+    "answerAccuracy": 0.769,
+    "precisionWhenAnswered": 0.833,
+    "answerRate": 0.923,
     "abstainOnUnanswerable": 1,
     "classifierAccuracy": 1
   },
@@ -13,9 +13,9 @@
     "top1": 0.701,
     "recallAt3": 0.866,
     "mrr": 0.786,
-    "answerAccuracy": 0.47,
-    "precisionWhenAnswered": 0.778,
-    "answerRate": 0.604,
+    "answerAccuracy": 0.515,
+    "precisionWhenAnswered": 0.784,
+    "answerRate": 0.657,
     "abstainOnUnanswerable": 1,
     "classifierAccuracy": 0.987
   }

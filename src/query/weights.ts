@@ -56,8 +56,8 @@ export const WEIGHTS = {
     maxSteps: 12,
   },
   gates: {
-    /** IDF-weighted share of question terms the top section must match (M4 sweep on dev: 0.75, was 0.5) */
-    minCoverage: 0.75,
+    /** IDF-weighted share of question terms the top section must match (M4 sweep on the 151-question dev set: 0.7, was 0.5) */
+    minCoverage: 0.7,
     /** per question type, replaces minCoverage (research.md section 11: looser for HOWTO, stricter with shape evidence) */
     minCoverageByType: { HOWTO: 0.45 } as Partial<Record<QClass, number>>, // M4: HOWTO 0.45 measured best on dev
     /** (top - second) / top below this is too close to call (M4 sweep on dev: 0.02, was 0.05) */
