@@ -16,7 +16,8 @@ export interface AskOptions {
   weights?: WeightOverrides;
 }
 
-const quote = (units: Unit[]) => units.map((u) => (u.kind === "code" ? "```" + (u.lang ?? "") + "\n" + u.text + "\n```" : u.text)).join("\n");
+/** Units back to markdown, code fenced. The MCP server quotes whole sections the same way. */
+export const quote = (units: Unit[]) => units.map((u) => (u.kind === "code" ? "```" + (u.lang ?? "") + "\n" + u.text + "\n```" : u.text)).join("\n");
 
 export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}): Answer {
   const w = withWeights(options.weights);

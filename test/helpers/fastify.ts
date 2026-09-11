@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { openIndex as loadIndex } from "../../src/query/load.ts";
+import { loadIndex as openDocs } from "../../src/core/index.ts";
 import { findDocs } from "../../src/node/index.ts";
 import { buildIndex, parseDocument } from "../../src/parse/index.ts";
 
@@ -11,3 +12,5 @@ export const fastifyData = buildIndex(
   (await findDocs(FASTIFY_DIR)).map((f) => parseDocument(f, readFileSync(join(FASTIFY_DIR, f), "utf8"))),
 );
 export const fastify = loadIndex(fastifyData);
+/** The same corpus as a public DocsIndex, for the surfaces that take one. */
+export const fastifyDocs = openDocs(fastifyData);
