@@ -28,7 +28,7 @@ docs-ask build [--dir .] [--out docs-index.json] [--target node|web] [--gzip]
 docs-ask mcp [dir]
 ```
 
-`ask` reads `docs-index.json` when it is newer than every doc file, and otherwise indexes in memory. Exit codes: 0 answered, 2 not sure, 1 error. `--json` prints the whole answer object and keeps the same codes.
+`ask` shows the three closest sections under the answer, and reads `docs-index.json` when it is newer than every doc file, and otherwise indexes in memory. Exit codes: 0 answered, 2 not sure, 1 error. `--json` prints the whole answer object and keeps the same codes.
 
 `build` writes the index. `--target web` drops the fields only the build reads, which is what the widget wants: on the Fastify docs that is 1,202 KB instead of 1,627 KB, 281 KB gzipped.
 
@@ -43,7 +43,7 @@ const answer = docs.ask("what is the default bodyLimit");
 if (answer.confident) {
   console.log(`${answer.file}:${answer.line}`, answer.text);
 } else {
-  console.log(answer.reason, answer.candidates); // always three closest sections
+  console.log(answer.reason, answer.candidates); // the closest sections, always present
 }
 ```
 
@@ -108,7 +108,7 @@ Measured on two frozen question sets over the Fastify and Hono docs.
 
 The first set was tuned on. The second was written from raw issue titles, frozen before any tuning, and run once. Titles like "Extending Context" or a pasted deprecation warning aren't questions, and on those docs-ask mostly says "not sure", which is the designed failure: it shows the three closest sections instead of guessing.
 
-What it can honestly promise: it finds the right section and quotes it for questions phrased close to the docs' own words, says so when it isn't sure, and always shows the three closest sections, so a wrong quote is one click from the right page.
+What it can honestly promise: it finds the right section and quotes it for questions phrased close to the docs' own words, says so when it isn't sure, and always shows the closest sections, so a wrong quote is one click from the right page.
 
 ## What it can't do
 
@@ -124,6 +124,12 @@ Real failures, not hypotheticals:
 ## Related
 
 Want embeddings and happy to download models? [qmd](https://github.com/tobi/qmd) also runs BM25 search over markdown from an MCP server. docs-ask differs in the last step: it quotes one answer with a line number or says "not sure", and it ships a browser widget.
+
+## Examples
+
+`examples/` has one folder per surface, each runnable against this repo's own docs: a Node script, a CI check
+that fails when the docs stop answering a list of questions, an MCP setup for Claude Code, and the widget demo
+page.
 
 ## Repo
 

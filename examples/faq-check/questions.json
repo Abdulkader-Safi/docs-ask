@@ -1,0 +1,5 @@
+[
+  { "q": "what does docs-ask do when it is not sure", "expect": "docs/overview.md" },
+  { "q": "which markdown parser does it use", "expect": "docs/research.md" },
+  { "q": "what are the quality targets", "expect": "docs/prd.md" }
+]

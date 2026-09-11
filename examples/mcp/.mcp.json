@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "docs-ask": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "docs-ask", "mcp", "${CLAUDE_PROJECT_DIR:-.}"]
+    }
+  }
+}
