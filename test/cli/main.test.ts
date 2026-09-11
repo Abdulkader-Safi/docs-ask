@@ -1,13 +1,14 @@
 // The CLI is tested through main(argv, io): same code as the bin, without spawning a process.
-import { mkdirSync, mkdtempSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { randomBytes } from "node:crypto";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { afterAll, describe, expect, it } from "vitest";
 import { main } from "../../src/cli/main.ts";
 
 const FASTIFY = fileURLToPath(new URL("../fixtures/fastify", import.meta.url));
+const BIN = fileURLToPath(new URL("../../dist/cli-bin.mjs", import.meta.url));
 const tmp = mkdtempSync(join(tmpdir(), "docs-ask-cli-"));
 afterAll(() => rmSync(tmp, { recursive: true, force: true }));
 
@@ -132,10 +133,16 @@ describe("errors and help", () => {
 });
 
 describe("docs-ask mcp", () => {
-  it("loads the MCP module only for this command", async () => {
-    // the stub throws until M6; reaching it proves the lazy import path runs
-    const { code, err } = await run("mcp", FASTIFY);
-    expect(code).toBe(1);
-    expect(err).toContain("the MCP server is not built yet");
+  // the server itself is tested in test/mcp; here it only has to stay out of the way of a plain ask
+  it("reaches the MCP server through a dynamic import", () => {
+    const src = readFileSync(new URL("../../src/cli/main.ts", import.meta.url), "utf8");
+    expect(src).toContain('await import("../mcp/stdio.ts")');
+    expect(src).not.toMatch(/^import[^\n]*mcp/m);
+  });
+
+  it.skipIf(!existsSync(BIN))("keeps the MCP SDK out of the built CLI, in a chunk of its own", () => {
+    expect(readFileSync(BIN, "utf8")).not.toContain("@modelcontextprotocol");
+    const chunk = readdirSync(dirname(BIN)).find((f) => f.startsWith("stdio-"));
+    expect(readFileSync(join(dirname(BIN), chunk!), "utf8")).toContain("@modelcontextprotocol");
   });
 });

@@ -13,11 +13,13 @@ jobs:
       - run: npm ci
       - run: npm run typecheck && npm run build && npm test && npm run lint
 
+  # packs the tarball, installs it in a throwaway repo, then drives the CLI and the MCP server
+  # through the Inspector CLI, which needs Node 22.19 or newer
   e2e:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version: '22' }
+        with: { node-version: '22.19' }
       - run: npm ci
       - run: npm run e2e
