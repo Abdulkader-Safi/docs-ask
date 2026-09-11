@@ -60,6 +60,30 @@ describe("build targets", () => {
   });
 });
 
+describe("a single file stands in for a folder", () => {
+  it("indexes one file and cites it from its own folder", async () => {
+    const one = await loadDocs(join(FASTIFY, "Reference/TypeScript.md"));
+    const all = await loadDocs(FASTIFY);
+    expect(one.docs.sectionCount).toBeGreaterThan(0);
+    expect(one.docs.sectionCount).toBeLessThan(all.docs.sectionCount);
+    expect(one.docs.ask("what is a FastifyInstance").file).toBe("TypeScript.md"); // relative to Reference/
+  });
+
+  it("ignores a folder index that covers more than the file asked for", async () => {
+    write("docs/limits.md", "# Limits\n\n## bodyLimit\n\nDefault: `1048576` (1MiB)\n");
+    write("docs/other.md", "# Other\n\n## keepAliveTimeout\n\nDefault: `72000` (72 seconds)\n");
+    await writeIndex(await indexDirectory(root), join(root, "docs", INDEX_FILE));
+    const one = await loadDocs(join(root, "docs/other.md"));
+    expect(one.fromFile).toBe(false);
+    expect(one.docs.ask("what is the default bodyLimit").confident).toBe(false); // that file isn't in scope
+  });
+
+  it("indexDirectory takes a file too", async () => {
+    const data = await indexDirectory(join(FASTIFY, "Reference/TypeScript.md"));
+    expect(new Set(data.sections.map((s) => s.file))).toEqual(new Set(["TypeScript.md"]));
+  });
+});
+
 describe("loadDocs uses the index file only while it's fresh", () => {
   const buildTo = async (path = join(root, INDEX_FILE)) => writeIndex(await indexDirectory(root), path);
 

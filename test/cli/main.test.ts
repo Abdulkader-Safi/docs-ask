@@ -51,6 +51,12 @@ describe("docs-ask ask", () => {
     expect(JSON.parse(unsure.out).confident).toBe(false);
   });
 
+  it("takes a single markdown file as --dir", async () => {
+    const { code, out } = await run("ask", "what is a FastifyInstance", "-d", join(FASTIFY, "Reference/TypeScript.md"));
+    expect(code).toBe(0);
+    expect(out).toMatch(/^TypeScript\.md:\d+ /); // cited from the file's own folder
+  });
+
   it("takes --top", async () => {
     const { out } = await run("ask", "how do I stop the server gracefully", "-d", FASTIFY, "--top", "1");
     expect(out.split("\n").filter((l) => /^ {2}\d\./.test(l))).toHaveLength(1);
@@ -101,6 +107,7 @@ describe("errors and help", () => {
     [["ask"], "error: missing question"],
     [["build", "--target", "sideways"], 'error: --target must be node or web, not "sideways"'],
     [["ask", "q", "--nope"], "error: Unknown option"],
+    [["ask", "q", "-d", "no-such-file.md"], "error: no such file or folder:"],
   ])("%s exits 1", async (argv, message) => {
     const { code, err } = await run(...argv);
     expect(code).toBe(1);
@@ -117,7 +124,7 @@ describe("errors and help", () => {
   it("reports a missing folder", async () => {
     const { code, err } = await run("ask", "anything", "-d", join(tmp, "not-here"));
     expect(code).toBe(1);
-    expect(err).toContain("error: no such folder:");
+    expect(err).toContain("error: no such file or folder:");
   });
 
   it("reports a folder with no markdown in it", async () => {

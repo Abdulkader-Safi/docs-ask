@@ -28,7 +28,7 @@ docs-ask build [--dir .] [--out docs-index.json] [--target node|web] [--gzip]
 docs-ask mcp [dir]
 ```
 
-`ask` shows the three closest sections under the answer, and reads `docs-index.json` when it is newer than every doc file, and otherwise indexes in memory. Exit codes: 0 answered, 2 not sure, 1 error. `--json` prints the whole answer object and keeps the same codes.
+`ask` shows the three closest sections under the answer, and reads `docs-index.json` when it is newer than every doc file, and otherwise indexes in memory. `--dir` takes a single markdown file as well as a folder. Exit codes: 0 answered, 2 not sure, 1 error. `--json` prints the whole answer object and keeps the same codes.
 
 `build` writes the index. `--target web` drops the fields only the build reads, which is what the widget wants: on the Fastify docs that is 1,202 KB instead of 1,627 KB, 281 KB gzipped.
 
