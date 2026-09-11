@@ -203,7 +203,8 @@ const HONO_TEST: Golden[] = ([
   { q: "How do I connect Hono to MongoDB?", unanswerable: true, qclass: "HOWTO" },
   { q: "Does Hono have a built-in ORM?", unanswerable: true, qclass: "YESNO" },
   { q: "How do I deploy Hono to Heroku?", unanswerable: true, qclass: "HOWTO" },
-  { q: "How do I schedule cron jobs with Hono?", unanswerable: true, qclass: "HOWTO" },
+  // relabelled 11 Sep: first marked unanswerable after grepping for "cron", but the Workers page shows `scheduled` handlers
+  { q: "How do I schedule cron jobs with Hono?", accept: [RF("getting-started/cloudflare-workers.md", "Using Hono with other event handlers")], qclass: "HOWTO" },
 ] as Golden[]).map((g) => ({ ...g, corpus: "hono" }));
 
 /** The first test split, retired into dev on 11 Sep 2026 after its failures were read for the M4 report. */

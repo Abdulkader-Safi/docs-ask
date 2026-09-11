@@ -10,12 +10,12 @@
     "classifierAccuracy": 1
   },
   "dev": {
-    "top1": 0.699,
-    "recallAt3": 0.865,
-    "mrr": 0.785,
-    "answerAccuracy": 0.459,
+    "top1": 0.701,
+    "recallAt3": 0.866,
+    "mrr": 0.786,
+    "answerAccuracy": 0.455,
     "precisionWhenAnswered": 0.753,
-    "answerRate": 0.609,
+    "answerRate": 0.604,
     "abstainOnUnanswerable": 1,
     "classifierAccuracy": 0.987
   }

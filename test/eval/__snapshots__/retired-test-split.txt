@@ -156,5 +156,5 @@ ok   rank=0 abs [hono] Does Hono have a built-in ORM?
      -> weak term coverage (0.54)
 ok   rank=0 abs [hono] How do I deploy Hono to Heroku?
      -> weak term coverage (0.34)
-ok   rank=0 abs [hono] How do I schedule cron jobs with Hono?
+FAIL rank=1 abs [hono] How do I schedule cron jobs with Hono?
      -> weak term coverage (0.35)
