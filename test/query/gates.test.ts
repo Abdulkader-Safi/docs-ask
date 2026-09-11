@@ -118,6 +118,13 @@ describe("gate 6: a DEFINITION answer has to define the thing", () => {
     expect(docs.ask("What is encapsulation?")).toMatchObject({ confident: true, headingPath: ["Encapsulation"] });
   });
 
+  it("counts a heading that names one of the question's words, as a whole word", () => {
+    // "what are the quality targets" found the right PRD section, headed "Quality", and the first version of
+    // this gate blocked it for not also saying "targets". CI caught it through examples/faq-check.
+    const idx = loadDocsIndex(buildIndex([parseDocument("prd.md", "# PRD\n\n## Quality\n\nThe v1 target for top-1 is 0.55 or more.\n")]));
+    expect(idx.ask("what are the quality targets")).toMatchObject({ confident: true, headingPath: ["PRD", "Quality"] });
+  });
+
   it("lets a quote that reads like a definition through, whatever the heading says", () => {
     const idx = loadDocsIndex(buildIndex([parseDocument("g.md", "# Guide\n\n## Contexts\n\nA widget is a small piece of a page. Use one per card.\n")]));
     expect(idx.ask("what is a widget")).toMatchObject({ confident: true, text: expect.stringContaining("A widget is a small piece of a page.") });

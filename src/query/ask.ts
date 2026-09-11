@@ -7,6 +7,7 @@ import { openIndex, type LoadedIndex } from "./load.ts";
 import { planQuery, retrieve } from "./retrieve.ts";
 import { classify } from "./rules.ts";
 import { suggest } from "./suggest.ts";
+import { wholeTerms } from "./text.ts";
 import { withWeights, type WeightOverrides } from "./weights.ts";
 
 export interface AskOptions {
@@ -58,8 +59,9 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   // of the question, or the quote reads like a definition ("X is a ..."). Without one of the two, a rare word
   // buried in an identifier wins on BM25 alone: "what is fastify framework?" answered from `frameworkErrors`.
   if (w.gates.definitionShape && rule.id === "DEFINITION" && units.length) {
-    const headingTerms = new Set(idx.tokenize([...sec.headingPath, sec.heading].join(" ")));
-    const namesIt = plan.content.length > 0 && plan.content.every((t) => headingTerms.has(t));
+    // whole words only: `frameworkErrors` does not count as saying "framework"
+    const headingWords = new Set(wholeTerms([...sec.headingPath, sec.heading].join(" ")));
+    const namesIt = plan.content.some((t) => headingWords.has(t));
     const defines = DEFINES.test(units.map((u) => u.text).join(" "));
     if (!namesIt && !defines) return notSure("DEFINITION question but the best section doesn't define it", { file: sec.file, line: sec.line });
   }
