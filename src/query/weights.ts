@@ -68,6 +68,8 @@ export const WEIGHTS = {
     /** a confident answer is "high" at this coverage and gap, otherwise "medium" */
     highCoverage: 0.9,
     highGap: 0.3,
+    /** gate 6: 1 = a DEFINITION answer must define the thing (heading names it, or the quote reads like a definition) */
+    definitionShape: 1,
     /** gate 5: a one-term question whose term is in more than this share of sections... */
     broadShare: 0.05,
     /** ...and whose top two are closer than this, is navigation, not a question */
