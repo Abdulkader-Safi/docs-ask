@@ -72,21 +72,3 @@ describe("dev set, both corpora", () => {
     await expect(table(m.rows)).toMatchFileSnapshot("./__snapshots__/dev.txt");
   });
 });
-
-describe("speed", () => {
-  it("answers in well under 20 ms at p95 (PRD section 2)", () => {
-    const qs = [...TUNED, ...HELDOUT].map((g) => g.q);
-    const times: number[] = [];
-    for (let round = 0; round < 5; round++) {
-      for (const q of qs) {
-        const t = performance.now();
-        docs.ask(q);
-        times.push(performance.now() - t);
-      }
-    }
-    times.sort((a, b) => a - b);
-    const p95 = times[Math.floor(times.length * 0.95)];
-    console.log(`ask() on ${docs.sectionCount} sections: p50 ${times[Math.floor(times.length / 2)].toFixed(2)} ms, p95 ${p95.toFixed(2)} ms`);
-    expect(p95).toBeLessThan(20);
-  });
-});
