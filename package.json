@@ -2,7 +2,14 @@
   "name": "docs-ask",
   "version": "0.1.0",
   "description": "Answer questions about a repo's markdown docs without an LLM: library, CLI, MCP server, web widget",
-  "keywords": ["markdown", "docs", "search", "mcp", "cli", "web-component"],
+  "keywords": [
+    "markdown",
+    "docs",
+    "search",
+    "mcp",
+    "cli",
+    "web-component"
+  ],
   "license": "MIT",
   "author": "Abdulkader Safi",
   "repository": {
@@ -12,7 +19,10 @@
   "homepage": "https://github.com/Abdulkader-Safi/docs-ask#readme",
   "bugs": "https://github.com/Abdulkader-Safi/docs-ask/issues",
   "type": "module",
-  "sideEffects": ["./dist/widget.mjs", "./dist/docs-ask-widget.iife.js"],
+  "sideEffects": [
+    "./dist/widget.mjs",
+    "./dist/docs-ask-widget.iife.js"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
@@ -42,7 +52,9 @@
   },
   "jsdelivr": "./dist/docs-ask-widget.iife.js",
   "unpkg": "./dist/docs-ask-widget.iife.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=22.17.0"
   },
@@ -51,7 +63,8 @@
     "typecheck": "tsc -p .",
     "test": "vitest run",
     "lint": "publint && attw --pack . --profile esm-only",
-    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "sweep": "node scripts/sweep.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",

@@ -34,13 +34,13 @@ ok   rank=1 ans [fastify] How do I add a prefix to all routes in a plugin?
      -> Reference/Routes.md:411 Route Prefixing
 ok   rank=1 ans [fastify] What options can I pass to a plugin?
      -> Reference/Plugins.md:24 Plugin Options
-FAIL rank=2 ans [fastify] How do I detect when a client aborts a request?
+ok   rank=1 ans [fastify] How do I detect when a client aborts a request?
      -> Reference/Hooks.md:293 onRequestAbort
 ok   rank=1 ans [fastify] Can I use Express middleware?
      -> Reference/Middleware.md:5 Middleware
-ok   rank=1 ans [fastify] difference between onRequest and preHandler
-     -> Reference/Hooks.md:134 preHandler
-FAIL rank=6 ans [fastify] Where is the custom error handler documented?
+FAIL rank=1 abs [fastify] difference between onRequest and preHandler
+     -> weak term coverage (0.73)
+ok   rank=1 ans [fastify] Where is the custom error handler documented?
      -> Reference/Errors.md:141 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
 ok   rank=1 ans [fastify] How do I connect to Postgres?
      -> Guides/Database.md:47 Postgres

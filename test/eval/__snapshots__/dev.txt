@@ -34,13 +34,13 @@ ok   rank=1 ans [fastify] How do I add a prefix to all routes in a plugin?
      -> Reference/Routes.md:411 Route Prefixing
 ok   rank=1 ans [fastify] What options can I pass to a plugin?
      -> Reference/Plugins.md:24 Plugin Options
-FAIL rank=2 ans [fastify] How do I detect when a client aborts a request?
+ok   rank=1 ans [fastify] How do I detect when a client aborts a request?
      -> Reference/Hooks.md:293 onRequestAbort
 ok   rank=1 ans [fastify] Can I use Express middleware?
      -> Reference/Middleware.md:5 Middleware
-ok   rank=1 ans [fastify] difference between onRequest and preHandler
-     -> Reference/Hooks.md:134 preHandler
-FAIL rank=6 ans [fastify] Where is the custom error handler documented?
+FAIL rank=1 abs [fastify] difference between onRequest and preHandler
+     -> weak term coverage (0.73)
+ok   rank=1 ans [fastify] Where is the custom error handler documented?
      -> Reference/Errors.md:141 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
 ok   rank=1 ans [fastify] How do I connect to Postgres?
      -> Guides/Database.md:47 Postgres
@@ -76,12 +76,12 @@ ok   rank=1 ans [fastify] how do I turn on logging
      -> Reference/Logging.md:6 Enable Logging
 FAIL rank=2 abs [fastify] how do I share a JSON schema between routes
      -> ambiguous: top two within 13%
-FAIL rank=2 ans [fastify] which hook runs when the request times out
-     -> Guides/Plugins-Guide.md:283 Hooks
+FAIL rank=2 abs [fastify] which hook runs when the request times out
+     -> weak term coverage (0.75)
 FAIL rank=3 ans [fastify] how do I set the status code of the response
      -> Reference/Validation-and-Serialization.md:549 .statusCode property
-ok   rank=1 ans [fastify] can I route based on the Host header
-     -> Reference/Routes.md:694 Host Constraints
+FAIL rank=1 abs [fastify] can I route based on the Host header
+     -> weak term coverage (0.70)
 FAIL rank=1 abs [fastify] how do I parse a custom content type like text/csv
      -> weak term coverage (0.39)
 FAIL rank=0 abs [fastify] how do I list all registered routes
@@ -97,9 +97,9 @@ ok   rank=1 ans [hono] Pass username to context from basicAuth
 FAIL rank=3 abs [hono] Calling getCookie after setCookie results in old data
      -> weak term coverage (0.45)
 FAIL rank=2 abs [hono] what is the default indentation for pretty json
-     -> VALUE question but best section has no value
-FAIL rank=1 abs [hono] What is the default body size limit?
-     -> ambiguous: top two within 5%
+     -> weak term coverage (0.52)
+ok   rank=1 ans [hono] What is the default body size limit?
+     -> middleware/builtin/body-limit.md:42 maxSize: number
 ok   rank=1 ans [hono] what is the default realm for basic auth
      -> middleware/builtin/basic-auth.md:79 realm: string
 ok   rank=1 ans [hono] What is TrieRouter?
@@ -120,16 +120,16 @@ ok   rank=1 ans [hono] Does Hono work on Bun?
      -> getting-started/bun.md:4 Bun
 ok   rank=1 ans [hono] Can I use Hono with Next.js?
      -> getting-started/nextjs.md:5 Next.js
-FAIL rank=0 ans [hono] What options does the bearer auth middleware take?
-     -> middleware/builtin/bearer-auth.md:3 Bearer Auth Middleware
+FAIL rank=0 abs [hono] What options does the bearer auth middleware take?
+     -> weak term coverage (0.67)
 FAIL rank=9 abs [hono] what arguments does the timeout middleware accept
      -> weak term coverage (0.48)
-ok   rank=1 ans [hono] Where is routing priority explained?
-     -> api/routing.md:210 Routing priority
-FAIL rank=6 ans [hono] difference between app.route and app.basePath
-     -> helpers/route.md:101 baseRoutePath()
-FAIL rank=2 ans [hono] Why do I get CORS errors in the browser
-     -> middleware/builtin/cors.md:109 Environment-dependent CORS configuration
+FAIL rank=1 abs [hono] Where is routing priority explained?
+     -> weak term coverage (0.50)
+FAIL rank=6 abs [hono] difference between app.route and app.basePath
+     -> weak term coverage (0.66)
+FAIL rank=2 abs [hono] Why do I get CORS errors in the browser
+     -> weak term coverage (0.52)
 FAIL rank=1 abs [hono] my middleware runs in the wrong order
      -> weak term coverage (0.41)
 ok   rank=0 abs [hono] How do I use Hono with Kafka?

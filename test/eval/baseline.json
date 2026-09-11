@@ -1,10 +1,22 @@
 {
-  "top1": 0.692,
-  "recallAt3": 0.808,
-  "mrr": 0.763,
-  "answerAccuracy": 0.654,
-  "precisionWhenAnswered": 0.739,
-  "answerRate": 0.885,
-  "abstainOnUnanswerable": 1,
-  "classifierAccuracy": 1
+  "tuned": {
+    "top1": 0.769,
+    "recallAt3": 0.846,
+    "mrr": 0.811,
+    "answerAccuracy": 0.731,
+    "precisionWhenAnswered": 0.826,
+    "answerRate": 0.885,
+    "abstainOnUnanswerable": 1,
+    "classifierAccuracy": 1
+  },
+  "dev": {
+    "top1": 0.705,
+    "recallAt3": 0.852,
+    "mrr": 0.782,
+    "answerAccuracy": 0.59,
+    "precisionWhenAnswered": 0.857,
+    "answerRate": 0.689,
+    "abstainOnUnanswerable": 1,
+    "classifierAccuracy": 1
+  }
 }

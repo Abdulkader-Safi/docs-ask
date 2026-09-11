@@ -86,7 +86,8 @@ describe("gates 4 and 5 (research.md section 11)", () => {
   it("gate 4: skips the check when the question type is a tie", () => {
     // ENDPOINT ties YESNO at 3 here; the section has no endpoint but answers the yes/no question
     expect(classify("can I route based on the Host header").scores).toMatchObject({ ENDPOINT: 3, YESNO: 3 });
-    expect(run("can I route based on the Host header").gate.ok).toBe(true);
+    // (at the M4 coverage bar of 0.75 this question stops at gate 2 first, so gate 4 is tested with 0.5)
+    expect(run("can I route based on the Host header", fastify, withWeights({ gates: { minCoverage: 0.5 } })).gate.ok).toBe(true);
   });
 
   it("gate 5: a single common word typed on its own is too broad", () => {

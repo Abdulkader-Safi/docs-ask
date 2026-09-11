@@ -23,7 +23,7 @@ describe("tuned Fastify set", () => {
   });
 
   it("doesn't fall below baseline.json", () => {
-    for (const [k, min] of Object.entries(baseline)) {
+    for (const [k, min] of Object.entries(baseline.tuned)) {
       expect.soft(m.summary[k as keyof typeof m.summary], k).toBeGreaterThanOrEqual(min - TOLERANCE);
     }
   });
@@ -57,9 +57,15 @@ describe("dev set, both corpora", () => {
   const m = evaluate({ fastify: docs, hono }, DEV);
   const byCorpus = (c: string) => evaluate({ fastify: docs, hono }, DEV.filter((g) => (g.corpus ?? "fastify") === c)).summary;
 
+  it("doesn't fall below baseline.json", () => {
+    for (const [k, min] of Object.entries(baseline.dev)) {
+      expect.soft(m.summary[k as keyof typeof m.summary], k).toBeGreaterThanOrEqual(min - TOLERANCE);
+    }
+  });
+
   it("reports its numbers", () => {
     console.log("dev", JSON.stringify(m.summary), "\n  fastify", JSON.stringify(byCorpus("fastify")), "\n  hono", JSON.stringify(byCorpus("hono")));
-    expect(m.rows.filter((r) => r.unanswerable && r.confident).length).toBeLessThanOrEqual(2);
+    expect(m.rows.filter((r) => r.unanswerable && r.confident)).toEqual([]);
   });
 
   it("matches the committed per-question table", async () => {
