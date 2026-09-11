@@ -55,9 +55,10 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   // A heading-only section (its content lives in its children) has nothing to quote. LOCATION answers are
   // meant to be empty: they cite the section and stop.
   if (!units.length && rule.answerShape !== "location") return notSure("best section has nothing to quote", { file: sec.file, line: sec.line });
-  // Gate 6: a DEFINITION answer has to define the thing. Either the section heading names every content word
-  // of the question, or the quote reads like a definition ("X is a ..."). Without one of the two, a rare word
-  // buried in an identifier wins on BM25 alone: "what is fastify framework?" answered from `frameworkErrors`.
+  // Gate 6: a DEFINITION answer has to define the thing. Either the heading path names at least one content
+  // word of the question as a whole word, or the quote reads like a definition ("X is a ..."). Without one of
+  // the two, a rare word buried in an identifier wins on BM25 alone: "what is fastify framework?" answered
+  // from `frameworkErrors`.
   if (w.gates.definitionShape && rule.id === "DEFINITION" && units.length) {
     // whole words only: `frameworkErrors` does not count as saying "framework"
     const headingWords = new Set(wholeTerms([...sec.headingPath, sec.heading].join(" ")));
