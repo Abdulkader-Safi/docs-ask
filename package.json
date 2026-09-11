@@ -65,7 +65,8 @@
     "lint": "publint && attw --pack . --profile esm-only",
     "prepublishOnly": "npm run typecheck && npm test && npm run build",
     "sweep": "node scripts/sweep.ts",
-    "e2e": "scripts/e2e.sh"
+    "e2e": "scripts/e2e.sh",
+    "demo": "scripts/demo.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",
