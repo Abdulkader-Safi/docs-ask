@@ -73,3 +73,10 @@ describe("pickUnits", () => {
     expect(answer("what is the upload limit", idx).picked).toEqual({ noValue: true });
   });
 });
+
+describe("VALUE answers quote the value (M4)", () => {
+  it("picks the sentence with the value when the definition shares its line", () => {
+    const idx = loadIndex(buildIndex([parseDocument("compress.md", "# Compress\n\n## threshold\n\nThe minimum size in bytes to compress. Defaults to 1024 bytes.\n")]));
+    expect(units(answer("What is the default threshold for compression?", idx).picked).map((u) => u.text)).toEqual(["Defaults to 1024 bytes."]);
+  });
+});

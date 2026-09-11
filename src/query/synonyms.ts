@@ -20,6 +20,10 @@ export const SYNONYMS: SynonymGroup[] = [
   { canonical: 'error',   aliases: ['exception', 'failure', 'fault'], strict: false },
   { canonical: 'db',      aliases: ['database'], strict: true },
   { canonical: 'repo',    aliases: ['repository'], strict: true },
+  // M4: each kept because it helped on the dev set (disable/turn off and 404/not found didn't, so they're out)
+  { canonical: 'redact',  aliases: ['hide', 'mask', 'censor'], strict: false },
+  { canonical: 'close',   aliases: ['stop', 'shutdown', 'terminate'], strict: false },
+  { canonical: 'enable',  aliases: ['turn on', 'switch on', 'activate'], strict: true },
 ];
 
 /** A synonym table compiled for the tokenizer. Build it once and share it between index and query. */

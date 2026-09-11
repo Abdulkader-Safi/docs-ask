@@ -15,6 +15,10 @@ export interface QueryPlan {
   content: string[];
   /** q plus loose synonyms */
   expanded: string[];
+  /** loose synonym -> the question term it was added for */
+  origin: Map<string, string>;
+  /** words the user typed, before any stop-word removal */
+  words: number;
 }
 
 export interface Ranked {
@@ -27,11 +31,15 @@ export interface Ranked {
 export function planQuery(idx: LoadedIndex, question: string): QueryPlan {
   const { terms, exact } = queryTerms(idx.syn.normPhrases(question));
   const q = [...new Set(terms.map(idx.syn.canon))];
+  const origin = new Map<string, string>();
+  for (const t of q) for (const e of idx.syn.loose.get(t) ?? []) if (!q.includes(e) && !origin.has(e)) origin.set(e, t);
   return {
     q,
     exact,
+    origin,
     content: q.filter((t) => !TRIGGER_WORDS.has(t)),
     expanded: [...new Set([...q, ...q.flatMap((t) => idx.syn.loose.get(t) ?? [])])],
+    words: question.trim().split(/\s+/).filter(Boolean).length,
   };
 }
 
@@ -72,7 +80,14 @@ export function retrieve(idx: LoadedIndex, plan: QueryPlan, rule: Rule, w: Weigh
       const hs = new Set(headTerms);
       const inter = content.filter((t) => hs.has(t)).length;
       score *= 1 + r.jaccard * (inter / (hs.size + content.length - inter || 1));
-      const matched = new Set((res.queryTerms as string[]).filter((t) => content.includes(t)));
+      if (w.search.groupExpansions) {
+        // MiniSearch multiplies by distinct terms matched; count a word and its synonyms as one
+        const terms = res.queryTerms as string[];
+        const groups = new Set(terms.map((t) => plan.origin.get(t) ?? t)).size;
+        if (groups < terms.length) score *= groups / terms.length;
+      }
+      // a loose synonym that matched covers the question word it was added for
+      const matched = new Set((res.queryTerms as string[]).map((t) => plan.origin.get(t) ?? t).filter((t) => content.includes(t)));
       const idfCoverage = [...matched].reduce((a, t) => a + idx.idf(t), 0) / qIdf;
       return { s, score, idfCoverage };
     })

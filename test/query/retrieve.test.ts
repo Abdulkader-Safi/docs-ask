@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { planQuery, retrieve } from "../../src/query/retrieve.ts";
 import { classify } from "../../src/query/rules.ts";
 import { withWeights, type WeightOverrides } from "../../src/query/weights.ts";
+import { openIndex as loadIndex } from "../../src/query/load.ts";
+import { buildIndex, parseDocument } from "../../src/parse/index.ts";
 import { fastify } from "../helpers/fastify.ts";
 
 const ranked = (q: string, overrides: WeightOverrides = {}) =>
@@ -23,8 +25,12 @@ describe("planQuery", () => {
       exact: ["bodylimit"],
       content: ["bodylimit", "bodi"],
       expanded: ["default", "bodylimit", "bodi", "limit"],
+      origin: new Map(),
+      words: 5,
     });
-    expect(planQuery(fastify, "how do I remove a route").expanded).toEqual(["remov", "rout", "delet"]);
+    const remove = planQuery(fastify, "how do I remove a route");
+    expect(remove.expanded).toEqual(["remov", "rout", "delet"]);
+    expect(remove.origin).toEqual(new Map([["delet", "remov"]]));
   });
 });
 
@@ -85,5 +91,39 @@ describe("rerank factors", () => {
     const noFactor = { ...rule, boosts: { ...rule.boosts, sectionHasFactor: 1 } };
     const off = retrieve(fastify, planQuery(fastify, q), noFactor, withWeights()).find((r) => r.s.id === id)!.score;
     expect(scoreOf(q, id) / off).toBeCloseTo(1.25);
+  });
+});
+
+describe("loose synonyms (M4)", () => {
+  const idx = loadIndex(buildIndex([
+    parseDocument("a.md", "# Records\n\n## Deleting\n\nDelete the record. Delete it from the list. Delete works on drafts.\n"),
+    parseDocument("b.md", "# Cleanup\n\n## Cleaning up\n\nRemove the record. Destroy the cache. Drop the table.\n"),
+  ]));
+  const scores = (groupExpansions: number) => {
+    const q = "how do I delete a record";
+    const res = retrieve(idx, planQuery(idx, q), classify(q).primary, withWeights({ search: { groupExpansions } }));
+    return Object.fromEntries(res.map((x) => [x.s.file === "b.md" ? "aliases" : x.s.id === "a.md#deleting" ? "exact" : "other", x.score]));
+  };
+
+  it("count a word and its synonyms as one match", () => {
+    // b.md matched record, remov, destroy and drop: 4 terms from 2 question words, so its score halves
+    const on = scores(1), off = scores(0);
+    expect(on.aliases / off.aliases).toBeCloseTo(0.5);
+    expect(on.exact).toBe(off.exact);
+    expect(on.exact).toBeGreaterThan(on.aliases);
+  });
+
+  it("cover the question word they were added for", () => {
+    // "hide" only reaches the Log Redaction section through its synonym "redact"
+    const [top] = ranked("How do I hide passwords in logs?");
+    expect(top.s.heading).toBe("Log Redaction");
+    expect(top.idfCoverage).toBeGreaterThanOrEqual(0.5);
+  });
+});
+
+describe("identifier headings match their words (research.md section 20)", () => {
+  it("finds setNotFoundHandler from 'not found handler', through the identifier's parts", () => {
+    expect(top("how do I set a not found handler")).toBe("Reference/Server.md > setNotFoundHandler");
+    expect(top("how do I add a content type parser")).toBe("Reference/Server.md > addContentTypeParser");
   });
 });

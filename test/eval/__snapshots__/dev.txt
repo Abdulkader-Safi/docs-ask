@@ -1,0 +1,302 @@
+ok   rank=1 ans [fastify] What is the default bodyLimit?
+     -> Reference/Server.md:224 bodyLimit
+ok   rank=1 ans [fastify] how long is keepAliveTimeout
+     -> Reference/Server.md:154 keepAliveTimeout
+ok   rank=1 ans [fastify] what is the default pluginTimeout
+     -> Reference/Server.md:490 pluginTimeout
+FAIL rank=2 ans [fastify] What is the maximum request body size?
+     -> Reference/ContentTypeParser.md:165 Body Parser
+ok   rank=1 ans [fastify] How do I fix FST_ERR_CTP_BODY_TOO_LARGE
+     -> Reference/Errors.md:300 Fastify Error Codes
+ok   rank=1 ans [fastify] What is encapsulation?
+     -> Reference/Encapsulation.md:6 Encapsulation
+ok   rank=1 ans [fastify] Does fastify support http2?
+     -> Reference/HTTP2.md:5 HTTP2
+ok   rank=1 ans [fastify] example of a preHandler hook
+     -> Reference/Hooks.md:134 preHandler
+ok   rank=1 ans [fastify] How do I register a plugin?
+     -> Guides/Plugins-Guide.md:31 Register
+ok   rank=1 ans [fastify] how to install fastify
+     -> Guides/Getting-Started.md:17 Install
+ok   rank=1 ans [fastify] How do I redirect a request?
+     -> Reference/Reply.md:314 .redirect(dest, [code ,])
+FAIL rank=4 ans [fastify] How do I set a response header?
+     -> Reference/Reply.md:208 .getHeaders()
+ok   rank=1 ans [fastify] What is the onSend hook?
+     -> Reference/Hooks.md:199 onSend
+FAIL rank=0 ans [fastify] How can I test my routes without starting a server?
+     -> Guides/Testing.md:243 Testing with a running server
+ok   rank=1 ans [fastify] How do I hide passwords in logs?
+     -> Reference/Logging.md:234 Log Redaction
+ok   rank=1 ans [fastify] How do I version my routes?
+     -> Reference/Routes.md:627 Version Constraints
+ok   rank=1 ans [fastify] How do I add a prefix to all routes in a plugin?
+     -> Reference/Routes.md:411 Route Prefixing
+ok   rank=1 ans [fastify] What options can I pass to a plugin?
+     -> Reference/Plugins.md:24 Plugin Options
+ok   rank=1 ans [fastify] How do I detect when a client aborts a request?
+     -> Reference/Hooks.md:293 onRequestAbort
+ok   rank=1 ans [fastify] Can I use Express middleware?
+     -> Reference/Middleware.md:5 Middleware
+ok   rank=1 ans [fastify] difference between onRequest and preHandler
+     -> Reference/Hooks.md:134 preHandler
+ok   rank=1 ans [fastify] Where is the custom error handler documented?
+     -> Reference/Errors.md:141 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
+ok   rank=1 ans [fastify] How do I connect to Postgres?
+     -> Guides/Database.md:47 Postgres
+FAIL rank=0 abs [fastify] Why is my request taking too long and getting cut off?
+     -> weak term coverage (0.25)
+FAIL rank=0 abs [fastify] Should I put fastify behind nginx?
+     -> weak term coverage (0.39)
+FAIL rank=3 ans [fastify] How do I deploy to AWS Lambda?
+     -> Guides/Serverless.md:86 lambda.js
+ok   rank=0 abs [fastify] what is the default port for GraphQL subscriptions
+     -> not found in docs: graphql
+ok   rank=0 abs [fastify] How do I configure Kubernetes autoscaling?
+     -> weak term coverage (0.35)
+ok   rank=0 abs [fastify] Does fastify support SOAP?
+     -> weak term coverage (0.04)
+ok   rank=0 abs [fastify] What is the rate limit for the API?
+     -> weak term coverage (0.30)
+ok   rank=1 ans [fastify] how do I trust the X-Forwarded-For header behind a load balancer?
+     -> Reference/Server.md:446 trustProxy
+ok   rank=1 ans [fastify] how can I make the router ignore a trailing slash
+     -> Reference/Server.md:869 ignoreTrailingSlash
+ok   rank=1 ans [fastify] what is the default max length of a route parameter
+     -> Reference/Server.md:899 maxParamLength
+ok   rank=1 ans [fastify] how do I handle 404s myself
+     -> Reference/Server.md:1619 setNotFoundHandler
+FAIL rank=1 abs [fastify] how do I stop the server gracefully
+     -> ambiguous: top two within 9%
+ok   rank=1 ans [fastify] how do I add a property to the request object
+     -> Reference/Hooks.md:787 Using Hooks to Inject Custom Properties
+ok   rank=1 ans [fastify] how do I set a different log level for one route
+     -> Reference/Routes.md:505 Custom Log Level
+ok   rank=1 ans [fastify] how do I turn on logging
+     -> Reference/Logging.md:6 Enable Logging
+FAIL rank=2 abs [fastify] how do I share a JSON schema between routes
+     -> ambiguous: top two within 13%
+FAIL rank=2 ans [fastify] which hook runs when the request times out
+     -> Guides/Plugins-Guide.md:283 Hooks
+FAIL rank=3 ans [fastify] how do I set the status code of the response
+     -> Reference/Validation-and-Serialization.md:549 .statusCode property
+ok   rank=1 ans [fastify] can I route based on the Host header
+     -> Reference/Routes.md:694 Host Constraints
+FAIL rank=1 abs [fastify] how do I parse a custom content type like text/csv
+     -> weak term coverage (0.39)
+FAIL rank=0 abs [fastify] how do I list all registered routes
+     -> ambiguous: top two within 3%
+ok   rank=0 abs [fastify] how do I enable CORS
+     -> weak term coverage (0.38)
+ok   rank=0 abs [fastify] how do I send emails from a route
+     -> weak term coverage (0.36)
+FAIL rank=6 ans [hono] How to use hono/client with a different fetch client
+     -> concepts/stacks.md:102 Client
+ok   rank=1 ans [hono] Pass username to context from basicAuth
+     -> middleware/builtin/basic-auth.md:98 onAuthSuccess: (c: Context, username: string) => void | Promise<void>
+FAIL rank=3 abs [hono] Calling getCookie after setCookie results in old data
+     -> weak term coverage (0.45)
+FAIL rank=2 abs [hono] what is the default indentation for pretty json
+     -> weak term coverage (0.52)
+ok   rank=1 ans [hono] What is the default body size limit?
+     -> middleware/builtin/body-limit.md:42 maxSize: number
+ok   rank=1 ans [hono] what is the default realm for basic auth
+     -> middleware/builtin/basic-auth.md:79 realm: string
+ok   rank=1 ans [hono] What is TrieRouter?
+     -> concepts/routers.md:28 TrieRouter
+ok   rank=1 ans [hono] What is Hono?
+     -> index.md:8 Hono
+ok   rank=1 ans [hono] how do I return JSON
+     -> getting-started/basic.md:142 Return JSON
+FAIL rank=1 abs [hono] how do I read query parameters
+     -> weak term coverage (0.39)
+FAIL rank=2 abs [hono] how do I redirect to another url
+     -> weak term coverage (0.25)
+ok   rank=1 ans [hono] example of Hono with React
+     -> concepts/stacks.md:131 With React
+ok   rank=1 ans [hono] streaming text example
+     -> helpers/streaming.md:33 streamText()
+ok   rank=1 ans [hono] Does Hono work on Bun?
+     -> getting-started/bun.md:4 Bun
+ok   rank=1 ans [hono] Can I use Hono with Next.js?
+     -> getting-started/nextjs.md:5 Next.js
+FAIL rank=0 abs [hono] What options does the bearer auth middleware take?
+     -> weak term coverage (0.67)
+FAIL rank=9 abs [hono] what arguments does the timeout middleware accept
+     -> weak term coverage (0.48)
+FAIL rank=1 abs [hono] Where is routing priority explained?
+     -> weak term coverage (0.50)
+FAIL rank=6 abs [hono] difference between app.route and app.basePath
+     -> weak term coverage (0.66)
+FAIL rank=2 abs [hono] Why do I get CORS errors in the browser
+     -> weak term coverage (0.52)
+FAIL rank=1 abs [hono] my middleware runs in the wrong order
+     -> weak term coverage (0.41)
+ok   rank=0 abs [hono] How do I use Hono with Kafka?
+     -> weak term coverage (0.08)
+ok   rank=0 abs [hono] Does Hono include an admin panel?
+     -> weak term coverage (0.21)
+ok   rank=0 abs [hono] What is the default session timeout in Hono?
+     -> weak term coverage (0.45)
+ok   rank=0 abs [hono] How do I configure Hono for Kubernetes autoscaling?
+     -> weak term coverage (0.22)
+ok   rank=1 ans [fastify] How does prefix works?
+     -> Reference/Routes.md:414 Route Prefixing
+FAIL rank=3 abs [fastify] how to access route's config from another route
+     -> weak term coverage (0.42)
+ok   rank=1 ans [fastify] how do I read a request header
+     -> Reference/Request.md:70 Headers
+FAIL rank=1 abs [fastify] how do I run code once the server is listening
+     -> ambiguous: top two within 6%
+ok   rank=1 ans [fastify] how to upload files with fastify
+     -> Reference/ContentTypeParser.md:189 Catch-All
+FAIL rank=1 abs [fastify] how do I add a custom HTTP method like PROPFIND
+     -> weak term coverage (0.34)
+ok   rank=1 ans [fastify] how do I send a stream as the response
+     -> Reference/Reply.md:685 Streams
+ok   rank=1 ans [fastify] how can I make routes case insensitive
+     -> Reference/Server.md:766 caseSensitive
+FAIL rank=1 abs [fastify] what's the default request timeout
+     -> weak term coverage (0.36)
+FAIL rank=1 abs [fastify] how many requests can a single socket handle by default
+     -> weak term coverage (0.64)
+FAIL rank=1 abs [fastify] which header does fastify read the request id from by default
+     -> weak term coverage (0.68)
+ok   rank=1 ans [fastify] default http2 session timeout
+     -> Reference/Server.md:585 http2SessionTimeout
+FAIL rank=1 ans [fastify] what port does listen use if I don't pass one
+     -> Reference/Server.md:1168 listen
+ok   rank=1 ans [fastify] Is logging on by default?
+     -> Reference/Logging.md:7 Enable Logging
+FAIL rank=2 abs [fastify] what is a decorator
+     -> ambiguous: top two within 2%
+ok   rank=1 ans [fastify] what is prototype poisoning
+     -> Guides/Prototype-Poisoning.md:10 History behind prototype poisoning
+ok   rank=1 ans [fastify] what does exposeHeadRoutes do
+     -> Reference/Server.md:532 exposeHeadRoutes
+ok   rank=1 ans [fastify] what is the reply lifecycle
+     -> Reference/Lifecycle.md:59 Reply Lifecycle
+FAIL rank=3 abs [fastify] ERROR: Method already declared for route
+     -> weak term coverage (0.67)
+ok   rank=1 ans [fastify] onResponse hook is not executed when Client close the connection
+     -> Reference/Hooks.md:237 onResponse
+FAIL rank=1 abs [fastify] plugin did not start in time error
+     -> weak term coverage (0.68)
+FAIL rank=2 ans [fastify] why do I get an error that the reply was already sent
+     -> Guides/Migration-Guide-V5.md:262 Modifying reply.sent is now forbidden
+ok   rank=1 ans [fastify] Unsupported Media Type error when posting XML
+     -> Reference/ContentTypeParser.md:4 Content-Type Parser
+ok   rank=1 ans [fastify] example of a custom error handler
+     -> Reference/Errors.md:193 Errors In Fastify Lifecycle Hooks And A Custom Error Handler
+FAIL rank=0 ans [fastify] show me a route with a response schema
+     -> Reference/Routes.md:147 Routes options
+ok   rank=1 ans [fastify] example of using Redis with fastify
+     -> Guides/Database.md:76 Redis
+FAIL rank=1 abs [fastify] Does fastify support ESM?
+     -> ambiguous: top two within 1%
+FAIL rank=1 abs [fastify] can I use a custom logger instead of pino
+     -> ambiguous: top two within 5%
+FAIL rank=2 abs [fastify] Is fastify a good fit for serverless?
+     -> weak term coverage (0.31)
+FAIL rank=1 abs [fastify] what options does fastify.listen accept
+     -> weak term coverage (0.65)
+ok   rank=1 ans [fastify] which options can I set on a route
+     -> Reference/Routes.md:109 Routes options
+ok   rank=1 ans [fastify] what arguments does addContentTypeParser take
+     -> Reference/Server.md:1976 addContentTypeParser
+FAIL rank=2 ans [fastify] Where is the list of error codes?
+     -> Guides/Write-Plugin.md:16 Code
+FAIL rank=3 abs [fastify] what endpoint does the Google Cloud Functions example expose
+     -> EXAMPLE question but best section has no code
+ok   rank=1 ans [fastify] connectionTimeout vs requestTimeout
+     -> Reference/Server.md:144 connectionTimeout
+ok   rank=1 ans [fastify] difference between register and fastify-plugin
+     -> Reference/Routes.md:478 Route Prefixing and fastify-plugin
+ok   rank=0 abs [fastify] How do I set up GraphQL with fastify?
+     -> not found in docs: graphql
+ok   rank=0 abs [fastify] Does fastify have a built-in admin dashboard?
+     -> weak term coverage (0.38)
+ok   rank=0 abs [fastify] What is the default database connection pool size?
+     -> weak term coverage (0.37)
+ok   rank=0 abs [fastify] How do I send push notifications to mobile phones?
+     -> weak term coverage (0.06)
+FAIL rank=1 abs [hono] Can hono serve static site?
+     -> weak term coverage (0.65)
+FAIL rank=0 ans [hono] How to get request's remote client IP in Node.js?
+     -> getting-started/nodejs.md:174 Access the raw Node.js APIs
+FAIL rank=6 ans [hono] How do I proxy a streaming response in hono?
+     -> getting-started/aws-lambda.md:208 Lambda response streaming
+FAIL rank=4 abs [hono] how do I change the port on Node.js
+     -> ambiguous: top two within 12%
+FAIL rank=3 abs [hono] Accessing env variables outside the route handlers in hono
+     -> weak term coverage (0.55)
+FAIL rank=5 ans [hono] how do I set a cookie
+     -> helpers/cookie.md:109 setCookie & setSignedCookie
+ok   rank=1 ans [hono] Setting up websockets in Node.js
+     -> helpers/websocket.md:198 Node.js
+FAIL rank=1 abs [hono] how do I group routes under /api
+     -> weak term coverage (0.42)
+FAIL rank=1 abs [hono] How do I test my app without deploying it
+     -> weak term coverage (0.41)
+ok   rank=1 ans [hono] What is the default threshold for compression?
+     -> middleware/builtin/compress.md:32 threshold: number
+FAIL rank=1 abs [hono] what port does the node server listen on by default
+     -> weak term coverage (0.50)
+ok   rank=1 ans [hono] what is the maximum length of a request id
+     -> middleware/builtin/request-id.md:67 limitLength: number
+FAIL rank=1 ans [hono] which status codes does the cache middleware cache by default
+     -> middleware/builtin/cache.md:84 cacheableStatusCodes: number[]
+FAIL rank=3 ans [hono] what header does the request id middleware use
+     -> middleware/builtin/request-id.md:42 Set Request ID
+ok   rank=1 ans [hono] What is RegExpRouter?
+     -> concepts/routers.md:9 RegExpRouter
+ok   rank=1 ans [hono] What are Hono Stacks?
+     -> concepts/stacks.md:3 Hono Stacks
+FAIL rank=5 abs [hono] What is `c` in `c.get('user')`?
+     -> weak term coverage (0.52)
+ok   rank=1 ans [hono] What does the combine middleware do?
+     -> middleware/builtin/combine.md:3 Combine Middleware
+FAIL rank=1 abs [hono] Why does Hono return 404 instead of 405 for unsupported HTTP methods?
+     -> weak term coverage (0.52)
+FAIL rank=7 ans [hono] Type instantiation is excessively deep and possibly infinite with RPC
+     -> guides/rpc.md:780 Hono version mismatch
+FAIL rank=2 abs [hono] my notFound handler is not called in a sub app
+     -> weak term coverage (0.54)
+FAIL rank=1 abs [hono] request body too large error on Bun
+     -> weak term coverage (0.60)
+FAIL rank=2 abs [hono] example of server-sent events
+     -> weak term coverage (0.34)
+ok   rank=1 ans [hono] show me basic auth with multiple users
+     -> middleware/builtin/basic-auth.md:124 Defining Multiple Users
+ok   rank=1 ans [hono] example of nested layouts with the JSX renderer
+     -> middleware/builtin/jsx-renderer.md:173 Nested Layouts
+FAIL rank=1 abs [hono] sample code for validating a request with zod
+     -> weak term coverage (0.41)
+FAIL rank=5 ans [hono] Does hono support http2 on Node.js?
+     -> getting-started/nodejs.md:174 Access the raw Node.js APIs
+FAIL rank=1 abs [hono] Can multiple validator('query', ...) middlewares be combined?
+     -> weak term coverage (0.61)
+FAIL rank=0 abs [hono] What options does the CORS middleware take?
+     -> weak term coverage (0.58)
+ok   rank=1 ans [hono] which options can I pass to setCookie
+     -> helpers/cookie.md:109 setCookie & setSignedCookie
+FAIL rank=3 ans [hono] parameters of the logger middleware
+     -> middleware/builtin/logger.md:3 Logger Middleware
+ok   rank=1 ans [hono] Where are the built-in middleware listed?
+     -> guides/middleware.md:79 Built-in Middleware
+FAIL rank=2 abs [hono] which page covers deploying to AWS Lambda
+     -> weak term coverage (0.35)
+ok   rank=1 ans [hono] Zod OpenAPI vs Hono OpenAPI, which should I use?
+     -> middleware/third-party.md:36 OpenAPI
+ok   rank=1 ans [hono] difference between the hono and hono/tiny presets
+     -> api/presets.md:44 hono/tiny
+ok   rank=1 ans [hono] RegExpRouter vs TrieRouter
+     -> concepts/routers.md:9 RegExpRouter
+ok   rank=0 abs [hono] How do I connect Hono to MongoDB?
+     -> not found in docs: mongodb
+ok   rank=0 abs [hono] Does Hono have a built-in ORM?
+     -> weak term coverage (0.54)
+ok   rank=0 abs [hono] How do I deploy Hono to Heroku?
+     -> weak term coverage (0.34)
+FAIL rank=1 abs [hono] How do I schedule cron jobs with Hono?
+     -> weak term coverage (0.35)

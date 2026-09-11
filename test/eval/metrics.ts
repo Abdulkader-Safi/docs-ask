@@ -2,20 +2,25 @@
 // among the candidates (0 when it isn't there).
 import type { Answer, DocsIndex } from "../../src/core/index.ts";
 import { classify } from "../../src/query/rules.ts";
-import type { Golden } from "./golden.ts";
+import type { Corpus, Golden } from "./golden.ts";
 
-export interface Row { q: string; rank: number; confident: boolean; answerOk: boolean; classOk: boolean; unanswerable: boolean; answer: Answer }
+export interface Row { corpus: Corpus; q: string; rank: number; confident: boolean; answerOk: boolean; classOk: boolean; unanswerable: boolean; answer: Answer }
 
 const accepted = (g: Golden, file?: string, heading?: string) => !!g.accept?.some((a) => a.file === file && a.heading === heading);
 
-export function evaluate(docs: DocsIndex, golden: Golden[], k = 10) {
+/** `docs` is one index, or one per corpus for sets that span both. */
+export function evaluate(docs: DocsIndex | Record<Corpus, DocsIndex>, golden: Golden[], k = 10) {
+  const pick = (g: Golden) => ("ask" in docs ? docs : docs[g.corpus ?? "fastify"]) as DocsIndex;
   const rows: Row[] = golden.map((g) => {
-    const a = docs.ask(g.q, { topK: k });
+    const a = pick(g).ask(g.q, { topK: k });
     const rank = g.unanswerable ? 0 : a.candidates.findIndex((c) => accepted(g, c.file, c.headingPath.at(-1))) + 1;
     const answerOk = g.unanswerable
       ? !a.confident
-      : a.confident && accepted(g, a.file, a.headingPath?.at(-1)) && (!g.contains || !!a.text?.includes(g.contains));
-    return { q: g.q, rank, confident: a.confident, answerOk, classOk: !g.qclass || classify(g.q).primary.id === g.qclass, unanswerable: !!g.unanswerable, answer: a };
+      : a.confident &&
+        // a comparison answer quotes two sections; it counts if either is an accepted one
+        (a.parts ?? [a]).some((p) => accepted(g, p.file, p.headingPath?.at(-1))) &&
+        (!g.contains || !!a.text?.includes(g.contains));
+    return { corpus: g.corpus ?? "fastify", q: g.q, rank, confident: a.confident, answerOk, classOk: !g.qclass || classify(g.q).primary.id === g.qclass, unanswerable: !!g.unanswerable, answer: a };
   });
   const ans = rows.filter((r) => !r.unanswerable);
   const una = rows.filter((r) => r.unanswerable);
@@ -45,6 +50,6 @@ export const table = (rows: Row[]) =>
     .map((r) => {
       const a = r.answer;
       const where = a.confident ? `${a.file}:${a.line} ${a.headingPath!.at(-1)}` : a.reason;
-      return `${r.answerOk ? "ok  " : "FAIL"} rank=${r.rank} ${r.confident ? "ans" : "abs"} ${r.q}\n     -> ${where}`;
+      return `${r.answerOk ? "ok  " : "FAIL"} rank=${r.rank} ${r.confident ? "ans" : "abs"} [${r.corpus}] ${r.q}\n     -> ${where}`;
     })
     .join("\n") + "\n";

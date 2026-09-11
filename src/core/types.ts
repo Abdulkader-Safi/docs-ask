@@ -116,8 +116,10 @@ export interface Answer {
   units?: Unit[]
   /** the closest sections, always present */
   candidates: Candidate[]
-  /** near spellings when an identifier was unknown (from M4) */
+  /** near spellings when an identifier was unknown */
   suggestions?: string[]
+  /** COMPARISON answers: one quoted sentence per side, each with its own citation */
+  parts?: { id: string; file: string; line: number; headingPath: string[]; text: string }[]
 }
 
 // ---------- index file ----------

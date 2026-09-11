@@ -1,10 +1,12 @@
 // The whole question pipeline: classify, retrieve and rerank, gate, then quote (research.md section 12).
 import type { Answer, QaSection, SerializedIndex, Unit } from "../core/types.ts";
+import { compare } from "./compare.ts";
 import { pickUnits } from "./extract.ts";
 import { checkGates } from "./gates.ts";
 import { openIndex, type LoadedIndex } from "./load.ts";
 import { planQuery, retrieve } from "./retrieve.ts";
 import { classify } from "./rules.ts";
+import { suggest } from "./suggest.ts";
 import { withWeights, type WeightOverrides } from "./weights.ts";
 
 export interface AskOptions {
@@ -18,7 +20,8 @@ const quote = (units: Unit[]) => units.map((u) => (u.kind === "code" ? "```" + (
 
 export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}): Answer {
   const w = withWeights(options.weights);
-  const rule = classify(question).primary;
+  const cls = classify(question);
+  const rule = cls.primary;
   const plan = planQuery(idx, question);
   const ranked = retrieve(idx, plan, rule, w);
   const candidates = ranked.slice(0, options.topK ?? w.candidates).map(({ s, score }) => ({
@@ -30,8 +33,15 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   }));
   const notSure = (reason: string, extra: Partial<Answer> = {}): Answer => ({ confident: false, qclass: rule.id, reason, candidates, ...extra });
 
-  const gate = checkGates(idx, ranked, plan, w);
-  if (!gate.ok) return notSure(gate.reason);
+  if (rule.id === "COMPARISON") {
+    const both = compare(idx, question, w);
+    if (both) return { ...both, qclass: rule.id, candidates };
+  }
+  const gate = checkGates(idx, ranked, plan, cls, w);
+  if (!gate.ok) {
+    const suggestions = [...new Set((gate.unknown ?? []).flatMap((t) => suggest(idx, t, w)))];
+    return notSure(gate.reason, suggestions.length ? { suggestions } : {});
+  }
   const sec = ranked[0].s;
   const picked = pickUnits(idx, sec, rule, plan, w);
   if ("noValue" in picked) return notSure("VALUE question but best section has no value", { file: sec.file, line: sec.line });
@@ -73,9 +83,9 @@ export class DocsIndex {
     return this.#idx.byId.get(id);
   }
 
-  /** near spellings of a term; filled in at M4 */
-  suggest(_term: string): string[] {
-    return [];
+  /** near spellings of a term, as the docs spell them */
+  suggest(term: string): string[] {
+    return suggest(this.#idx, term, withWeights(this.#defaults.weights));
   }
 
   get sectionCount(): number {
