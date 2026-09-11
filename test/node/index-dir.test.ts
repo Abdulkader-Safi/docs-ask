@@ -5,6 +5,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { afterAll, afterEach, beforeEach, describe, expect, it } from "vitest";
 import { gzippedSize, indexDirectory, loadDocs, readIndex, writeIndex, INDEX_FILE, WEB_BUDGET } from "../../src/node/index.ts";
+import { loadIndex } from "../../src/core/index.ts";
 
 const FASTIFY = fileURLToPath(new URL("../fixtures/fastify", import.meta.url));
 const out = mkdtempSync(join(tmpdir(), "docs-ask-out-"));
@@ -36,6 +37,16 @@ describe("build targets", () => {
     const loaded = await readIndex(web);
     expect(loaded.sections.every((s) => s.prose === "" && s.code === "")).toBe(true);
     expect(loaded.sections[0].units.length).toBeGreaterThan(0); // units are what answers come from
+  });
+
+  it("a web index still answers, and gives the same answer as the node one", async () => {
+    const data = await indexDirectory(FASTIFY);
+    const path = join(out, "answers.json");
+    await writeIndex(data, path, { target: "web" });
+    const web = loadIndex(await readIndex(path));
+    const question = "what is the default bodyLimit";
+    expect(web.ask(question)).toEqual(loadIndex(data).ask(question));
+    expect(web.ask(question).text).toBe("Default: `1048576` (1MiB)");
   });
 
   it("gzippedSize measures a plain file and reports a gzipped one as it stands", async () => {
