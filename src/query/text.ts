@@ -74,6 +74,14 @@ export function indexTerms(text: string): string[] {
   return terms;
 }
 
+/**
+ * Whole tokens only: an identifier stays whole and a word is stemmed, with no parts emitted. Gate 6 uses this
+ * to tell "the heading says quality" from "the heading says frameworkErrors, which contains framework".
+ */
+export function wholeTerms(text: string): string[] {
+  return rawTokens(text).map((t) => (t.isCodeish ? t.norm : stemWord(t.norm)));
+}
+
 // Query-time: same, but drop question stop words (unless nothing would remain).
 export function queryTerms(question: string): { terms: string[]; exact: string[] } {
   const toks = rawTokens(question);
