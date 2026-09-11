@@ -2168,10 +2168,10 @@ error: unknown command "frob"          (exit 1)
 
 ### SDK facts (checked 10 Sep 2026)
 
-- The TypeScript SDK v2 is split into `@modelcontextprotocol/server` and `@modelcontextprotocol/client` (both 2.0.0, 27 Jul 2026) and implements spec 2026-07-28.
+- The TypeScript SDK v2 is split into `@modelcontextprotocol/server` and `@modelcontextprotocol/client` (both 2.0.0, 27 Jul 2026) and implements spec 2026-07-28. Its `LATEST_PROTOCOL_VERSION` is still `2025-11-25`, and `SUPPORTED_PROTOCOL_VERSIONS` tops out there: the 2026-07-28 revision travels as an envelope claim in `_meta["io.modelcontextprotocol/protocolVersion"]`, not as an `initialize` version string (checked against 2.0.0 on 11 Sep 2026, building M6).
 - It needs `zod ^4.2.0` (zod 3 dropped) and Node 20+. v1 (`@modelcontextprotocol/sdk` 1.30.0) gets fixes for at least six months.
 - `server.tool()` is removed. Use `registerTool(name, { title, description, inputSchema: z.object(...), outputSchema, annotations }, handler)`.
-- `serveStdio(factory)` comes from the `/stdio` subpath. Its default `legacy: 'serve'` also answers 2025-era clients. Tested: the server negotiated both `2025-11-25` and `2026-07-28`.
+- `serveStdio(factory)` comes from the `/stdio` subpath. Its default `legacy: 'serve'` also answers 2025-era clients. The opening message picks the era: an `initialize` carrying a valid modern envelope claim is served as modern, anything else (including a claim the SDK doesn't know) as 2025-era. Tested both openings against `docs-ask mcp`: each reaches the same tools, and the `initialize` result names `2025-11-25` either way.
 - With `outputSchema`, the handler must return `structuredContent`; the SDK validates it. Also return a text block.
 - Bad arguments come back as `isError: true` before the handler runs.
 - The handler context moved from `extra` to `ctx` (`ctx.mcpReq.signal`). `McpError` is now `ProtocolError`.
@@ -2304,10 +2304,11 @@ import { createDocsMcpServer } from "./server.ts";
 
 /** Start the stdio MCP server. stdout carries JSON-RPC, so log to stderr only. */
 export async function runStdio(root: string) {
-  const index = await loadDocs(root);
-  console.error(`[docs-ask] indexed ${root}`);
-  const handle = serveStdio(() => createDocsMcpServer(index));
+  const { docs, fromFile } = await loadDocs(root);
+  console.error(`[docs-ask] ${docs.sectionCount} sections from ${root} ${fromFile ? "(docs-index.json)" : "(built in memory)"}`);
+  const handle = serveStdio(() => createDocsMcpServer(docs));
   process.on("SIGINT", () => void handle.close());
+  process.on("SIGTERM", () => void handle.close());
 }
 ```
 

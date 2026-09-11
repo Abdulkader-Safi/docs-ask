@@ -1,4 +1,15 @@
-// Stdio MCP server. Filled in at M6; `docs-ask mcp` imports this lazily.
-export async function runStdio(_root: string): Promise<void> {
-  throw new Error("docs-ask: the MCP server is not built yet (M6)");
+// docs-ask mcp: the MCP server over stdio (research.md section 16).
+// stdout carries JSON-RPC, so everything this prints goes to stderr.
+import { serveStdio } from "@modelcontextprotocol/server/stdio";
+import { loadDocs } from "../node/index.ts";
+import { createDocsMcpServer } from "./server.ts";
+
+/** Indexes `root` (from the index file when it's fresh), then serves until stdin closes or SIGINT. */
+export async function runStdio(root: string): Promise<void> {
+  const started = Date.now();
+  const { docs, fromFile } = await loadDocs(root);
+  console.error(`[docs-ask] ${docs.sectionCount} sections from ${root} ${fromFile ? "(docs-index.json)" : "(built in memory)"} in ${Date.now() - started} ms`);
+  const handle = serveStdio(() => createDocsMcpServer(docs), { onerror: (e) => console.error(`[docs-ask] ${e.message}`) });
+  process.on("SIGINT", () => void handle.close());
+  process.on("SIGTERM", () => void handle.close());
 }
