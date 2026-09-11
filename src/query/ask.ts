@@ -48,6 +48,9 @@ export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}
   if ("noValue" in picked) return notSure("VALUE question but best section has no value", { file: sec.file, line: sec.line });
 
   const { units } = picked;
+  // A heading-only section (its content lives in its children) has nothing to quote. LOCATION answers are
+  // meant to be empty: they cite the section and stop.
+  if (!units.length && rule.answerShape !== "location") return notSure("best section has nothing to quote", { file: sec.file, line: sec.line });
   const high = gate.coverage >= w.gates.highCoverage && gate.gap >= w.gates.highGap;
   return {
     confident: true,

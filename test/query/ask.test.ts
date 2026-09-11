@@ -69,6 +69,31 @@ describe("ask", () => {
   });
 });
 
+describe("nothing to quote", () => {
+  it("abstains when the best section is only a heading", () => {
+    // Reference/TypeScript.md#fastify is one heading with its content in child sections. It used to answer
+    // confidently with an empty quote.
+    const a = docs.ask("what is fastify");
+    expect(a.confident).toBe(false);
+    expect(a.reason).toBe("best section has nothing to quote");
+    expect(a.candidates[0].id).toBe("Reference/TypeScript.md#fastify");
+  });
+
+  it("still lets a LOCATION question answer with the section alone", () => {
+    const a = docs.ask("Where is the custom error handler documented?");
+    expect(a).toMatchObject({ confident: true, qclass: "LOCATION", text: "" });
+    expect(a.file).toBe("Reference/Errors.md");
+  });
+
+  it("abstains on a heading-only section however the docs are shaped", () => {
+    // the word is in the parent heading only, so the section that wins is the one with no body of its own
+    const idx = loadIndex(buildIndex([parseDocument("api.md", "# API\n\n## Widgets\n\n### Colours\n\nBlue and red.\n")]));
+    const a = idx.ask("what are widgets");
+    expect(a.confident).toBe(false);
+    expect(a.reason).toBe("best section has nothing to quote");
+  });
+});
+
 describe("DocsIndex", () => {
   it("looks sections up by id and reports its size", () => {
     expect(docs.get("Reference/Server.md#bodylimit")?.heading).toBe("bodyLimit");
