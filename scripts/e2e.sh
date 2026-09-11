@@ -68,4 +68,26 @@ node -e 'const a=JSON.parse(require("fs").readFileSync(0,"utf8")); if(!a.confide
 $out
 JSON
 
-echo "e2e: all checks passed"
+# The MCP server, through the Inspector CLI: a real client, not our own test harness.
+# Inspector 2.6.0 needs Node 22.19 or newer, and it swallows "npx -y", so call the installed binary.
+node -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=19)?0:1)' || {
+  echo "e2e: all CLI checks passed; skipping the Inspector on Node $(node -v) (needs 22.19)"
+  exit 0
+}
+inspector() { npx -y @modelcontextprotocol/inspector@2.6.0 --cli ./node_modules/.bin/docs-ask mcp "$root/test/fixtures/fastify" "$@" 2>/dev/null; }
+
+out=$(inspector --method tools/list)
+case $out in *'"ask_docs"'*) ;; *) fail "inspector tools/list: no ask_docs
+$out";; esac
+
+out=$(inspector --method tools/call --tool-name ask_docs --tool-arg question="what is the default bodyLimit" --tool-arg topK=1)
+case $out in *'Reference/Server.md:224'*) ;; *) fail "inspector ask_docs: no citation
+$out";; esac
+case $out in *'1048576'*) ;; *) fail "inspector ask_docs: no value
+$out";; esac
+
+out=$(inspector --method tools/call --tool-name get_section --tool-arg id="Reference/Server.md#bodylimit")
+case $out in *'1048576'*) ;; *) fail "inspector get_section: no section text
+$out";; esac
+
+echo "e2e: all checks passed, Inspector included"
