@@ -48,7 +48,7 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "docs-ask": "./dist/cli-bin.mjs"
+    "docs-ask": "dist/cli-bin.mjs"
   },
   "jsdelivr": "./dist/docs-ask-widget.iife.js",
   "unpkg": "./dist/docs-ask-widget.iife.js",
