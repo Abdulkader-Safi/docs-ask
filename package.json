@@ -64,6 +64,7 @@
     "test": "vitest run",
     "lint": "publint && attw --pack . --profile esm-only",
     "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "version": "node scripts/sync-version.mjs && git add src/core/version.ts",
     "sweep": "node scripts/sweep.ts",
     "e2e": "scripts/e2e.sh",
     "demo": "scripts/demo.sh"
