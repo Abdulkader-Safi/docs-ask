@@ -1,6 +1,6 @@
 {
   "name": "docs-ask",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Answer questions about a repo's markdown docs without an LLM: library, CLI, MCP server, web widget",
   "keywords": [
     "markdown",
