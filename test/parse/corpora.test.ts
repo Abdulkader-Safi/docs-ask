@@ -2,6 +2,8 @@
 // readable diff in <corpus>-outline.txt.
 //   fastify: Fastify docs at v5.6.0 (MIT), the corpus research.md measured on
 //   hono:    Hono website docs at c48b858 (MIT), the second corpus, VitePress-flavoured
+//   vault:   an invented Obsidian vault, shaped like a real one: nested folders, frontmatter, wikilinks and
+//            embeds, one note with broken YAML, and a note inside .obsidian/ that the walk must skip
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,7 +13,8 @@ import { parseDocument, toQaSections } from "../../src/parse/index.ts";
 
 describe.each([
   ["fastify", 30, 559, 3810],
-  ["hono", 87, 792, 3827],
+  ["hono", 87, 793, 3828],
+  ["vault", 18, 42, 138],
 ])("%s corpus", async (name, fileCount, sectionCount, unitCount) => {
   const root = fileURLToPath(new URL(`../fixtures/${name}`, import.meta.url));
   const files = await findDocs(root);

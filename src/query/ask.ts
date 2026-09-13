@@ -2,6 +2,7 @@
 import type { Answer, QaSection, SerializedIndex, Unit } from "../core/types.ts";
 import { compare } from "./compare.ts";
 import { pickUnits } from "./extract.ts";
+import { filterLabel, matchingFiles, parseFilters } from "./filters.ts";
 import { checkGates } from "./gates.ts";
 import { openIndex, type LoadedIndex } from "./load.ts";
 import { planQuery, retrieve } from "./retrieve.ts";
@@ -23,23 +24,31 @@ const DEFINES = /\b(?:is|are)\s+(?:an?|the|used|not|called)\b|\brefers? to\b|\bm
 
 export const quote = (units: Unit[]) => units.map((u) => (u.kind === "code" ? "```" + (u.lang ?? "") + "\n" + u.text + "\n```" : u.text)).join("\n");
 
-export function ask(idx: LoadedIndex, question: string, options: AskOptions = {}): Answer {
+export function ask(idx: LoadedIndex, asked: string, options: AskOptions = {}): Answer {
   const w = withWeights(options.weights);
+  // filters (status:published, folder:Clients) come out first; the rest is the question
+  const { question, filters } = parseFilters(asked, idx.filterKeys);
+  const files = filters.length ? matchingFiles(idx.notes, filters) : undefined;
   const cls = classify(question);
   const rule = cls.primary;
   const plan = planQuery(idx, question);
-  const ranked = retrieve(idx, plan, rule, w);
-  const candidates = ranked.slice(0, options.topK ?? w.candidates).map(({ s, score }) => ({
-    id: s.id,
-    file: s.file,
-    line: s.line,
-    headingPath: [...s.headingPath, s.heading],
-    score: +score.toFixed(2),
-  }));
+  const ranked = retrieve(idx, plan, rule, w, files);
+  const topK = options.topK ?? w.candidates;
+  const candidate = (s: QaSection, score: number) => ({ id: s.id, file: s.file, line: s.line, headingPath: [...s.headingPath, s.heading], score: +score.toFixed(2) });
+  const candidates = ranked.slice(0, topK).map(({ s, score }) => candidate(s, score));
   const notSure = (reason: string, extra: Partial<Answer> = {}): Answer => ({ confident: false, qclass: rule.id, reason, candidates, ...extra });
 
+  if (files && !files.size) return notSure(`no notes match ${filterLabel(filters)}`);
+  if (files && !plan.q.length) {
+    // only filters, nothing to search for: list the notes that match, each at its first section
+    const seen = new Set<string>();
+    const notes = idx.sections.filter((s) => files.has(s.file) && !seen.has(s.file) && seen.add(s.file));
+    const n = files.size;
+    return notSure(`${n} ${n === 1 ? "note matches" : "notes match"} ${filterLabel(filters)}`, { candidates: notes.slice(0, topK).map((s) => candidate(s, 0)) });
+  }
+
   if (rule.id === "COMPARISON") {
-    const both = compare(idx, question, w);
+    const both = compare(idx, question, w, files);
     if (both) return { ...both, qclass: rule.id, candidates };
   }
   const gate = checkGates(idx, ranked, plan, cls, w);

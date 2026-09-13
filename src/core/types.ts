@@ -42,6 +42,8 @@ export interface Section {
 export interface ParsedDoc {
   file: string
   frontmatter: Record<string, unknown>
+  /** source line of each top-level frontmatter key. A Map: a key like `constructor` would hit Object.prototype */
+  frontmatterLines?: Map<string, number>
   frontmatterError?: string
   sections: Section[]
 }
@@ -55,9 +57,9 @@ export interface ParseOptions {
 // Different from Block and Section above: a Unit is one quotable piece of a section, and
 // QaSection.headingPath holds the ancestors only (the section's own heading is in `heading`).
 
-export type UnitKind = 'code' | 'orderedList' | 'list' | 'tableRow' | 'sentence' | 'heading' | 'blockquote'
+export type UnitKind = 'code' | 'orderedList' | 'list' | 'tableRow' | 'sentence' | 'heading' | 'blockquote' | 'property'
 
-/** One answer unit: a sentence, list item, table row, code block, blockquote or heading. */
+/** One answer unit: a sentence, list item, table row, code block, blockquote, heading or frontmatter property ("status: live"). */
 export interface Unit {
   kind: UnitKind
   text: string
@@ -68,7 +70,7 @@ export interface Unit {
 export interface QaSection {
   id: string
   file: string
-  /** this section's heading, backticks removed; the file path for the intro section */
+  /** this section's heading, backticks removed; for the intro (the note card), the frontmatter title or else the file path */
   heading: string
   /** ancestors only, NOT including `heading` */
   headingPath: string[]

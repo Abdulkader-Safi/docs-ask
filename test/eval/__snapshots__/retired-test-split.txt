@@ -26,8 +26,8 @@ FAIL rank=1 ans [fastify] what port does listen use if I don't pass one
      -> Reference/Server.md:1168 listen
 ok   rank=1 ans [fastify] Is logging on by default?
      -> Reference/Logging.md:7 Enable Logging
-FAIL rank=2 abs [fastify] what is a decorator
-     -> ambiguous: top two within 2%
+ok   rank=1 ans [fastify] what is a decorator
+     -> Reference/Decorators.md:5 Decorators
 ok   rank=1 ans [fastify] what is prototype poisoning
      -> Guides/Prototype-Poisoning.md:10 History behind prototype poisoning
 ok   rank=1 ans [fastify] what does exposeHeadRoutes do
@@ -88,12 +88,12 @@ FAIL rank=4 abs [hono] how do I change the port on Node.js
      -> ambiguous: top two within 12%
 FAIL rank=3 abs [hono] Accessing env variables outside the route handlers in hono
      -> weak term coverage (0.55)
-FAIL rank=5 ans [hono] how do I set a cookie
+FAIL rank=4 ans [hono] how do I set a cookie
      -> helpers/cookie.md:109 setCookie & setSignedCookie
 ok   rank=1 ans [hono] Setting up websockets in Node.js
      -> helpers/websocket.md:198 Node.js
 FAIL rank=1 abs [hono] how do I group routes under /api
-     -> weak term coverage (0.42)
+     -> ambiguous: top two within 10%
 FAIL rank=1 abs [hono] How do I test my app without deploying it
      -> weak term coverage (0.41)
 ok   rank=1 ans [hono] What is the default threshold for compression?
@@ -153,7 +153,7 @@ ok   rank=1 ans [hono] RegExpRouter vs TrieRouter
 ok   rank=0 abs [hono] How do I connect Hono to MongoDB?
      -> not found in docs: mongodb
 ok   rank=0 abs [hono] Does Hono have a built-in ORM?
-     -> weak term coverage (0.54)
+     -> weak term coverage (0.53)
 ok   rank=0 abs [hono] How do I deploy Hono to Heroku?
      -> weak term coverage (0.34)
 FAIL rank=1 abs [hono] How do I schedule cron jobs with Hono?

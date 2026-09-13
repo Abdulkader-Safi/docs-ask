@@ -33,7 +33,7 @@ describe("docs-ask ask", () => {
   it("exits 2 and lists the closest sections when it isn't sure", async () => {
     const { code, out } = await run("ask", "how do I stop the server gracefully", "-d", FASTIFY);
     expect(code).toBe(2);
-    expect(out).toContain("No confident answer (ambiguous: top two within 9%). Closest sections:");
+    expect(out).toContain("No confident answer (ambiguous: top two within 6%). Closest sections:");
     expect(out).toMatch(/ {2}1\. Reference\/Hooks\.md:\d+ {2}Application Hooks > preClose/);
   });
 

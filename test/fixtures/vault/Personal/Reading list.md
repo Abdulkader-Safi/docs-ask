@@ -1,0 +1,2 @@
+- The Mom Test, about asking customers useful questions
+- Shape Up, about fixed-time projects

@@ -43,7 +43,8 @@ export function planQuery(idx: LoadedIndex, question: string): QueryPlan {
   };
 }
 
-export function retrieve(idx: LoadedIndex, plan: QueryPlan, rule: Rule, w: Weights): Ranked[] {
+/** `files`: when the question had filters, only sections of these notes are searched. */
+export function retrieve(idx: LoadedIndex, plan: QueryPlan, rule: Rule, w: Weights, files?: Set<string>): Ranked[] {
   const { q, exact, content, expanded } = plan;
   const original = new Set(q);
   const { termBoost: tb } = w.search;
@@ -56,6 +57,8 @@ export function retrieve(idx: LoadedIndex, plan: QueryPlan, rule: Rule, w: Weigh
       prefix: (t) => t.length > w.search.prefixAbove,
       fuzzy: (t) => (t.length > w.search.fuzzyAbove && !/[\/._]/.test(t) ? w.search.fuzzy : false), // never fuzz identifiers
       combineWith: "OR",
+      // inside the search, not after the top N, so matching notes further down aren't lost
+      filter: files && ((r) => files.has(idx.byId.get(r.id)!.file)),
     })
     .slice(0, w.search.topN);
 

@@ -5,6 +5,8 @@ exports[`toQaSections on the sample API doc > is stable 1`] = `
   {
     "id": "docs/api.md",
     "units": [
+      "property@3",
+      "property@4",
       "sentence@7",
       "sentence@7",
       "sentence@8",

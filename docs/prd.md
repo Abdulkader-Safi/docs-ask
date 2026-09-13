@@ -196,7 +196,7 @@ interface Answer {
 
 ```ts
 interface SerializedIndex {
-  formatVersion: 1;
+  formatVersion: 2; // 2 since M11: a `path` search field and `property` units
   packageVersion: string; // loader refuses a different major.minor
   builtAt: string; // ISO date
   sections: SectionWithUnits[]; // no raw markdown

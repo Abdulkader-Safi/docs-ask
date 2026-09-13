@@ -21,7 +21,15 @@ export function parseDocument(filePath: string, source: string, options: ParseOp
   if (fm) {
     try {
       const data = parseYaml(fm[1])
-      if (data && typeof data === 'object' && !Array.isArray(data)) doc.frontmatter = data as Record<string, unknown>
+      if (data && typeof data === 'object' && !Array.isArray(data)) {
+        doc.frontmatter = data as Record<string, unknown>
+        // top-level keys start at column 0; line 1 of the file is the opening ---
+        doc.frontmatterLines = new Map()
+        fm[1].split(/\r?\n/).forEach((l, i) => {
+          const key = /^([^\s#:'"-][^:]*?)\s*:/.exec(l)?.[1]
+          if (key && !doc.frontmatterLines!.has(key)) doc.frontmatterLines!.set(key, i + 2)
+        })
+      }
     } catch (e) { doc.frontmatterError = (e as Error).message }
     src = fm[0].replace(/[^\r\n]/g, '') + src.slice(fm[0].length)
   }
@@ -72,6 +80,19 @@ export function parseDocument(filePath: string, source: string, options: ParseOp
   return doc
 }
 
+/**
+ * Obsidian links as the words a reader sees: [[note]] -> note, [[folder/note]] -> note, [[note|text]] -> text,
+ * [[note#Heading]] -> note Heading, [[note#^block-id]] -> note. A note embed (![[note]]) reads the same; an embedded
+ * file (![[shot.png]], ![[shot.png|300]]) is dropped.
+ */
+export const cleanLinks = (text: string) =>
+  text.replace(/(!?)\[\[([^\]|]*)(?:\|([^\]]*))?\]\]/g, (_, bang: string, target: string, alias?: string) => {
+    const name = target.split('#')[0]
+    if (bang && /\.[a-z0-9]{2,5}$/i.test(name) && !/\.md$/i.test(name)) return ''
+    if (alias !== undefined) return alias.trim()
+    return target.replace(/#\^[\w-]+$/, '').split('/').pop()!.replace(/#/g, ' ').trim()
+  })
+
 function findClose(tokens: Token[], open: number): number {
   let depth = 0
   for (let j = open; j < tokens.length; j++) { depth += tokens[j].nesting; if (depth === 0) return j }
@@ -101,7 +122,8 @@ function toBlock(tokens: Token[], i: number, close: number, lastLine: (m: [numbe
     case 'blockquote_open': {
       const parts: string[] = []
       for (let j = i + 1; j < close; j++) if (tokens[j].type === 'inline') parts.push(inlineText(tokens[j]).trim())
-      return {type: 'blockquote', text: parts.join('\n'), startLine, endLine}
+      // an Obsidian callout or GitHub alert opens with its type marker ("[!warning]"): keep the title and text only
+      return {type: 'blockquote', text: parts.join('\n').replace(/^\[![\w-]+\][+-]?\s*/, ''), startLine, endLine}
     }
     case 'table_open': {
       const rows: string[][] = [], rowLines: number[] = []
@@ -141,7 +163,7 @@ function listText(tokens: Token[], open: number, close: number, indent: number):
 function inlineText(t: Token | undefined): string {
   let s = ''
   for (const c of t?.children ?? []) {
-    if (c.type === 'text') s += c.content
+    if (c.type === 'text') s += cleanLinks(c.content) // inline code keeps [[...]] as written
     else if (c.type === 'code_inline') s += '`' + c.content + '`'
     else if (c.type === 'softbreak' || c.type === 'hardbreak') s += '\n'
     else if (c.type === 'image') s += c.content

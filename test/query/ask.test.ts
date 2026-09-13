@@ -51,7 +51,7 @@ describe("ask", () => {
 
   it("says not sure, with the closest sections, when it can't tell", () => {
     const a = docs.ask("how do I stop the server gracefully");
-    expect(a).toMatchObject({ confident: false, qclass: "HOWTO", reason: "ambiguous: top two within 9%" });
+    expect(a).toMatchObject({ confident: false, qclass: "HOWTO", reason: "ambiguous: top two within 6%" });
     expect(a.file).toBeUndefined();
     expect(a.candidates.slice(0, 3).map((c) => c.headingPath.at(-1))).toEqual(["preClose", "close", "onClose"]);
   });

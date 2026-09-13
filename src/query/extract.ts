@@ -66,6 +66,7 @@ export function pickUnits(idx: LoadedIndex, sec: QaSection, rule: Rule, plan: Qu
   const needExact = plan.exact.filter((e) => !headingTerms.includes(e));
   const withExact = scored.filter((x) => needExact.some((e) => x.u.text.toLowerCase().includes(e)));
   const ranked = withExact.length ? withExact : scored;
-  const n = ranked[0]?.u.kind === "tableRow" ? 1 : rule.maxSentences; // a table-row answer is always one row
+  // a table-row or property answer is always one line
+  const n = ranked[0]?.u.kind === "tableRow" || ranked[0]?.u.kind === "property" ? 1 : rule.maxSentences;
   return { units: ranked.slice(0, n).map((x) => x.u).sort((a, b) => a.line - b.line) };
 }
