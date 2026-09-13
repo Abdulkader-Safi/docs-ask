@@ -5,7 +5,10 @@ import type { QaSection } from "../core/types.ts";
 import type { Synonyms } from "./synonyms.ts";
 import { indexTerms } from "./text.ts";
 
-export const FIELDS = ["heading", "headingPath", "prose", "code"] as const;
+export const FIELDS = ["heading", "headingPath", "path", "prose", "code"] as const;
+
+/** A file's folder and file names as words: "Clients/Beta Foods/Invoices.md" -> "Clients Beta Foods Invoices". */
+export const pathText = (file: string) => file.replace(/\.mdx?$/i, "").replace(/[\/_-]+/g, " ");
 
 export const indexTokenizer = (syn: Synonyms) => (text: string) => indexTerms(syn.normPhrases(text)).map(syn.canon);
 
@@ -15,7 +18,9 @@ export function miniSearchOptions(syn: Synonyms): Options<QaSection> {
     fields: [...FIELDS],
     // No storeFields: sections live next to the index in SerializedIndex, so nothing gets spread onto
     // search results (a stored field called `score` once overwrote the real score).
-    extractField: (doc, field) => (field === "headingPath" ? doc.headingPath.join(" ") : (doc as any)[field]),
+    // `path` is derived from `file` here rather than stored on every section
+    extractField: (doc, field) =>
+      field === "headingPath" ? doc.headingPath.join(" ") : field === "path" ? pathText(doc.file) : (doc as any)[field],
     tokenize: indexTokenizer(syn),
     processTerm: (term) => term,
   };

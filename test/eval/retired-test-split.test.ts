@@ -20,11 +20,12 @@ describe("retired first test split", () => {
     expect(s.abstainOnUnanswerable).toBeGreaterThanOrEqual(0.9);
   });
 
-  // Missed on the first run; see the M4 report. These flip to failing (and need updating) once met.
+  // Missed on the first run; see the M4 report. This flips to failing (and needs updating) once met.
   it.fails("meets the PRD target for precision when answered (0.80)", () => {
     expect(s.precisionWhenAnswered).toBeGreaterThanOrEqual(0.8);
   });
-  it.fails("meets the PRD target for answer rate (0.60)", () => {
+  // Missed on the first run (0.542). Met since M11's path field: 0.603, one more question answered right.
+  it("meets the PRD target for answer rate (0.60)", () => {
     expect(s.answerRate).toBeGreaterThanOrEqual(0.6);
   });
 

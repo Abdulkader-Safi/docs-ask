@@ -29,11 +29,11 @@ FAIL rank=0 ans [fastify] Is it possible to disable parsing the body into JSON f
 FAIL rank=1 abs [fastify] Does the Fastify.js have trouble with complicated Regex patterns?
      -> not found in docs: fastify.js
 FAIL rank=1 abs [fastify] When to prefer fastify.decorateRequest() over fastify.decorate()?
-     -> ambiguous: top two within 11%
+     -> ambiguous: top two within 13%
 FAIL rank=3 abs [fastify] Do I need to install Pino as dependency to be able to customize the logger options?
      -> weak term coverage (0.57)
 FAIL rank=1 abs [fastify] fastify.setErrorHandler() is not being called on schema validation error
-     -> ambiguous: top two within 8%
+     -> ambiguous: top two within 7%
 FAIL rank=1 abs [fastify] Load plugins in parallel?
      -> weak term coverage (0.46)
 FAIL rank=5 abs [fastify] How to kill the process when an unknown error is thrown?

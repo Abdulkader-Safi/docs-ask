@@ -6,7 +6,13 @@ export const WEIGHTS = {
   search: {
     /** sections kept from MiniSearch before reranking */
     topN: 25,
-    fieldBoost: { heading: 3, headingPath: 1.5, prose: 1, code: 0.6 },
+    /**
+     * path: folder and file names (M11). 0.25 was best on the dev split (top-1 0.709, precision 0.787, answer
+     * rate 0.664, against 0.701, 0.784 and 0.657 without the field). From 0.75 up, a file name outranks the
+     * heading that names the thing: "add a content type parser" found hasContentTypeParser in
+     * ContentTypeParser.md instead of Server.md's addContentTypeParser.
+     */
+    fieldBoost: { heading: 3, headingPath: 1.5, path: 0.25, prose: 1, code: 0.6 },
     /** per-term boost: an identifier from the question, a question-type trigger word, an original term, a loose synonym */
     termBoost: { exact: 2, trigger: 0.3, original: 1, expansion: 0.4 },
     /** prefix-match terms longer than this */
