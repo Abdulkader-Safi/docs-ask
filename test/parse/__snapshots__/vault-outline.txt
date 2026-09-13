@@ -23,7 +23,7 @@ Clients/Acme/Dashboard/Users.md:9  Users
 Clients/Acme/Dashboard/Users.md:13  Users > Add a new user
   heading@13 orderedList@15 orderedList@16 orderedList@17 orderedList@18
 Clients/Acme/Dashboard/Users.md:20  Users > Roles
-  heading@20 sentence@22 sentence@22
+  heading@20 sentence@22
 Clients/Acme/Dashboard/Users.md:24  Users > Remove a user
   heading@24 sentence@26 sentence@26
 Clients/Acme/Project overview.md:1  Acme dashboard project
@@ -73,7 +73,7 @@ Knowledge/Glossary.md:8  Glossary > SLA
 Knowledge/Glossary.md:12  Glossary > MRR
   heading@12 list@14 list@15
 Knowledge/Tools/Obsidian tips.md:1  Obsidian tips
-  heading@1 sentence@3 sentence@5 sentence@5 sentence@7
+  heading@1 sentence@3 sentence@7
 Personal/Reading list.md:1  Personal/Reading list.md
   list@1 list@2
 Templates/Client project template.md:9  Client project

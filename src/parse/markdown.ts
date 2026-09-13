@@ -80,9 +80,18 @@ export function parseDocument(filePath: string, source: string, options: ParseOp
   return doc
 }
 
-/** Obsidian links as plain words: [[note]] -> note, [[note|text]] -> text, [[note#Heading]] -> note Heading. */
+/**
+ * Obsidian links as the words a reader sees: [[note]] -> note, [[folder/note]] -> note, [[note|text]] -> text,
+ * [[note#Heading]] -> note Heading, [[note#^block-id]] -> note. A note embed (![[note]]) reads the same; an embedded
+ * file (![[shot.png]], ![[shot.png|300]]) is dropped.
+ */
 export const cleanLinks = (text: string) =>
-  text.replace(/!?\[\[([^\]|]*)(?:\|([^\]]*))?\]\]/g, (_, target: string, alias?: string) => (alias ?? target.replace(/#\^?/g, ' ')).trim())
+  text.replace(/(!?)\[\[([^\]|]*)(?:\|([^\]]*))?\]\]/g, (_, bang: string, target: string, alias?: string) => {
+    const name = target.split('#')[0]
+    if (bang && /\.[a-z0-9]{2,5}$/i.test(name) && !/\.md$/i.test(name)) return ''
+    if (alias !== undefined) return alias.trim()
+    return target.replace(/#\^[\w-]+$/, '').split('/').pop()!.replace(/#/g, ' ').trim()
+  })
 
 function findClose(tokens: Token[], open: number): number {
   let depth = 0
@@ -113,7 +122,8 @@ function toBlock(tokens: Token[], i: number, close: number, lastLine: (m: [numbe
     case 'blockquote_open': {
       const parts: string[] = []
       for (let j = i + 1; j < close; j++) if (tokens[j].type === 'inline') parts.push(inlineText(tokens[j]).trim())
-      return {type: 'blockquote', text: parts.join('\n'), startLine, endLine}
+      // an Obsidian callout or GitHub alert opens with its type marker ("[!warning]"): keep the title and text only
+      return {type: 'blockquote', text: parts.join('\n').replace(/^\[![\w-]+\][+-]?\s*/, ''), startLine, endLine}
     }
     case 'table_open': {
       const rows: string[][] = [], rowLines: number[] = []
@@ -153,7 +163,7 @@ function listText(tokens: Token[], open: number, close: number, indent: number):
 function inlineText(t: Token | undefined): string {
   let s = ''
   for (const c of t?.children ?? []) {
-    if (c.type === 'text') s += c.content
+    if (c.type === 'text') s += cleanLinks(c.content) // inline code keeps [[...]] as written
     else if (c.type === 'code_inline') s += '`' + c.content + '`'
     else if (c.type === 'softbreak' || c.type === 'hardbreak') s += '\n'
     else if (c.type === 'image') s += c.content
