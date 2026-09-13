@@ -3,6 +3,7 @@
 import MiniSearch from "minisearch";
 import type { QaSection, SerializedIndex } from "../core/types.ts";
 import { FORMAT_VERSION, VERSION } from "../core/version.ts";
+import { noteFacts, type NoteFacts } from "./filters.ts";
 import { indexTokenizer, miniSearchOptions } from "./index-options.ts";
 import { compileSynonyms, type Synonyms } from "./synonyms.ts";
 
@@ -17,6 +18,10 @@ export interface LoadedIndex {
   tokenize(text: string): string[];
   /** BM25 inverse document frequency of a term across all sections */
   idf(term: string): number;
+  /** each note's properties and tags, for filters in a question */
+  notes: Map<string, NoteFacts>;
+  /** words that act as a filter before a colon: folder, tag and every property name in the index */
+  filterKeys: Set<string>;
   packageVersion: string;
   builtAt: string;
 }
@@ -37,7 +42,10 @@ export function openIndex(data: SerializedIndex): LoadedIndex {
   const ms = MiniSearch.loadJS(data.mini, miniSearchOptions(syn));
   const df = new Map(Object.entries(data.df));
   const N = data.sections.length;
+  const { notes, keys } = noteFacts(data.sections);
   return {
+    notes,
+    filterKeys: keys,
     ms,
     sections: data.sections,
     byId: new Map(data.sections.map((s) => [s.id, s])),

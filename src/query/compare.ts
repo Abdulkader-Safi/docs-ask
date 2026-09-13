@@ -28,11 +28,11 @@ type Part = NonNullable<Answer["parts"]>[number];
 const DEFINITION = RULES.find((r) => r.id === "DEFINITION")!;
 
 /** One side, looked up on its own: the best section and its best unit, or null if the gates say no. */
-function lookUpSide(idx: LoadedIndex, side: string, rule: Rule, w: Weights): { part: Part; gap: number; coverage: number } | null {
+function lookUpSide(idx: LoadedIndex, side: string, rule: Rule, w: Weights, files?: Set<string>): { part: Part; gap: number; coverage: number } | null {
   const plan = planQuery(idx, side);
   // one common word ("return") is too vague to look up on its own (the gate 5 rule)
   if (plan.q.length === 1 && (idx.df.get(plan.q[0]) ?? 0) / idx.sections.length > w.gates.broadShare) return null;
-  const ranked = retrieve(idx, plan, rule, w);
+  const ranked = retrieve(idx, plan, rule, w, files);
   const gate = checkGates(idx, ranked, plan, classify(side), w);
   if (!gate.ok) return null;
   const sec = ranked[0].s;
@@ -45,10 +45,10 @@ function lookUpSide(idx: LoadedIndex, side: string, rule: Rule, w: Weights): { p
 }
 
 /** Both sides answered from two different sections, or null to fall back to a single lookup. */
-export function compare(idx: LoadedIndex, question: string, w: Weights): Omit<Answer, "candidates" | "qclass"> | null {
+export function compare(idx: LoadedIndex, question: string, w: Weights, files?: Set<string>): Omit<Answer, "candidates" | "qclass"> | null {
   const sides = splitComparison(question);
   if (!sides) return null;
-  const [a, b] = sides.map((s) => lookUpSide(idx, s, DEFINITION, w));
+  const [a, b] = sides.map((s) => lookUpSide(idx, s, DEFINITION, w, files));
   if (!a || !b || a.part.id === b.part.id) return null;
   const high = [a, b].every((x) => x.coverage >= w.gates.highCoverage && x.gap >= w.gates.highGap);
   return {
