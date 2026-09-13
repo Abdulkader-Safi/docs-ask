@@ -92,12 +92,13 @@ describe("version checks", () => {
 
   it("refuses a different minor version, and says how to fix it", () => {
     expect(() => loadIndex({ ...data, packageVersion: "0.2.0" })).toThrow(
-      `docs-ask: this index was built by docs-ask 0.2.0 (format 1), but this is docs-ask ${VERSION} (format 1). Rebuild it with docs-ask build.`,
+      `docs-ask: this index was built by docs-ask 0.2.0 (format ${data.formatVersion}), but this is docs-ask ${VERSION} (format ${data.formatVersion}). Rebuild it with docs-ask build.`,
     );
   });
 
-  it("refuses a different format version", () => {
-    expect(() => loadIndex({ ...data, formatVersion: 2 })).toThrow(/format 2\).*Rebuild it with docs-ask build/);
+  it("refuses an index from an older format", () => {
+    const older = data.formatVersion - 1;
+    expect(() => loadIndex({ ...data, formatVersion: older })).toThrow(new RegExp(`format ${older}\\).*Rebuild it with docs-ask build`));
   });
 
   it("refuses something that isn't an index", () => {

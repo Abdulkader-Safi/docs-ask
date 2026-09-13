@@ -121,6 +121,16 @@ describe("loadDocs uses the index file only while it's fresh", () => {
     expect((await loadDocs(root)).fromFile).toBe(false);
   });
 
+  it("rebuilds in memory when the index file is from an older format, instead of failing", async () => {
+    await buildTo();
+    const path = join(root, INDEX_FILE);
+    writeFileSync(path, JSON.stringify({ ...(await readIndex(path)), formatVersion: 1 }));
+    age("docs/limits.md", 60); // the file is fresh, so only its format can send loadDocs past it
+    const { docs, fromFile } = await loadDocs(root);
+    expect(fromFile).toBe(false);
+    expect(docs.ask("what is the default bodyLimit").text).toBe("Default: `1048576` (1MiB)");
+  });
+
   it("takes another index file name", async () => {
     await buildTo(join(root, "custom.json"));
     age("docs/limits.md", 60);

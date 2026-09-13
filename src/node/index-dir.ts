@@ -50,7 +50,10 @@ export async function loadDocs(path: string, options: { config?: DocsAskConfig; 
   const built = oneFile ? 0 : await stat(indexPath).then((s) => s.mtimeMs).catch(() => 0);
   // strictly newer: a doc saved in the same millisecond as the index counts as a miss, and rebuilding once is cheap
   if (built && built > (await newestDoc(root, config))) {
-    return { docs: loadIndex(await readIndex(indexPath), askOptions), fromFile: true, config };
+    // The index file is a cache. One this version can't load (an older format, another docs-ask version) is
+    // rebuilt in memory rather than failing the question; `docs-ask build` writes a new one.
+    const docs = await readIndex(indexPath).then((data) => loadIndex(data, askOptions)).catch(() => null);
+    if (docs) return { docs, fromFile: true, config };
   }
   return { docs: loadIndex(await indexDirectory(root, config), askOptions), fromFile: false, config };
 }
