@@ -1,15 +1,23 @@
-Clients/Acme/Acme.md:7  Clients/Acme/Acme.md
-  sentence@7 sentence@7 sentence@9
+Clients/Acme/Acme.md:1  Clients/Acme/Acme.md
+  property@2 property@3 property@4 sentence@7 sentence@7 sentence@9
+Clients/Acme/Dashboard/Invoices.md:1  Invoices page
+  property@3 property@4 property@5 property@8
 Clients/Acme/Dashboard/Invoices.md:11  Invoices
   heading@11 sentence@13 sentence@15 sentence@15
 Clients/Acme/Dashboard/Invoices.md:17  Invoices > Download an invoice
   heading@17 orderedList@19 orderedList@20 sentence@22 sentence@22
 Clients/Acme/Dashboard/Order statuses.md:1  Clients/Acme/Dashboard/Order statuses.md
   sentence@1 tableRow@5 tableRow@6 tableRow@7 tableRow@8 sentence@10
+Clients/Acme/Dashboard/Roles.md:1  Roles
+  property@3 property@4
 Clients/Acme/Dashboard/Roles.md:7  Roles
   heading@7 tableRow@11 tableRow@12 tableRow@13 sentence@15
+Clients/Acme/Dashboard/Sync.md:1  Sync button
+  property@3 property@4
 Clients/Acme/Dashboard/Sync.md:7  Sync
   heading@7 sentence@9 sentence@11 sentence@11 blockquote@13
+Clients/Acme/Dashboard/Users.md:1  Users and access
+  property@3 property@4 property@5 property@6
 Clients/Acme/Dashboard/Users.md:9  Users
   heading@9 sentence@11 sentence@11
 Clients/Acme/Dashboard/Users.md:13  Users > Add a new user
@@ -18,24 +26,36 @@ Clients/Acme/Dashboard/Users.md:20  Users > Roles
   heading@20 sentence@22 sentence@22
 Clients/Acme/Dashboard/Users.md:24  Users > Remove a user
   heading@24 sentence@26 sentence@26
+Clients/Acme/Project overview.md:1  Acme dashboard project
+  property@3 property@4 property@5 property@6 property@7 property@8
 Clients/Acme/Project overview.md:13  Acme dashboard project
   heading@13 sentence@15
 Clients/Acme/Project overview.md:17  Acme dashboard project > Scope
   heading@17 list@19 list@20 list@21 list@22
 Clients/Acme/Project overview.md:24  Acme dashboard project > Next steps
   heading@24 sentence@26 sentence@26
+Clients/Beta Foods/Portal/Invoices.md:1  Portal invoices
+  property@3 property@4 property@5 property@6
 Clients/Beta Foods/Portal/Invoices.md:9  Invoices
   heading@9 sentence@11 sentence@13
+Clients/Beta Foods/Project overview.md:1  Beta Foods customer portal
+  property@3 property@4 property@5 property@6 property@7
 Clients/Beta Foods/Project overview.md:10  Beta Foods customer portal
   heading@10 sentence@12 sentence@12
+Content/Blogs/Drafts/dashboard-design-tips.md:1  Dashboard design tips
+  property@3 property@4 property@5 property@6
 Content/Blogs/Drafts/dashboard-design-tips.md:9  Dashboard design tips
   heading@9 sentence@11 sentence@11 sentence@13
 Content/Blogs/Ideas/_README.md:1  Blog ideas
   heading@1 sentence@3 blockquote@5 sentence@8
+Content/Blogs/Published/how-we-price-projects.md:1  How we price client projects
+  property@3 property@4 property@5 property@6 property@7 property@8
 Content/Blogs/Published/how-we-price-projects.md:11  How we price client projects
   heading@11 sentence@13 sentence@13
 Content/Blogs/Published/how-we-price-projects.md:15  How we price client projects > Why fixed prices
   heading@15 sentence@17 sentence@17
+Daily/2026-09-01.md:1  Daily/2026-09-01.md
+  property@2 property@3
 Daily/2026-09-01.md:6  1 September 2026
   heading@6
 Daily/2026-09-01.md:8  1 September 2026 > Acme
@@ -44,6 +64,8 @@ Daily/2026-09-01.md:12  1 September 2026 > Beta Foods
   heading@12 sentence@14 sentence@14
 Knowledge/Broken properties.md:6  Broken properties
   heading@6 sentence@8 sentence@8
+Knowledge/Glossary.md:1  Glossary
+  property@3
 Knowledge/Glossary.md:6  Glossary
   heading@6
 Knowledge/Glossary.md:8  Glossary > SLA

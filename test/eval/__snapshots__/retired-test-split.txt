@@ -153,7 +153,7 @@ ok   rank=1 ans [hono] RegExpRouter vs TrieRouter
 ok   rank=0 abs [hono] How do I connect Hono to MongoDB?
      -> not found in docs: mongodb
 ok   rank=0 abs [hono] Does Hono have a built-in ORM?
-     -> weak term coverage (0.54)
+     -> weak term coverage (0.53)
 ok   rank=0 abs [hono] How do I deploy Hono to Heroku?
      -> weak term coverage (0.34)
 FAIL rank=1 abs [hono] How do I schedule cron jobs with Hono?

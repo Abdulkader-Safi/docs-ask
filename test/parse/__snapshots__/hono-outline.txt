@@ -1062,6 +1062,8 @@ helpers/websocket.md:142  WebSocket Helper > Examples > Bun with JSX
   heading@142 code@144
 helpers/websocket.md:196  WebSocket Helper > Examples > Node.js
   heading@196 code@198
+index.md:1  Hono - Web framework built on Web Standards
+  property@3
 index.md:6  Hono
   heading@6 sentence@8 sentence@9 sentence@11 code@13
 index.md:22  Hono > Quick Start

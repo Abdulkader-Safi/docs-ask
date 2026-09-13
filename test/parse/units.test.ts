@@ -17,8 +17,11 @@ describe("toQaSections on the sample API doc", () => {
 
   it("splits paragraphs into sentences, each on its own source line", () => {
     const intro = sections[0];
-    expect(intro.heading).toBe("docs/api.md");
+    // the note card: headed by the frontmatter title, properties first (M11)
+    expect(intro.heading).toBe("Acme API reference");
     expect(intro.units.map((u) => [u.kind, u.line, u.text])).toEqual([
+      ["property", 3, "description: Endpoints, auth and errors for the Acme REST API."],
+      ["property", 4, "tags: api, rest"],
       ["sentence", 7, "Welcome to the Acme API."],
       ["sentence", 7, "Use v2.1 of the API for all new work."],
       ["sentence", 8, "This page covers authentication, rate limits and errors."],

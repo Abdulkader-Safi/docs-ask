@@ -21,7 +21,15 @@ export function parseDocument(filePath: string, source: string, options: ParseOp
   if (fm) {
     try {
       const data = parseYaml(fm[1])
-      if (data && typeof data === 'object' && !Array.isArray(data)) doc.frontmatter = data as Record<string, unknown>
+      if (data && typeof data === 'object' && !Array.isArray(data)) {
+        doc.frontmatter = data as Record<string, unknown>
+        // top-level keys start at column 0; line 1 of the file is the opening ---
+        doc.frontmatterLines = new Map()
+        fm[1].split(/\r?\n/).forEach((l, i) => {
+          const key = /^([^\s#:'"-][^:]*?)\s*:/.exec(l)?.[1]
+          if (key && !doc.frontmatterLines!.has(key)) doc.frontmatterLines!.set(key, i + 2)
+        })
+      }
     } catch (e) { doc.frontmatterError = (e as Error).message }
     src = fm[0].replace(/[^\r\n]/g, '') + src.slice(fm[0].length)
   }
@@ -71,6 +79,10 @@ export function parseDocument(filePath: string, source: string, options: ParseOp
   }
   return doc
 }
+
+/** Obsidian links as plain words: [[note]] -> note, [[note|text]] -> text, [[note#Heading]] -> note Heading. */
+export const cleanLinks = (text: string) =>
+  text.replace(/!?\[\[([^\]|]*)(?:\|([^\]]*))?\]\]/g, (_, target: string, alias?: string) => (alias ?? target.replace(/#\^?/g, ' ')).trim())
 
 function findClose(tokens: Token[], open: number): number {
   let depth = 0

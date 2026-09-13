@@ -13,8 +13,8 @@ import { parseDocument, toQaSections } from "../../src/parse/index.ts";
 
 describe.each([
   ["fastify", 30, 559, 3810],
-  ["hono", 87, 792, 3827],
-  ["vault", 18, 31, 98],
+  ["hono", 87, 793, 3828],
+  ["vault", 18, 42, 141],
 ])("%s corpus", async (name, fileCount, sectionCount, unitCount) => {
   const root = fileURLToPath(new URL(`../fixtures/${name}`, import.meta.url));
   const files = await findDocs(root);

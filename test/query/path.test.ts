@@ -10,13 +10,15 @@ describe("folder and file names", () => {
     expect(pathText("Content/Blogs/Published/how-we-price-projects.md")).toBe("Content Blogs Published how we price projects");
   });
 
-  it("are scored: a folder name alone can rank the note inside it", () => {
-    // "daily" is only in the folder name Daily/, and "notes" nowhere. The default weight is tuned on the dev
-    // split; this raises it so the test shows the field doing the ranking.
+  it("are scored: a word found only in a folder or file name finds the note", () => {
+    // "template" is in Templates/Client project template.md and nowhere in any note's text or properties
+    const file = "Templates/Client project template.md";
     const withPath = (path: number) => loadIndex(vaultData, { weights: { search: { fieldBoost: { ...WEIGHTS.search.fieldBoost, path } } } });
-    expect(withPath(3).ask("daily notes").candidates[0].file).toBe("Daily/2026-09-01.md");
-    // near zero, not 0: MiniSearch reads a boost of 0 as 1 (`boost[field] || 1`)
-    expect(withPath(1e-9).ask("daily notes").candidates[0].file).not.toBe("Daily/2026-09-01.md");
-    expect(vault.ask("daily notes").candidates.map((c) => c.file)).toContain("Daily/2026-09-01.md");
+    const [on] = vault.ask("template").candidates;
+    expect(on.file).toBe(file);
+    // Near zero, not 0: MiniSearch reads a boost of 0 as 1 (`boost[field] || 1`). The note is still the only match,
+    // so it still comes first; its score is what shows the path field doing the work.
+    const [off] = withPath(1e-9).ask("template").candidates;
+    expect(off.score).toBeLessThan(on.score / 1000);
   });
 });

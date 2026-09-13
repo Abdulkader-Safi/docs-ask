@@ -123,7 +123,7 @@ export const RULES: Rule[] = [
       { re: /\b(?:limits?|maximum|minimum|max|min|timeouts?|ttl|expir(?:y|es|ation)|quota|port|size)\b/i, weight: 2 },
       { re: /\bwhen does .{1,40}\bexpire\b/i, weight: 4 },
     ],
-    preferUnits: ['sentence', 'tableRow', 'list', 'code'],
+    preferUnits: ['sentence', 'tableRow', 'list', 'code', 'property'],
     answerShape: 'valueSentence',
     boosts: {
       headingTerms: ['default', 'limit', 'config'],
@@ -184,7 +184,7 @@ export const RULES: Rule[] = [
       { re: new RegExp(String.raw`^${AUX}\s+\w`, 'i'), weight: 3 },            // starts with an auxiliary verb
       { re: /\b(?:support(?:s|ed)?|possible|compatible|allowed|able to)\b/i, weight: 2 },
     ],
-    preferUnits: ['sentence', 'tableRow'],
+    preferUnits: ['sentence', 'tableRow', 'property'],
     answerShape: 'yesNoEvidence',
     boosts: {
       sentenceRe: /\b(?:supports?|can|cannot|can't|not|only|must|requires?|allows?|possible|available|deprecated|no longer)\b/i,
@@ -200,7 +200,7 @@ export const RULES: Rule[] = [
       { re: /\b(?:define|definition of|meaning of|explain|overview of|purpose of)\b/i, weight: 4 },
       { re: /^(?:[\w.-]+)\??$/i, weight: 3 },                                 // single-term query: "hooks?"
     ],
-    preferUnits: ['sentence'],
+    preferUnits: ['sentence', 'property'],
     answerShape: 'definition',
     boosts: {
       headingTerms: ['overview', 'introduct', 'what', 'concept'],
@@ -211,7 +211,7 @@ export const RULES: Rule[] = [
   },
   {
     id: 'FALLBACK', rank: 0, triggers: [],
-    preferUnits: ['sentence', 'code', 'list', 'tableRow'],
+    preferUnits: ['sentence', 'code', 'list', 'tableRow', 'property'],
     answerShape: 'snippet', boosts: {}, maxSentences: 2,
   },
 ];
